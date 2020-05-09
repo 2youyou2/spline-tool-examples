@@ -22,7 +22,7 @@ export default class SplineNode {
     public set position (v) {
         if (!CC_EDITOR && this._position.equals(v)) return;
         this._position.set(v);
-        this.changed.invoke();
+        this.changed.invoke(this);
     }
 
     /// <summary>
@@ -36,7 +36,7 @@ export default class SplineNode {
     public set direction (v) {
         if (!CC_EDITOR && this._direction.equals(v)) return;
         this._direction.set(v);
-        this.changed.invoke();
+        this.changed.invoke(this);
     }
 
     get invDirection () {
@@ -59,7 +59,7 @@ export default class SplineNode {
     public set up (v) {
         if (!CC_EDITOR && this._up.equals(v)) return;
         this._up.set(v);
-        this.changed.invoke();
+        this.changed.invoke(this);
     }
 
     /// <summary>
@@ -74,7 +74,7 @@ export default class SplineNode {
     public set scale (v) {
         if (!CC_EDITOR && this._scale.equals(v)) return;
         this._scale.set(v);
-        this.changed.invoke();
+        this.changed.invoke(this);
     }
 
     /// <summary>
@@ -89,7 +89,7 @@ export default class SplineNode {
     public set roll (v) {
         if (!CC_EDITOR && this._roll === v) return;
         this._roll = v;
-        this.changed.invoke();
+        this.changed.invoke(this);
     }
 
     static create (position: Vec3, direction: Vec3) : SplineNode {

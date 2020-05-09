@@ -1,4 +1,4 @@
-import { _decorator, Node } from 'cc';
+import { _decorator, Node, Prefab } from 'cc';
 import BaseUtils from './spline-util-base';
 
 const { ccclass, executeInEditMode, float, type, boolean } = _decorator;
@@ -20,8 +20,8 @@ export default class NewClass extends BaseUtils {
     _scale = 1;
     @float
     _scaleRange = 0;
-    @type(Node)
-    _prefab: Node = null;
+    @type(Prefab)
+    _prefab: Prefab = null;
 
     @float
     get spacing () { return this._spacing; };
@@ -44,7 +44,7 @@ export default class NewClass extends BaseUtils {
     get scaleRange () { return this._scaleRange; };
     set scaleRange (v) { this._scaleRange = v; this.dirty = true; };
 
-    @type(Node)
+    @type(Prefab)
     get prefab () { return this._prefab; };
     set prefab (v) { this._prefab = v; this.dirty = true; };
 
@@ -71,6 +71,7 @@ export default class NewClass extends BaseUtils {
 
             // apply scale + random
             let rangedScale = this.scale + Math.random() * this.scaleRange;
+            rangedScale *= Math.min(sample.scale.x, sample.scale.y);
             node.setScale(rangedScale, rangedScale, rangedScale);
 
             // rotate with random yaw

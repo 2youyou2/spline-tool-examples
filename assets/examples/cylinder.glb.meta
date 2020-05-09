@@ -1,0 +1,57 @@
+{
+  "ver": "1.3.20",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "c500f0e0-537f-4749-ab4d-25470eac6d4a",
+  "files": [],
+  "subMetas": {
+    "c244a": {
+      "importer": "gltf-mesh",
+      "uuid": "c500f0e0-537f-4749-ab4d-25470eac6d4a@c244a",
+      "displayName": "",
+      "id": "c244a",
+      "name": "Cylinder.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "77ee0": {
+      "importer": "gltf-scene",
+      "uuid": "c500f0e0-537f-4749-ab4d-25470eac6d4a@77ee0",
+      "displayName": "",
+      "id": "77ee0",
+      "name": "cylinder.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "c500f0e0-537f-4749-ab4d-25470eac6d4a@77ee0",
+    "assetFinder": {
+      "meshes": [
+        "c500f0e0-537f-4749-ab4d-25470eac6d4a@c244a"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "c500f0e0-537f-4749-ab4d-25470eac6d4a@77ee0"
+      ]
+    }
+  }
+}

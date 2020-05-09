@@ -8,6 +8,11 @@ const front = cc.v3(0,0,1);
 
 const RAD = Math.PI / 180;
 
+let tempQuat = new Quat();
+let tempQuat_2 = new Quat();
+let tempVec3 = new Vec3();
+let tempVec3_2 = new Vec3();
+
 export default class CurveSample {
     public location: Vec3;
     public tangent: Vec3;
@@ -20,9 +25,9 @@ export default class CurveSample {
     private _transformedUp: Vec3;
     get transformedUp () {
         if (!this._transformedUp) {
-            let axisQuat = Quat.fromAxisAngle(cc.quat(), front, this.roll * RAD);
-            let upVector = Vec3.transformQuat(cc.v3(), this.up, axisQuat);
-            this._transformedUp = Vec3.cross(cc.v3(), this.tangent, Vec3.cross(cc.v3(), upVector, this.tangent).normalize());
+            let axisQuat = Quat.fromAxisAngle(tempQuat, front, this.roll * RAD);
+            let upVector = Vec3.transformQuat(tempVec3, this.up, axisQuat);
+            this._transformedUp = Vec3.cross(new Vec3(), this.tangent, Vec3.cross(tempVec3, upVector, this.tangent).normalize());
         }
         return this._transformedUp;
     }
@@ -71,10 +76,10 @@ export default class CurveSample {
         var res = MeshVertex.create(vert.position, vert.normal, vert.uv);
 
         // application of scale
-        Vec3.multiply(res.position, res.position, new Vec3(0, this.scale.y, this.scale.x));
+        Vec3.multiply(res.position, res.position, tempVec3.set(0, this.scale.y, this.scale.x));
 
         // application of roll
-        let q = Quat.fromAxisAngle(cc.quat(), Vec3.RIGHT, this.roll * RAD);
+        let q = Quat.fromAxisAngle(tempQuat, Vec3.RIGHT, this.roll * RAD);
         
         Vec3.transformQuat(res.position, res.position, q);
         Vec3.transformQuat(res.normal, res.normal, q);
@@ -83,18 +88,29 @@ export default class CurveSample {
         res.position.x = 0;
 
         // application of the rotation + location
-        q = Quat.fromEuler(cc.quat(), 0, -90, 0);
 
-        let axisQuat = Quat.fromAxisAngle(cc.quat(), front, 0);
-        let upVector = Vec3.transformQuat(cc.v3(), this.up, axisQuat);
-        upVector = Vec3.cross(cc.v3(), this.tangent, Vec3.cross(cc.v3(), upVector, this.tangent).normalize());
-        let rotation = Quat.fromViewUp(new Quat(), this.tangent, upVector)
+        // tangent is the same with up
+        // excursion tangent a little
+        let tangent = this.tangent;
+        if (Math.abs(Vec3.dot(tangent, this.up) - 1) < 0.01) {
+            tempVec3_2.set(tangent);
+            tempVec3_2.x += 0.01;
+            tempVec3_2.normalize();
+            tangent = tempVec3_2;
+        }
 
-        Quat.multiply(q, rotation, q);
+        let upVector = tempVec3.set(this.up);
+        Vec3.cross(upVector, tangent, upVector).normalize();
+        Vec3.cross(upVector, upVector, tangent);
+
+        let rotation = Quat.fromViewUp(tempQuat, tangent, upVector)
+
+        Quat.fromEuler(tempQuat_2, 0, -90, 0);
+        q = Quat.multiply(tempQuat_2, rotation, tempQuat_2);
         
         Vec3.transformQuat(res.position, res.position, q);
-
         res.position.add(this.location);
+
         Vec3.transformQuat(res.normal, res.normal, q);
 
         return res;

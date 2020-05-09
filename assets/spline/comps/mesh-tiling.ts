@@ -24,7 +24,17 @@ export default class SplineMeshTiling extends BaseUtils {
     }
 
     @type(Mesh)
-    public mesh: Mesh = null;
+    public _mesh: Mesh = null;
+    @type(Mesh)
+    get mesh () : Mesh {
+        return this._mesh;
+    }
+    set mesh (value) {
+        this._mesh = value;
+        this.reset();
+    }
+
+
     // "Translation to apply on the mesh before bending it."
     public translation = cc.v3();
     // "Rotation to apply on the mesh before bending it."
@@ -36,11 +46,34 @@ export default class SplineMeshTiling extends BaseUtils {
     // public bool updateInPlayMode;
 
     // "If true, a mesh will be placed on each curve of the spline. If false, a single mesh will be placed for the whole spline."
-    public curveSpace = false;
+    @property
+    private _curveSpace = false;
+    @property
+    public get curveSpace () {
+        return this._curveSpace;
+    }
+    public set curveSpace (value) {
+        this._curveSpace = value;
+        this.setDirty();
+    }
 
     // "The mode to use to fill the choosen interval with the bent mesh."
     // public mode: FillingMode = FillingMode.StretchToInterval;
-    public mode: FillingMode = FillingMode.Repeat;
+    @property
+    private _mode: FillingMode = FillingMode.Repeat;
+    /// <summary>
+    /// The scaling mode along the spline
+    /// </summary>
+    @property({
+        type: FillingMode,
+    })
+    get mode () { return this._mode; }
+    set mode (value) {
+        if (value == this._mode) return;
+        this._mode = value;
+
+        this._updateMode();
+    }
 
     public compute () {
         if (!this.mesh) {
@@ -73,6 +106,14 @@ export default class SplineMeshTiling extends BaseUtils {
         for (let i = 0; i < children.length; i++) {
             let mc = children[i].getComponent(ModelComponent);
             mc.material = this.material;
+        }
+    }
+
+    private _updateMode () {
+        let children = this.generated.children;
+        for (let i = 0; i < children.length; i++) {
+            let mb = children[i].getComponent(MeshBender);
+            mb.mode = this.mode;
         }
     }
 

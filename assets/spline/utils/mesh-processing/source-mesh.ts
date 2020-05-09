@@ -18,25 +18,25 @@ export default class SourceMesh {
 
     private _vertices: MeshVertex[];
     get vertices () {
-        if (!this._vertices == null) this.buildData();
+        if (!this._vertices) this.buildData();
         return this._vertices;
     }
 
     private _triangles: number[] = [];
     get triangles () {
-        if (this._vertices == null) this.buildData();
+        if (!this._vertices) this.buildData();
         return this._triangles;
     }
 
     private _minX: number = 0;
     get minX () {
-        if (this._vertices == null) this.buildData();
+        if (!this._vertices) this.buildData();
         return this._minX;
     }
 
     private _length: number = 0;
     get length () {
-        if (this._vertices == null) this.buildData();
+        if (!this._vertices) this.buildData();
         return this._length;
     }
 

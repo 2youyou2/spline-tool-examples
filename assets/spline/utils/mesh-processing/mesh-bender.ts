@@ -1,4 +1,4 @@
-import { Component, Mesh, GFXAttributeName, Vec2, ModelComponent, _decorator } from 'cc';
+import { Component, Mesh, GFXAttributeName, Vec2, ModelComponent, _decorator, Enum, Vec3 } from 'cc';
 import Spline from '../../spline';
 import CubicBezierCurve from '../../cubic-bezier-curve';
 import CurveSample from '../../curve-sample';
@@ -30,6 +30,8 @@ export enum FillingMode {
     /// </summary>
     StretchToInterval
 }
+
+Enum(FillingMode)
 
 
 @ccclass
@@ -171,44 +173,43 @@ export default class MeshBender extends Component {
     }
 
     private fillOnce () {
-        // this.sampleCache.clear();
+        this.sampleCache.clear();
         // for each mesh vertex, we found its projection on the curve
-        // let storage = this.source.readAttribute(0, GFXAttributeName.ATTR_POSITION);
-        // let vertCount = storage.length / 4;
-        // let bentVertices = [];
-        
-        // for (let i = 0; i < vertCount; i++)
-        //     let vert = this.source.
-        //     float distance = vert.position.x - source.MinX;
-        //     CurveSample sample;
-        //     if (!sampleCache.TryGetValue(distance, out sample)) {
-        //         if (!useSpline) {
-        //             if (distance > curve.Length) distance = curve.Length;
-        //             sample = curve.GetSampleAtDistance(distance);
-        //         } else {
-        //             float distOnSpline = intervalStart + distance;
-        //             if (distOnSpline > spline.Length) {
-        //                 if (spline.IsLoop) {
-        //                     while (distOnSpline > spline.Length) {
-        //                         distOnSpline -= spline.Length;
-        //                     }
-        //                 } else {
-        //                     distOnSpline = spline.Length;
-        //                 }
-        //             }
-        //             sample = spline.GetSampleAtDistance(distOnSpline);
-        //         }
-        //         sampleCache[distance] = sample;
-        //     }
+        this.sampleCache.clear();
 
-        //     bentVertices.push(sample.GetBent(vert));
-        // }
+        let source = this.source;
+        var bentVertices: MeshVertex[] = [];
+        // for each mesh vertex, we found its projection on the curve
+        for (let j = 0; j < source.vertices.length; j++) {
+            let vert = source.vertices[j];
+            let distance = vert.position.x - source.minX;
+            let sample: CurveSample = this.sampleCache.get(distance);
+            if (!sample) {
+                if (!this.useSpline) {
+                    if (distance > this.curve.length) continue;
+                    sample = this.curve.getSampleAtDistance(distance);
+                } else {
+                    let distOnSpline = this.intervalStart + distance;
+                    //if (true) { //spline.isLoop) {
+                    while (distOnSpline > this.spline.length) {
+                        distOnSpline -= this.spline.length;
+                    }
+                    //} else if (distOnSpline > spline.Length) {
+                    //    continue;
+                    //}
+                    sample = this.spline.getSampleAtDistance(distOnSpline);
+                }
+                this.sampleCache.set(distance, sample);
+            }
+            bentVertices.push(sample.getBent(vert));
+        }
 
-        // MeshUtility.Update(result,
-        //     source.Mesh,
-        //     source.Triangles,
-        //     bentVertices.Select(b => b.position),
-        //     bentVertices.Select(b => b.normal));
+        MeshUtility.updateModelMesh(this.getComponent(ModelComponent), {
+            positions: bentVertices.map(b => b.position),
+            normals: bentVertices.map(b => b.normal),
+            uvs: source.mesh.readAttribute(0, GFXAttributeName.ATTR_TEX_COORD),
+            indices: source.triangles
+        });
     }
 
     private fillRepeat () {
@@ -217,7 +218,6 @@ export default class MeshBender extends Component {
             (this.intervalEnd == 0 ? this.spline.length : this.intervalEnd) - this.intervalStart :
             this.curve.length;
         let repetitionCount = Math.floor(intervalLength / source.length);
-
 
         // building triangles and UVs for the repeated mesh
         let triangles: number[] = [];
@@ -231,7 +231,7 @@ export default class MeshBender extends Component {
         }
 
         // computing vertices and normals
-        var bentVertices: MeshVertex[] = [];
+        let bentVertices: MeshVertex[] = [];
         let offset = 0;
         for (let i = 0; i < repetitionCount; i++) {
 
@@ -258,6 +258,7 @@ export default class MeshBender extends Component {
                     }
                     this.sampleCache.set(distance, sample);
                 }
+
                 bentVertices.push(sample.getBent(vert));
             }
             offset += source.length;
@@ -272,37 +273,39 @@ export default class MeshBender extends Component {
     }
 
     private fillStretch () {
-        // var bentVertices = new List<MeshVertex>(source.Vertices.Count);
-        // sampleCache.Clear();
-        // // for each mesh vertex, we found its projection on the curve
-        // foreach(var vert in source.Vertices) {
-        //     float distanceRate = source.Length == 0 ? 0 : Math.Abs(vert.position.x - source.MinX) / source.Length;
-        //     CurveSample sample;
-        //     if (!sampleCache.TryGetValue(distanceRate, out sample)) {
-        //         if (!useSpline) {
-        //             sample = curve.GetSampleAtDistance(curve.Length * distanceRate);
-        //         } else {
-        //             float intervalLength = intervalEnd == 0 ? spline.Length - intervalStart : intervalEnd - intervalStart;
-        //             float distOnSpline = intervalStart + intervalLength * distanceRate;
-        //             if (distOnSpline > spline.Length) {
-        //                 distOnSpline = spline.Length;
-        //                 Debug.Log("dist " + distOnSpline + " spline length " + spline.Length + " start " + intervalStart);
-        //             }
+        this.sampleCache.clear();
 
-        //             sample = spline.GetSampleAtDistance(distOnSpline);
-        //         }
-        //         sampleCache[distanceRate] = sample;
-        //     }
+        let bentVertices: MeshVertex[] = [];
+        let source = this.source;
+        // for each mesh vertex, we found its projection on the curve
+        for (let i = 0; i < source.vertices.length; i++) {
+            let vert = source.vertices[i];
+            let distanceRate = source.length == 0 ? 0 : Math.abs(vert.position.x - source.minX) / source.length;
+            let sample: CurveSample = this.sampleCache.get(distanceRate);
+            if (!sample) {
+                if (!this.useSpline) {
+                    sample = this.curve.getSampleAtDistance(this.curve.length * distanceRate);
+                } else {
+                    let intervalLength = this.intervalEnd == 0 ? this.spline.length - this.intervalStart : this.intervalEnd - this.intervalStart;
+                    let distOnSpline = this.intervalStart + intervalLength * distanceRate;
+                    if (distOnSpline > this.spline.length) {
+                        distOnSpline = this.spline.length;
+                        cc.log("dist " + distOnSpline + " spline length " + this.spline.length + " start " + this.intervalStart);
+                    }
 
-        //     bentVertices.Add(sample.GetBent(vert));
-        // }
+                    sample = this.spline.getSampleAtDistance(distOnSpline);
+                }
+                this.sampleCache.set(distanceRate, sample);
+            }
 
-        // MeshUtility.Update(result,
-        //     source.Mesh,
-        //     source.Triangles,
-        //     bentVertices.Select(b => b.position),
-        //     bentVertices.Select(b => b.normal));
+            bentVertices.push(sample.getBent(vert));
+        }
+
+        MeshUtility.updateModelMesh(this.getComponent(ModelComponent), {
+            positions: bentVertices.map(b => b.position),
+            normals: bentVertices.map(b => b.normal),
+            uvs: source.mesh.readAttribute(0, GFXAttributeName.ATTR_TEX_COORD),
+            indices: source.triangles
+        });
     }
-
-
 }

@@ -99,7 +99,7 @@ export default class Spline extends Component {
     public set nodes (v) {
         this._nodes = v;
         this.createCurves();
-        this.nodeListChanged.invoke();
+        this.nodeListChanged.invoke({});
     }
 
     /// <summary>

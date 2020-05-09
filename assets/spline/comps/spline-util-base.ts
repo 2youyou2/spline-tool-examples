@@ -1,12 +1,29 @@
 import { Node, Component, _decorator } from 'cc';
 import Spline from '../spline';
 
-const { ccclass, executeInEditMode } = _decorator;
+const { ccclass, executeInEditMode, type } = _decorator;
 
 @ccclass
 @executeInEditMode
 export default class SplineUtilBase extends Component {
-    protected generated: Node = null;
+    @type(Spline)
+    get splineComp () {
+        return this. spline;
+    }
+
+    protected _generated: Node = null;
+    protected get generated () {
+        if (!this._generated) {
+            let generatedName = 'generated ' + cc.js.getClassName(this);
+            this._generated = cc.find(generatedName, this.node);
+            if (!this._generated) {
+                this._generated = new Node(generatedName);
+                this._generated.parent = this.node;
+            }
+        }
+        return this._generated;
+    }
+
     protected spline: Spline = null;
     protected dirty = true;
 
@@ -19,14 +36,6 @@ export default class SplineUtilBase extends Component {
     }
 
     onLoad () {
-        let generatedName = 'generated ' + cc.js.getClassName(this);
-        this.generated = cc.find(generatedName, this.node);
-        if (!this.generated) {
-            this.generated = new Node(generatedName);
-            this.generated.parent = this.node;
-            // this.generated.is3DNode = true;
-        }
-
         let parent = this.node;
         while (parent) {
             this.spline = parent.getComponent(Spline);
@@ -48,6 +57,14 @@ export default class SplineUtilBase extends Component {
 
     setDirty () {
         this.dirty = true;
+    }
+
+    reset () {
+        if (this._generated) {
+            this._generated.parent = null;
+            this._generated = null;
+        }
+        this.setDirty();
     }
 
     update (dt) {
