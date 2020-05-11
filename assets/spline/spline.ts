@@ -210,7 +210,7 @@ export default class Spline extends Component {
         if (t < 0 || t > this.nodes.length - 1) {
             throw new Error(`Time must be between 0 and last node index (${this.nodes.length - 1}). Given time was {${t}}.`);
         }
-        let res = t;
+        let res = Math.floor(t);
         if (res == this.nodes.length - 1)
             res--;
         return res;
