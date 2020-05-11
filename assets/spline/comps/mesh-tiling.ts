@@ -36,11 +36,40 @@ export default class SplineMeshTiling extends BaseUtils {
 
 
     // "Translation to apply on the mesh before bending it."
-    public translation = cc.v3();
+    @property
+    public _translation = new Vec3;
+    @type(Vec3)
+    get translation () {
+        return this._translation;
+    }
+    set translation (value) {
+        this._translation = value;
+        this.reset();
+    }
+
     // "Rotation to apply on the mesh before bending it."
-    public rotation = cc.v3();
+    @property
+    public _rotation = new Vec3;
+    @type(Vec3)
+    get rotation () {
+        return this._rotation;
+    }
+    set rotation (value) {
+        this._rotation = value;
+        this.reset();
+    }
+
     // "Scale to apply on the mesh before bending it."
-    public scale = Vec3.ONE.clone();
+    @property
+    public _scale = Vec3.ONE.clone();
+    @type(Vec3)
+    get scale () {
+        return this._scale;
+    }
+    set scale (value) {
+        this._scale = value;
+        this.reset();
+    }
 
     // "If true, the mesh will be bent on play mode. If false, the bent mesh will be kept from the editor mode, allowing lighting baking."
     // public bool updateInPlayMode;

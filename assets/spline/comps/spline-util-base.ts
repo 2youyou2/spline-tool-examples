@@ -40,6 +40,8 @@ export default class SplineUtilBase extends Component {
         while (parent) {
             this.spline = parent.getComponent(Spline);
             if (this.spline) break;
+
+            parent = parent.parent;
         }
     }
 
