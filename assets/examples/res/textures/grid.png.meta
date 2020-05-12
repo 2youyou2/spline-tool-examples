@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "03dc0beb-de85-4b3f-8c2f-a2920cda3f8d",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "03dc0beb-de85-4b3f-8c2f-a2920cda3f8d@6c48a",
+      "displayName": "grid",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "03dc0beb-de85-4b3f-8c2f-a2920cda3f8d"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "03dc0beb-de85-4b3f-8c2f-a2920cda3f8d@6c48a"
+  }
+}

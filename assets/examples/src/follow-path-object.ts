@@ -14,6 +14,20 @@ export class followPath extends Component {
     @property
     duration = 5;
 
+    @property({
+        serializable: false
+    })
+    _previewInEditor = false;
+    @property
+    get previewInEditor () {
+        return this._previewInEditor;
+    }
+    set previewInEditor (value) {
+        this._previewInEditor = value;
+        //@ts-ignore
+        cce.Engine.repaintInEditMode();
+    }
+
     _time = 0;
 
     private _spline: Spline = null;
@@ -30,6 +44,13 @@ export class followPath extends Component {
 
     update (deltaTime: number) {
         if (!this.spline) return;
+        if (CC_EDITOR) {
+            if (!this.previewInEditor) {
+                return;
+            }
+            //@ts-ignore
+            cce.Engine.repaintInEditMode();
+        }
 
         let t = this._time / this.duration;
         t = t % (this.spline.nodes.length - 1);
