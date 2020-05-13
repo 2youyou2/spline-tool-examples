@@ -1,6 +1,7 @@
 import { _decorator, Component, Node, Vec3 } from 'cc';
 import Spline from './spline';
 import SplineNode from './spline-node';
+import pool from './utils/pool';
 
 const { ccclass, property, executeInEditMode } = _decorator;
 
@@ -89,17 +90,19 @@ export class splineSmoother extends Component {
         // Orientation is obtained by substracting the vectors to the previous and next way points,
         // which give an acceptable tangent in most situations.
         // Then we apply a part of the average magnitude of these two vectors, according to the smoothness we want.
-        let dir = new Vec3();
+        let dir = pool.Vec3.get().set(Vec3.ZERO);
+        let toPos = pool.Vec3.get();
+        
         let averageMagnitude = 0;
         if (index !== 0) {
             var previousPos = nodes[index - 1].position;
-            var toPrevious = pos.clone().subtract(previousPos);
+            var toPrevious = toPos.set(pos).subtract(previousPos);
             averageMagnitude += toPrevious.length();
             dir.add(toPrevious.normalize());
         }
         if (index != nodes.length - 1) {
             var nextPos = nodes[index + 1].position;
-            var toNext = pos.clone().subtract(nextPos);
+            var toNext = toPos.set(pos).subtract(nextPos);
             averageMagnitude += toNext.length();
             dir.subtract(toNext.normalize());
         }
@@ -112,6 +115,9 @@ export class splineSmoother extends Component {
 
         // We only set one direction at each spline node because SplineMesh only support mirrored direction between curves.
         node.direction = controlPoint;
+
+        pool.Vec3.put(dir);
+        pool.Vec3.put(toPos);
 
         this._smoothing = false;
     }

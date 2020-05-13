@@ -3,6 +3,7 @@ import { getNodeLocalPostion, getNodeWorldPostion } from './utils';
 
 import SplineNodeController from './spline-node-controller';
 import ContinuousLineController from './continuous-line-controller';
+import pool from '../utils/pool';
 
 class SplineGizmo extends Gizmo {
     moveTarget = null;
@@ -78,11 +79,15 @@ class SplineGizmo extends Gizmo {
             let samples = curve.getSamples();
             for (let j = 0; j < samples.length; j++) {
                 let sample = samples[j];
-                positions.push(getNodeWorldPostion(node, sample.location));
+                positions.push(getNodeWorldPostion(node, sample.location, pool.Vec3.get()));
             }
         }
 
         this.splineLineController.updatePoints(positions);
+
+        for (let i  = 0; i < positions.length; i++) {
+            pool.Vec3.put(positions[i]);
+        }
     }
 
     onShow () {

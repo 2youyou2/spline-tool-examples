@@ -3,7 +3,9 @@
   "importer": "scene",
   "imported": true,
   "uuid": "abbe8454-8bf0-4a8f-83eb-c17d0fb92f9f",
-  "files": [],
+  "files": [
+    ".json"
+  ],
   "subMetas": {},
   "userData": {}
 }

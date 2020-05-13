@@ -104,6 +104,17 @@ export default class SplineMeshTiling extends BaseUtils {
         this._updateMode();
     }
 
+    @property
+    _offset = 0;
+    @property
+    get offset () {
+        return this._offset;
+    }
+    set offset (value) {
+        this._offset = value;
+        this.setDirty();
+    }
+
     public compute () {
         if (!this.mesh) {
             return;
@@ -168,6 +179,7 @@ export default class SplineMeshTiling extends BaseUtils {
             .rotate(Quat.fromEuler(new Quat(), this.rotation.x, this.rotation.y, this.rotation.z))
             .scaleRes(this.scale);
         mb.mode = this.mode;
+        mb.offset = this.offset;
 
         let mc = node.getComponent(ModelComponent);
         if (!mc) {

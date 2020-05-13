@@ -1,5 +1,5 @@
-import { Node, Mat4, Vec3, Color } from 'cc';
-
+import { Node, Mat4, Vec3, Color, ModelComponent } from 'cc';
+import MeshUtility from '../utils/mesh-processing/mesh-utility';
 
 
 export function createLineShape (name, color?: Color) {
@@ -8,37 +8,36 @@ export function createLineShape (name, color?: Color) {
     name = name || 'Line';
     color = color || cc.Color.WHITE;
 
-    let mesh = createMesh({
+    let mesh = MeshUtility.createMesh({
         positions: [
             cc.v3(0,0),
             cc.v3(0,1),
             cc.v3(1,0),
             cc.v3(1,1),
         ],
+        indices: [ 0, 1, 1, 2, 2, 3],
         primitiveType: cc.GFXPrimitiveMode.LINE_LIST
     })
 
-    let node = create3DNode(name);
+    let node: Node = create3DNode(name);
     addMeshToNode(node, mesh);
     setMeshColor(node, color);
 
+    let model = node.getComponent(ModelComponent);
 
+    let indices = [];
+    //@ts-ignore
     node.updatePoints = function (points) {
-        let indices = [];
+        indices.length = 0;
         for (let i = 1; i < points.length; i++) {
             indices.push(i - 1, i);
         }
 
-        // updateVBAttr(node.modelComp, AttributeName.POSITION, points);
-        // updateIBAttr(node.modelComp, indices);
-
-        let mesh = createMesh({
+        MeshUtility.updateModelMesh(model, {
             positions: points,
             indices,
             primitiveType: cc.GFXPrimitiveMode.LINE_LIST
         })
-
-        node.modelComp.mesh = mesh;
     }
 
     return node;

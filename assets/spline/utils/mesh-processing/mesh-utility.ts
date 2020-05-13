@@ -18,9 +18,10 @@ let primitiveAttr = {
 function flat (arr: any) {
     if (arr && arr[0] !== undefined && arr[0] instanceof ValueType) {
         let ret = [];
-        arr.forEach(val => {
+        for (let i = 0, l = arr.length; i < l; i++) {
+            let val = arr[i];
             val.constructor.toArray(ret, val, ret.length);
-        })
+        }
         return ret;
     }
     return arr;

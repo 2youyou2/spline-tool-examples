@@ -44,7 +44,7 @@ export default class MeshBender extends Component {
     private intervalStart
     private intervalEnd;
     private curve: CubicBezierCurve;
-    private sampleCache: Map<number, CurveSample> = new Map();
+    private _sampleCache: Map<string, CurveSample> = new Map();
 
     private _source: SourceMesh;
     /// <summary>
@@ -66,6 +66,15 @@ export default class MeshBender extends Component {
         if (value == this._mode) return;
         this.setDirty();
         this._mode = value;
+    }
+
+    _offset = 0;
+    get offset () {
+        return this._offset;
+    }
+    set offset (value) {
+        this._offset = value;
+        this.setDirty();
     }
 
     constructor () {
@@ -173,21 +182,21 @@ export default class MeshBender extends Component {
     }
 
     private fillOnce () {
-        this.sampleCache.clear();
-        // for each mesh vertex, we found its projection on the curve
-        this.sampleCache.clear();
+        let sampleCache = this._sampleCache;
 
         let source = this.source;
-        var bentVertices: MeshVertex[] = [];
+        let bentVertices: MeshVertex[] = [];
+        let offset = this.offset;
         // for each mesh vertex, we found its projection on the curve
         for (let j = 0; j < source.vertices.length; j++) {
             let vert = source.vertices[j];
-            let distance = vert.position.x - source.minX;
-            let sample: CurveSample = this.sampleCache.get(distance);
+            let distance = vert.position.x - source.minX + offset;
+            let cacheKey = '' + distance;
+            let sample: CurveSample = sampleCache.get(cacheKey);
             if (!sample) {
                 if (!this.useSpline) {
                     if (distance > this.curve.length) continue;
-                    sample = this.curve.getSampleAtDistance(distance);
+                    sample = this.curve.getSampleAtDistance(distance, CurveSample.pool.get());
                 } else {
                     let distOnSpline = this.intervalStart + distance;
                     //if (true) { //spline.isLoop) {
@@ -199,9 +208,10 @@ export default class MeshBender extends Component {
                     //}
                     sample = this.spline.getSampleAtDistance(distOnSpline);
                 }
-                this.sampleCache.set(distance, sample);
+                sampleCache.set(cacheKey, sample);
             }
-            bentVertices.push(sample.getBent(vert));
+
+            bentVertices.push(sample.getBent(vert, MeshVertex.pool.get()));
         }
 
         MeshUtility.updateModelMesh(this.getComponent(ModelComponent), {
@@ -210,6 +220,14 @@ export default class MeshBender extends Component {
             uvs: source.mesh.readAttribute(0, GFXAttributeName.ATTR_TEX_COORD),
             indices: source.triangles
         });
+
+        for (let i = 0; i < bentVertices.length; i++) {
+            MeshVertex.pool.put(bentVertices[i]);
+        }
+        for (const iter of sampleCache) {
+            CurveSample.pool.put(iter[1]);
+        }
+        sampleCache.clear();
     }
 
     private fillRepeat () {
@@ -218,6 +236,7 @@ export default class MeshBender extends Component {
             (this.intervalEnd == 0 ? this.spline.length : this.intervalEnd) - this.intervalStart :
             this.curve.length;
         let repetitionCount = Math.floor(intervalLength / source.length);
+        let sampleCache = this._sampleCache;
 
         // building triangles and UVs for the repeated mesh
         let triangles: number[] = [];
@@ -232,19 +251,18 @@ export default class MeshBender extends Component {
 
         // computing vertices and normals
         let bentVertices: MeshVertex[] = [];
-        let offset = 0;
+        let offset = this.offset;
         for (let i = 0; i < repetitionCount; i++) {
-
-            this.sampleCache.clear();
             // for each mesh vertex, we found its projection on the curve
             for (let j = 0; j < source.vertices.length; j++) {
                 let vert = source.vertices[j];
                 let distance = vert.position.x - source.minX + offset;
-                let sample: CurveSample = this.sampleCache.get(distance);
+                let cacheKey = `${i}_${distance}`;
+                let sample: CurveSample = sampleCache.get(cacheKey);
                 if (!sample) {
                     if (!this.useSpline) {
                         if (distance > this.curve.length) continue;
-                        sample = this.curve.getSampleAtDistance(distance);
+                        sample = this.curve.getSampleAtDistance(distance, CurveSample.pool.get());
                     } else {
                         let distOnSpline = this.intervalStart + distance;
                         //if (true) { //spline.isLoop) {
@@ -256,10 +274,10 @@ export default class MeshBender extends Component {
                         //}
                         sample = this.spline.getSampleAtDistance(distOnSpline);
                     }
-                    this.sampleCache.set(distance, sample);
+                    sampleCache.set(cacheKey, sample);
                 }
 
-                bentVertices.push(sample.getBent(vert));
+                bentVertices.push(sample.getBent(vert, MeshVertex.pool.get()));
             }
             offset += source.length;
         }
@@ -270,21 +288,29 @@ export default class MeshBender extends Component {
             uvs: uv,
             indices: triangles
         });
+
+        for (let i = 0; i < bentVertices.length; i++) {
+            MeshVertex.pool.put(bentVertices[i]);
+        }
+        for (const iter of sampleCache) {
+            CurveSample.pool.put(iter[1]);
+        }
+        sampleCache.clear();
     }
 
     private fillStretch () {
-        this.sampleCache.clear();
-
         let bentVertices: MeshVertex[] = [];
         let source = this.source;
+        let sampleCache = this._sampleCache;
         // for each mesh vertex, we found its projection on the curve
         for (let i = 0; i < source.vertices.length; i++) {
             let vert = source.vertices[i];
             let distanceRate = source.length == 0 ? 0 : Math.abs(vert.position.x - source.minX) / source.length;
-            let sample: CurveSample = this.sampleCache.get(distanceRate);
+            let cacheKey = '' + distanceRate;
+            let sample: CurveSample = sampleCache.get(cacheKey);
             if (!sample) {
                 if (!this.useSpline) {
-                    sample = this.curve.getSampleAtDistance(this.curve.length * distanceRate);
+                    sample = this.curve.getSampleAtDistance(this.curve.length * distanceRate, CurveSample.pool.get());
                 } else {
                     let intervalLength = this.intervalEnd == 0 ? this.spline.length - this.intervalStart : this.intervalEnd - this.intervalStart;
                     let distOnSpline = this.intervalStart + intervalLength * distanceRate;
@@ -295,10 +321,10 @@ export default class MeshBender extends Component {
 
                     sample = this.spline.getSampleAtDistance(distOnSpline);
                 }
-                this.sampleCache.set(distanceRate, sample);
+                sampleCache.set(cacheKey, sample);
             }
 
-            bentVertices.push(sample.getBent(vert));
+            bentVertices.push(sample.getBent(vert, MeshVertex.pool.get()));
         }
 
         MeshUtility.updateModelMesh(this.getComponent(ModelComponent), {
@@ -307,5 +333,13 @@ export default class MeshBender extends Component {
             uvs: source.mesh.readAttribute(0, GFXAttributeName.ATTR_TEX_COORD),
             indices: source.triangles
         });
+
+        for (let i = 0; i < bentVertices.length; i++) {
+            MeshVertex.pool.put(bentVertices[i]);
+        }
+        for (const iter of sampleCache) {
+            CurveSample.pool.put(iter[1]);
+        }
+        sampleCache.clear();
     }
 }

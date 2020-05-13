@@ -5,6 +5,7 @@ import CurveSample from './curve-sample';
 
 import Event from './utils/event';
 import Mathf from './utils/mathf';
+import pool from './utils/pool';
 
 const STEP_COUNT = 30;
 const T_STEP = 1.0 / STEP_COUNT;
@@ -59,8 +60,9 @@ export default class CubicBezierCurve {
     /// Convinent method to get the third control point of the curve, as the direction of the end spline node indicates the starting tangent of the next curve.
     /// </summary>
     /// <returns></returns>
-    public getInverseDirection (): Vec3 {
-        return new Vec3(this.n2.position).multiplyScalar(2).subtract(this.n2.direction);
+    public getInverseDirection (out?: Vec3): Vec3 {
+        out = out || new Vec3();
+        return out.set(this.n2.position).multiplyScalar(2).subtract(this.n2.direction);
     }
 
     /// <summary>
@@ -68,23 +70,27 @@ export default class CubicBezierCurve {
     /// </summary>
     /// <param name="t"></param>
     /// <returns></returns>
-    private getLocation (t: number): Vec3 {
+    private getLocation (t: number, out?: Vec3): Vec3 {
+        out = out || new Vec3();
+
         let omt = 1 - t;
         let omt2 = omt * omt;
         let t2 = t * t;
 
-        // return n1.Position * (omt2 * omt) +
-        //         n1.Direction * (3f * omt2 * t) +
-        //         GetInverseDirection() * (3f * omt * t2) +
-        //         n2.Position * (t2 * t);
+        let tmpN1Direction = pool.Vec3.get();
+        let tmpN2Position = pool.Vec3.get();
+        let tmpInverseDirection = pool.Vec3.get();
 
-        return new Vec3(this.n1.position).multiplyScalar(omt2 * omt).add(
-            new Vec3(this.n1.direction).multiplyScalar(3 * omt2 * t)
-        ).add(
-            this.getInverseDirection().multiplyScalar(3 * omt * t2)
-        ).add(
-            new Vec3(this.n2.position).multiplyScalar(t2 * t)
-        );
+        out.set(this.n1.position).multiplyScalar(omt2 * omt);
+        out.add(tmpN1Direction.set(this.n1.direction).multiplyScalar(3 * omt2 * t));
+        out.add(this.getInverseDirection(tmpInverseDirection).multiplyScalar(3 * omt * t2));
+        out.add(tmpN2Position.set(this.n2.position).multiplyScalar(t2 * t));
+
+        pool.Vec3.put(tmpN1Direction);
+        pool.Vec3.put(tmpN2Position);
+        pool.Vec3.put(tmpInverseDirection);
+
+        return out;
     }
 
     /// <summary>
@@ -92,7 +98,9 @@ export default class CubicBezierCurve {
     /// </summary>
     /// <param name="t"></param>
     /// <returns></returns>
-    private getTangent (t: number): Vec3 {
+    private getTangent (t: number, out?: Vec3): Vec3 {
+        out = out || new Vec3();
+
         let omt = 1 - t;
         let omt2 = omt * omt;
         let t2 = t * t;
@@ -124,33 +132,39 @@ export default class CubicBezierCurve {
 
     public computeSamples () {
         let samples = this.samples;
-        samples.length = 0;
+        samples.length = STEP_COUNT;
         this.length = 0;
         let previousPosition = this.getLocation(0);
-        for (let t = 0; t < 1; t += T_STEP) {
+        for (let i = 0; i <= STEP_COUNT; i++) {
+            let t = i * T_STEP;
             let position = this.getLocation(t);
             this.length += Vec3.distance(previousPosition, position);
             previousPosition = position;
-            samples.push(this.createSample(this.length, t));
+
+            if (!samples[i]) {
+                samples[i] = new CurveSample();
+            }
+            this.updateSample(samples[i], this.length, t);
         }
-        this.length += Vec3.distance(previousPosition, this.getLocation(1));
-        samples.push(this.createSample(this.length, 1));
+        // this.length += Vec3.distance(previousPosition, this.getLocation(1));
+        // samples.push(this.createSample(this.length, 1));
 
         this.changed.invoke();
     }
 
-    private createSample (distance: number, time: number): CurveSample {
-        return new CurveSample(
+    private updateSample (sample: CurveSample, distance: number, time: number): CurveSample {
+        return sample.set(
             this.getLocation(time),
             this.getTangent(time),
             this.getUp(time),
             this.getScale(time),
             this.getRoll(time),
             distance,
-            time);
+            time
+        );
     }
 
-    public getSample (time: number): CurveSample {
+    public getSample (time: number, out?: CurveSample): CurveSample {
         assertTimeInBounds(time);
         let samples = this.samples;
         let previous = samples[0];
@@ -168,10 +182,10 @@ export default class CubicBezierCurve {
         }
         let t = next == previous ? 0 : (time - previous.timeInCurve) / (next.timeInCurve - previous.timeInCurve);
 
-        return CurveSample.Lerp(previous, next, t);
+        return CurveSample.lerp(previous, next, t, out);
     }
 
-    public getSampleAtDistance (d: number): CurveSample {
+    public getSampleAtDistance (d: number, out?: CurveSample): CurveSample {
         if (d < 0 || d > this.length)
             throw new Error("Distance must be positive and less than curve length. Length = " + this.length + ", given distance was " + d);
 
@@ -195,7 +209,7 @@ export default class CubicBezierCurve {
         }
         let t = next == previous ? 0 : (d - previous.distanceInCurve) / (next.distanceInCurve - previous.distanceInCurve);
 
-        return CurveSample.Lerp(previous, next, t);
+        return CurveSample.lerp(previous, next, t, out);
     }
 
 
