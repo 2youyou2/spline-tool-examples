@@ -1,15 +1,14 @@
-import { _decorator, Component, Node, Vec3, Mat4 } from 'cc';
-import Spline from '../../spline/spline';
+import { _decorator, Component, Node, Vec3, Mat4, cclegacy } from 'cc';
+import Spline from '../../src/spline';
+import SplineMeshTiling from '../../src/comps/mesh-tiling';
 const { ccclass, property, type, executeInEditMode } = _decorator;
 
 let tempPos = new Vec3();
 let tempMat4 = new Mat4();
 
-@ccclass('followPath')
+@ccclass('followPathMesh')
 @executeInEditMode
-export class followPath extends Component {
-    @type(Node)
-    target: Node = null
+export class followPathMesh extends Component {
 
     @property
     duration = 5;
@@ -28,7 +27,7 @@ export class followPath extends Component {
         cce.Engine.repaintInEditMode();
     }
 
-    _time = 0;
+    _offset = 0;
 
     private _spline: Spline = null;
     public get spline () {
@@ -36,6 +35,14 @@ export class followPath extends Component {
             this._spline = this.getComponent(Spline);
         }
         return this._spline;
+    }
+
+    private _meshTilling: SplineMeshTiling = null;
+    public get meshTilling () {
+        if (!this._meshTilling) {
+            this._meshTilling = this.getComponent(SplineMeshTiling);
+        }
+        return this._meshTilling;
     }
 
     start () {
@@ -52,18 +59,9 @@ export class followPath extends Component {
             cce.Engine.repaintInEditMode();
         }
 
-        let t = this._time / this.duration;
-        t = t % (this.spline.nodes.length - 1);
-        let sample = this.spline.getSample(t);
-        let matrix = this.spline.node.worldMatrix;
-        Vec3.transformMat4(tempPos, sample.location, matrix);
-
-        let targetParentMatrix = this.target.parent.worldMatrix;
-        Mat4.invert(tempMat4, targetParentMatrix)
-        Vec3.transformMat4(tempPos, tempPos, tempMat4);
-
-        this.target.position = tempPos;
-
-        this._time += deltaTime;
+        let step = this.spline.length / 5 / 60;
+        this.meshTilling.offset = this._offset;
+        this._offset += step;
+        this._offset = this._offset % this.spline.length;
     }
 }

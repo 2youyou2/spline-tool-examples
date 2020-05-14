@@ -3,7 +3,9 @@
   "importer": "prefab",
   "imported": true,
   "uuid": "dba3bb2b-1449-4c99-a1c1-0f72e27522e5",
-  "files": [],
+  "files": [
+    ".json"
+  ],
   "subMetas": {},
   "userData": {}
 }

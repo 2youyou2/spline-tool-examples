@@ -10,6 +10,6 @@
   "subMetas": {},
   "userData": {
     "importAsPlugin": false,
-    "moduleId": "project:///assets/examples/src/follow-path-mesh.js"
+    "moduleId": "project:///assets/spline/examples/src/follow-path-mesh.js"
   }
 }
