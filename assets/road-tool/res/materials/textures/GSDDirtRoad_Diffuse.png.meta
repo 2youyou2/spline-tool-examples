@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "94e9453f-f185-4f2c-92e2-1e184c720d66",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "94e9453f-f185-4f2c-92e2-1e184c720d66@6c48a",
+      "displayName": "GSDDirtRoad_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "94e9453f-f185-4f2c-92e2-1e184c720d66"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "94e9453f-f185-4f2c-92e2-1e184c720d66@6c48a"
+  }
+}

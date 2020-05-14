@@ -1,0 +1,123 @@
+{
+  "ver": "1.3.20",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "6b0d0c64-a105-478d-a6b1-081de22e0759",
+  "files": [],
+  "subMetas": {
+    "29459": {
+      "importer": "gltf-embeded-image",
+      "uuid": "6b0d0c64-a105-478d-a6b1-081de22e0759@29459",
+      "displayName": "",
+      "id": "29459",
+      "name": "Map #7651.image",
+      "ver": "1.0.2",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "23d22": {
+      "importer": "gltf-mesh",
+      "uuid": "6b0d0c64-a105-478d-a6b1-081de22e0759@23d22",
+      "displayName": "",
+      "id": "23d22",
+      "name": "GSDTrafficCone.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "1e155": {
+      "importer": "texture",
+      "uuid": "6b0d0c64-a105-478d-a6b1-081de22e0759@1e155",
+      "displayName": "",
+      "id": "1e155",
+      "name": "Map #7651.texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "6b0d0c64-a105-478d-a6b1-081de22e0759@29459"
+      }
+    },
+    "883e3": {
+      "importer": "gltf-material",
+      "uuid": "6b0d0c64-a105-478d-a6b1-081de22e0759@883e3",
+      "displayName": "",
+      "id": "883e3",
+      "name": "14 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "f2df1": {
+      "importer": "gltf-scene",
+      "uuid": "6b0d0c64-a105-478d-a6b1-081de22e0759@f2df1",
+      "displayName": "",
+      "id": "f2df1",
+      "name": "GSDTrafficCone.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #7651",
+        "uri": "6b0d0c64-a105-478d-a6b1-081de22e0759@29459"
+      }
+    ],
+    "redirect": "6b0d0c64-a105-478d-a6b1-081de22e0759@f2df1",
+    "assetFinder": {
+      "meshes": [
+        "6b0d0c64-a105-478d-a6b1-081de22e0759@23d22"
+      ],
+      "skeletons": [],
+      "textures": [
+        "6b0d0c64-a105-478d-a6b1-081de22e0759@1e155"
+      ],
+      "materials": [
+        "6b0d0c64-a105-478d-a6b1-081de22e0759@883e3"
+      ],
+      "scenes": [
+        "6b0d0c64-a105-478d-a6b1-081de22e0759@f2df1"
+      ]
+    }
+  }
+}

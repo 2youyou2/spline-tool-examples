@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "96244d1d-3b46-4bc5-9a86-2e576595e9eb",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "96244d1d-3b46-4bc5-9a86-2e576595e9eb@6c48a",
+      "displayName": "GSDRailing4_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "96244d1d-3b46-4bc5-9a86-2e576595e9eb"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "96244d1d-3b46-4bc5-9a86-2e576595e9eb@6c48a"
+  }
+}

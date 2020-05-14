@@ -1,0 +1,123 @@
+{
+  "ver": "1.3.20",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "cecfaea1-4fa6-470c-88b6-f327e073ca9b",
+  "files": [],
+  "subMetas": {
+    "2dd28": {
+      "importer": "gltf-mesh",
+      "uuid": "cecfaea1-4fa6-470c-88b6-f327e073ca9b@2dd28",
+      "displayName": "",
+      "id": "2dd28",
+      "name": "Cone001.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "a2364": {
+      "importer": "gltf-embeded-image",
+      "uuid": "cecfaea1-4fa6-470c-88b6-f327e073ca9b@a2364",
+      "displayName": "",
+      "id": "a2364",
+      "name": "Map #1.image",
+      "ver": "1.0.2",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "6e70c": {
+      "importer": "texture",
+      "uuid": "cecfaea1-4fa6-470c-88b6-f327e073ca9b@6e70c",
+      "displayName": "",
+      "id": "6e70c",
+      "name": "Map #1.texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "cecfaea1-4fa6-470c-88b6-f327e073ca9b@a2364"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "cecfaea1-4fa6-470c-88b6-f327e073ca9b@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "deb10": {
+      "importer": "gltf-scene",
+      "uuid": "cecfaea1-4fa6-470c-88b6-f327e073ca9b@deb10",
+      "displayName": "",
+      "id": "deb10",
+      "name": "GSDStreetLight_TrafficLight.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #1",
+        "uri": "cecfaea1-4fa6-470c-88b6-f327e073ca9b@a2364"
+      }
+    ],
+    "redirect": "cecfaea1-4fa6-470c-88b6-f327e073ca9b@deb10",
+    "assetFinder": {
+      "meshes": [
+        "cecfaea1-4fa6-470c-88b6-f327e073ca9b@2dd28"
+      ],
+      "skeletons": [],
+      "textures": [
+        "cecfaea1-4fa6-470c-88b6-f327e073ca9b@6e70c"
+      ],
+      "materials": [
+        "cecfaea1-4fa6-470c-88b6-f327e073ca9b@d90a4"
+      ],
+      "scenes": [
+        "cecfaea1-4fa6-470c-88b6-f327e073ca9b@deb10"
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "ver": "1.3.20",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "71786af4-9420-4cca-8c8c-b06ac36c8a4d",
+  "files": [],
+  "subMetas": {
+    "861ed": {
+      "importer": "gltf-mesh",
+      "uuid": "71786af4-9420-4cca-8c8c-b06ac36c8a4d@861ed",
+      "displayName": "",
+      "id": "861ed",
+      "name": "GSDSidewalk-Cap.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "a2364": {
+      "importer": "gltf-embeded-image",
+      "uuid": "71786af4-9420-4cca-8c8c-b06ac36c8a4d@a2364",
+      "displayName": "",
+      "id": "a2364",
+      "name": "Map #1.image",
+      "ver": "1.0.2",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "6e70c": {
+      "importer": "texture",
+      "uuid": "71786af4-9420-4cca-8c8c-b06ac36c8a4d@6e70c",
+      "displayName": "",
+      "id": "6e70c",
+      "name": "Map #1.texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "71786af4-9420-4cca-8c8c-b06ac36c8a4d@a2364"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "71786af4-9420-4cca-8c8c-b06ac36c8a4d@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "fdcb5": {
+      "importer": "gltf-scene",
+      "uuid": "71786af4-9420-4cca-8c8c-b06ac36c8a4d@fdcb5",
+      "displayName": "",
+      "id": "fdcb5",
+      "name": "GSDSidewalk-Cap.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #1",
+        "uri": "71786af4-9420-4cca-8c8c-b06ac36c8a4d@a2364"
+      }
+    ],
+    "redirect": "71786af4-9420-4cca-8c8c-b06ac36c8a4d@fdcb5",
+    "assetFinder": {
+      "meshes": [
+        "71786af4-9420-4cca-8c8c-b06ac36c8a4d@861ed"
+      ],
+      "skeletons": [],
+      "textures": [
+        "71786af4-9420-4cca-8c8c-b06ac36c8a4d@6e70c"
+      ],
+      "materials": [
+        "71786af4-9420-4cca-8c8c-b06ac36c8a4d@d90a4"
+      ],
+      "scenes": [
+        "71786af4-9420-4cca-8c8c-b06ac36c8a4d@fdcb5"
+      ]
+    }
+  }
+}

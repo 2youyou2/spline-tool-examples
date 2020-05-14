@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.20",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "8912996b-c3c4-46d9-a966-41c749844ce8",
+  "files": [],
+  "subMetas": {
+    "ec343": {
+      "importer": "gltf-mesh",
+      "uuid": "8912996b-c3c4-46d9-a966-41c749844ce8@ec343",
+      "displayName": "",
+      "id": "ec343",
+      "name": "BridgePillar2-4L.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ea6e2": {
+      "importer": "gltf-material",
+      "uuid": "8912996b-c3c4-46d9-a966-41c749844ce8@ea6e2",
+      "displayName": "",
+      "id": "ea6e2",
+      "name": "DefaultMaterial.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "4d905": {
+      "importer": "gltf-scene",
+      "uuid": "8912996b-c3c4-46d9-a966-41c749844ce8@4d905",
+      "displayName": "",
+      "id": "4d905",
+      "name": "BridgePillar1-4L.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "8912996b-c3c4-46d9-a966-41c749844ce8@4d905",
+    "assetFinder": {
+      "meshes": [
+        "8912996b-c3c4-46d9-a966-41c749844ce8@ec343"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "8912996b-c3c4-46d9-a966-41c749844ce8@ea6e2"
+      ],
+      "scenes": [
+        "8912996b-c3c4-46d9-a966-41c749844ce8@4d905"
+      ]
+    }
+  }
+}

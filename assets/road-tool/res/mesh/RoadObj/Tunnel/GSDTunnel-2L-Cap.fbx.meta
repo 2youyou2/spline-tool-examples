@@ -1,0 +1,123 @@
+{
+  "ver": "1.3.20",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "9006d6db-c837-4217-8271-5250b8235810",
+  "files": [],
+  "subMetas": {
+    "6594d": {
+      "importer": "gltf-mesh",
+      "uuid": "9006d6db-c837-4217-8271-5250b8235810@6594d",
+      "displayName": "",
+      "id": "6594d",
+      "name": "GSDTunnel-2L-Cap.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "873ed": {
+      "importer": "gltf-embeded-image",
+      "uuid": "9006d6db-c837-4217-8271-5250b8235810@873ed",
+      "displayName": "",
+      "id": "873ed",
+      "name": "Map #6.image",
+      "ver": "1.0.2",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "53e01": {
+      "importer": "texture",
+      "uuid": "9006d6db-c837-4217-8271-5250b8235810@53e01",
+      "displayName": "",
+      "id": "53e01",
+      "name": "Map #6.texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "9006d6db-c837-4217-8271-5250b8235810@873ed"
+      }
+    },
+    "c4114": {
+      "importer": "gltf-material",
+      "uuid": "9006d6db-c837-4217-8271-5250b8235810@c4114",
+      "displayName": "",
+      "id": "c4114",
+      "name": "07 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "7a155": {
+      "importer": "gltf-scene",
+      "uuid": "9006d6db-c837-4217-8271-5250b8235810@7a155",
+      "displayName": "",
+      "id": "7a155",
+      "name": "GSDTunnel-2L-Cap.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #6",
+        "uri": "9006d6db-c837-4217-8271-5250b8235810@873ed"
+      }
+    ],
+    "redirect": "9006d6db-c837-4217-8271-5250b8235810@7a155",
+    "assetFinder": {
+      "meshes": [
+        "9006d6db-c837-4217-8271-5250b8235810@6594d"
+      ],
+      "skeletons": [],
+      "textures": [
+        "9006d6db-c837-4217-8271-5250b8235810@53e01"
+      ],
+      "materials": [
+        "9006d6db-c837-4217-8271-5250b8235810@c4114"
+      ],
+      "scenes": [
+        "9006d6db-c837-4217-8271-5250b8235810@7a155"
+      ]
+    }
+  }
+}

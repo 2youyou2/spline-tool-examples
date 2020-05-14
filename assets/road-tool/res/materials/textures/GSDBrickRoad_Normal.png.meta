@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "c43da8d5-02a1-4437-ba80-c414caf58508",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "c43da8d5-02a1-4437-ba80-c414caf58508@6c48a",
+      "displayName": "GSDBrickRoad_Normal",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "c43da8d5-02a1-4437-ba80-c414caf58508"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "c43da8d5-02a1-4437-ba80-c414caf58508@6c48a"
+  }
+}

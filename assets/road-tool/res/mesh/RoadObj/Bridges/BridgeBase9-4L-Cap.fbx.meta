@@ -1,0 +1,123 @@
+{
+  "ver": "1.3.20",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "178951d3-ccf2-435d-942c-74e15e149563",
+  "files": [],
+  "subMetas": {
+    "827c4": {
+      "importer": "gltf-mesh",
+      "uuid": "178951d3-ccf2-435d-942c-74e15e149563@827c4",
+      "displayName": "",
+      "id": "827c4",
+      "name": "BridgeBase9-4L-Cap.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "178951d3-ccf2-435d-942c-74e15e149563@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.2",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "178951d3-ccf2-435d-942c-74e15e149563@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "178951d3-ccf2-435d-942c-74e15e149563@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "178951d3-ccf2-435d-942c-74e15e149563@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ae9f4": {
+      "importer": "gltf-scene",
+      "uuid": "178951d3-ccf2-435d-942c-74e15e149563@ae9f4",
+      "displayName": "",
+      "id": "ae9f4",
+      "name": "BridgeBase9-4L-Cap.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "178951d3-ccf2-435d-942c-74e15e149563@32d96"
+      }
+    ],
+    "redirect": "178951d3-ccf2-435d-942c-74e15e149563@ae9f4",
+    "assetFinder": {
+      "meshes": [
+        "178951d3-ccf2-435d-942c-74e15e149563@827c4"
+      ],
+      "skeletons": [],
+      "textures": [
+        "178951d3-ccf2-435d-942c-74e15e149563@ab932"
+      ],
+      "materials": [
+        "178951d3-ccf2-435d-942c-74e15e149563@d90a4"
+      ],
+      "scenes": [
+        "178951d3-ccf2-435d-942c-74e15e149563@ae9f4"
+      ]
+    }
+  }
+}

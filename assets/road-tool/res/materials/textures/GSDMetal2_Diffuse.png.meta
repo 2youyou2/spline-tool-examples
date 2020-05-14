@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "8a57c8e0-7964-497c-a1a8-132d07ae9b63",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "8a57c8e0-7964-497c-a1a8-132d07ae9b63@6c48a",
+      "displayName": "GSDMetal2_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "8a57c8e0-7964-497c-a1a8-132d07ae9b63"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "8a57c8e0-7964-497c-a1a8-132d07ae9b63@6c48a"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.20",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "e453ccc7-e573-4992-8fb8-faf03cfb1708",
+  "files": [],
+  "subMetas": {
+    "21578": {
+      "importer": "gltf-mesh",
+      "uuid": "e453ccc7-e573-4992-8fb8-faf03cfb1708@21578",
+      "displayName": "",
+      "id": "21578",
+      "name": "CableTest1.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "55869": {
+      "importer": "gltf-scene",
+      "uuid": "e453ccc7-e573-4992-8fb8-faf03cfb1708@55869",
+      "displayName": "",
+      "id": "55869",
+      "name": "CableTest2.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ea6e2": {
+      "importer": "gltf-material",
+      "uuid": "e453ccc7-e573-4992-8fb8-faf03cfb1708@ea6e2",
+      "displayName": "",
+      "id": "ea6e2",
+      "name": "DefaultMaterial.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "e453ccc7-e573-4992-8fb8-faf03cfb1708@55869",
+    "assetFinder": {
+      "meshes": [
+        "e453ccc7-e573-4992-8fb8-faf03cfb1708@21578"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "e453ccc7-e573-4992-8fb8-faf03cfb1708@ea6e2"
+      ],
+      "scenes": [
+        "e453ccc7-e573-4992-8fb8-faf03cfb1708@55869"
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "ver": "1.3.20",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "10e0b5ae-9774-4926-9d17-8a2e888b272e",
+  "files": [],
+  "subMetas": {
+    "50961": {
+      "importer": "gltf-scene",
+      "uuid": "10e0b5ae-9774-4926-9d17-8a2e888b272e@50961",
+      "displayName": "",
+      "id": "50961",
+      "name": "BridgePillar2-4L.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ec343": {
+      "importer": "gltf-mesh",
+      "uuid": "10e0b5ae-9774-4926-9d17-8a2e888b272e@ec343",
+      "displayName": "",
+      "id": "ec343",
+      "name": "BridgePillar2-4L.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "10e0b5ae-9774-4926-9d17-8a2e888b272e@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.2",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "10e0b5ae-9774-4926-9d17-8a2e888b272e@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "10e0b5ae-9774-4926-9d17-8a2e888b272e@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "10e0b5ae-9774-4926-9d17-8a2e888b272e@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "10e0b5ae-9774-4926-9d17-8a2e888b272e@32d96"
+      }
+    ],
+    "redirect": "10e0b5ae-9774-4926-9d17-8a2e888b272e@50961",
+    "assetFinder": {
+      "meshes": [
+        "10e0b5ae-9774-4926-9d17-8a2e888b272e@ec343"
+      ],
+      "skeletons": [],
+      "textures": [
+        "10e0b5ae-9774-4926-9d17-8a2e888b272e@ab932"
+      ],
+      "materials": [
+        "10e0b5ae-9774-4926-9d17-8a2e888b272e@d90a4"
+      ],
+      "scenes": [
+        "10e0b5ae-9774-4926-9d17-8a2e888b272e@50961"
+      ]
+    }
+  }
+}
