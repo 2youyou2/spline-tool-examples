@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "fb6e54c8-a7f3-4dfe-90d3-e0a179175c24",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "fb6e54c8-a7f3-4dfe-90d3-e0a179175c24@6c48a",
+      "displayName": "GSDFedSign-396-Trucks60kmh_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "fb6e54c8-a7f3-4dfe-90d3-e0a179175c24"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "fb6e54c8-a7f3-4dfe-90d3-e0a179175c24@6c48a"
+  }
+}

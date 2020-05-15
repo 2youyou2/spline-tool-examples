@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "a3ae548b-084e-468d-a5b6-a19a6cd01932",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "a3ae548b-084e-468d-a5b6-a19a6cd01932@6c48a",
+      "displayName": "GSDFedSign-396-EndSchoolZone_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "a3ae548b-084e-468d-a5b6-a19a6cd01932"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "a3ae548b-084e-468d-a5b6-a19a6cd01932@6c48a"
+  }
+}

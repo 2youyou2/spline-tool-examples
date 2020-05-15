@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "bd891ba5-0c99-4aaf-beef-111607735410",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "bd891ba5-0c99-4aaf-beef-111607735410@6c48a",
+      "displayName": "GSDFedSign-330-Speed80kmh_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bd891ba5-0c99-4aaf-beef-111607735410"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "bd891ba5-0c99-4aaf-beef-111607735410@6c48a"
+  }
+}

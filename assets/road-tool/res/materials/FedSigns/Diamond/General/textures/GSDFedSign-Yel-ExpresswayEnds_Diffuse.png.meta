@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "3f7d6278-0ece-4826-9fa2-de5c212ac6cf",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "3f7d6278-0ece-4826-9fa2-de5c212ac6cf@6c48a",
+      "displayName": "GSDFedSign-Yel-ExpresswayEnds_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "3f7d6278-0ece-4826-9fa2-de5c212ac6cf"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "3f7d6278-0ece-4826-9fa2-de5c212ac6cf@6c48a"
+  }
+}

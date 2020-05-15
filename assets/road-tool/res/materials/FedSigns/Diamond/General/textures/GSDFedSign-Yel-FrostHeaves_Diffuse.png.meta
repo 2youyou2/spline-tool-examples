@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "85b4071b-d270-4bb3-9ba6-9dfc94c5a310",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "85b4071b-d270-4bb3-9ba6-9dfc94c5a310@6c48a",
+      "displayName": "GSDFedSign-Yel-FrostHeaves_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "85b4071b-d270-4bb3-9ba6-9dfc94c5a310"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "85b4071b-d270-4bb3-9ba6-9dfc94c5a310@6c48a"
+  }
+}

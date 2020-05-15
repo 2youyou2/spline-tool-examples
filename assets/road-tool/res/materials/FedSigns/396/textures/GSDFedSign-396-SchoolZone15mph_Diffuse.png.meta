@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "6aa18b50-d8c6-4f3f-b46f-b9cd7eee101b",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "6aa18b50-d8c6-4f3f-b46f-b9cd7eee101b@6c48a",
+      "displayName": "GSDFedSign-396-SchoolZone15mph_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "6aa18b50-d8c6-4f3f-b46f-b9cd7eee101b"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "6aa18b50-d8c6-4f3f-b46f-b9cd7eee101b@6c48a"
+  }
+}

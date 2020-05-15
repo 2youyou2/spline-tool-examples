@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "f447b72c-66c0-4cad-844d-c81ac6f40fee",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "f447b72c-66c0-4cad-844d-c81ac6f40fee@6c48a",
+      "displayName": "GSDInterCenter-Left-2L-3",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f447b72c-66c0-4cad-844d-c81ac6f40fee"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "f447b72c-66c0-4cad-844d-c81ac6f40fee@6c48a"
+  }
+}

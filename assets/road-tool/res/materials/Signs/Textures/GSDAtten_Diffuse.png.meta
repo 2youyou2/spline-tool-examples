@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "610b1494-0bcc-4cfd-bfc0-4687745897e6",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "610b1494-0bcc-4cfd-bfc0-4687745897e6@6c48a",
+      "displayName": "GSDAtten_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "610b1494-0bcc-4cfd-bfc0-4687745897e6"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "610b1494-0bcc-4cfd-bfc0-4687745897e6@6c48a"
+  }
+}

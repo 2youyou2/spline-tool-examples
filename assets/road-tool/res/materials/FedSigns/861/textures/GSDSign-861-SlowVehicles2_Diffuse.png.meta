@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d7345662-09cb-4aaf-ac16-f20aee40685a",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d7345662-09cb-4aaf-ac16-f20aee40685a@6c48a",
+      "displayName": "GSDSign-861-SlowVehicles2_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "d7345662-09cb-4aaf-ac16-f20aee40685a"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "d7345662-09cb-4aaf-ac16-f20aee40685a@6c48a"
+  }
+}

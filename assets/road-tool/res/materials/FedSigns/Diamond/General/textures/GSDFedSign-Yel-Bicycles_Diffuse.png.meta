@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "5ee52d0d-d752-40eb-b49d-7f2a8d7121f8",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "5ee52d0d-d752-40eb-b49d-7f2a8d7121f8@6c48a",
+      "displayName": "GSDFedSign-Yel-Bicycles_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5ee52d0d-d752-40eb-b49d-7f2a8d7121f8"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "5ee52d0d-d752-40eb-b49d-7f2a8d7121f8@6c48a"
+  }
+}

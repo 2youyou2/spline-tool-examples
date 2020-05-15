@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "4f069dec-4b71-4561-b1c7-2dba7e5b03c8",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "4f069dec-4b71-4561-b1c7-2dba7e5b03c8@6c48a",
+      "displayName": "GSDFedSign-988-RoadWorkNext5_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "4f069dec-4b71-4561-b1c7-2dba7e5b03c8"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "4f069dec-4b71-4561-b1c7-2dba7e5b03c8@6c48a"
+  }
+}

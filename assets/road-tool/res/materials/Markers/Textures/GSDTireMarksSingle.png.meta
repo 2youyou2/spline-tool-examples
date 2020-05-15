@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d07f418d-4f20-4341-99f1-af62f15d94f3",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d07f418d-4f20-4341-99f1-af62f15d94f3@6c48a",
+      "displayName": "GSDTireMarksSingle",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "d07f418d-4f20-4341-99f1-af62f15d94f3"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "d07f418d-4f20-4341-99f1-af62f15d94f3@6c48a"
+  }
+}

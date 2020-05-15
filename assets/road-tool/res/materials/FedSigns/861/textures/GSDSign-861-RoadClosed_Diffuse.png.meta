@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "db0b5caf-b39a-445f-a04f-511f86be8820",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "db0b5caf-b39a-445f-a04f-511f86be8820@6c48a",
+      "displayName": "GSDSign-861-RoadClosed_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "db0b5caf-b39a-445f-a04f-511f86be8820"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "db0b5caf-b39a-445f-a04f-511f86be8820@6c48a"
+  }
+}

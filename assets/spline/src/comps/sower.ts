@@ -9,7 +9,7 @@ const { Quat, Vec3 } = cc;
 @executeInEditMode
 export default class NewClass extends BaseUtils {
     @float
-    _spacing = 1000;
+    _spacing = 10;
     @float
     _spacingRange = 0;
     @float
@@ -73,7 +73,7 @@ export default class NewClass extends BaseUtils {
             let rangedScale = this.scale + Math.random() * this.scaleRange;
             rangedScale *= Math.min(sample.scale.x, sample.scale.y);
             node.setScale(rangedScale, rangedScale, rangedScale);
-
+            
             // rotate with random yaw
             if (this.isRandomYaw) {
                 node.eulerAngles = cc.v3(0, 0, (Math.random() - 0.5) * 360);

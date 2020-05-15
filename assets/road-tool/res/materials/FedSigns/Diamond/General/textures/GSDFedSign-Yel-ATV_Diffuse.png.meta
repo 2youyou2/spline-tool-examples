@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "52b8c9f7-2960-40f5-8646-2684ef2e93bb",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "52b8c9f7-2960-40f5-8646-2684ef2e93bb@6c48a",
+      "displayName": "GSDFedSign-Yel-ATV_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "52b8c9f7-2960-40f5-8646-2684ef2e93bb"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "52b8c9f7-2960-40f5-8646-2684ef2e93bb@6c48a"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "27f416fd-b430-467d-9798-6e9958750df0",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "27f416fd-b430-467d-9798-6e9958750df0@6c48a",
+      "displayName": "GSDFedSign-396-Seatbelt_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "27f416fd-b430-467d-9798-6e9958750df0"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "27f416fd-b430-467d-9798-6e9958750df0@6c48a"
+  }
+}

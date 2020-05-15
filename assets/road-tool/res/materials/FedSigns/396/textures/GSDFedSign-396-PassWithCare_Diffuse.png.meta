@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "9f2645de-b0c6-4f85-bdff-0493f52faa2f",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "9f2645de-b0c6-4f85-bdff-0493f52faa2f@6c48a",
+      "displayName": "GSDFedSign-396-PassWithCare_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "9f2645de-b0c6-4f85-bdff-0493f52faa2f"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "9f2645de-b0c6-4f85-bdff-0493f52faa2f@6c48a"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "afdf484d-c522-4488-9ca7-c595169f03d9",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "afdf484d-c522-4488-9ca7-c595169f03d9@6c48a",
+      "displayName": "GSDFedSign-Yel-ThruTrafficMergeLeft_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "afdf484d-c522-4488-9ca7-c595169f03d9"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "afdf484d-c522-4488-9ca7-c595169f03d9@6c48a"
+  }
+}

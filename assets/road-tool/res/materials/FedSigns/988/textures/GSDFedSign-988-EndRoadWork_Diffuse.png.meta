@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "f2899deb-77df-4a87-aaa3-8bff6043648b",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "f2899deb-77df-4a87-aaa3-8bff6043648b@6c48a",
+      "displayName": "GSDFedSign-988-EndRoadWork_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f2899deb-77df-4a87-aaa3-8bff6043648b"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "f2899deb-77df-4a87-aaa3-8bff6043648b@6c48a"
+  }
+}

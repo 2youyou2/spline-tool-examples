@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "aa9b4aae-94b1-47f0-9ec7-9f7731edbf0d",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "aa9b4aae-94b1-47f0-9ec7-9f7731edbf0d@6c48a",
+      "displayName": "GSDFedSign-Com-NoParking_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "aa9b4aae-94b1-47f0-9ec7-9f7731edbf0d"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "aa9b4aae-94b1-47f0-9ec7-9f7731edbf0d@6c48a"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "9faf299d-e230-4bb8-919b-6a77f1bf8b38",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "9faf299d-e230-4bb8-919b-6a77f1bf8b38@6c48a",
+      "displayName": "GSDFedSign-396-LightsOnWhenRaining_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "9faf299d-e230-4bb8-919b-6a77f1bf8b38"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "9faf299d-e230-4bb8-919b-6a77f1bf8b38@6c48a"
+  }
+}

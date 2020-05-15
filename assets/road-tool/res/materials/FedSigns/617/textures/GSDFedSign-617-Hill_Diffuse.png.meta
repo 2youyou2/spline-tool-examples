@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "1fc61874-7b94-47bf-9efd-2d11003ea6ce",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "1fc61874-7b94-47bf-9efd-2d11003ea6ce@6c48a",
+      "displayName": "GSDFedSign-617-Hill_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "1fc61874-7b94-47bf-9efd-2d11003ea6ce"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "1fc61874-7b94-47bf-9efd-2d11003ea6ce@6c48a"
+  }
+}

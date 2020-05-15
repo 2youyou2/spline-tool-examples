@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "7288c8ac-57a6-46ec-8e9b-354c0909a995",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "7288c8ac-57a6-46ec-8e9b-354c0909a995@6c48a",
+      "displayName": "GSDFedSign-617-SC322_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "7288c8ac-57a6-46ec-8e9b-354c0909a995"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "7288c8ac-57a6-46ec-8e9b-354c0909a995@6c48a"
+  }
+}

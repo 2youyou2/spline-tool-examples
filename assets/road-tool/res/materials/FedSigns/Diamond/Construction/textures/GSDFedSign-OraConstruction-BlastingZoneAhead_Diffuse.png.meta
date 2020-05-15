@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "21e479c7-1555-497a-be8a-87f2ef2f18ce",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "21e479c7-1555-497a-be8a-87f2ef2f18ce@6c48a",
+      "displayName": "GSDFedSign-OraConstruction-BlastingZoneAhead_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "21e479c7-1555-497a-be8a-87f2ef2f18ce"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "21e479c7-1555-497a-be8a-87f2ef2f18ce@6c48a"
+  }
+}

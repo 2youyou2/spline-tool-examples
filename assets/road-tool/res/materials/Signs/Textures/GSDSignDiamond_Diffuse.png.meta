@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "dbd52986-6a27-4be4-b803-e3fc79a5964f",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "dbd52986-6a27-4be4-b803-e3fc79a5964f@6c48a",
+      "displayName": "GSDSignDiamond_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "dbd52986-6a27-4be4-b803-e3fc79a5964f"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "dbd52986-6a27-4be4-b803-e3fc79a5964f@6c48a"
+  }
+}

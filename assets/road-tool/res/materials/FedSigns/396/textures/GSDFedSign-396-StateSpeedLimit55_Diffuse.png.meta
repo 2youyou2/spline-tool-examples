@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "c11a4edd-ad06-4117-b269-8b8da9b01897",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "c11a4edd-ad06-4117-b269-8b8da9b01897@6c48a",
+      "displayName": "GSDFedSign-396-StateSpeedLimit55_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "c11a4edd-ad06-4117-b269-8b8da9b01897"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "c11a4edd-ad06-4117-b269-8b8da9b01897@6c48a"
+  }
+}

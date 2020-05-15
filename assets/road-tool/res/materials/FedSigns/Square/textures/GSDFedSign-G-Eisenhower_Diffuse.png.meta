@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "6b08d694-44e9-4c62-89af-fecb6283a2b2",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "6b08d694-44e9-4c62-89af-fecb6283a2b2@6c48a",
+      "displayName": "GSDFedSign-G-Eisenhower_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "6b08d694-44e9-4c62-89af-fecb6283a2b2"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "6b08d694-44e9-4c62-89af-fecb6283a2b2@6c48a"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "47b8fa20-cdfc-4c2d-9e1e-6885c7c8d226",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "47b8fa20-cdfc-4c2d-9e1e-6885c7c8d226@6c48a",
+      "displayName": "GSDFedSign-G-H22_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "47b8fa20-cdfc-4c2d-9e1e-6885c7c8d226"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "47b8fa20-cdfc-4c2d-9e1e-6885c7c8d226@6c48a"
+  }
+}

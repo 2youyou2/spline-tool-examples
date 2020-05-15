@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "e5777568-5af2-4f43-827b-8f00dae4a5ca",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "e5777568-5af2-4f43-827b-8f00dae4a5ca@6c48a",
+      "displayName": "GSDFedSign-Yel-Deer_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e5777568-5af2-4f43-827b-8f00dae4a5ca"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "e5777568-5af2-4f43-827b-8f00dae4a5ca@6c48a"
+  }
+}

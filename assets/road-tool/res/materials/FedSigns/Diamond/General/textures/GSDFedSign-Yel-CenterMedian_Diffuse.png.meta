@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "970f5c8e-f183-4801-848a-b2da4753c104",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "970f5c8e-f183-4801-848a-b2da4753c104@6c48a",
+      "displayName": "GSDFedSign-Yel-CenterMedian_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "970f5c8e-f183-4801-848a-b2da4753c104"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "970f5c8e-f183-4801-848a-b2da4753c104@6c48a"
+  }
+}

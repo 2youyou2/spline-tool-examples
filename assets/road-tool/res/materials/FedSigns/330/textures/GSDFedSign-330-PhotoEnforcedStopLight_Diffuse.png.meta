@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d4df4137-8531-45c5-b6d8-0c3f77ef464f",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d4df4137-8531-45c5-b6d8-0c3f77ef464f@6c48a",
+      "displayName": "GSDFedSign-330-PhotoEnforcedStopLight_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "d4df4137-8531-45c5-b6d8-0c3f77ef464f"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "d4df4137-8531-45c5-b6d8-0c3f77ef464f@6c48a"
+  }
+}

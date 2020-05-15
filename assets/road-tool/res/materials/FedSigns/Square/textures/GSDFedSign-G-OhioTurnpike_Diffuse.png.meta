@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d19c695b-6b3b-4a25-88e7-cdabeb799170",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d19c695b-6b3b-4a25-88e7-cdabeb799170@6c48a",
+      "displayName": "GSDFedSign-G-OhioTurnpike_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "d19c695b-6b3b-4a25-88e7-cdabeb799170"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "d19c695b-6b3b-4a25-88e7-cdabeb799170@6c48a"
+  }
+}

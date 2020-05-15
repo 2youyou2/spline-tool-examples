@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "4d2610e2-2d5a-4c00-a487-c55e2059c32e",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "4d2610e2-2d5a-4c00-a487-c55e2059c32e@6c48a",
+      "displayName": "GSDFedSign-Yel-Intersections3Way2Upcoming_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "4d2610e2-2d5a-4c00-a487-c55e2059c32e"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "4d2610e2-2d5a-4c00-a487-c55e2059c32e@6c48a"
+  }
+}

@@ -1,6 +1,7 @@
 import { Mesh, Vec3, Quat, GFXAttributeName, Vec4, Vec2 } from 'cc';
 import MeshVertex from './mesh-vertex';
 import MeshUtility from './mesh-utility';
+import MeshTesselate from './mesh-tesselate';
 
 export default class SourceMesh {
     public static build (mesh: Mesh) {
@@ -38,6 +39,15 @@ export default class SourceMesh {
     get length () {
         if (!this._vertices) this.buildData();
         return this._length;
+    }
+
+    private _divisions = 0;
+    get divisions () {
+        return this._divisions;
+    }
+    set divisions (value) {
+        this._divisions = value;
+        this.buildData();
     }
 
     /// <summary>
@@ -100,19 +110,25 @@ export default class SourceMesh {
         }
 
         // we transform the source mesh vertices according to rotation/translation/scale
-        let vertices = this._vertices = [];
+        let vertices = this._vertices = this._vertices || [];
         let positions = this._mesh.readAttribute(0, GFXAttributeName.ATTR_POSITION);
         let normals = this._mesh.readAttribute(0, GFXAttributeName.ATTR_NORMAL);
         let tangents = this._mesh.readAttribute(0, GFXAttributeName.ATTR_TANGENT);
+        let uvs = this._mesh.readAttribute(0, GFXAttributeName.ATTR_TEX_COORD);
         let hasTangents = tangents && tangents.length > 0;
         let vertCount = positions.length / 3;
-        for (let i = 0; i < vertCount; i++) {
-            let transformed = MeshVertex.create(
-                new Vec3(positions[3 * i + 0], positions[3 * i + 1], positions[3 * i + 2]),
-                new Vec3(normals[3 * i + 0], normals[3 * i + 1], normals[3 * i + 2]),
-                Vec2.ZERO,
-                hasTangents ? new Vec4(tangents[4 * i + 0], tangents[4 * i + 1], tangents[4 * i + 2], tangents[4 * i + 3]) : undefined,
-            );
+        let i = 0;
+        for (; i < vertCount; i++) {
+            let transformed = vertices[i];
+            if (!transformed) {
+                transformed = vertices[i] = MeshVertex.pool.get();
+            }
+            transformed.position.set(positions[3 * i + 0], positions[3 * i + 1], positions[3 * i + 2]);
+            transformed.normal.set(normals[3 * i + 0], normals[3 * i + 1], normals[3 * i + 2]);
+            transformed.uv.set(uvs[2 * i + 0], uvs[2 * i + 1]);
+            if (hasTangents) {
+                transformed.tangent.set(tangents[4 * i + 0], tangents[4 * i + 1], tangents[4 * i + 2], tangents[4 * i + 3]);
+            }
             //  application of rotation
             if (!this.rotation.equals(Quat.IDENTITY)) {
                 Vec3.transformQuat(transformed.position, transformed.position, this.rotation);
@@ -127,8 +143,18 @@ export default class SourceMesh {
                 // Vec4.multiply(transformed.tangent, transformed.tangent, this.scale);
             }
             transformed.position.add(this.translation);
-            vertices.push(transformed);
+            
         }
+
+        for (; i < vertices.length; i++) {
+            if (vertices[i]) {
+                MeshVertex.pool.put(vertices[i]);
+            }
+        }
+        vertices.length = vertCount;
+
+        // tessellate mesh along x
+
 
         // find the bounds along x
         this._minX = Number.MAX_SAFE_INTEGER;
@@ -140,6 +166,8 @@ export default class SourceMesh {
             this._minX = Math.min(this._minX, p.x);
         }
         this._length = Math.abs(maxX - this._minX);
+
+        // this._triangles = MeshTesselate.tessellate(vertices, this._triangles, 5);
     }
 
     // public equals (object obj) {

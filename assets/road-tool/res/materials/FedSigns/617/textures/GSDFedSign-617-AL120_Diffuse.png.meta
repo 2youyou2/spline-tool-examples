@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "6610c0c4-bc60-4890-8272-357def404c4f",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "6610c0c4-bc60-4890-8272-357def404c4f@6c48a",
+      "displayName": "GSDFedSign-617-AL120_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "6610c0c4-bc60-4890-8272-357def404c4f"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "6610c0c4-bc60-4890-8272-357def404c4f@6c48a"
+  }
+}

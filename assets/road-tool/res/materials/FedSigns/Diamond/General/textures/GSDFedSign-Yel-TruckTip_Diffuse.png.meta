@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "5a5ac48d-13fe-4874-805c-22e247052960",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "5a5ac48d-13fe-4874-805c-22e247052960@6c48a",
+      "displayName": "GSDFedSign-Yel-TruckTip_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5a5ac48d-13fe-4874-805c-22e247052960"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "5a5ac48d-13fe-4874-805c-22e247052960@6c48a"
+  }
+}

@@ -218,7 +218,7 @@ export default class MeshBender extends Component {
             positions: bentVertices.map(b => b.position),
             normals: bentVertices.map(b => b.normal),
             tangents: bentVertices.map(b => b.tangent),
-            uvs: source.mesh.readAttribute(0, GFXAttributeName.ATTR_TEX_COORD),
+            uvs: bentVertices.map(b => b.uv),
             indices: source.triangles
         });
 
@@ -241,13 +241,10 @@ export default class MeshBender extends Component {
 
         // building triangles and UVs for the repeated mesh
         let triangles: number[] = [];
-        let uv: number[] = [];
-        let storage = source.mesh.readAttribute(0, GFXAttributeName.ATTR_TEX_COORD);
         for (let i = 0; i < repetitionCount; i++) {
             for (let j = 0; j < source.triangles.length; j++) {
                 triangles.push(source.triangles[j] + source.vertices.length * i);
             }
-            Array.prototype.push.apply(uv, storage);
         }
 
         // computing vertices and normals
@@ -287,7 +284,7 @@ export default class MeshBender extends Component {
             positions: bentVertices.map(b => b.position),
             normals: bentVertices.map(b => b.normal),
             tangents: bentVertices.map(b => b.tangent),
-            uvs: uv,
+            uvs: bentVertices.map(b => b.uv),
             indices: triangles
         });
 
@@ -333,7 +330,7 @@ export default class MeshBender extends Component {
             positions: bentVertices.map(b => b.position),
             normals: bentVertices.map(b => b.normal),
             tangents: bentVertices.map(b => b.tangent),
-            uvs: source.mesh.readAttribute(0, GFXAttributeName.ATTR_TEX_COORD),
+            uvs: bentVertices.map(b => b.uv),
             indices: source.triangles
         });
 

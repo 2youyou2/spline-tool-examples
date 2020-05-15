@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "ca5d2e4b-24cc-4373-8a58-f1341613da81",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "ca5d2e4b-24cc-4373-8a58-f1341613da81@6c48a",
+      "displayName": "GSDFedSign-396-StayInLane_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ca5d2e4b-24cc-4373-8a58-f1341613da81"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "ca5d2e4b-24cc-4373-8a58-f1341613da81@6c48a"
+  }
+}

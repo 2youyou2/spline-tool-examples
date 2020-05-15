@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "5302e24f-19a4-4965-a901-992ba25c2381",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "5302e24f-19a4-4965-a901-992ba25c2381@6c48a",
+      "displayName": "GSDFedSign-617-NoMotorDrivenCycles_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5302e24f-19a4-4965-a901-992ba25c2381"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "5302e24f-19a4-4965-a901-992ba25c2381@6c48a"
+  }
+}

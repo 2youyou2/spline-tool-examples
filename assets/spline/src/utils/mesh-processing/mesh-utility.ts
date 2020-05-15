@@ -1,6 +1,6 @@
 import { Mesh, Vec3, ValueType, utils, GFXFormat, GFXFormatInfos, GFXAttributeName, ModelComponent } from 'cc';
 
-let primitiveAttr = {
+const primitiveAttr = {
     positions: {
         size: 3,
         gfxName: GFXAttributeName.ATTR_POSITION
@@ -13,10 +13,14 @@ let primitiveAttr = {
         size: 2,
         gfxName: GFXAttributeName.ATTR_TEX_COORD
     },
-    tangent: {
-        size: 3,
+    tangents: {
+        size: 4,
         gfxName: GFXAttributeName.ATTR_TANGENT
     }
+}
+
+const customAttributes = {
+    tagent: { name: GFXAttributeName.ATTR_TANGENT, format: GFXFormat.RGBA32F }
 }
 
 function flat (arr: any) {
@@ -86,6 +90,15 @@ export default {
             if (primitive[name]) {
                 primitive[name] = flat(primitive[name]);
             }
+        }
+
+        if (primitive.tangents) {
+            primitive.customAttributes = [
+                { 
+                    attr:  customAttributes.tagent,
+                    values: primitive.tangents
+                }
+            ]
         }
 
         return cc.utils.createMesh(primitive);

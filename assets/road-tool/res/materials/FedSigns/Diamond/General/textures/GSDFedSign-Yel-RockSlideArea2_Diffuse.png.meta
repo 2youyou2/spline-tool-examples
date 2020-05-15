@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d38dfb55-2d2e-40f8-9e53-875b41f4a070",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d38dfb55-2d2e-40f8-9e53-875b41f4a070@6c48a",
+      "displayName": "GSDFedSign-Yel-RockSlideArea2_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "d38dfb55-2d2e-40f8-9e53-875b41f4a070"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "d38dfb55-2d2e-40f8-9e53-875b41f4a070@6c48a"
+  }
+}

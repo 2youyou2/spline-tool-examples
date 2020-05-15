@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d1a697bc-2e83-4d43-a128-5b0b88d1540c",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d1a697bc-2e83-4d43-a128-5b0b88d1540c@6c48a",
+      "displayName": "GSDFedSign-Yel-Sheep_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "d1a697bc-2e83-4d43-a128-5b0b88d1540c"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "d1a697bc-2e83-4d43-a128-5b0b88d1540c@6c48a"
+  }
+}

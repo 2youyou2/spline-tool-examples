@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "4f2fbab2-19b6-4448-9b0e-6437c288e893",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "4f2fbab2-19b6-4448-9b0e-6437c288e893@6c48a",
+      "displayName": "GSDSign-861-WrongWay_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "4f2fbab2-19b6-4448-9b0e-6437c288e893"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "4f2fbab2-19b6-4448-9b0e-6437c288e893@6c48a"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "9f431b8f-202d-4e74-a05d-70d020cd18ac",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "9f431b8f-202d-4e74-a05d-70d020cd18ac@6c48a",
+      "displayName": "GSDFedSign-617-StopForXWalk_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "9f431b8f-202d-4e74-a05d-70d020cd18ac"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "9f431b8f-202d-4e74-a05d-70d020cd18ac@6c48a"
+  }
+}
