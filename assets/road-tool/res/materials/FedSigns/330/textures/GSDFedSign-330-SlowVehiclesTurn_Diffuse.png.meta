@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "29f02edd-8f5b-4e5f-9894-94fe67e31d1b",
+  "uuid": "93ca4352-851c-4033-9445-84b3e67947b2",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "29f02edd-8f5b-4e5f-9894-94fe67e31d1b@6c48a",
+      "uuid": "93ca4352-851c-4033-9445-84b3e67947b2@6c48a",
       "displayName": "GSDFedSign-330-SlowVehiclesTurn_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "29f02edd-8f5b-4e5f-9894-94fe67e31d1b"
+        "imageUuidOrDatabaseUri": "93ca4352-851c-4033-9445-84b3e67947b2"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "29f02edd-8f5b-4e5f-9894-94fe67e31d1b@6c48a"
+    "redirect": "93ca4352-851c-4033-9445-84b3e67947b2@6c48a"
   }
 }

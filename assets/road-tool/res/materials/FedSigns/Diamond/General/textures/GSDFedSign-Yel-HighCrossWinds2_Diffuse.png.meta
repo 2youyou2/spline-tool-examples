@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "a95b08a0-8ed1-4667-b915-e28feeadf78c",
+  "uuid": "106b08fd-d52e-4bd4-9ba7-d645097bec4e",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "a95b08a0-8ed1-4667-b915-e28feeadf78c@6c48a",
+      "uuid": "106b08fd-d52e-4bd4-9ba7-d645097bec4e@6c48a",
       "displayName": "GSDFedSign-Yel-HighCrossWinds2_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "a95b08a0-8ed1-4667-b915-e28feeadf78c"
+        "imageUuidOrDatabaseUri": "106b08fd-d52e-4bd4-9ba7-d645097bec4e"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "a95b08a0-8ed1-4667-b915-e28feeadf78c@6c48a"
+    "redirect": "106b08fd-d52e-4bd4-9ba7-d645097bec4e@6c48a"
   }
 }

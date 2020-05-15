@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "9c191637-0b75-451c-99bd-aeee0ef22998",
+  "uuid": "ca68042b-ad63-4628-9e55-9c37cc2506be",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "9c191637-0b75-451c-99bd-aeee0ef22998@6c48a",
+      "uuid": "ca68042b-ad63-4628-9e55-9c37cc2506be@6c48a",
       "displayName": "GSDFedSign-617-WeighStation1Mile_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "9c191637-0b75-451c-99bd-aeee0ef22998"
+        "imageUuidOrDatabaseUri": "ca68042b-ad63-4628-9e55-9c37cc2506be"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "9c191637-0b75-451c-99bd-aeee0ef22998@6c48a"
+    "redirect": "ca68042b-ad63-4628-9e55-9c37cc2506be@6c48a"
   }
 }

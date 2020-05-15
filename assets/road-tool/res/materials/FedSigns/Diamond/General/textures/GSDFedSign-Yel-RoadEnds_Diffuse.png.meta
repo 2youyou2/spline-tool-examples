@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "80233bd6-bf69-4c62-aa6c-d55af49ad6c5",
+  "uuid": "e53d1d82-6b49-451f-82f7-5031ff24159b",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "80233bd6-bf69-4c62-aa6c-d55af49ad6c5@6c48a",
+      "uuid": "e53d1d82-6b49-451f-82f7-5031ff24159b@6c48a",
       "displayName": "GSDFedSign-Yel-RoadEnds_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "80233bd6-bf69-4c62-aa6c-d55af49ad6c5"
+        "imageUuidOrDatabaseUri": "e53d1d82-6b49-451f-82f7-5031ff24159b"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "80233bd6-bf69-4c62-aa6c-d55af49ad6c5@6c48a"
+    "redirect": "e53d1d82-6b49-451f-82f7-5031ff24159b@6c48a"
   }
 }

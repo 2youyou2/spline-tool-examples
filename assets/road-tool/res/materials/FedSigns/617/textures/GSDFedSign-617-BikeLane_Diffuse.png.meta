@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "9cb4a295-6df0-413a-b5be-353be6a31ad8",
+  "uuid": "0b37011d-0924-4e3f-9ed2-2ff62df080b7",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "9cb4a295-6df0-413a-b5be-353be6a31ad8@6c48a",
+      "uuid": "0b37011d-0924-4e3f-9ed2-2ff62df080b7@6c48a",
       "displayName": "GSDFedSign-617-BikeLane_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "9cb4a295-6df0-413a-b5be-353be6a31ad8"
+        "imageUuidOrDatabaseUri": "0b37011d-0924-4e3f-9ed2-2ff62df080b7"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "9cb4a295-6df0-413a-b5be-353be6a31ad8@6c48a"
+    "redirect": "0b37011d-0924-4e3f-9ed2-2ff62df080b7@6c48a"
   }
 }

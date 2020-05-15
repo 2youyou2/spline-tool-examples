@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "0609c8ae-4343-49cb-b6c3-446a423e28e7",
+  "uuid": "002b9ee3-df7b-412d-a579-f23f77ab148b",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "0609c8ae-4343-49cb-b6c3-446a423e28e7@6c48a",
+      "uuid": "002b9ee3-df7b-412d-a579-f23f77ab148b@6c48a",
       "displayName": "GSDFedSign-Yel-TruckTip35_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "0609c8ae-4343-49cb-b6c3-446a423e28e7"
+        "imageUuidOrDatabaseUri": "002b9ee3-df7b-412d-a579-f23f77ab148b"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "0609c8ae-4343-49cb-b6c3-446a423e28e7@6c48a"
+    "redirect": "002b9ee3-df7b-412d-a579-f23f77ab148b@6c48a"
   }
 }

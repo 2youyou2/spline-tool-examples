@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "14e13f60-b0f1-4f6b-a4ce-5f375d38da46",
+  "uuid": "195def10-fb99-49e5-b302-f9fba7c54753",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "14e13f60-b0f1-4f6b-a4ce-5f375d38da46@6c48a",
+      "uuid": "195def10-fb99-49e5-b302-f9fba7c54753@6c48a",
       "displayName": "GSDFedSign-Yel-FallingRock_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "14e13f60-b0f1-4f6b-a4ce-5f375d38da46"
+        "imageUuidOrDatabaseUri": "195def10-fb99-49e5-b302-f9fba7c54753"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "14e13f60-b0f1-4f6b-a4ce-5f375d38da46@6c48a"
+    "redirect": "195def10-fb99-49e5-b302-f9fba7c54753@6c48a"
   }
 }

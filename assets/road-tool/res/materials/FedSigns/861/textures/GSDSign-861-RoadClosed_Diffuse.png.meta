@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "db0b5caf-b39a-445f-a04f-511f86be8820",
+  "uuid": "0bddd9b9-1603-47d8-8a47-74798ae1f167",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "db0b5caf-b39a-445f-a04f-511f86be8820@6c48a",
+      "uuid": "0bddd9b9-1603-47d8-8a47-74798ae1f167@6c48a",
       "displayName": "GSDSign-861-RoadClosed_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "db0b5caf-b39a-445f-a04f-511f86be8820"
+        "imageUuidOrDatabaseUri": "0bddd9b9-1603-47d8-8a47-74798ae1f167"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "db0b5caf-b39a-445f-a04f-511f86be8820@6c48a"
+    "redirect": "0bddd9b9-1603-47d8-8a47-74798ae1f167@6c48a"
   }
 }

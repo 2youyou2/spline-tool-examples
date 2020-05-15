@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "fc354dff-ee00-4275-9c80-9029bdf3fa31",
+  "uuid": "701af36d-14e9-4008-a670-2469aeb6fe4f",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "fc354dff-ee00-4275-9c80-9029bdf3fa31@6c48a",
+      "uuid": "701af36d-14e9-4008-a670-2469aeb6fe4f@6c48a",
       "displayName": "GSDFedSign-Green-SchoolBusTurnAhead_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "fc354dff-ee00-4275-9c80-9029bdf3fa31"
+        "imageUuidOrDatabaseUri": "701af36d-14e9-4008-a670-2469aeb6fe4f"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "fc354dff-ee00-4275-9c80-9029bdf3fa31@6c48a"
+    "redirect": "701af36d-14e9-4008-a670-2469aeb6fe4f@6c48a"
   }
 }

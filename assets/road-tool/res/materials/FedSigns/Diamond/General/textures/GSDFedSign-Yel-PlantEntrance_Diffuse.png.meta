@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "b5ebf356-e794-4877-b2f6-f1665892924f",
+  "uuid": "6719e3fe-aeca-42ef-bfb0-c57300676f68",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "b5ebf356-e794-4877-b2f6-f1665892924f@6c48a",
+      "uuid": "6719e3fe-aeca-42ef-bfb0-c57300676f68@6c48a",
       "displayName": "GSDFedSign-Yel-PlantEntrance_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "b5ebf356-e794-4877-b2f6-f1665892924f"
+        "imageUuidOrDatabaseUri": "6719e3fe-aeca-42ef-bfb0-c57300676f68"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "b5ebf356-e794-4877-b2f6-f1665892924f@6c48a"
+    "redirect": "6719e3fe-aeca-42ef-bfb0-c57300676f68@6c48a"
   }
 }

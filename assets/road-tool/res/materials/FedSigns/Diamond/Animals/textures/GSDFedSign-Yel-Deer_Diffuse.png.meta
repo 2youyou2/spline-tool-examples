@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "e5777568-5af2-4f43-827b-8f00dae4a5ca",
+  "uuid": "818c285b-05da-4378-9f0a-4654d19ae9e0",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "e5777568-5af2-4f43-827b-8f00dae4a5ca@6c48a",
+      "uuid": "818c285b-05da-4378-9f0a-4654d19ae9e0@6c48a",
       "displayName": "GSDFedSign-Yel-Deer_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "e5777568-5af2-4f43-827b-8f00dae4a5ca"
+        "imageUuidOrDatabaseUri": "818c285b-05da-4378-9f0a-4654d19ae9e0"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "e5777568-5af2-4f43-827b-8f00dae4a5ca@6c48a"
+    "redirect": "818c285b-05da-4378-9f0a-4654d19ae9e0@6c48a"
   }
 }

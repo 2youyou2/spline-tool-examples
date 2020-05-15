@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "50c771e8-5ee0-4f94-bb6c-5738dcd3f07a",
+  "uuid": "5312cd1c-06af-45a1-8711-e646be8e7fdc",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "50c771e8-5ee0-4f94-bb6c-5738dcd3f07a@6c48a",
+      "uuid": "5312cd1c-06af-45a1-8711-e646be8e7fdc@6c48a",
       "displayName": "GSDFedSign-Yel-TruckEntrance_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "50c771e8-5ee0-4f94-bb6c-5738dcd3f07a"
+        "imageUuidOrDatabaseUri": "5312cd1c-06af-45a1-8711-e646be8e7fdc"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "50c771e8-5ee0-4f94-bb6c-5738dcd3f07a@6c48a"
+    "redirect": "5312cd1c-06af-45a1-8711-e646be8e7fdc@6c48a"
   }
 }

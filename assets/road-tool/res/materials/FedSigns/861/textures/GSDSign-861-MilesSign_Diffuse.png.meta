@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "d9529989-5022-40df-b40d-7c5ec568346f",
+  "uuid": "d5a7d3de-4a75-4fc7-b88f-4526db91b18f",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "d9529989-5022-40df-b40d-7c5ec568346f@6c48a",
+      "uuid": "d5a7d3de-4a75-4fc7-b88f-4526db91b18f@6c48a",
       "displayName": "GSDSign-861-MilesSign_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "d9529989-5022-40df-b40d-7c5ec568346f"
+        "imageUuidOrDatabaseUri": "d5a7d3de-4a75-4fc7-b88f-4526db91b18f"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "d9529989-5022-40df-b40d-7c5ec568346f@6c48a"
+    "redirect": "d5a7d3de-4a75-4fc7-b88f-4526db91b18f@6c48a"
   }
 }

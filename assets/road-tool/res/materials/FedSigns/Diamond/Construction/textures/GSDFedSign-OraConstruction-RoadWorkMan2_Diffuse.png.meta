@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "3b5acabe-c08f-469f-9268-d70513588851",
+  "uuid": "d549a5cf-105f-4714-a462-169ee16e36e3",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "3b5acabe-c08f-469f-9268-d70513588851@6c48a",
+      "uuid": "d549a5cf-105f-4714-a462-169ee16e36e3@6c48a",
       "displayName": "GSDFedSign-OraConstruction-RoadWorkMan2_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "3b5acabe-c08f-469f-9268-d70513588851"
+        "imageUuidOrDatabaseUri": "d549a5cf-105f-4714-a462-169ee16e36e3"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "3b5acabe-c08f-469f-9268-d70513588851@6c48a"
+    "redirect": "d549a5cf-105f-4714-a462-169ee16e36e3@6c48a"
   }
 }

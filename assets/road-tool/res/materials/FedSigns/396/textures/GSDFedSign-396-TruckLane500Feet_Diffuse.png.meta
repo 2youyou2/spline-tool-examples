@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "5b518c6d-7664-4ed9-9142-09637ff21819",
+  "uuid": "e4fc099a-0130-4b00-b5d2-353cc94833ab",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "5b518c6d-7664-4ed9-9142-09637ff21819@6c48a",
+      "uuid": "e4fc099a-0130-4b00-b5d2-353cc94833ab@6c48a",
       "displayName": "GSDFedSign-396-TruckLane500Feet_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "5b518c6d-7664-4ed9-9142-09637ff21819"
+        "imageUuidOrDatabaseUri": "e4fc099a-0130-4b00-b5d2-353cc94833ab"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "5b518c6d-7664-4ed9-9142-09637ff21819@6c48a"
+    "redirect": "e4fc099a-0130-4b00-b5d2-353cc94833ab@6c48a"
   }
 }

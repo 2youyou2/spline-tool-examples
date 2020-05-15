@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "6d230ae8-827a-453e-995e-5421dd07ebe4",
+  "uuid": "d765414c-16f8-41ad-8a5d-15dc87c27b14",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "6d230ae8-827a-453e-995e-5421dd07ebe4@6c48a",
+      "uuid": "d765414c-16f8-41ad-8a5d-15dc87c27b14@6c48a",
       "displayName": "GSDFedSign-Yel-WatchForRock_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "6d230ae8-827a-453e-995e-5421dd07ebe4"
+        "imageUuidOrDatabaseUri": "d765414c-16f8-41ad-8a5d-15dc87c27b14"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "6d230ae8-827a-453e-995e-5421dd07ebe4@6c48a"
+    "redirect": "d765414c-16f8-41ad-8a5d-15dc87c27b14@6c48a"
   }
 }

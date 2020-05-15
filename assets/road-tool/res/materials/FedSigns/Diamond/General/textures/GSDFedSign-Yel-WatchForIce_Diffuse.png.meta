@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "64e2dae3-ad93-4c75-a1f8-0dde9812a3cf",
+  "uuid": "aacfee7f-5c60-46c5-b880-f8261ffb6851",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "64e2dae3-ad93-4c75-a1f8-0dde9812a3cf@6c48a",
+      "uuid": "aacfee7f-5c60-46c5-b880-f8261ffb6851@6c48a",
       "displayName": "GSDFedSign-Yel-WatchForIce_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "64e2dae3-ad93-4c75-a1f8-0dde9812a3cf"
+        "imageUuidOrDatabaseUri": "aacfee7f-5c60-46c5-b880-f8261ffb6851"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "64e2dae3-ad93-4c75-a1f8-0dde9812a3cf@6c48a"
+    "redirect": "aacfee7f-5c60-46c5-b880-f8261ffb6851@6c48a"
   }
 }

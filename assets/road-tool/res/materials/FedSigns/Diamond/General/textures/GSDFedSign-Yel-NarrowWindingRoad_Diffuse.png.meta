@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "c9db8edd-3c18-435d-89e6-8f5cd545e9f1",
+  "uuid": "6b0c8759-638e-4f79-98db-16b46244d279",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "c9db8edd-3c18-435d-89e6-8f5cd545e9f1@6c48a",
+      "uuid": "6b0c8759-638e-4f79-98db-16b46244d279@6c48a",
       "displayName": "GSDFedSign-Yel-NarrowWindingRoad_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "c9db8edd-3c18-435d-89e6-8f5cd545e9f1"
+        "imageUuidOrDatabaseUri": "6b0c8759-638e-4f79-98db-16b46244d279"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "c9db8edd-3c18-435d-89e6-8f5cd545e9f1@6c48a"
+    "redirect": "6b0c8759-638e-4f79-98db-16b46244d279@6c48a"
   }
 }

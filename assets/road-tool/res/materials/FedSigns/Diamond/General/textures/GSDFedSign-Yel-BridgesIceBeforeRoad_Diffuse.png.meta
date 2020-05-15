@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "00aac76a-35de-4d00-922b-5543ecb00017",
+  "uuid": "9c8eb3da-8e18-48f9-9915-d8b4b207a41d",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "00aac76a-35de-4d00-922b-5543ecb00017@6c48a",
+      "uuid": "9c8eb3da-8e18-48f9-9915-d8b4b207a41d@6c48a",
       "displayName": "GSDFedSign-Yel-BridgesIceBeforeRoad_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "00aac76a-35de-4d00-922b-5543ecb00017"
+        "imageUuidOrDatabaseUri": "9c8eb3da-8e18-48f9-9915-d8b4b207a41d"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "00aac76a-35de-4d00-922b-5543ecb00017@6c48a"
+    "redirect": "9c8eb3da-8e18-48f9-9915-d8b4b207a41d@6c48a"
   }
 }

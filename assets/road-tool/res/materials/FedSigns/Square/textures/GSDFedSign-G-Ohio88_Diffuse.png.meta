@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "1db1b64f-8d47-49d0-be01-0fc24d0271f4",
+  "uuid": "ebf8b8c0-93ca-4a36-9c12-ea14477913d4",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "1db1b64f-8d47-49d0-be01-0fc24d0271f4@6c48a",
+      "uuid": "ebf8b8c0-93ca-4a36-9c12-ea14477913d4@6c48a",
       "displayName": "GSDFedSign-G-Ohio88_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "1db1b64f-8d47-49d0-be01-0fc24d0271f4"
+        "imageUuidOrDatabaseUri": "ebf8b8c0-93ca-4a36-9c12-ea14477913d4"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "1db1b64f-8d47-49d0-be01-0fc24d0271f4@6c48a"
+    "redirect": "ebf8b8c0-93ca-4a36-9c12-ea14477913d4@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "3d6574e4-6092-42fe-995e-a0d65b19a9d9",
+  "uuid": "fbe6655a-4b3c-45c0-94b7-0a23106f3605",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "3d6574e4-6092-42fe-995e-a0d65b19a9d9@6c48a",
+      "uuid": "fbe6655a-4b3c-45c0-94b7-0a23106f3605@6c48a",
       "displayName": "GSDTireMarks-4L",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "3d6574e4-6092-42fe-995e-a0d65b19a9d9"
+        "imageUuidOrDatabaseUri": "fbe6655a-4b3c-45c0-94b7-0a23106f3605"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "3d6574e4-6092-42fe-995e-a0d65b19a9d9@6c48a"
+    "redirect": "fbe6655a-4b3c-45c0-94b7-0a23106f3605@6c48a"
   }
 }

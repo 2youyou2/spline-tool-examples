@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "ed6270f6-99e7-4624-9486-fdf4f18a5099",
+  "uuid": "ab85af95-683e-4c31-b986-3f9a7897e9d9",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "ed6270f6-99e7-4624-9486-fdf4f18a5099@6c48a",
+      "uuid": "ab85af95-683e-4c31-b986-3f9a7897e9d9@6c48a",
       "displayName": "GSDFedSign-396-AxleWeightLimit5Tons_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "ed6270f6-99e7-4624-9486-fdf4f18a5099"
+        "imageUuidOrDatabaseUri": "ab85af95-683e-4c31-b986-3f9a7897e9d9"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "ed6270f6-99e7-4624-9486-fdf4f18a5099@6c48a"
+    "redirect": "ab85af95-683e-4c31-b986-3f9a7897e9d9@6c48a"
   }
 }

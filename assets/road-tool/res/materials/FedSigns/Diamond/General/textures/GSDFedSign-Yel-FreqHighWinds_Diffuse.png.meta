@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "81697b57-1913-4ae2-9e74-481fae24b302",
+  "uuid": "cad68891-79a1-4507-a16b-9f96df3baefb",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "81697b57-1913-4ae2-9e74-481fae24b302@6c48a",
+      "uuid": "cad68891-79a1-4507-a16b-9f96df3baefb@6c48a",
       "displayName": "GSDFedSign-Yel-FreqHighWinds_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "81697b57-1913-4ae2-9e74-481fae24b302"
+        "imageUuidOrDatabaseUri": "cad68891-79a1-4507-a16b-9f96df3baefb"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "81697b57-1913-4ae2-9e74-481fae24b302@6c48a"
+    "redirect": "cad68891-79a1-4507-a16b-9f96df3baefb@6c48a"
   }
 }

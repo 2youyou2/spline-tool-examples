@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "92a9f982-3847-434d-9ad1-711a2bd573af",
+  "uuid": "2d5f8aad-4586-4be4-a813-4d56fa8ed673",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "92a9f982-3847-434d-9ad1-711a2bd573af@6c48a",
+      "uuid": "2d5f8aad-4586-4be4-a813-4d56fa8ed673@6c48a",
       "displayName": "GSDFedSign-330-2HrParking_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "92a9f982-3847-434d-9ad1-711a2bd573af"
+        "imageUuidOrDatabaseUri": "2d5f8aad-4586-4be4-a813-4d56fa8ed673"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "92a9f982-3847-434d-9ad1-711a2bd573af@6c48a"
+    "redirect": "2d5f8aad-4586-4be4-a813-4d56fa8ed673@6c48a"
   }
 }

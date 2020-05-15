@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "15cdc020-8432-459c-9850-dc305b236eb5",
+  "uuid": "01a8c7ca-a46f-49ee-8782-7f21434eae53",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "15cdc020-8432-459c-9850-dc305b236eb5@6c48a",
+      "uuid": "01a8c7ca-a46f-49ee-8782-7f21434eae53@6c48a",
       "displayName": "GSDFedSign-Yel-RoadwaySubjectToFlooding_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "15cdc020-8432-459c-9850-dc305b236eb5"
+        "imageUuidOrDatabaseUri": "01a8c7ca-a46f-49ee-8782-7f21434eae53"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "15cdc020-8432-459c-9850-dc305b236eb5@6c48a"
+    "redirect": "01a8c7ca-a46f-49ee-8782-7f21434eae53@6c48a"
   }
 }

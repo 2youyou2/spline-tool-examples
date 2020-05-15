@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "ad086470-2aac-4023-8529-613e5b9404e8",
+  "uuid": "6e3c81cd-659d-4826-bc4e-308c5bcc16bb",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "ad086470-2aac-4023-8529-613e5b9404e8@6c48a",
+      "uuid": "6e3c81cd-659d-4826-bc4e-308c5bcc16bb@6c48a",
       "displayName": "GSDFedSign-Yel-EmergencyVehicles_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "ad086470-2aac-4023-8529-613e5b9404e8"
+        "imageUuidOrDatabaseUri": "6e3c81cd-659d-4826-bc4e-308c5bcc16bb"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "ad086470-2aac-4023-8529-613e5b9404e8@6c48a"
+    "redirect": "6e3c81cd-659d-4826-bc4e-308c5bcc16bb@6c48a"
   }
 }

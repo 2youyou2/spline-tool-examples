@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "9d9ea7e0-f9c3-4769-95b3-1777526af4d1",
+  "uuid": "199164fe-3173-4d42-a07d-d3b120560410",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "9d9ea7e0-f9c3-4769-95b3-1777526af4d1@6c48a",
+      "uuid": "199164fe-3173-4d42-a07d-d3b120560410@6c48a",
       "displayName": "GSDFedSign-Green-SchoolBusLoading_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "9d9ea7e0-f9c3-4769-95b3-1777526af4d1"
+        "imageUuidOrDatabaseUri": "199164fe-3173-4d42-a07d-d3b120560410"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "9d9ea7e0-f9c3-4769-95b3-1777526af4d1@6c48a"
+    "redirect": "199164fe-3173-4d42-a07d-d3b120560410@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "1a11d82a-2193-40d9-9708-d582827abb48",
+  "uuid": "53972450-e60b-4970-918b-0be2d3ae60e0",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "1a11d82a-2193-40d9-9708-d582827abb48@6c48a",
+      "uuid": "53972450-e60b-4970-918b-0be2d3ae60e0@6c48a",
       "displayName": "GSDFedSign-Yel-LaneEndsMergeLeft_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "1a11d82a-2193-40d9-9708-d582827abb48"
+        "imageUuidOrDatabaseUri": "53972450-e60b-4970-918b-0be2d3ae60e0"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "1a11d82a-2193-40d9-9708-d582827abb48@6c48a"
+    "redirect": "53972450-e60b-4970-918b-0be2d3ae60e0@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "a6817a87-efda-4ae4-a565-db3e82a1d141",
+  "uuid": "3f6a7e1c-7540-4327-9ad6-8b36e9885be2",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "a6817a87-efda-4ae4-a565-db3e82a1d141@6c48a",
+      "uuid": "3f6a7e1c-7540-4327-9ad6-8b36e9885be2@6c48a",
       "displayName": "GSDFedSign-330-WrongWayBicycle_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "a6817a87-efda-4ae4-a565-db3e82a1d141"
+        "imageUuidOrDatabaseUri": "3f6a7e1c-7540-4327-9ad6-8b36e9885be2"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "a6817a87-efda-4ae4-a565-db3e82a1d141@6c48a"
+    "redirect": "3f6a7e1c-7540-4327-9ad6-8b36e9885be2@6c48a"
   }
 }

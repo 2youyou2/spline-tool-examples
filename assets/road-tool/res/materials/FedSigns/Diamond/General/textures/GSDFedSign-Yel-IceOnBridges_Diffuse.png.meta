@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "4f7373ce-84d1-4467-865f-edbab20943f7",
+  "uuid": "efae60ea-2530-4d9a-86dd-e0797ff34956",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "4f7373ce-84d1-4467-865f-edbab20943f7@6c48a",
+      "uuid": "efae60ea-2530-4d9a-86dd-e0797ff34956@6c48a",
       "displayName": "GSDFedSign-Yel-IceOnBridges_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "4f7373ce-84d1-4467-865f-edbab20943f7"
+        "imageUuidOrDatabaseUri": "efae60ea-2530-4d9a-86dd-e0797ff34956"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "4f7373ce-84d1-4467-865f-edbab20943f7@6c48a"
+    "redirect": "efae60ea-2530-4d9a-86dd-e0797ff34956@6c48a"
   }
 }

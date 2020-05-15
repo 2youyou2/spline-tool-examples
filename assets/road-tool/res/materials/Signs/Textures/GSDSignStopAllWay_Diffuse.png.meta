@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "8091d681-9f28-4eb6-bb48-d729a94cbcf6",
+  "uuid": "a4f4a972-5f19-49c6-9977-1a3e54cd4d57",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "8091d681-9f28-4eb6-bb48-d729a94cbcf6@6c48a",
+      "uuid": "a4f4a972-5f19-49c6-9977-1a3e54cd4d57@6c48a",
       "displayName": "GSDSignStopAllWay_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "8091d681-9f28-4eb6-bb48-d729a94cbcf6"
+        "imageUuidOrDatabaseUri": "a4f4a972-5f19-49c6-9977-1a3e54cd4d57"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "8091d681-9f28-4eb6-bb48-d729a94cbcf6@6c48a"
+    "redirect": "a4f4a972-5f19-49c6-9977-1a3e54cd4d57@6c48a"
   }
 }

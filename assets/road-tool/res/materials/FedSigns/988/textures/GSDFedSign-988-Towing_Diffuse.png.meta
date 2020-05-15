@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "c6ae601f-df5e-437a-8f51-f0124132374c",
+  "uuid": "8954c536-01d9-4eae-9bf3-697611c8ce55",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "c6ae601f-df5e-437a-8f51-f0124132374c@6c48a",
+      "uuid": "8954c536-01d9-4eae-9bf3-697611c8ce55@6c48a",
       "displayName": "GSDFedSign-988-Towing_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "c6ae601f-df5e-437a-8f51-f0124132374c"
+        "imageUuidOrDatabaseUri": "8954c536-01d9-4eae-9bf3-697611c8ce55"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "c6ae601f-df5e-437a-8f51-f0124132374c@6c48a"
+    "redirect": "8954c536-01d9-4eae-9bf3-697611c8ce55@6c48a"
   }
 }

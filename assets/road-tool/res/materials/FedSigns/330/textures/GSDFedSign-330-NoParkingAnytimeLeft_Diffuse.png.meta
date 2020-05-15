@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "0467fdba-e802-4013-a0d0-722f86cb67ad",
+  "uuid": "5e182907-34c5-4863-aeaa-26c7d3816846",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "0467fdba-e802-4013-a0d0-722f86cb67ad@6c48a",
+      "uuid": "5e182907-34c5-4863-aeaa-26c7d3816846@6c48a",
       "displayName": "GSDFedSign-330-NoParkingAnytimeLeft_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "0467fdba-e802-4013-a0d0-722f86cb67ad"
+        "imageUuidOrDatabaseUri": "5e182907-34c5-4863-aeaa-26c7d3816846"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "0467fdba-e802-4013-a0d0-722f86cb67ad@6c48a"
+    "redirect": "5e182907-34c5-4863-aeaa-26c7d3816846@6c48a"
   }
 }

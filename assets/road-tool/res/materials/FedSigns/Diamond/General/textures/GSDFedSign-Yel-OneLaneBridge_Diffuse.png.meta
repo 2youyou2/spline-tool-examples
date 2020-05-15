@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "7bc2ad02-c3c6-4adf-8cc1-7f0e7da31ab9",
+  "uuid": "b813d640-b31e-47ed-832e-5d072ecb0ce5",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "7bc2ad02-c3c6-4adf-8cc1-7f0e7da31ab9@6c48a",
+      "uuid": "b813d640-b31e-47ed-832e-5d072ecb0ce5@6c48a",
       "displayName": "GSDFedSign-Yel-OneLaneBridge_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "7bc2ad02-c3c6-4adf-8cc1-7f0e7da31ab9"
+        "imageUuidOrDatabaseUri": "b813d640-b31e-47ed-832e-5d072ecb0ce5"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "7bc2ad02-c3c6-4adf-8cc1-7f0e7da31ab9@6c48a"
+    "redirect": "b813d640-b31e-47ed-832e-5d072ecb0ce5@6c48a"
   }
 }

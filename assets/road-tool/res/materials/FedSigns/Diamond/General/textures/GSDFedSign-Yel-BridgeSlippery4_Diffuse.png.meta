@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "619ffb89-0766-493c-931f-5dd97493279e",
+  "uuid": "7206bec1-b84c-42b4-bea9-25abda14807c",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "619ffb89-0766-493c-931f-5dd97493279e@6c48a",
+      "uuid": "7206bec1-b84c-42b4-bea9-25abda14807c@6c48a",
       "displayName": "GSDFedSign-Yel-BridgeSlippery4_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "619ffb89-0766-493c-931f-5dd97493279e"
+        "imageUuidOrDatabaseUri": "7206bec1-b84c-42b4-bea9-25abda14807c"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "619ffb89-0766-493c-931f-5dd97493279e@6c48a"
+    "redirect": "7206bec1-b84c-42b4-bea9-25abda14807c@6c48a"
   }
 }

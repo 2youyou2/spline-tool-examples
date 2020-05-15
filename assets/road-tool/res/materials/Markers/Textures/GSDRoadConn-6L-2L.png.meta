@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "7becf975-3c8d-480e-9ced-2c9f194cb85f",
+  "uuid": "14bd28a3-047b-4ebc-8d7e-5ffbfe8199e1",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "7becf975-3c8d-480e-9ced-2c9f194cb85f@6c48a",
+      "uuid": "14bd28a3-047b-4ebc-8d7e-5ffbfe8199e1@6c48a",
       "displayName": "GSDRoadConn-6L-2L",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "7becf975-3c8d-480e-9ced-2c9f194cb85f"
+        "imageUuidOrDatabaseUri": "14bd28a3-047b-4ebc-8d7e-5ffbfe8199e1"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "7becf975-3c8d-480e-9ced-2c9f194cb85f@6c48a"
+    "redirect": "14bd28a3-047b-4ebc-8d7e-5ffbfe8199e1@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "7e771b17-c70e-4b81-a12e-e349bd29f1bb",
+  "uuid": "f002e302-e71f-4d83-81d2-e447481ecd76",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "7e771b17-c70e-4b81-a12e-e349bd29f1bb@6c48a",
+      "uuid": "f002e302-e71f-4d83-81d2-e447481ecd76@6c48a",
       "displayName": "GSDFedSign-Yel-BikeUseFullLane2_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "7e771b17-c70e-4b81-a12e-e349bd29f1bb"
+        "imageUuidOrDatabaseUri": "f002e302-e71f-4d83-81d2-e447481ecd76"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "7e771b17-c70e-4b81-a12e-e349bd29f1bb@6c48a"
+    "redirect": "f002e302-e71f-4d83-81d2-e447481ecd76@6c48a"
   }
 }

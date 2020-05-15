@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "f7f1bb51-ab61-4930-8cdb-2a3893979dde",
+  "uuid": "d610ff0e-32c7-4a8c-bfed-f4f1e7c08958",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "f7f1bb51-ab61-4930-8cdb-2a3893979dde@6c48a",
+      "uuid": "d610ff0e-32c7-4a8c-bfed-f4f1e7c08958@6c48a",
       "displayName": "GSDFedSign-Com-BikeMayUseFullLane_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "f7f1bb51-ab61-4930-8cdb-2a3893979dde"
+        "imageUuidOrDatabaseUri": "d610ff0e-32c7-4a8c-bfed-f4f1e7c08958"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "f7f1bb51-ab61-4930-8cdb-2a3893979dde@6c48a"
+    "redirect": "d610ff0e-32c7-4a8c-bfed-f4f1e7c08958@6c48a"
   }
 }

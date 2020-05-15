@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "ce3ff236-9bcc-4fdf-85f4-e3264f7a711b",
+  "uuid": "8bd7a448-6e81-447a-b6d8-1ab85585604b",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "ce3ff236-9bcc-4fdf-85f4-e3264f7a711b@6c48a",
+      "uuid": "8bd7a448-6e81-447a-b6d8-1ab85585604b@6c48a",
       "displayName": "GSDFedSign-Yel-Motorcycles_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "ce3ff236-9bcc-4fdf-85f4-e3264f7a711b"
+        "imageUuidOrDatabaseUri": "8bd7a448-6e81-447a-b6d8-1ab85585604b"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "ce3ff236-9bcc-4fdf-85f4-e3264f7a711b@6c48a"
+    "redirect": "8bd7a448-6e81-447a-b6d8-1ab85585604b@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "9faf299d-e230-4bb8-919b-6a77f1bf8b38",
+  "uuid": "6c601c5f-bb5e-46a1-9d53-2d5324c1864a",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "9faf299d-e230-4bb8-919b-6a77f1bf8b38@6c48a",
+      "uuid": "6c601c5f-bb5e-46a1-9d53-2d5324c1864a@6c48a",
       "displayName": "GSDFedSign-396-LightsOnWhenRaining_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "9faf299d-e230-4bb8-919b-6a77f1bf8b38"
+        "imageUuidOrDatabaseUri": "6c601c5f-bb5e-46a1-9d53-2d5324c1864a"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "9faf299d-e230-4bb8-919b-6a77f1bf8b38@6c48a"
+    "redirect": "6c601c5f-bb5e-46a1-9d53-2d5324c1864a@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "2ee49b33-5142-4956-8448-baf3b5375653",
+  "uuid": "66b40961-eb42-4cb1-8ab3-2483266b2dfd",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "2ee49b33-5142-4956-8448-baf3b5375653@6c48a",
+      "uuid": "66b40961-eb42-4cb1-8ab3-2483266b2dfd@6c48a",
       "displayName": "GSDFedSign-OraConstruction-FreshOil_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "2ee49b33-5142-4956-8448-baf3b5375653"
+        "imageUuidOrDatabaseUri": "66b40961-eb42-4cb1-8ab3-2483266b2dfd"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "2ee49b33-5142-4956-8448-baf3b5375653@6c48a"
+    "redirect": "66b40961-eb42-4cb1-8ab3-2483266b2dfd@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "411fc9ed-7149-4d27-80d3-65997c9601b5",
+  "uuid": "e31ed403-3f65-42e3-a124-d59edce91f41",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "411fc9ed-7149-4d27-80d3-65997c9601b5@6c48a",
+      "uuid": "e31ed403-3f65-42e3-a124-d59edce91f41@6c48a",
       "displayName": "GSDFedSign-Yel-TrafficCircle_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "411fc9ed-7149-4d27-80d3-65997c9601b5"
+        "imageUuidOrDatabaseUri": "e31ed403-3f65-42e3-a124-d59edce91f41"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "411fc9ed-7149-4d27-80d3-65997c9601b5@6c48a"
+    "redirect": "e31ed403-3f65-42e3-a124-d59edce91f41@6c48a"
   }
 }

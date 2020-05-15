@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "4afbe4da-0aba-44da-947f-e250be6e068b",
+  "uuid": "054d2fce-8e5c-47e1-ae77-857561c3ff4e",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "4afbe4da-0aba-44da-947f-e250be6e068b@6c48a",
+      "uuid": "054d2fce-8e5c-47e1-ae77-857561c3ff4e@6c48a",
       "displayName": "GSDFedSign-Yel-45SpeedZoneAhead_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "4afbe4da-0aba-44da-947f-e250be6e068b"
+        "imageUuidOrDatabaseUri": "054d2fce-8e5c-47e1-ae77-857561c3ff4e"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "4afbe4da-0aba-44da-947f-e250be6e068b@6c48a"
+    "redirect": "054d2fce-8e5c-47e1-ae77-857561c3ff4e@6c48a"
   }
 }

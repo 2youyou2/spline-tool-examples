@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "1fcbd602-44c2-4018-9886-5a158233282e",
+  "uuid": "bfa5d748-2ace-49cd-8d39-b50631b1b794",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "1fcbd602-44c2-4018-9886-5a158233282e@6c48a",
+      "uuid": "bfa5d748-2ace-49cd-8d39-b50631b1b794@6c48a",
       "displayName": "GSDFedSign-Yel-BikewayNarrows_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "1fcbd602-44c2-4018-9886-5a158233282e"
+        "imageUuidOrDatabaseUri": "bfa5d748-2ace-49cd-8d39-b50631b1b794"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "1fcbd602-44c2-4018-9886-5a158233282e@6c48a"
+    "redirect": "bfa5d748-2ace-49cd-8d39-b50631b1b794@6c48a"
   }
 }

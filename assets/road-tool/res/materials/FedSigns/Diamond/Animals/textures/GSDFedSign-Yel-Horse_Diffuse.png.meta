@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "e1c5a088-3cde-40dd-bc70-8d5ddf8b2e27",
+  "uuid": "9b9c74b2-954e-489c-97f2-b7b49aa240e8",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "e1c5a088-3cde-40dd-bc70-8d5ddf8b2e27@6c48a",
+      "uuid": "9b9c74b2-954e-489c-97f2-b7b49aa240e8@6c48a",
       "displayName": "GSDFedSign-Yel-Horse_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "e1c5a088-3cde-40dd-bc70-8d5ddf8b2e27"
+        "imageUuidOrDatabaseUri": "9b9c74b2-954e-489c-97f2-b7b49aa240e8"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "e1c5a088-3cde-40dd-bc70-8d5ddf8b2e27@6c48a"
+    "redirect": "9b9c74b2-954e-489c-97f2-b7b49aa240e8@6c48a"
   }
 }

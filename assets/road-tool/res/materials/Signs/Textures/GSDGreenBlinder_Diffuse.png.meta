@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "2b362775-9218-46aa-b056-c34319def319",
+  "uuid": "6638793a-a478-4730-bda0-fc688dc86025",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "2b362775-9218-46aa-b056-c34319def319@6c48a",
+      "uuid": "6638793a-a478-4730-bda0-fc688dc86025@6c48a",
       "displayName": "GSDGreenBlinder_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "2b362775-9218-46aa-b056-c34319def319"
+        "imageUuidOrDatabaseUri": "6638793a-a478-4730-bda0-fc688dc86025"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "2b362775-9218-46aa-b056-c34319def319@6c48a"
+    "redirect": "6638793a-a478-4730-bda0-fc688dc86025@6c48a"
   }
 }

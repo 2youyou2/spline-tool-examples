@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "10089f23-55e6-4f15-8396-6f4be12ab46b",
+  "uuid": "cb7c68fc-abb9-4928-979c-2164cfe2f72d",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "10089f23-55e6-4f15-8396-6f4be12ab46b@6c48a",
+      "uuid": "cb7c68fc-abb9-4928-979c-2164cfe2f72d@6c48a",
       "displayName": "GSDFedSign-330-ReservedParking_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "10089f23-55e6-4f15-8396-6f4be12ab46b"
+        "imageUuidOrDatabaseUri": "cb7c68fc-abb9-4928-979c-2164cfe2f72d"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "10089f23-55e6-4f15-8396-6f4be12ab46b@6c48a"
+    "redirect": "cb7c68fc-abb9-4928-979c-2164cfe2f72d@6c48a"
   }
 }

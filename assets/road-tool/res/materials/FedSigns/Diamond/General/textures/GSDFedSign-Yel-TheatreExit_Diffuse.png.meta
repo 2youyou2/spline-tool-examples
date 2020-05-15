@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "10e1fe34-fa99-41f0-ae2a-fb79e60312ac",
+  "uuid": "2222574f-cbef-47b0-a77f-b77fb38ea7bb",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "10e1fe34-fa99-41f0-ae2a-fb79e60312ac@6c48a",
+      "uuid": "2222574f-cbef-47b0-a77f-b77fb38ea7bb@6c48a",
       "displayName": "GSDFedSign-Yel-TheatreExit_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "10e1fe34-fa99-41f0-ae2a-fb79e60312ac"
+        "imageUuidOrDatabaseUri": "2222574f-cbef-47b0-a77f-b77fb38ea7bb"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "10e1fe34-fa99-41f0-ae2a-fb79e60312ac@6c48a"
+    "redirect": "2222574f-cbef-47b0-a77f-b77fb38ea7bb@6c48a"
   }
 }

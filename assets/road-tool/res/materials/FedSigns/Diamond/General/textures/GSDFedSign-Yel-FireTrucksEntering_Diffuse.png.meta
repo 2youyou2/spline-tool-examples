@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "26084190-836b-499f-b1d2-f6f22923a44d",
+  "uuid": "b88e703d-5213-4d32-a45e-df2d0ab1fcd8",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "26084190-836b-499f-b1d2-f6f22923a44d@6c48a",
+      "uuid": "b88e703d-5213-4d32-a45e-df2d0ab1fcd8@6c48a",
       "displayName": "GSDFedSign-Yel-FireTrucksEntering_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "26084190-836b-499f-b1d2-f6f22923a44d"
+        "imageUuidOrDatabaseUri": "b88e703d-5213-4d32-a45e-df2d0ab1fcd8"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "26084190-836b-499f-b1d2-f6f22923a44d@6c48a"
+    "redirect": "b88e703d-5213-4d32-a45e-df2d0ab1fcd8@6c48a"
   }
 }

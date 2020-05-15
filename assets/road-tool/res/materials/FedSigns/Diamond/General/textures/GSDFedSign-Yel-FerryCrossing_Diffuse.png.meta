@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "a25132d5-049b-41c9-879a-0e48b25fbac9",
+  "uuid": "7495043f-f8a3-4246-ac24-6dcc449a738e",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "a25132d5-049b-41c9-879a-0e48b25fbac9@6c48a",
+      "uuid": "7495043f-f8a3-4246-ac24-6dcc449a738e@6c48a",
       "displayName": "GSDFedSign-Yel-FerryCrossing_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "a25132d5-049b-41c9-879a-0e48b25fbac9"
+        "imageUuidOrDatabaseUri": "7495043f-f8a3-4246-ac24-6dcc449a738e"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "a25132d5-049b-41c9-879a-0e48b25fbac9@6c48a"
+    "redirect": "7495043f-f8a3-4246-ac24-6dcc449a738e@6c48a"
   }
 }

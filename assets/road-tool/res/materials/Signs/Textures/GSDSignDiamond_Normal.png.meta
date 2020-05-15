@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "b178b013-e2a0-4239-b35a-51deda039648",
+  "uuid": "6359abd7-ca2d-4e2f-b0a9-637b40d5466e",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "b178b013-e2a0-4239-b35a-51deda039648@6c48a",
+      "uuid": "6359abd7-ca2d-4e2f-b0a9-637b40d5466e@6c48a",
       "displayName": "GSDSignDiamond_Normal",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "b178b013-e2a0-4239-b35a-51deda039648"
+        "imageUuidOrDatabaseUri": "6359abd7-ca2d-4e2f-b0a9-637b40d5466e"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "b178b013-e2a0-4239-b35a-51deda039648@6c48a"
+    "redirect": "6359abd7-ca2d-4e2f-b0a9-637b40d5466e@6c48a"
   }
 }

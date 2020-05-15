@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "1fc61874-7b94-47bf-9efd-2d11003ea6ce",
+  "uuid": "847c00b6-257b-420b-9144-f5217cd4b0f5",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "1fc61874-7b94-47bf-9efd-2d11003ea6ce@6c48a",
+      "uuid": "847c00b6-257b-420b-9144-f5217cd4b0f5@6c48a",
       "displayName": "GSDFedSign-617-Hill_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "1fc61874-7b94-47bf-9efd-2d11003ea6ce"
+        "imageUuidOrDatabaseUri": "847c00b6-257b-420b-9144-f5217cd4b0f5"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "1fc61874-7b94-47bf-9efd-2d11003ea6ce@6c48a"
+    "redirect": "847c00b6-257b-420b-9144-f5217cd4b0f5@6c48a"
   }
 }

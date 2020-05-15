@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "0d465b87-5fbc-4743-b505-e6c54aea2ee3",
+  "uuid": "7bbd42d2-5190-4e29-9d24-31bd0a431791",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "0d465b87-5fbc-4743-b505-e6c54aea2ee3@6c48a",
+      "uuid": "7bbd42d2-5190-4e29-9d24-31bd0a431791@6c48a",
       "displayName": "GSDFedSign-Yel-SchoolBusTurn2_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "0d465b87-5fbc-4743-b505-e6c54aea2ee3"
+        "imageUuidOrDatabaseUri": "7bbd42d2-5190-4e29-9d24-31bd0a431791"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "0d465b87-5fbc-4743-b505-e6c54aea2ee3@6c48a"
+    "redirect": "7bbd42d2-5190-4e29-9d24-31bd0a431791@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "0dc564ea-8782-4cab-9eae-f110d9f7a8fa",
+  "uuid": "2b1d012f-55e5-48e5-9b6d-81f9063e7b89",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "0dc564ea-8782-4cab-9eae-f110d9f7a8fa@6c48a",
+      "uuid": "2b1d012f-55e5-48e5-9b6d-81f9063e7b89@6c48a",
       "displayName": "GSDSign-861-RestArea1Mile_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "0dc564ea-8782-4cab-9eae-f110d9f7a8fa"
+        "imageUuidOrDatabaseUri": "2b1d012f-55e5-48e5-9b6d-81f9063e7b89"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "0dc564ea-8782-4cab-9eae-f110d9f7a8fa@6c48a"
+    "redirect": "2b1d012f-55e5-48e5-9b6d-81f9063e7b89@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "353e25e0-2254-4420-8d99-6d477e3f5ddc",
+  "uuid": "639bf0a2-f29a-4d15-9456-ecc48d9483fc",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "353e25e0-2254-4420-8d99-6d477e3f5ddc@6c48a",
+      "uuid": "639bf0a2-f29a-4d15-9456-ecc48d9483fc@6c48a",
       "displayName": "GSDFedSign-Yel-CableCar2_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "353e25e0-2254-4420-8d99-6d477e3f5ddc"
+        "imageUuidOrDatabaseUri": "639bf0a2-f29a-4d15-9456-ecc48d9483fc"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "353e25e0-2254-4420-8d99-6d477e3f5ddc@6c48a"
+    "redirect": "639bf0a2-f29a-4d15-9456-ecc48d9483fc@6c48a"
   }
 }

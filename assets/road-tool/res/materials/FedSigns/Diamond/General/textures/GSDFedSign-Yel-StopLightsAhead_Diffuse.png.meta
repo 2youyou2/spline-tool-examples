@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "8c747eb2-a406-424c-ac20-38189299b765",
+  "uuid": "a911ee3b-feac-4b58-b11a-cb342fd1e5c0",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "8c747eb2-a406-424c-ac20-38189299b765@6c48a",
+      "uuid": "a911ee3b-feac-4b58-b11a-cb342fd1e5c0@6c48a",
       "displayName": "GSDFedSign-Yel-StopLightsAhead_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "8c747eb2-a406-424c-ac20-38189299b765"
+        "imageUuidOrDatabaseUri": "a911ee3b-feac-4b58-b11a-cb342fd1e5c0"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "8c747eb2-a406-424c-ac20-38189299b765@6c48a"
+    "redirect": "a911ee3b-feac-4b58-b11a-cb342fd1e5c0@6c48a"
   }
 }

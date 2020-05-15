@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "06b5b3f0-f2b1-4c5a-a2e0-042f84726f7a",
+  "uuid": "455e68c8-7389-48a9-964f-2a27ed8eae26",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "06b5b3f0-f2b1-4c5a-a2e0-042f84726f7a@6c48a",
+      "uuid": "455e68c8-7389-48a9-964f-2a27ed8eae26@6c48a",
       "displayName": "GSDFedSign-OraConstruction-RoadWork1k_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "06b5b3f0-f2b1-4c5a-a2e0-042f84726f7a"
+        "imageUuidOrDatabaseUri": "455e68c8-7389-48a9-964f-2a27ed8eae26"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "06b5b3f0-f2b1-4c5a-a2e0-042f84726f7a@6c48a"
+    "redirect": "455e68c8-7389-48a9-964f-2a27ed8eae26@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "6edad0a2-9d2f-4ea4-8298-5ba8111ddd51",
+  "uuid": "82e5594a-4adc-43ad-b7d6-966ccb631396",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "6edad0a2-9d2f-4ea4-8298-5ba8111ddd51@6c48a",
+      "uuid": "82e5594a-4adc-43ad-b7d6-966ccb631396@6c48a",
       "displayName": "GSDFedSign-330-BridgeSpeed15_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "6edad0a2-9d2f-4ea4-8298-5ba8111ddd51"
+        "imageUuidOrDatabaseUri": "82e5594a-4adc-43ad-b7d6-966ccb631396"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "6edad0a2-9d2f-4ea4-8298-5ba8111ddd51@6c48a"
+    "redirect": "82e5594a-4adc-43ad-b7d6-966ccb631396@6c48a"
   }
 }

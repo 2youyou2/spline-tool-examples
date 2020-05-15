@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "02b6864f-a3e2-4166-905a-263e79ee1d61",
+  "uuid": "d89a0c07-3bc5-4a72-a8b7-15b49b428e18",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "02b6864f-a3e2-4166-905a-263e79ee1d61@6c48a",
+      "uuid": "d89a0c07-3bc5-4a72-a8b7-15b49b428e18@6c48a",
       "displayName": "GSDFedSign-Yel-LowFlyingAircraft1_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "02b6864f-a3e2-4166-905a-263e79ee1d61"
+        "imageUuidOrDatabaseUri": "d89a0c07-3bc5-4a72-a8b7-15b49b428e18"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "02b6864f-a3e2-4166-905a-263e79ee1d61@6c48a"
+    "redirect": "d89a0c07-3bc5-4a72-a8b7-15b49b428e18@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "cc8daf13-64eb-4293-bb18-898e29823dac",
+  "uuid": "cee65807-6435-4cbf-b4f1-54f2e7d8607e",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "cc8daf13-64eb-4293-bb18-898e29823dac@6c48a",
+      "uuid": "cee65807-6435-4cbf-b4f1-54f2e7d8607e@6c48a",
       "displayName": "GSDFedSign-396-WalkOnLeftFacingTraffic_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "cc8daf13-64eb-4293-bb18-898e29823dac"
+        "imageUuidOrDatabaseUri": "cee65807-6435-4cbf-b4f1-54f2e7d8607e"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "cc8daf13-64eb-4293-bb18-898e29823dac@6c48a"
+    "redirect": "cee65807-6435-4cbf-b4f1-54f2e7d8607e@6c48a"
   }
 }

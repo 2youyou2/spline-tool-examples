@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "1c21349a-960e-483c-9ba7-5cf495cc1af8",
+  "uuid": "46324a76-146e-411b-969e-e2e14583b9b0",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "1c21349a-960e-483c-9ba7-5cf495cc1af8@6c48a",
+      "uuid": "46324a76-146e-411b-969e-e2e14583b9b0@6c48a",
       "displayName": "GSDFedSign-617-LoadingZone_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "1c21349a-960e-483c-9ba7-5cf495cc1af8"
+        "imageUuidOrDatabaseUri": "46324a76-146e-411b-969e-e2e14583b9b0"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "1c21349a-960e-483c-9ba7-5cf495cc1af8@6c48a"
+    "redirect": "46324a76-146e-411b-969e-e2e14583b9b0@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "dd49a12a-2b55-4d65-a008-f5c192d0be98",
+  "uuid": "313d5f79-cd68-4825-afda-0b899ce4180f",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "dd49a12a-2b55-4d65-a008-f5c192d0be98@6c48a",
+      "uuid": "313d5f79-cd68-4825-afda-0b899ce4180f@6c48a",
       "displayName": "GSDFedSign-330-StopHereOnRed_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "dd49a12a-2b55-4d65-a008-f5c192d0be98"
+        "imageUuidOrDatabaseUri": "313d5f79-cd68-4825-afda-0b899ce4180f"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "dd49a12a-2b55-4d65-a008-f5c192d0be98@6c48a"
+    "redirect": "313d5f79-cd68-4825-afda-0b899ce4180f@6c48a"
   }
 }

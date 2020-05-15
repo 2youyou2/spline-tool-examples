@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "d2978b06-e736-4e75-9470-2c09df4b4650",
+  "uuid": "b48f5f15-fd8d-47bb-b26e-a4a4b4d926f7",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "d2978b06-e736-4e75-9470-2c09df4b4650@6c48a",
+      "uuid": "b48f5f15-fd8d-47bb-b26e-a4a4b4d926f7@6c48a",
       "displayName": "GSDFedSign-Yel-Tractor_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "d2978b06-e736-4e75-9470-2c09df4b4650"
+        "imageUuidOrDatabaseUri": "b48f5f15-fd8d-47bb-b26e-a4a4b4d926f7"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "d2978b06-e736-4e75-9470-2c09df4b4650@6c48a"
+    "redirect": "b48f5f15-fd8d-47bb-b26e-a4a4b4d926f7@6c48a"
   }
 }

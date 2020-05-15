@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "1ad1daad-aa2e-40fb-bbe6-0d35f5531c0c",
+  "uuid": "b0205ab7-e1b6-444f-be29-a43afa84c805",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "1ad1daad-aa2e-40fb-bbe6-0d35f5531c0c@6c48a",
+      "uuid": "b0205ab7-e1b6-444f-be29-a43afa84c805@6c48a",
       "displayName": "GSDFedSign-617-CoinParking_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "1ad1daad-aa2e-40fb-bbe6-0d35f5531c0c"
+        "imageUuidOrDatabaseUri": "b0205ab7-e1b6-444f-be29-a43afa84c805"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "1ad1daad-aa2e-40fb-bbe6-0d35f5531c0c@6c48a"
+    "redirect": "b0205ab7-e1b6-444f-be29-a43afa84c805@6c48a"
   }
 }

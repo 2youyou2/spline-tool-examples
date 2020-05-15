@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "2d392d6a-abc3-4c28-a596-9b1ba9e57cc5",
+  "uuid": "e397f50c-73b7-4c5b-989b-30d31904517a",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "2d392d6a-abc3-4c28-a596-9b1ba9e57cc5@6c48a",
+      "uuid": "e397f50c-73b7-4c5b-989b-30d31904517a@6c48a",
       "displayName": "GSDSign-861-WeighStationNextRight_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "2d392d6a-abc3-4c28-a596-9b1ba9e57cc5"
+        "imageUuidOrDatabaseUri": "e397f50c-73b7-4c5b-989b-30d31904517a"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "2d392d6a-abc3-4c28-a596-9b1ba9e57cc5@6c48a"
+    "redirect": "e397f50c-73b7-4c5b-989b-30d31904517a@6c48a"
   }
 }

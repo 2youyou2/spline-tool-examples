@@ -9,6 +9,7 @@
   "_techIdx": 0,
   "_defines": [
     {
+      "USE_NORMAL_MAP": true,
       "USE_ALBEDO_MAP": true
     }
   ],
@@ -24,6 +25,13 @@
     }
   ],
   "_props": [
-    {}
+    {
+      "mainTexture": {
+        "__uuid__": "26b2ff8c-9008-4645-9524-8932121bbca2@6c48a"
+      },
+      "normalMap": {
+        "__uuid__": "c13c3f77-0134-4820-8647-eb675540247b@6c48a"
+      }
+    }
   ]
 }

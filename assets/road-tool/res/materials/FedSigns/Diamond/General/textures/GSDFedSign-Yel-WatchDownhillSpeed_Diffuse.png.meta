@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "bfaa0af4-7de3-4686-92fc-fc9868cdfb27",
+  "uuid": "d3a74196-d171-4bd0-80d6-afcbea7d152b",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "bfaa0af4-7de3-4686-92fc-fc9868cdfb27@6c48a",
+      "uuid": "d3a74196-d171-4bd0-80d6-afcbea7d152b@6c48a",
       "displayName": "GSDFedSign-Yel-WatchDownhillSpeed_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "bfaa0af4-7de3-4686-92fc-fc9868cdfb27"
+        "imageUuidOrDatabaseUri": "d3a74196-d171-4bd0-80d6-afcbea7d152b"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "bfaa0af4-7de3-4686-92fc-fc9868cdfb27@6c48a"
+    "redirect": "d3a74196-d171-4bd0-80d6-afcbea7d152b@6c48a"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "6b582c34-195c-45a8-adf7-96d0df9ea115",
+  "uuid": "6bd78439-c3ca-4ed7-ab19-a2350beadb19",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "6b582c34-195c-45a8-adf7-96d0df9ea115@6c48a",
+      "uuid": "6bd78439-c3ca-4ed7-ab19-a2350beadb19@6c48a",
       "displayName": "GSDFedSign-G-TexasFarmRoad665_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "6b582c34-195c-45a8-adf7-96d0df9ea115"
+        "imageUuidOrDatabaseUri": "6bd78439-c3ca-4ed7-ab19-a2350beadb19"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "6b582c34-195c-45a8-adf7-96d0df9ea115@6c48a"
+    "redirect": "6bd78439-c3ca-4ed7-ab19-a2350beadb19@6c48a"
   }
 }

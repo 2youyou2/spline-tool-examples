@@ -2,7 +2,7 @@
   "ver": "1.0.17",
   "importer": "image",
   "imported": true,
-  "uuid": "8576485f-b3d1-4d58-b61f-5a20ac31dbca",
+  "uuid": "89744031-8483-4d92-9cc5-8a6cede65d6d",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "8576485f-b3d1-4d58-b61f-5a20ac31dbca@6c48a",
+      "uuid": "89744031-8483-4d92-9cc5-8a6cede65d6d@6c48a",
       "displayName": "GSDFedSign-617-FireHouse_Diffuse",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "8576485f-b3d1-4d58-b61f-5a20ac31dbca"
+        "imageUuidOrDatabaseUri": "89744031-8483-4d92-9cc5-8a6cede65d6d"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "8576485f-b3d1-4d58-b61f-5a20ac31dbca@6c48a"
+    "redirect": "89744031-8483-4d92-9cc5-8a6cede65d6d@6c48a"
   }
 }
