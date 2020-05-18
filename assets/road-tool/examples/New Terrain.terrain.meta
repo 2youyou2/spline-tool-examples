@@ -1,9 +1,10 @@
 {
   "ver": "1.0.28",
-  "importer": "scene",
+  "importer": "terrain",
   "imported": true,
-  "uuid": "20807065-0cdf-42b9-a85f-b57699064215",
+  "uuid": "86a16c42-f0a6-447e-9279-e13b09e520ba",
   "files": [
+    ".bin",
     ".json"
   ],
   "subMetas": {},
