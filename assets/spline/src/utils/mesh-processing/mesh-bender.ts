@@ -238,12 +238,14 @@ export default class MeshBender extends Component {
             this.curve.length;
         let repetitionCount = Math.floor(intervalLength / source.length);
         let sampleCache = this._sampleCache;
+        
+        let sourceVertices = source.vertices;
 
         // building triangles and UVs for the repeated mesh
         let triangles: number[] = [];
-        for (let i = 0; i < repetitionCount; i++) {
+        for (let i = 0; i < repetitionCount+1; i++) {
             for (let j = 0; j < source.triangles.length; j++) {
-                triangles.push(source.triangles[j] + source.vertices.length * i);
+                triangles.push(source.triangles[j] + sourceVertices.length * i);
             }
         }
 
@@ -252,8 +254,8 @@ export default class MeshBender extends Component {
         let offset = this.offset;
         for (let i = 0; i < repetitionCount; i++) {
             // for each mesh vertex, we found its projection on the curve
-            for (let j = 0; j < source.vertices.length; j++) {
-                let vert = source.vertices[j];
+            for (let j = 0; j < sourceVertices.length; j++) {
+                let vert = sourceVertices[j];
                 let distance = vert.position.x - source.minX + offset;
                 let cacheKey = `${i}_${distance}`;
                 let sample: CurveSample = sampleCache.get(cacheKey);
@@ -278,6 +280,35 @@ export default class MeshBender extends Component {
                 bentVertices.push(sample.getBent(vert, MeshVertex.pool.get()));
             }
             offset += source.length;
+        }
+
+        // fill remaining length
+        let remainingLength = this.spline.length - offset;
+        for (let i = 0; i < sourceVertices.length; i++) {
+            let vert = sourceVertices[i];
+            let distanceRate = source.length == 0 ? 0 : Math.abs(vert.position.x - source.minX) / source.length;
+            let distance = offset + distanceRate * remainingLength;
+            let cacheKey = '' + distance;
+            let sample: CurveSample = sampleCache.get(cacheKey);
+            if (!sample) {
+                if (!this.useSpline) {
+                    if (distance > this.curve.length) continue;
+                    sample = this.curve.getSampleAtDistance(distance, CurveSample.pool.get());
+                } else {
+                    let distOnSpline = this.intervalStart + distance;
+                    //if (true) { //spline.isLoop) {
+                    while (distOnSpline > this.spline.length) {
+                        distOnSpline -= this.spline.length;
+                    }
+                    //} else if (distOnSpline > spline.Length) {
+                    //    continue;
+                    //}
+                    sample = this.spline.getSampleAtDistance(distOnSpline);
+                }
+                sampleCache.set(cacheKey, sample);
+            }
+
+            bentVertices.push(sample.getBent(vert, MeshVertex.pool.get()));
         }
 
         MeshUtility.updateModelMesh(this.getComponent(ModelComponent), {
