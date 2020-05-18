@@ -51,6 +51,7 @@ export function create3DNode(name: string) {
 }
 
 export function callGizmoFunction (cb) {
+    if (!window.cce) return;
     if (window.cce.gizmos) {
         cb();
         return;

@@ -8,7 +8,7 @@ const { ccclass, executeInEditMode, type } = _decorator;
 export default class SplineUtilBase extends Component {
     @type(Spline)
     get splineComp () {
-        return this. spline;
+        return this.spline;
     }
 
     protected _generated: Node = null;

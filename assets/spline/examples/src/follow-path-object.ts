@@ -33,7 +33,13 @@ export class followPath extends Component {
     private _spline: Spline = null;
     public get spline () {
         if (!this._spline) {
-            this._spline = this.getComponent(Spline);
+            let parent = this.node;
+            while (parent) {
+                this._spline = parent.getComponent(Spline);
+                if (this._spline) break;
+    
+                parent = parent.parent;
+            }
         }
         return this._spline;
     }
@@ -63,6 +69,7 @@ export class followPath extends Component {
         Vec3.transformMat4(tempPos, tempPos, tempMat4);
 
         this.target.position = tempPos;
+        this.target.rotation = sample.rotation;
 
         this._time += deltaTime;
     }

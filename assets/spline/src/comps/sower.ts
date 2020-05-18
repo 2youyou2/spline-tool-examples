@@ -1,9 +1,9 @@
-import { _decorator, Node, Prefab } from 'cc';
+import { _decorator, Node, Prefab, isPropertyModifier, Vec4, Quat, Vec3 } from 'cc';
 import BaseUtils from './spline-util-base';
 
-const { ccclass, executeInEditMode, float, type, boolean } = _decorator;
+const { ccclass, executeInEditMode, float, type, boolean, property } = _decorator;
 
-const { Quat, Vec3 } = cc;
+let tempQuat = new Quat();
 
 @ccclass
 @executeInEditMode
@@ -20,6 +20,8 @@ export default class NewClass extends BaseUtils {
     _scale = 1;
     @float
     _scaleRange = 0;
+    @property
+    _rotation = new Vec3();
     @type(Prefab)
     _prefab: Prefab = null;
 
@@ -40,6 +42,9 @@ export default class NewClass extends BaseUtils {
     @float
     get scale () { return this._scale; };
     set scale (v) { this._scale = v; this.dirty = true; };
+    @property
+    get rotation () { return this._rotation; }
+    set rotation (value) { this._rotation = value; this.dirty = true; }
     @float
     get scaleRange () { return this._scaleRange; };
     set scaleRange (v) { this._scaleRange = v; this.dirty = true; };
@@ -48,7 +53,6 @@ export default class NewClass extends BaseUtils {
     get prefab () { return this._prefab; };
     set prefab (v) { this._prefab = v; this.dirty = true; };
 
-    isRandomYaw = false;
     public compute () {
         let children = this.generated.children;
 
@@ -74,18 +78,10 @@ export default class NewClass extends BaseUtils {
             rangedScale *= Math.min(sample.scale.x, sample.scale.y);
             node.setScale(rangedScale, rangedScale, rangedScale);
             
-            // rotate with random yaw
-            if (this.isRandomYaw) {
-                node.eulerAngles = cc.v3(0, 0, (Math.random() - 0.5) * 360);
-            } else {
-                // if (node.is3DNode) {
-                node.setRotation(sample.rotation);
-                // }
-                // else {
-                //     let euler = sample.rotation.toEuler(cc.v3());
-                //     node.angle = euler.x > 0 ? (90 - euler.x) : (90 + euler.x);
-                // }
-            }
+            Quat.fromEuler(tempQuat, this.rotation.x, this.rotation.y, this.rotation.z);
+            Quat.multiply(tempQuat, sample.rotation, tempQuat);
+            node.setRotation(tempQuat);
+            
             // move orthogonaly to the spline, according to offset + random
             let binormal = Vec3.transformQuat(cc.v3(), cc.Vec3.RIGHT, Quat.fromViewUp(cc.quat(), sample.tangent, sample.up)).normalize();
             let localOffset = this.offset + Math.random() * this.offsetRange * Math.sign(this.offset);
