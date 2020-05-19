@@ -83,7 +83,7 @@ export default class SplineMeshTiling extends BaseUtils {
     }
     public set curveSpace (value) {
         this._curveSpace = value;
-        this.setDirty();
+        this._onSplineChanged();
     }
 
     // "The mode to use to fill the choosen interval with the bent mesh."
@@ -112,7 +112,7 @@ export default class SplineMeshTiling extends BaseUtils {
     }
     set offset (value) {
         this._offset = value;
-        this.setDirty();
+        this._onSplineChanged();
     }
 
     public compute () {

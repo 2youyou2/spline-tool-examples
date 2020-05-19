@@ -1,0 +1,93 @@
+{
+  "ver": "1.3.20",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "a863b302-ef21-4336-a9be-c3c445b00f0c",
+  "files": [],
+  "subMetas": {
+    "6e283": {
+      "importer": "gltf-mesh",
+      "uuid": "a863b302-ef21-4336-a9be-c3c445b00f0c@6e283",
+      "displayName": "",
+      "id": "6e283",
+      "name": "SM_grass_bush_01_LOD0.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "f5781": {
+      "importer": "gltf-mesh",
+      "uuid": "a863b302-ef21-4336-a9be-c3c445b00f0c@f5781",
+      "displayName": "",
+      "id": "f5781",
+      "name": "SM_grass_bush_01_LOD1.mesh",
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 1
+      }
+    },
+    "12a2b": {
+      "importer": "gltf-material",
+      "uuid": "a863b302-ef21-4336-a9be-c3c445b00f0c@12a2b",
+      "displayName": "",
+      "id": "12a2b",
+      "name": "M_atlas_grass_01.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "312ae": {
+      "importer": "gltf-scene",
+      "uuid": "a863b302-ef21-4336-a9be-c3c445b00f0c@312ae",
+      "displayName": "",
+      "id": "312ae",
+      "name": "grass-bush-01.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "a863b302-ef21-4336-a9be-c3c445b00f0c@312ae",
+    "assetFinder": {
+      "meshes": [
+        "a863b302-ef21-4336-a9be-c3c445b00f0c@6e283",
+        "a863b302-ef21-4336-a9be-c3c445b00f0c@f5781"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "a863b302-ef21-4336-a9be-c3c445b00f0c@12a2b"
+      ],
+      "scenes": [
+        "a863b302-ef21-4336-a9be-c3c445b00f0c@312ae"
+      ]
+    }
+  }
+}

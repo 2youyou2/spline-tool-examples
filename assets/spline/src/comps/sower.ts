@@ -51,7 +51,11 @@ export default class NewClass extends BaseUtils {
 
     @type(Prefab)
     get prefab () { return this._prefab; };
-    set prefab (v) { this._prefab = v; this.dirty = true; };
+    set prefab (v) { 
+        this._prefab = v; 
+        this.node.removeAllChildren();
+        this.dirty = true;
+    };
 
     public compute () {
         let children = this.generated.children;
