@@ -113,9 +113,13 @@ export default class SourceMesh {
         let vertices = this._vertices = this._vertices || [];
         let positions = this._mesh.readAttribute(0, GFXAttributeName.ATTR_POSITION);
         let normals = this._mesh.readAttribute(0, GFXAttributeName.ATTR_NORMAL);
+
         let tangents = this._mesh.readAttribute(0, GFXAttributeName.ATTR_TANGENT);
-        let uvs = this._mesh.readAttribute(0, GFXAttributeName.ATTR_TEX_COORD);
         let hasTangents = tangents && tangents.length > 0;
+
+        let uvs = this._mesh.readAttribute(0, GFXAttributeName.ATTR_TEX_COORD);
+        let hasUvs = uvs && uvs.length > 0;
+
         let vertCount = positions.length / 3;
         let i = 0;
         for (; i < vertCount; i++) {
@@ -125,7 +129,9 @@ export default class SourceMesh {
             }
             transformed.position.set(positions[3 * i + 0], positions[3 * i + 1], positions[3 * i + 2]);
             transformed.normal.set(normals[3 * i + 0], normals[3 * i + 1], normals[3 * i + 2]);
-            transformed.uv.set(uvs[2 * i + 0], uvs[2 * i + 1]);
+            if (hasUvs) {
+                transformed.uv.set(uvs[2 * i + 0], uvs[2 * i + 1]);
+            }
             if (hasTangents) {
                 transformed.tangent.set(tangents[4 * i + 0], tangents[4 * i + 1], tangents[4 * i + 2], tangents[4 * i + 3]);
             }
