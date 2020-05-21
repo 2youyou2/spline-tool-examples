@@ -1,5 +1,5 @@
 
-import BaseUtils from './spline-util-base';
+import SplineUtilRenderer from './spline-util-renderer';
 import MeshBender, { FillingMode } from '../utils/mesh-processing/mesh-bender';
 import SourceMesh from '../utils/mesh-processing/source-mesh';
 import Spline from '../spline';
@@ -10,7 +10,7 @@ const { ccclass, executeInEditMode, float, type, boolean, property } = _decorato
 
 @ccclass
 @executeInEditMode
-export default class SplineMeshTiling extends BaseUtils {
+export default class SplineMeshTiling extends SplineUtilRenderer {
     @type(Material)
     public _material: Material = null;
     

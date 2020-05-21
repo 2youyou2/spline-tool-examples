@@ -1,10 +1,11 @@
-import { Component, Node, _decorator } from 'cc';
+import { Component, Node, _decorator, Vec3 } from 'cc';
 
 import SplineNode from './spline-node';
 import CubicBezierCurve from './cubic-bezier-curve';
 import CurveSample from './curve-sample';
 
 import Event from './utils/event';
+import pool from './utils/pool';
 
 const { ccclass, type, boolean, integer, float, executeInEditMode } = _decorator;
 
@@ -185,6 +186,7 @@ export default class Spline extends Component {
             this.length += curve.length;
         }
         this.curveChanged.invoke();
+        this._points.length = 0;
     }
 
     /// <summary>
@@ -368,6 +370,50 @@ export default class Spline extends Component {
         start.changed.addListener(this.startNodeChanged);
     }
 
-    // editor
+    _points = [];
+    _minPos = new Vec3();
+    _maxPos = new Vec3();
+
+    getPoints () {
+        if (this._points.length === 0) {
+            this._caclBoundingBox();
+        }
+        return this._points;
+    }
+    getBounding (min:Vec3, max: Vec3) {
+        if (this._points.length === 0) {
+            this._caclBoundingBox();
+        }
+        min.set(this._minPos);
+        max.set(this._maxPos);
+    }
+    private _caclBoundingBox () {
+        let curves = this.curves;
+        let points = this._points;
+
+        let min = this._minPos.set(Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);
+        let max = this._maxPos.set(-Number.MAX_SAFE_INTEGER, -Number.MAX_SAFE_INTEGER, -Number.MAX_SAFE_INTEGER);
+
+        let index = 0;
+        for (let i = 0; i < curves.length; i++) {
+            let samples = curves[i].getSamples();
+            for (let j = 0; j < samples.length; j++) {
+                let position = samples[j].location;
+                points[index] = position;
+
+                min.x = Math.min(min.x, position.x);
+                min.y = Math.min(min.y, position.y);
+                min.z = Math.min(min.z, position.z);
+
+                max.x = Math.max(max.x, position.x);
+                max.y = Math.max(max.y, position.y);
+                max.z = Math.max(max.z, position.z);
+
+                index++;
+            }
+        }
+        points.length = index;
+    }
+
 
 }

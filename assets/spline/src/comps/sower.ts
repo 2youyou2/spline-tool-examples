@@ -1,5 +1,5 @@
 import { _decorator, Node, Prefab, isPropertyModifier, Vec4, Quat, Vec3 } from 'cc';
-import BaseUtils from './spline-util-base';
+import SplineUtilRenderer from './spline-util-renderer';
 
 const { ccclass, executeInEditMode, float, type, boolean, property } = _decorator;
 
@@ -7,7 +7,7 @@ let tempQuat = new Quat();
 
 @ccclass
 @executeInEditMode
-export default class NewClass extends BaseUtils {
+export default class NewClass extends SplineUtilRenderer {
     @float
     _spacing = 10;
     @float

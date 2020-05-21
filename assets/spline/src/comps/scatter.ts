@@ -1,9 +1,11 @@
 import { _decorator, Node, Prefab, isPropertyModifier, Vec4, Quat, Vec3, geometry, randomRange, Mat4, Layers, Enum, ModelComponent, Vec2, Mat3, Terrain } from 'cc';
-import BaseUtils from './spline-util-base';
+import SplineUtilRenderer from './spline-util-renderer';
 import raycast from '../utils/raycast';
 import pool from '../utils/pool';
 import SourceMesh from '../utils/mesh-processing/source-mesh';
 import FixedModelMesh from '../utils/mesh-processing/fixed-model-mesh';
+import { ScatterVolume } from './scatter-volume';
+import { pointInPolygonAreaXZ } from '../utils/mathf';
 
 const { ccclass, executeInEditMode, float, type, boolean, property } = _decorator;
 
@@ -21,25 +23,8 @@ let tempMeshPos = new Vec3();
 let tempMeshNormal = new Vec3();
 let tempMeshTangent = new Vec4();
 
-function pointInPolygonXZ (point: Vec3, polygon: Vec3[]) {
-    var inside = false;
-    var x = point.x;
-    var z = point.z;
-
-    // use some raycasting to test hits
-    // https://github.com/substack/point-in-polygon/blob/master/index.js
-    var length = polygon.length;
-
-    for (var i = 0, j = length - 1; i < length; j = i++) {
-        var xi = polygon[i].x, zi = polygon[i].z,
-            xj = polygon[j].x, zj = polygon[j].z,
-            intersect = ((zi > z) !== (zj > z)) && (x < (xj - xi) * (z - zi) / (zj - zi) + xi);
-
-        if (intersect) inside = !inside;
-    }
-
-    return inside;
-}
+let tempMin = new Vec3;
+let tempMax = new Vec3;
 
 enum ScatterType {
     Mesh,
@@ -47,9 +32,15 @@ enum ScatterType {
 }
 Enum(ScatterType);
 
+class VolumeInfo {
+    volume = 0;
+    maxCount = 0;
+    count = 0;
+}
+
 @ccclass
 @executeInEditMode
-export default class Scatter extends BaseUtils {
+export default class Scatter extends SplineUtilRenderer {
     @property
     _scale = Vec3.ONE.clone();
     @property
@@ -148,62 +139,72 @@ export default class Scatter extends BaseUtils {
         return this._currentItemCount;
     }
 
-    private _points: Vec3[] = [];
-    private _minPos = new Vec3;
-    private _maxPos = new Vec3;
+    _volumeInfos: VolumeInfo[] = [];
+    _selfVolumeInfo = new VolumeInfo;
+
+    @type(ScatterVolume)
+    _volumes: ScatterVolume[] = []    
+    @type(ScatterVolume)
+    get volumes () {
+        return this._volumes;
+    }
+    set volumes (value) {
+        let oldValue = this._volumes;
+        for (let i = 0; i < oldValue.length; i++) {
+            if (oldValue[i]) {
+                oldValue[i].volumeChanged.removeListener(this._updateVolume, this);
+            }
+        }
+        this._volumes = value;
+        this._updateVolume();
+    }
 
     public onLoad () {
         super.onLoad();
         this._updateType();
         this._updateMesh();
-    }
-
-    protected _onSplineChanged () {
-        super._onSplineChanged();
-        this._caclBoundingBox();
-    }
-
-    private _caclBoundingBox () {
-        let curves = this.spline.curves;
-        let points = this._points;
-
-        let min = this._minPos.set(Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);
-        let max = this._maxPos.set(-Number.MAX_SAFE_INTEGER, -Number.MAX_SAFE_INTEGER, -Number.MAX_SAFE_INTEGER);
-
-        let index = 0;
-        for (let i = 0; i < curves.length; i++) {
-            let samples = curves[i].getSamples();
-            for (let j = 0; j < samples.length; j++) {
-                let position = samples[j].location;
-                if (!points[index]) {
-                    points[index] = pool.Vec3.get();
-                }
-                position = Vec3.transformMat4(points[index], position, this.spline.node.worldMatrix);
-
-                min.x = Math.min(min.x, position.x);
-                min.y = Math.min(min.y, position.y);
-                min.z = Math.min(min.z, position.z);
-
-                max.x = Math.max(max.x, position.x);
-                max.y = Math.max(max.y, position.y);
-                max.z = Math.max(max.z, position.z);
-
-                index++;
-            }
-        }
-
-        for (; index < points.length; index++) {
-            pool.Vec3.put(points[index]);
-        }
+        this._updateVolume();
     }
 
     private _isPosValid (pos) {
-        return pointInPolygonXZ(pos, this._points);
+        if (!pointInPolygonAreaXZ(pos, this.spline.getPoints())) {
+            return false;
+        }
+
+        Vec3.transformMat4(pos, pos, this.spline.node.worldMatrix);
+
+        let volumes = this._volumes;
+        let volumeInfos = this._volumeInfos;
+        let valid = false;
+        let includeByVolumes = 0;
+        for (let i = 0; i < volumes.length; i++) {
+            let volume = volumes[i];
+            if (!volume) continue;
+
+            let info = volumeInfos[i];
+            if (volume.includePos(pos)) {
+                includeByVolumes ++;
+                if (info.count >= info.maxCount) {
+                    continue;       
+                }
+                valid = true;
+                info.count++;
+                break;
+            }
+        }
+        if (includeByVolumes === 0) {
+            if (this._selfVolumeInfo.count < this._selfVolumeInfo.maxCount) {
+                valid = true;
+                this._selfVolumeInfo.count++;
+            }
+        }
+        return valid;
     }
 
     private _getNextPosition (): Vec3 | null {
-        let min = this._minPos;
-        let max = this._maxPos;
+        let min = tempMin;
+        let max = tempMax;
+        this._spline.getBounding(min, max);
 
         let iterratorCount = 0;
         do {
@@ -295,6 +296,46 @@ export default class Scatter extends BaseUtils {
                 children[i].parent = null;
             }
         }
+    }
+
+    protected _updateVolume () {
+        let infos = this._volumeInfos;
+        infos.length = 0;
+        let totalVolume = 0;
+        for (let i = 0; i < this._volumes.length; i++) {
+            let volume = this._volumes[i];
+            let info = new VolumeInfo;
+
+            if (volume) {
+                volume.volumeChanged.addListener(this._updateVolume, this);
+                info.volume = volume.volume;
+            }
+            else {
+                info.volume = 0;
+            }
+
+            infos[i] = info;
+            totalVolume += info.volume;
+        }
+        
+        for (let i = 0; i < infos.length; i++) {
+            let info = infos[i];
+            if (totalVolume) {
+                if (totalVolume > 1) {
+                    info.volume /= totalVolume;
+                }
+            }
+            else {
+                info.volume = 0;
+            }
+            info.maxCount = info.volume * this.itemCount;
+        }
+
+        this._selfVolumeInfo.count = 0;
+        this._selfVolumeInfo.volume = Math.max(0, 1 - totalVolume);
+        this._selfVolumeInfo.maxCount = this._selfVolumeInfo.volume * this.itemCount;
+
+        this.dirty = true;
     }
 
     protected _fixedMesh: FixedModelMesh = null;
