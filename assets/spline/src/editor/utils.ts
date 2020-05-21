@@ -33,7 +33,7 @@ export function createLineShape (name, color?: Color) {
             indices.push(i - 1, i);
         }
 
-        MeshUtility.updateModelMesh(model, {
+        MeshUtility.updateOrCreateModelMesh(model, {
             positions: points,
             indices,
             primitiveType: cc.GFXPrimitiveMode.LINE_LIST

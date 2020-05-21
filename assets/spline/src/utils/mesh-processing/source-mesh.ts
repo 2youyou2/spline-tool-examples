@@ -8,9 +8,9 @@ export default class SourceMesh {
         return new SourceMesh(mesh);
     }
 
-    private translation = new Vec3;
-    private rotation = new Quat;
-    private scale = new Vec3;
+    public translation = new Vec3;
+    public rotation = new Quat;
+    public scale = new Vec3;
 
     private _mesh: Mesh;
     get mesh () {
@@ -71,9 +71,9 @@ export default class SourceMesh {
     }
 
     public translate (translation: Vec3) {
-        var res = new SourceMesh(this);
-        res.translation.set(translation);
-        return res;
+        this.reset();
+        this.translation.set(translation);
+        return this;
     }
 
     public translate2 (x: number, y: number, z: number) {
@@ -81,19 +81,30 @@ export default class SourceMesh {
     }
 
     public rotate (rotation: Quat) {
-        var res = new SourceMesh(this);
-        res.rotation.set(rotation);
-        return res;
+        this.reset();
+        this.rotation.set(rotation);
+        return this;
     }
 
     public scaleRes (scale: Vec3) {
-        var res = new SourceMesh(this);
-        res.scale.set(scale);
-        return res;
+        this.reset();
+        this.scale.set(scale);
+        return this;
     }
 
     public scaleRes2 (x: number, y: number, z: number) {
         return this.scaleRes(new Vec3(x, y, z));
+    }
+
+    public reset () {
+        if (this._vertices) {
+            this._vertices.forEach(v => {
+                MeshVertex.pool.put(v);
+            })
+            this._vertices = null;
+        }
+
+        this._triangles.length = 0;
     }
 
     private buildData () {
@@ -149,7 +160,7 @@ export default class SourceMesh {
                 // Vec4.multiply(transformed.tangent, transformed.tangent, this.scale);
             }
             transformed.position.add(this.translation);
-            
+
         }
 
         for (; i < vertices.length; i++) {

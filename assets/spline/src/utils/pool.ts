@@ -1,4 +1,4 @@
-import { Vec3, Vec2, Quat, Mat4 } from 'cc';
+import { Vec3, Vec2, Quat, Mat4, Vec4 } from 'cc';
 
 export class Pool <T> {
     _pool = [];
@@ -24,6 +24,7 @@ export class Pool <T> {
 export default {
     Vec2: new Pool(Vec2),
     Vec3: new Pool(Vec3),
+    Vec4: new Pool(Vec4),
     Quat: new Pool(Quat),
     Mat4: new Pool(Mat4),
 }

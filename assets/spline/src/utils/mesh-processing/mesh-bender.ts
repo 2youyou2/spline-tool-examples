@@ -214,7 +214,7 @@ export default class MeshBender extends Component {
             bentVertices.push(sample.getBent(vert, MeshVertex.pool.get()));
         }
 
-        MeshUtility.updateModelMesh(this.getComponent(ModelComponent), {
+        MeshUtility.updateOrCreateModelMesh(this.getComponent(ModelComponent), {
             positions: bentVertices.map(b => b.position),
             normals: bentVertices.map(b => b.normal),
             tangents: bentVertices.map(b => b.tangent),
@@ -311,7 +311,7 @@ export default class MeshBender extends Component {
             bentVertices.push(sample.getBent(vert, MeshVertex.pool.get()));
         }
 
-        MeshUtility.updateModelMesh(this.getComponent(ModelComponent), {
+        MeshUtility.updateOrCreateModelMesh(this.getComponent(ModelComponent), {
             positions: bentVertices.map(b => b.position),
             normals: bentVertices.map(b => b.normal),
             tangents: bentVertices.map(b => b.tangent),
@@ -357,7 +357,7 @@ export default class MeshBender extends Component {
             bentVertices.push(sample.getBent(vert, MeshVertex.pool.get()));
         }
 
-        MeshUtility.updateModelMesh(this.getComponent(ModelComponent), {
+        MeshUtility.updateOrCreateModelMesh(this.getComponent(ModelComponent), {
             positions: bentVertices.map(b => b.position),
             normals: bentVertices.map(b => b.normal),
             tangents: bentVertices.map(b => b.tangent),

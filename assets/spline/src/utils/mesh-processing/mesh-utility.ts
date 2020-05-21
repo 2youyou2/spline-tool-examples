@@ -174,7 +174,7 @@ export default {
         model.updateCommandBuffer();
     },
 
-    updateModelMesh (model: ModelComponent, primitive) {
+    updateOrCreateModelMesh (model: ModelComponent, primitive) {
         if (!model.mesh) {
             model.mesh = this.createMesh(primitive);
         }
