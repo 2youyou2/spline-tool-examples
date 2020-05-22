@@ -1,4 +1,4 @@
-import { _decorator, Node, Prefab, isPropertyModifier, Vec4, Quat, Vec3, geometry, randomRange, Mat4, Layers, Enum, ModelComponent, Vec2, Mat3, Terrain } from 'cc';
+import { _decorator, Node, Prefab, isPropertyModifier, Vec4, Quat, Vec3, geometry, randomRange, Mat4, Layers, Enum, ModelComponent, Vec2, Mat3, Terrain, CCClass } from 'cc';
 import SplineUtilRenderer from './spline-util-renderer';
 import raycast from '../utils/raycast';
 import pool from '../utils/pool';
@@ -26,11 +26,189 @@ let tempMeshTangent = new Vec4();
 let tempMin = new Vec3;
 let tempMax = new Vec3;
 
+let tempArray2 = new Array(2).fill(0);
+let tempArray3 = new Array(3).fill(0);
+let tempArray4 = new Array(4).fill(0);
+
 enum ScatterType {
     Mesh,
     Instance,
 }
 Enum(ScatterType);
+
+@ccclass('ScatterItem')
+class ScatterItem {
+    @type(Prefab)
+    _prefab: Prefab = null;
+    @type(ScatterType)
+    _type = ScatterType.Mesh;
+    @property
+    _volume = 1;
+
+    @type(Prefab)
+    get prefab () {
+        return this._prefab;
+    }
+    set prefab (value) {
+        this._prefab = value;
+    }
+    @type(ScatterType)
+    get type () {
+        return this._type;
+    }
+    set type (value) {
+        this._type = value;
+    }
+    @property
+    get volume () {
+        return this._volume;
+    }
+    set volume (value) {
+        this._volume = value;
+    }
+
+    _maxCount = 0;
+    @property
+    get maxCount () {
+        return this._maxCount;
+    }
+
+    protected _fixedMeshes: FixedModelMesh[] = [];
+    protected _models: ModelComponent[] = [];
+    protected _sourceMesh: SourceMesh = null;
+
+    init (node, maxCount) {
+        this.node = node;
+        this._maxCount = maxCount;
+        this.currentCount = 0;
+
+        if (!this.prefab) return;
+
+        if (this._type === ScatterType.Mesh) {
+            this.node.removeAllChildren();
+
+            let tempNode: Node = cc.instantiate(this.prefab);
+            tempNode.setPosition(0, 0, 0);
+            let tempModel = tempNode.getComponent(ModelComponent) || tempNode.getComponentInChildren(ModelComponent);
+            if (tempModel && tempModel.mesh) {
+                this._sourceMesh = SourceMesh.build(tempModel.mesh);
+                tempModel.node.getWorldRotation(this._sourceMesh.rotation)
+                tempModel.node.getWorldPosition(this._sourceMesh.translation)
+                tempModel.node.getWorldScale(this._sourceMesh.scale)
+                this._sourceMesh.reset();
+            }
+
+            let tempMaterials = tempModel && tempModel.sharedMaterials;
+            let subMeshCount = this._sourceMesh.subCount();
+
+            this._fixedMeshes.length = 0;
+            this._models.length = 0;
+            for (let i = 0; i < subMeshCount; i++) {
+                this._fixedMeshes[i] = FixedModelMesh.create(this._sourceMesh.getVertices(i).length, this._sourceMesh.getTriangles(i).length, this.maxCount);
+                let node = new Node('ScatterItemModel');
+                let model = node.addComponent(ModelComponent);
+                model.setMaterial(tempMaterials[i] || tempMaterials[0], 0);
+                model.mesh = this._fixedMeshes[i].mesh;
+                this._models[i] = model;
+
+                node.parent = this.node;
+            }
+        }
+        else {
+            this.node.removeComponent(ModelComponent);
+
+            this._models.length = 0;
+            this._sourceMesh = null;
+            this._fixedMeshes.length = 0;
+        }
+    }
+
+    fill (position: Vec3, scale: Vec3, rotation: Quat, mat: Mat4) {
+        if (this.currentCount >= this.maxCount || !this.prefab) return false;
+
+        if (this._type === ScatterType.Mesh) {
+            this.updateMesh(mat);
+        }
+        else {
+            this.updateInstance(position, scale, rotation);
+        }
+
+        this.currentCount++;
+
+        this._updated = true;
+        return true;
+    }
+
+    endFill () {
+        if (!this._updated || !this.prefab) return;
+
+        if (this._type === ScatterType.Mesh) {
+            let fixedMeshes = this._fixedMeshes;
+            let models = this._models;
+            for (let i = 0; i < fixedMeshes.length; i++) {
+                fixedMeshes[i].update(models[i]);
+            }
+        }
+        else if (this._type === ScatterType.Instance) {
+            let children = this.node.children;
+            if (children.length > this.maxCount) {
+                for (let i = children.length - 1; i >= this.maxCount; i--) {
+                    children[i].parent = null;
+                }
+            }
+        }
+
+        this._updated = false;
+    }
+
+    protected updateMesh (mat: Mat4) {
+        let sourceMesh = this._sourceMesh;
+        if (!sourceMesh) return;
+
+        let subCount = sourceMesh.subCount();
+        for (let si = 0; si < subCount; si++) {
+            let fixedMesh = this._fixedMeshes[si];
+            let vertices = sourceMesh.getVertices(si);
+            let vertCount = vertices.length;
+            let vertOffset = this.currentCount * vertCount
+
+            for (let i = 0; i < vertCount; i++) {
+                let vert = vertices[i];
+
+                let offset = vertOffset + i;
+
+                fixedMesh.writeVertex(offset, 'position', Vec3.toArray(tempArray3, Vec3.transformMat4(tempMeshPos, vert.position, mat)));
+                fixedMesh.writeVertex(offset, 'normal', Vec3.toArray(tempArray3, Vec3.transformMat4(tempMeshNormal, vert.position, mat)));
+                fixedMesh.writeVertex(offset, 'tangent', Vec4.toArray(tempArray4, Vec4.transformMat4(tempMeshTangent, vert.tangent, mat)));
+                fixedMesh.writeVertex(offset, 'uv', Vec2.toArray(tempArray2, vert.uv));
+            }
+
+            let triangles = sourceMesh.triangles;
+            let triangleCount = triangles.length;
+            let triangleOffset = this.currentCount * triangleCount;
+            for (let i = 0; i < triangleCount; i++) {
+                fixedMesh.writeIndex(triangleOffset + i, vertOffset + triangles[i]);
+            }
+        }
+    }
+
+    protected updateInstance (position: Vec3, scale: Vec3, rotation: Quat) {
+        let node = this.node.children[this.currentCount];
+        if (!node) {
+            node = cc.instantiate(this.prefab);
+            node.parent = this.node;
+        }
+        node.position = position;
+        node.scale = scale;
+        node.rotation = rotation;
+    }
+
+    private _updated = false;
+
+    private currentCount = 0;
+
+    private node: Node = null;
+}
 
 class VolumeInfo {
     volume = 0;
@@ -38,7 +216,7 @@ class VolumeInfo {
     count = 0;
 }
 
-@ccclass
+@ccclass('Scatter')
 @executeInEditMode
 export default class Scatter extends SplineUtilRenderer {
     @property
@@ -60,9 +238,6 @@ export default class Scatter extends SplineUtilRenderer {
     @type(Terrain)
     _raycastTerrain: Terrain = null;
 
-    @type(ScatterType)
-    _type = ScatterType.Mesh;
-
     @property
     get scale () { return this._scale; };
     set scale (v) { this._scale = v; this.dirty = true; };
@@ -77,26 +252,15 @@ export default class Scatter extends SplineUtilRenderer {
     set rotationYRange (value) { this._rotationYRange = value; this.dirty = true; }
     @property
     get itemCount () { return this._itemCount; }
-    set itemCount (value) { 
+    set itemCount (value) {
         if (this._itemCount === value) return;
         this._itemCount = value;
-        this.dirty = true; 
-        this._updateMesh();
+        this.dirty = true;
+        this._updateItems();
     }
     @property
     get generateCountPerFrame () { return this._generateCountPerFrame; }
     set generateCountPerFrame (value) { this._generateCountPerFrame = value; }
-
-    @type(Prefab)
-    get prefab () { return this._prefab; };
-    set prefab (v) {
-        this._prefab = v;
-        this.node.removeAllChildren();
-        this.dirty = true;
-
-        this._sourceMesh = null;
-        this._updateType();
-    };
 
     @type(Node)
     set raycastLayer (l) {
@@ -110,16 +274,6 @@ export default class Scatter extends SplineUtilRenderer {
     }
     get raycastLayer () {
         return this._raycastLayer;
-    }
-
-    @type(ScatterType)
-    get type () {
-        return this._type;
-    }
-    set type (value) {
-        this._type = value;
-        this._updateType();
-        this.dirty = true;
     }
 
     private _dirty = true;
@@ -143,7 +297,7 @@ export default class Scatter extends SplineUtilRenderer {
     _selfVolumeInfo = new VolumeInfo;
 
     @type(ScatterVolume)
-    _volumes: ScatterVolume[] = []    
+    _volumes: ScatterVolume[] = []
     @type(ScatterVolume)
     get volumes () {
         return this._volumes;
@@ -159,10 +313,23 @@ export default class Scatter extends SplineUtilRenderer {
         this._updateVolume();
     }
 
+    @type(ScatterItem)
+    _items: ScatterItem[] = [];
+    @type(ScatterItem)
+    get item () {
+        return this._items;
+    }
+    set item (value) {
+        this._items = value;
+        this.node.removeAllChildren();
+        this.dirty = true;
+
+        this._updateItems();
+    }
+
+
     public onLoad () {
         super.onLoad();
-        this._updateType();
-        this._updateMesh();
         this._updateVolume();
     }
 
@@ -183,9 +350,9 @@ export default class Scatter extends SplineUtilRenderer {
 
             let info = volumeInfos[i];
             if (volume.includePos(pos)) {
-                includeByVolumes ++;
+                includeByVolumes++;
                 if (info.count >= info.maxCount) {
-                    continue;       
+                    continue;
                 }
                 valid = true;
                 info.count++;
@@ -248,12 +415,12 @@ export default class Scatter extends SplineUtilRenderer {
     }
 
     public compute () {
-        if (this.prefab == null) return;
-
-        let children = this.generated.children;
+        if (this._items.length <= 0 || !this._hasValidItem) return;
 
         Mat4.invert(invertParentMatrix, this.node.parent.worldMatrix);
         if (this._currentItemCount < this._itemCount) {
+            let items = this._items;
+            
             for (let i = 0; i < this._generateCountPerFrame; i++) {
                 if (this._currentItemCount >= this._itemCount) break;
 
@@ -270,18 +437,19 @@ export default class Scatter extends SplineUtilRenderer {
                 let rotationY = Math.random() * (this.rotationY + this.rotationYRange);
                 tempEuler.set(0, rotationY, 0);
 
-                if (this._type === ScatterType.Mesh) {
-                    this.updateMesh(validPos, tempScale, tempEuler);
-                }
-                else {
-                    this.updateInstance(validPos, tempScale, tempEuler);
-                }
+                Quat.fromEuler(tempQuat, tempEuler.x, tempEuler.y, tempEuler.z);
+                Mat4.fromRTS(tempMat4, tempQuat, validPos, tempScale);
 
-                this._currentItemCount++;
+                for (let j = 0; j < items.length; j++) {
+                    if (items[j].fill(validPos, tempScale, tempQuat, tempMat4)) {
+                        this._currentItemCount++;
+                        break;
+                    }
+                }
             }
 
-            if (this._type === ScatterType.Mesh) {
-                this._fixedMesh.update(this._model);
+            for (let i = 0; i < items.length; i++) {
+                items[i].endFill();
             }
 
             //@ts-ignore
@@ -289,12 +457,6 @@ export default class Scatter extends SplineUtilRenderer {
         }
         else {
             this._dirty = false;
-        }
-
-        if (children.length > this.itemCount) {
-            for (let i = children.length - 1; i >= this.itemCount; i--) {
-                children[i].parent = null;
-            }
         }
     }
 
@@ -317,7 +479,7 @@ export default class Scatter extends SplineUtilRenderer {
             infos[i] = info;
             totalVolume += info.volume;
         }
-        
+
         for (let i = 0; i < infos.length; i++) {
             let info = infos[i];
             if (totalVolume) {
@@ -336,91 +498,67 @@ export default class Scatter extends SplineUtilRenderer {
         this._selfVolumeInfo.maxCount = this._selfVolumeInfo.volume * this.itemCount;
 
         this.dirty = true;
+        
+        this._updateItems();
     }
 
-    protected _fixedMesh: FixedModelMesh = null;
-    protected _updateMesh () {
-        if (this._type !== ScatterType.Mesh || !this._model || !this._sourceMesh) {
-            this._updateType();
+    protected get generated () {
+        if (!this._generated || this._generated.parent !== this.node) {
+            let generatedName = 'generated ' + cc.js.getClassName(this);
+            // this._generated = cc.find(generatedName, this.node);
+            if (!this._generated) {
+                this._generated = new Node(generatedName);
+                this._generated.parent = this.node;
+            }
+        }
+        return this._generated;
+    }
+
+    _hasValidItem = false;
+    _updateItems () {
+        this._hasValidItem = false;
+
+        let totalVolume = 0;
+        let items = this._items;
+        for (let i = 0; i < items.length; i++) {
+            let item = items[i];
+            if (!item.prefab) continue;
+            totalVolume += items[i].volume;
+            this._hasValidItem = true;
+        }
+        if (totalVolume === 0) {
+            this._hasValidItem = false;
+        }
+        if (!this._hasValidItem) {
+            return;
         }
 
-        this._fixedMesh = FixedModelMesh.create(this._sourceMesh.vertices.length, this._sourceMesh.triangles.length, this._itemCount);
-        this._model.mesh = this._fixedMesh.mesh;
-    }
+        
+        let children = this.generated.children;
+        for (let i = 0; i < items.length; i++) {
+            let item = items[i];
+            if (!item.prefab) continue;
 
-    protected _model: ModelComponent = null;
-    protected _sourceMesh: SourceMesh = null;
-    protected _updateType () {
-        if (this._type === ScatterType.Mesh) {
-            this.generated.removeAllChildren();
-            this._model = this.generated.getComponent(ModelComponent)
-            if (!this._model) {
-                this._model = this.generated.addComponent(ModelComponent);
-            }
-            if (!this._sourceMesh) {
-                let tempNode: Node = cc.instantiate(this.prefab);
-                tempNode.setPosition(0,0,0);
-                let model = tempNode.getComponent(ModelComponent) || tempNode.getComponentInChildren(ModelComponent);
-                if (model && model.mesh) {
-                    this._sourceMesh = SourceMesh.build(model.mesh);
-                    model.node.getWorldRotation(this._sourceMesh.rotation)
-                    model.node.getWorldPosition(this._sourceMesh.translation)
-                    model.node.getWorldScale(this._sourceMesh.scale)
-                    this._sourceMesh.reset();
+            if (totalVolume) {
+                if (totalVolume > 1) {
+                    item.volume /= totalVolume;
                 }
-                this._model.material = model.material;
             }
-        }
-        else {
-            this.generated.removeComponent(ModelComponent);
-            this._model = null;
-
-            if (this._sourceMesh) {
-                this._sourceMesh = null;
+            else {
+                item.volume = 0;
             }
-        }
-    }
-
-    protected updateMesh (position: Vec3, scale: Vec3, rotation: Vec3) {
-        if (!this._sourceMesh) return;
-
-        Quat.fromEuler(tempQuat, rotation.x, rotation.y, rotation.z);
-        Mat4.fromRTS(tempMat4, tempQuat, position, scale);
-
-        let sourceMesh = this._sourceMesh;
-        let vertices = sourceMesh.vertices;
-        let vertCount = vertices.length;
-        let vertOffset = this._currentItemCount * vertCount;
-
-        let fixedMesh = this._fixedMesh;
-
-        for (let i = 0; i < vertCount; i++) {
-            let vert = vertices[i];
             
-            let offset = vertOffset + i;
+            let node = children[i];
+            if (!node) {
+                node = new Node('ScatterItem');
+                node.parent = this.generated;
+            }
 
-            fixedMesh.writeVertex(offset, 'position', Vec3.toArray([], Vec3.transformMat4(tempMeshPos, vert.position, tempMat4)));
-            fixedMesh.writeVertex(offset, 'normal', Vec3.toArray([], Vec3.transformMat4(tempMeshNormal, vert.position, tempMat4)));
-            fixedMesh.writeVertex(offset, 'tangent', Vec4.toArray([], Vec4.transformMat4(tempMeshTangent, vert.tangent, tempMat4)));
-            fixedMesh.writeVertex(offset, 'uv', Vec2.toArray([], vert.uv));
+            let maxCount = item.volume * this.itemCount;
+
+            item.init(node, maxCount);
         }
 
-        let triangles = sourceMesh.triangles;
-        let triangleCount = triangles.length;
-        let triangleOffset = this._currentItemCount * triangleCount;
-        for (let i = 0; i < triangleCount; i++) {
-            fixedMesh.writeIndex(triangleOffset + i,  vertOffset + triangles[i]);
-        }
-    }
-
-    protected updateInstance (position: Vec3, scale: Vec3, rotation: Vec3) {
-        let node = this.generated.children[this._currentItemCount];
-        if (!node) {
-            node = cc.instantiate(this.prefab);
-            node.parent = this.generated;
-        }
-        node.position = position;
-        node.scale = scale;
-        node.eulerAngles = rotation;
+        this.dirty = true;
     }
 }

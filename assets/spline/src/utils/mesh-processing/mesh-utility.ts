@@ -68,9 +68,9 @@ function updateMeshVB (mesh: Mesh, attr: string, newValues: [], buffer: ArrayBuf
 
 
 export default {
-    getReversedTriangles (mesh: Mesh) {
+    getReversedTriangles (mesh: Mesh, subMeshIndex = 0) {
         let res: number[] = [];
-        mesh.copyIndices(0, res);
+        mesh.copyIndices(subMeshIndex, res);
         var triangleCount = res.length / 3;
         for (var i = 0; i < triangleCount; i++) {
             var tmp = res[i * 3];
