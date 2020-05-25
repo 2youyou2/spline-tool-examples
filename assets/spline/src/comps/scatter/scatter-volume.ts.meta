@@ -10,6 +10,6 @@
   "subMetas": {},
   "userData": {
     "importAsPlugin": false,
-    "moduleId": "project:///assets/spline/src/comps/scatter-volume.js"
+    "moduleId": "project:///assets/spline/src/comps/scatter/scatter-volume.js"
   }
 }

@@ -1,17 +1,13 @@
 
-import { _decorator, Component, Node, Vec3, Mat4, cclegacy, Enum } from 'cc';
-import SplineUtilBase from './spline-util-base';
-import { pointInPolygonAreaXZ, pointInPolygonLineXZ } from '../utils/mathf';
-import Event from '../utils/event';
+import { _decorator, Vec3, } from 'cc';
+import SplineUtilBase from '../spline-util-base';
+import { pointInPolygonAreaXZ, pointInPolygonLineXZ } from '../../utils/mathf';
+import Event from '../../utils/event';
+import { VolumeType } from './type';
 const { ccclass, property, type, executeInEditMode } = _decorator;
 
 let tempPos = new Vec3;
 
-enum VolumeType {
-    Area,
-    Line,
-}
-Enum(VolumeType);
 
 @ccclass('ScatterVolume')
 @executeInEditMode
