@@ -1,5 +1,5 @@
 {
-  "ver": "1.3.20",
+  "ver": "1.3.21",
   "importer": "fbx",
   "imported": true,
   "uuid": "90bf47ed-270f-4809-8c6a-c1c25fa883fc",
@@ -22,12 +22,12 @@
         "gltfIndex": 0
       }
     },
-    "d4f45": {
+    "596e9": {
       "importer": "gltf-embeded-image",
-      "uuid": "90bf47ed-270f-4809-8c6a-c1c25fa883fc@d4f45",
+      "uuid": "90bf47ed-270f-4809-8c6a-c1c25fa883fc@596e9",
       "displayName": "",
-      "id": "d4f45",
-      "name": "Map #2.image",
+      "id": "596e9",
+      "name": "GSDGalv1_Diffuse.png.image",
       "ver": "1.0.2",
       "imported": true,
       "files": [
@@ -60,7 +60,7 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "90bf47ed-270f-4809-8c6a-c1c25fa883fc@d4f45"
+        "imageUuidOrDatabaseUri": "90bf47ed-270f-4809-8c6a-c1c25fa883fc@596e9"
       }
     },
     "db4d2": {
@@ -99,8 +99,8 @@
   "userData": {
     "imageMetas": [
       {
-        "name": "Map #2",
-        "uri": "90bf47ed-270f-4809-8c6a-c1c25fa883fc@d4f45"
+        "name": "GSDGalv1_Diffuse.png",
+        "uri": "90bf47ed-270f-4809-8c6a-c1c25fa883fc@596e9"
       }
     ],
     "redirect": "90bf47ed-270f-4809-8c6a-c1c25fa883fc@f7862",

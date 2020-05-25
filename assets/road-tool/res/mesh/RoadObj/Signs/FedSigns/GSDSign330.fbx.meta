@@ -1,5 +1,5 @@
 {
-  "ver": "1.3.20",
+  "ver": "1.3.21",
   "importer": "fbx",
   "imported": true,
   "uuid": "75f6e526-61e4-4280-8532-7b70534c15de",
@@ -22,12 +22,12 @@
         "gltfIndex": 0
       }
     },
-    "4a814": {
+    "5b823": {
       "importer": "gltf-embeded-image",
-      "uuid": "75f6e526-61e4-4280-8532-7b70534c15de@4a814",
+      "uuid": "75f6e526-61e4-4280-8532-7b70534c15de@5b823",
       "displayName": "",
-      "id": "4a814",
-      "name": "Map #7655.image",
+      "id": "5b823",
+      "name": "GSDFedSign-330-Exit25mph_Diffuse.png.image",
       "ver": "1.0.2",
       "imported": true,
       "files": [
@@ -60,7 +60,7 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "75f6e526-61e4-4280-8532-7b70534c15de@4a814"
+        "imageUuidOrDatabaseUri": "75f6e526-61e4-4280-8532-7b70534c15de@5b823"
       }
     },
     "cd5dd": {
@@ -99,8 +99,8 @@
   "userData": {
     "imageMetas": [
       {
-        "name": "Map #7655",
-        "uri": "75f6e526-61e4-4280-8532-7b70534c15de@4a814"
+        "name": "GSDFedSign-330-Exit25mph_Diffuse.png",
+        "uri": "75f6e526-61e4-4280-8532-7b70534c15de@5b823"
       }
     ],
     "redirect": "75f6e526-61e4-4280-8532-7b70534c15de@b3bf9",

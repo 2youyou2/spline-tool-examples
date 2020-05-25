@@ -1,5 +1,5 @@
 {
-  "ver": "1.3.20",
+  "ver": "1.3.21",
   "importer": "fbx",
   "imported": true,
   "uuid": "b8a8d6b5-4015-41e7-8e9b-2ec17deaef23",
@@ -22,12 +22,12 @@
         "gltfIndex": 0
       }
     },
-    "a2364": {
+    "7dbc7": {
       "importer": "gltf-embeded-image",
-      "uuid": "b8a8d6b5-4015-41e7-8e9b-2ec17deaef23@a2364",
+      "uuid": "b8a8d6b5-4015-41e7-8e9b-2ec17deaef23@7dbc7",
       "displayName": "",
-      "id": "a2364",
-      "name": "Map #1.image",
+      "id": "7dbc7",
+      "name": "GSDConcrete2_Diffuse.png.image",
       "ver": "1.0.2",
       "imported": true,
       "files": [
@@ -60,7 +60,7 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "b8a8d6b5-4015-41e7-8e9b-2ec17deaef23@a2364"
+        "imageUuidOrDatabaseUri": "b8a8d6b5-4015-41e7-8e9b-2ec17deaef23@7dbc7"
       }
     },
     "d90a4": {
@@ -99,8 +99,8 @@
   "userData": {
     "imageMetas": [
       {
-        "name": "Map #1",
-        "uri": "b8a8d6b5-4015-41e7-8e9b-2ec17deaef23@a2364"
+        "name": "GSDConcrete2_Diffuse.png",
+        "uri": "b8a8d6b5-4015-41e7-8e9b-2ec17deaef23@7dbc7"
       }
     ],
     "redirect": "b8a8d6b5-4015-41e7-8e9b-2ec17deaef23@c3551",

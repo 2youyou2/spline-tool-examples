@@ -1,10 +1,27 @@
 {
-  "ver": "1.3.20",
+  "ver": "1.3.21",
   "importer": "fbx",
   "imported": true,
   "uuid": "a16a2f8b-b20a-4827-83f3-c640363c4c8c",
   "files": [],
   "subMetas": {
+    "45414": {
+      "importer": "gltf-embeded-image",
+      "uuid": "a16a2f8b-b20a-4827-83f3-c640363c4c8c@45414",
+      "displayName": "",
+      "id": "45414",
+      "name": "GSDFedSign-G-Advise35_Diffuse.png.image",
+      "ver": "1.0.2",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
     "d2771": {
       "importer": "gltf-mesh",
       "uuid": "a16a2f8b-b20a-4827-83f3-c640363c4c8c@d2771",
@@ -16,23 +33,6 @@
       "files": [
         ".json",
         ".bin"
-      ],
-      "subMetas": {},
-      "userData": {
-        "gltfIndex": 0
-      }
-    },
-    "f5977": {
-      "importer": "gltf-embeded-image",
-      "uuid": "a16a2f8b-b20a-4827-83f3-c640363c4c8c@f5977",
-      "displayName": "",
-      "id": "f5977",
-      "name": "Map #7656.image",
-      "ver": "1.0.2",
-      "imported": true,
-      "files": [
-        ".png",
-        ".json"
       ],
       "subMetas": {},
       "userData": {
@@ -60,7 +60,7 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "a16a2f8b-b20a-4827-83f3-c640363c4c8c@f5977"
+        "imageUuidOrDatabaseUri": "a16a2f8b-b20a-4827-83f3-c640363c4c8c@45414"
       }
     },
     "6230f": {
@@ -99,8 +99,8 @@
   "userData": {
     "imageMetas": [
       {
-        "name": "Map #7656",
-        "uri": "a16a2f8b-b20a-4827-83f3-c640363c4c8c@f5977"
+        "name": "GSDFedSign-G-Advise35_Diffuse.png",
+        "uri": "a16a2f8b-b20a-4827-83f3-c640363c4c8c@45414"
       }
     ],
     "redirect": "a16a2f8b-b20a-4827-83f3-c640363c4c8c@a710a",

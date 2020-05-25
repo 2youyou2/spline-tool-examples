@@ -1,5 +1,5 @@
 {
-  "ver": "1.3.20",
+  "ver": "1.3.21",
   "importer": "fbx",
   "imported": true,
   "uuid": "00db75df-38cf-4b50-be17-ce30eaac35ef",
@@ -22,12 +22,12 @@
         "gltfIndex": 0
       }
     },
-    "f5977": {
+    "3f648": {
       "importer": "gltf-embeded-image",
-      "uuid": "00db75df-38cf-4b50-be17-ce30eaac35ef@f5977",
+      "uuid": "00db75df-38cf-4b50-be17-ce30eaac35ef@3f648",
       "displayName": "",
-      "id": "f5977",
-      "name": "Map #7656.image",
+      "id": "3f648",
+      "name": "GSDFedSign-617-AllLanes_Diffuse.png.image",
       "ver": "1.0.2",
       "imported": true,
       "files": [
@@ -60,7 +60,7 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "00db75df-38cf-4b50-be17-ce30eaac35ef@f5977"
+        "imageUuidOrDatabaseUri": "00db75df-38cf-4b50-be17-ce30eaac35ef@3f648"
       }
     },
     "6230f": {
@@ -99,8 +99,8 @@
   "userData": {
     "imageMetas": [
       {
-        "name": "Map #7656",
-        "uri": "00db75df-38cf-4b50-be17-ce30eaac35ef@f5977"
+        "name": "GSDFedSign-617-AllLanes_Diffuse.png",
+        "uri": "00db75df-38cf-4b50-be17-ce30eaac35ef@3f648"
       }
     ],
     "redirect": "00db75df-38cf-4b50-be17-ce30eaac35ef@1ec90",
