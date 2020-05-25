@@ -314,10 +314,10 @@ export default class Scatter extends SplineUtilRenderer {
         if (!this._generated || this._generated.parent !== this.node) {
             let generatedName = 'generated ' + cc.js.getClassName(this);
             // this._generated = cc.find(generatedName, this.node);
-            if (!this._generated) {
+            // if (!this._generated) {
                 this._generated = new Node(generatedName);
                 this._generated.parent = this.node;
-            }
+            // }
         }
         return this._generated;
     }
