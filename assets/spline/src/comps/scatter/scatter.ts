@@ -2,8 +2,8 @@ import { _decorator, Node, Prefab, isPropertyModifier, Vec4, Quat, Vec3, geometr
 import SplineUtilRenderer from './../spline-util-renderer';
 import raycast from '../../utils/raycast';
 import { ScatterVolume } from './scatter-volume';
-import { pointInPolygonAreaXZ } from '../../utils/mathf';
-import { VolumeInfo } from './type';
+import { pointInPolygonAreaXZ, pointInPolygonLineXZ, pointPolygonMinDistXZ } from '../../utils/mathf';
+import { VolumeInfo, VolumeType } from './type';
 import ScatterItem from './scatter-item';
 
 const { ccclass, executeInEditMode, float, type, boolean, property } = _decorator;
@@ -18,6 +18,8 @@ let tempMat4 = new Mat4();
 let tempQuat = new Quat();
 let invertParentMatrix = new Mat4();
 
+let tempVec3 = new Vec3();
+
 
 let tempMin = new Vec3;
 let tempMax = new Vec3;
@@ -27,6 +29,7 @@ let tempMax = new Vec3;
 @ccclass('Scatter')
 @executeInEditMode
 export default class Scatter extends SplineUtilRenderer {
+    // transform
     @property
     _scale = Vec3.ONE.clone();
     @property
@@ -35,16 +38,6 @@ export default class Scatter extends SplineUtilRenderer {
     _rotationY = 0;
     @property
     _rotationYRange = 360;
-    @type(Prefab)
-    _prefab: Prefab = null;
-    @property
-    _itemCount = 20;
-    @property
-    _generateCountPerFrame = 10;
-    @type(Node)
-    _raycastLayer: Node = null;
-    @type(Terrain)
-    _raycastTerrain: Terrain = null;
 
     @property
     get scale () { return this._scale; };
@@ -58,6 +51,12 @@ export default class Scatter extends SplineUtilRenderer {
     @property
     get rotationYRange () { return this._rotationYRange; }
     set rotationYRange (value) { this._rotationYRange = value; this.dirty = true; }
+
+    // item count
+    @property
+    _itemCount = 20;
+    @property
+    _generateCountPerFrame = 10;
     @property
     get itemCount () { return this._itemCount; }
     set itemCount (value) {
@@ -70,6 +69,11 @@ export default class Scatter extends SplineUtilRenderer {
     get generateCountPerFrame () { return this._generateCountPerFrame; }
     set generateCountPerFrame (value) { this._generateCountPerFrame = value; }
 
+    // racast layer
+    @type(Node)
+    _raycastLayer: Node = null;
+    @type(Terrain)
+    _raycastTerrain: Terrain = null;
     @type(Node)
     set raycastLayer (l) {
         this._raycastLayer = l;
@@ -84,6 +88,7 @@ export default class Scatter extends SplineUtilRenderer {
         return this._raycastLayer;
     }
 
+    // dirty
     private _dirty = true;
     get dirty () {
         return this._dirty;
@@ -92,15 +97,24 @@ export default class Scatter extends SplineUtilRenderer {
         if (value) {
             this._currentItemCount = 0;
             this._dirty = value;
+
+            let items = this._items;
+            if (items) {
+                for (let i = 0; i < items.length; i++) {
+                    items[i].currentCount = 0;
+                }
+            }
         }
     }
 
+    // current item count
     private _currentItemCount = 0;
     @property
     public get currentItemCount () {
         return this._currentItemCount;
     }
 
+    // volumes
     _volumeInfos: VolumeInfo[] = [];
     _selfVolumeInfo = new VolumeInfo;
 
@@ -121,6 +135,7 @@ export default class Scatter extends SplineUtilRenderer {
         this._updateVolume();
     }
 
+    // scatter items
     @type(ScatterItem)
     _items: ScatterItem[] = [];
     @type(ScatterItem)
@@ -129,11 +144,45 @@ export default class Scatter extends SplineUtilRenderer {
     }
     set items (value) {
         this._items = value;
-        this.node.removeAllChildren();
-        this.dirty = true;
-
         this._updateVolume();
     }
+
+    // scatter type
+    // @ts-ignore
+    @type(VolumeType)
+    _type: VolumeType = VolumeType.Area;
+    // @ts-ignore
+    @type(VolumeType)
+    get type () {
+        return this._type;
+    }
+    set type (value) {
+        this._type = value;
+        this._updateVolume();
+    }
+
+    // used for this.type === VolumeType.Line
+    @property
+    _scatterLineWidth = 1;
+    @property
+    get scatterLineWidth () {
+        return this._scatterLineWidth;
+    }
+    set scatterLineWidth (value) {
+        this._scatterLineWidth = value;
+        this.dirty = true;
+    }
+    @property
+    _scatterLineOffset = 0;
+    @property
+    get scatterLineOffset () {
+        return this._scatterLineOffset;
+    }
+    set scatterLineOffset (value) {
+        this._scatterLineOffset = value;
+        this.dirty = true;
+    }
+
 
 
     public onLoad () {
@@ -142,7 +191,16 @@ export default class Scatter extends SplineUtilRenderer {
     }
 
     private _isPosValid (pos) {
-        if (!pointInPolygonAreaXZ(pos, this.spline.getPoints())) {
+        let pointIn = false;
+        if (this._type === VolumeType.Line) {
+            let dist = pointPolygonMinDistXZ(pos, this.spline.getPoints());
+            pointIn = dist > this._scatterLineOffset && dist < (this.scatterLineOffset + this.scatterLineWidth);
+        }
+        else if (this._type === VolumeType.Area) {
+            pointIn = pointInPolygonAreaXZ(pos, this.spline.getPoints());
+        }
+
+        if (!pointIn) {
             return false;
         }
 
@@ -176,10 +234,10 @@ export default class Scatter extends SplineUtilRenderer {
         return valid;
     }
 
-    private _getNextPosition (): Vec3 | null {
+    _getRandomAreaPoint (): Vec3 | null {
         let min = tempMin;
         let max = tempMax;
-        this._spline.getBounding(min, max);
+        this.spline.getBounding(min, max);
 
         let iterratorCount = 0;
         do {
@@ -195,14 +253,48 @@ export default class Scatter extends SplineUtilRenderer {
         }
         while (!this._isPosValid(tempPos))
 
-        tempRay.o.set(tempPos.x, tempPos.y + 1000, tempPos.z);
+        return tempPos;
+    }
+
+    _getRandomeLinePint (): Vec3 | null {
+        let samples = this.spline.getSamples();
+        let index = randomRange(0, samples.length) | 0;
+        let sample = samples[index];
+        if (!sample) return null;
+
+        tempPos.set(sample.location);
+        
+        let normal: Vec3 = tempVec3.set(-sample.tangent.z, 0, sample.tangent.x);
+        let width = randomRange(-this._scatterLineWidth, this.scatterLineWidth);
+        let dist = Math.sign(width) * this._scatterLineOffset + width;
+        normal.multiplyScalar(dist);
+        tempPos.add(normal);
+
+        Vec3.transformMat4(tempPos, tempPos, this.spline.node.worldMatrix);
+
+        return tempPos;
+    }
+
+    private _getNextPosition (): Vec3 | null {
+        let randomPos;
+        if (this._type === VolumeType.Area) {
+            randomPos = this._getRandomAreaPoint();
+        }
+        else if (this._type === VolumeType.Line) {
+            randomPos = this._getRandomeLinePint();
+        }
+        if (!randomPos) {
+            return null;
+        }
+
+        tempRay.o.set(randomPos.x, randomPos.y + 1000, randomPos.z);
         tempRay.d.set(DOWN);
 
         // @ts-ignore
         if (this._raycastTerrain) {
             let res = this._raycastTerrain.rayCheck(tempRay.o, tempRay.d, 1, true);
             if (res) {
-                Vec3.add(tempPos, res, this._raycastTerrain.node.getWorldPosition(tempPos));
+                Vec3.add(randomPos, res, this._raycastTerrain.node.getWorldPosition(randomPos));
             }
         }
         else {
@@ -212,14 +304,14 @@ export default class Scatter extends SplineUtilRenderer {
             }
             let results = raycast.raycastAllModels(cc.director._scene._renderScene, tempRay, layer);
             if (results.length > 0) {
-                tempPos = tempPos;
-                Vec3.scaleAndAdd(tempPos, tempRay.o, tempRay.d, results[0].distance);
+                randomPos = randomPos;
+                Vec3.scaleAndAdd(randomPos, tempRay.o, tempRay.d, results[0].distance);
             }
         }
 
-        Vec3.transformMat4(tempPos, tempPos, invertParentMatrix);
+        Vec3.transformMat4(randomPos, randomPos, invertParentMatrix);
 
-        return tempPos;
+        return randomPos;
     }
 
     public compute () {
@@ -315,8 +407,8 @@ export default class Scatter extends SplineUtilRenderer {
             let generatedName = 'generated ' + cc.js.getClassName(this);
             // this._generated = cc.find(generatedName, this.node);
             // if (!this._generated) {
-                this._generated = new Node(generatedName);
-                this._generated.parent = this.node;
+            this._generated = new Node(generatedName);
+            this._generated.parent = this.node;
             // }
         }
         return this._generated;
@@ -324,6 +416,8 @@ export default class Scatter extends SplineUtilRenderer {
 
     _hasValidItem = false;
     _updateItems () {
+        this.node.removeAllChildren();
+
         this._hasValidItem = false;
 
         let totalVolume = 0;

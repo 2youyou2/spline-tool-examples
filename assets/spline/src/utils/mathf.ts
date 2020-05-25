@@ -61,3 +61,11 @@ export function pointInPolygonLineXZ (point: Vec3, polygon: Vec3[], width) {
     }
     return false;
 }
+
+export function pointPolygonMinDistXZ (point: Vec3, polygon: Vec3[]) {
+    let dist = Number.MAX_SAFE_INTEGER;
+    for (let i = 1; i < polygon.length; i++) {
+        dist = Math.min(pointLineDistanceXZ(point, polygon[i], polygon[i-1], true), dist);
+    }
+    return dist;
+}

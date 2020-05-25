@@ -29,6 +29,7 @@ export class ScatterVolume extends SplineUtilBase {
     get type () {
         return this._type;
     }
+    // @ts-ignore
     @type(VolumeType)
     set type (value) {
         if (this._type === value) return;

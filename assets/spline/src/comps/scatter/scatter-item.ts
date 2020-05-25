@@ -17,6 +17,7 @@ let tempArray4 = new Array(4).fill(0);
 export default class ScatterItem {
     @type(Prefab)
     _prefab: Prefab = null;
+    // @ts-ignore
     @type(ScatterType)
     _type = ScatterType.Mesh;
     @property
@@ -29,6 +30,7 @@ export default class ScatterItem {
     set prefab (value) {
         this._prefab = value;
     }
+    // @ts-ignore
     @type(ScatterType)
     get type () {
         return this._type;
@@ -182,7 +184,7 @@ export default class ScatterItem {
 
     private _updated = false;
 
-    private currentCount = 0;
+    currentCount = 0;
 
     private node: Node = null;
 }
