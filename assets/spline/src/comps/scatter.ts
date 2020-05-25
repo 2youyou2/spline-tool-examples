@@ -420,7 +420,7 @@ export default class Scatter extends SplineUtilRenderer {
         Mat4.invert(invertParentMatrix, this.node.parent.worldMatrix);
         if (this._currentItemCount < this._itemCount) {
             let items = this._items;
-            
+
             for (let i = 0; i < this._generateCountPerFrame; i++) {
                 if (this._currentItemCount >= this._itemCount) break;
 
@@ -498,7 +498,7 @@ export default class Scatter extends SplineUtilRenderer {
         this._selfVolumeInfo.maxCount = this._selfVolumeInfo.volume * this.itemCount;
 
         this.dirty = true;
-        
+
         this._updateItems();
     }
 
@@ -533,28 +533,27 @@ export default class Scatter extends SplineUtilRenderer {
             return;
         }
 
-        
+
         let children = this.generated.children;
         for (let i = 0; i < items.length; i++) {
             let item = items[i];
             if (!item.prefab) continue;
 
+            let volume = item.volume;
             if (totalVolume) {
-                if (totalVolume > 1) {
-                    item.volume /= totalVolume;
-                }
+                volume /= totalVolume;
             }
             else {
-                item.volume = 0;
+                volume = 0;
             }
-            
+
             let node = children[i];
             if (!node) {
                 node = new Node('ScatterItem');
                 node.parent = this.generated;
             }
 
-            let maxCount = item.volume * this.itemCount;
+            let maxCount = (volume * this.itemCount) | 0;
 
             item.init(node, maxCount);
         }
