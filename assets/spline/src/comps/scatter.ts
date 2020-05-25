@@ -256,7 +256,7 @@ export default class Scatter extends SplineUtilRenderer {
         if (this._itemCount === value) return;
         this._itemCount = value;
         this.dirty = true;
-        this._updateItems();
+        this._updateVolume();
     }
     @property
     get generateCountPerFrame () { return this._generateCountPerFrame; }
@@ -316,15 +316,15 @@ export default class Scatter extends SplineUtilRenderer {
     @type(ScatterItem)
     _items: ScatterItem[] = [];
     @type(ScatterItem)
-    get item () {
+    get items () {
         return this._items;
     }
-    set item (value) {
+    set items (value) {
         this._items = value;
         this.node.removeAllChildren();
         this.dirty = true;
 
-        this._updateItems();
+        this._updateVolume();
     }
 
 
