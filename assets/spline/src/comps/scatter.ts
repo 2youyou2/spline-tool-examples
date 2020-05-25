@@ -535,6 +535,7 @@ export default class Scatter extends SplineUtilRenderer {
 
 
         let children = this.generated.children;
+        let used = 0;
         for (let i = 0; i < items.length; i++) {
             let item = items[i];
             if (!item.prefab) continue;
@@ -554,8 +555,13 @@ export default class Scatter extends SplineUtilRenderer {
             }
 
             let maxCount = (volume * this.itemCount) | 0;
+            // make sure item max count sum equls to total item count
+            if (i === items.length - 1) {
+                maxCount = this.itemCount - used;
+            }
 
             item.init(node, maxCount);
+            used += maxCount;
         }
 
         this.dirty = true;
