@@ -11,7 +11,7 @@
     "6c48a": {
       "importer": "texture",
       "uuid": "334a80fd-0fde-4917-ad9c-079692faa19d@6c48a",
-      "displayName": "2611589781746_.pic_hd",
+      "displayName": "red",
       "id": "6c48a",
       "name": "texture",
       "ver": "1.0.19",
@@ -25,7 +25,7 @@
         "wrapModeT": "repeat",
         "minfilter": "linear",
         "magfilter": "linear",
-        "mipfilter": "none",
+        "mipfilter": "linear",
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,

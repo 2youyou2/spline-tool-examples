@@ -3,7 +3,9 @@
   "importer": "material",
   "imported": true,
   "uuid": "d88e9a04-6d35-4a60-bfb7-2f73a1b9ab9e",
-  "files": [],
+  "files": [
+    ".json"
+  ],
   "subMetas": {},
   "userData": {}
 }

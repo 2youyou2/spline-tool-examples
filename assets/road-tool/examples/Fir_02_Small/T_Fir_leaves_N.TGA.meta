@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "a6230178-29c1-4146-b7a5-e0e4b1967bff",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "a6230178-29c1-4146-b7a5-e0e4b1967bff@6c48a",
+      "displayName": "T_Fir_leaves_N",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "a6230178-29c1-4146-b7a5-e0e4b1967bff"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "a6230178-29c1-4146-b7a5-e0e4b1967bff@6c48a"
+  }
+}

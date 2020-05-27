@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.17",
+  "importer": "image",
+  "imported": true,
+  "uuid": "86761de1-9fda-4582-9718-c2726da8990b",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "86761de1-9fda-4582-9718-c2726da8990b@6c48a",
+      "displayName": "PW_Grass_Yellow_Flower_01",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "86761de1-9fda-4582-9718-c2726da8990b"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "86761de1-9fda-4582-9718-c2726da8990b@6c48a"
+  }
+}

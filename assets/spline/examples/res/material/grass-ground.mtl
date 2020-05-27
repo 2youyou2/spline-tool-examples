@@ -33,14 +33,14 @@
         "z": 0,
         "w": 0
       },
-      "metallic": 0.2,
-      "emissive": {
+      "mainColor": {
         "__type__": "cc.Color",
-        "r": 12,
-        "g": 12,
-        "b": 12,
+        "r": 255,
+        "g": 248,
+        "b": 248,
         "a": 255
       },
+      "metallic": 0.2,
       "mainTexture": {
         "__uuid__": "61ac7916-96c0-4e34-a594-b46af2bdb63e@6c48a"
       },
