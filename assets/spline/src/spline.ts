@@ -224,7 +224,7 @@ export default class Spline extends Component {
     /// </summary>
     /// <param name="d"></param>
     /// <returns></returns>
-    public getSampleAtDistance (d: number): CurveSample {
+    public getSampleAtDistance (d: number, out?: CurveSample): CurveSample {
         if (d < 0 || d > this.length)
             throw new Error(`Distance must be between 0 and spline length (${this.length}). Given distance was ${d}.`);
         for (let i = 0; i < this.curves.length; i++) {
@@ -237,7 +237,7 @@ export default class Spline extends Component {
             if (d > curve.length) {
                 d -= curve.length;
             } else {
-                return curve.getSampleAtDistance(d);
+                return curve.getSampleAtDistance(d, out);
             }
         }
         throw new Error("Something went wrong with GetSampleAtDistance.");

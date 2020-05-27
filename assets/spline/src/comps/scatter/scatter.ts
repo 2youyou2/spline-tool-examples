@@ -5,6 +5,7 @@ import { ScatterVolume } from './scatter-volume';
 import { pointInPolygonAreaXZ, pointInPolygonLineXZ, pointPolygonMinDistXZ } from '../../utils/mathf';
 import { VolumeInfo, VolumeType } from './type';
 import ScatterItem from './scatter-item';
+import CurveSample from '../../curve-sample';
 
 const { ccclass, executeInEditMode, float, type, boolean, property } = _decorator;
 
@@ -24,6 +25,7 @@ let tempVec3 = new Vec3();
 let tempMin = new Vec3;
 let tempMax = new Vec3;
 
+let tempCurveSample = new CurveSample();
 
 
 @ccclass('Scatter')
@@ -256,11 +258,9 @@ export default class Scatter extends SplineUtilRenderer {
         return tempPos;
     }
 
-    _getRandomeLinePint (): Vec3 | null {
-        let samples = this.spline.getSamples();
-        let index = randomRange(0, samples.length) | 0;
-        let sample = samples[index];
-        if (!sample) return null;
+    _getRandomLinePint (): Vec3 | null {
+        let length = this.spline.length;
+        let sample = this.spline.getSampleAtDistance(randomRange(0, length), tempCurveSample);
 
         tempPos.set(sample.location);
         
@@ -281,7 +281,7 @@ export default class Scatter extends SplineUtilRenderer {
             randomPos = this._getRandomAreaPoint();
         }
         else if (this._type === VolumeType.Line) {
-            randomPos = this._getRandomeLinePint();
+            randomPos = this._getRandomLinePint();
         }
         if (!randomPos) {
             return null;
