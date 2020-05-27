@@ -62,6 +62,7 @@ export default class FixedModelMesh {
             arrayBufferVerticesOffset += buffer.verticesBytes;
             arrayBufferIndicesOffset += buffer.indicesBytes;
         }
+        fixedModelMesh.maxBatchVerticesCount = maxModelCount * verticesCount;
 
         let meshStruct: Mesh.IStruct = {
             vertexBundles: [],
@@ -105,6 +106,8 @@ export default class FixedModelMesh {
 
     mesh: Mesh = null;
 
+    maxBatchVerticesCount = 0;
+
     _buffers: FixedBuffer[] = [];
 
     _dataView: DataView = null;
@@ -119,6 +122,7 @@ export default class FixedModelMesh {
         utils.writeBuffer(this._dataView, value, attr.format, offset, this._stride);
     }
     writeIndex (indexOffset, value) {
+        value = value % this.maxBatchVerticesCount;
         this._iView[indexOffset] = value;
     }
     update (modelComp: ModelComponent) {

@@ -86,8 +86,15 @@ export default class ScatterItem {
                 this._fixedMeshes[i] = FixedModelMesh.create(this._sourceMesh.getVertices(i).length, this._sourceMesh.getTriangles(i).length, this.maxCount);
                 let node = new Node('ScatterItemModel');
                 let model = node.addComponent(ModelComponent);
-                model.setMaterial(tempMaterials[i] || tempMaterials[0], 0);
                 model.mesh = this._fixedMeshes[i].mesh;
+                model.shadowCastingMode = tempModel.shadowCastingMode;
+
+                let renderingSubMeshes = model.mesh.renderingSubMeshes;
+                let material = tempMaterials[i] || tempMaterials[0];
+                for (let j = 0; j < renderingSubMeshes.length; j++) {
+                    model.setMaterial(material, j);
+                }
+
                 this._models[i] = model;
 
                 node.parent = this.node;
