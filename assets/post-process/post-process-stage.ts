@@ -1,7 +1,19 @@
-import { _decorator, Component, Node, RenderStage, RenderFlow, RenderView, renderer, UBOGlobal, GFXClearFlag, GFXPipelineState, GFXCommandBuffer, GFXTextureType, GFXTextureUsageBit, GFXTextureViewType, GFXFormat, Vec2 } from "cc";
+import { _decorator, Component, Node, RenderStage, RenderFlow, RenderView, renderer, UBOGlobal, GFXClearFlag, GFXPipelineState, GFXCommandBuffer, GFXTextureType, GFXTextureUsageBit, GFXTextureViewType, GFXFormat, Vec2, GFXFramebuffer, GFXTexture, GFXTextureView } from "cc";
 const { ccclass, property } = _decorator;
 
 const bufs: GFXCommandBuffer[] = [];
+
+class PostEffectCommand {
+    pass: renderer.Pass = null;
+    input: GFXFramebuffer = null;
+    output: GFXFramebuffer = null;
+
+    constructor (pass: renderer.Pass, input: GFXFramebuffer, output: GFXFramebuffer) {
+        this.pass = pass;
+        this.input = input;
+        this.output = output;
+    }
+}
 
 @ccclass("PostProcessStage")
 export class PostProcessStage extends RenderStage {
@@ -30,6 +42,14 @@ export class PostProcessStage extends RenderStage {
 
     render (view: RenderView) {
         // Your update function goes here.
+
+        if (this.passes.length === 0) {
+            this._framebuffer = null;
+        }
+        else {
+            this._framebuffer = this.flow.pipeline.getFrameBuffer('shading');
+        }
+
         this.sortRenderQueue();
         this.executeCommandBuffer(view);
 
@@ -37,18 +57,24 @@ export class PostProcessStage extends RenderStage {
     }
 
     renderEffects (view: RenderView) {
+        let commands = this._commands;
+        if (commands.length === 0) return;
+
         const camera = view.camera!;
 
         let cmdBuff = this._cmdBuff;
         let pipeline = this._pipeline!;
         let quadIA = pipeline.quadIA;
 
-        let passes = this.passes;
         cmdBuff.begin();
-        for (let i = 0; i < passes.length; i++) {
+        for (let i = 0; i < commands.length; i++) {
             this._renderArea!.width = camera.width;
             this._renderArea!.height = camera.height;
-            const framebuffer = view.window!.framebuffer;
+            let framebuffer = commands[i].output;
+
+            if (!framebuffer) {
+                framebuffer = view.window!.framebuffer;
+            }
 
             cmdBuff.beginRenderPass(framebuffer, this._renderArea!,
                 GFXClearFlag.ALL, [{ r: 0.0, g: 0.0, b: 0.0, a: 1.0 }], 1.0, 0);
@@ -76,11 +102,12 @@ export class PostProcessStage extends RenderStage {
         this.rebuild();
     }
 
+    _commands: PostEffectCommand[] = [];
 
     createFrameBuffer () {
         // @ts-ignore
         let pipelineAny: any = this.pipeline;
-        let format: GFXFormat = pipelineAny._getTextureFormat(GFXTextureType.TEX2D, GFXTextureUsageBit.COLOR_ATTACHMENT);
+        let format: GFXFormat = pipelineAny._getTextureFormat(GFXFormat.UNKNOWN, GFXTextureUsageBit.COLOR_ATTACHMENT);
         let shadingWidth = pipelineAny._shadingWidth;
         let shadingHeight = pipelineAny._shadingHeight;
 
@@ -99,7 +126,7 @@ export class PostProcessStage extends RenderStage {
         })
 
         let frameBuffer = this._device.createFramebuffer({
-            renderPass: null,
+            renderPass: pipelineAny._renderPasses.get(1),
             colorViews: [textureView],
             depthStencilView: null,
         })
@@ -110,14 +137,19 @@ export class PostProcessStage extends RenderStage {
     rebuild () {
         let pipeline = this._pipeline!;
 
-        this._framebuffer = this.flow.pipeline.getFrameBuffer('shading');
-        let originTexture = this._framebuffer.colorViews[0];
+        let originFrameBuffer = this._framebuffer = this.flow.pipeline.getFrameBuffer('shading');
+
+        let originTexture = originFrameBuffer.colorViews[0];
+
+        let flip:GFXFramebuffer, flop:GFXFramebuffer, tmp:GFXFramebuffer;
+        const globalUBO = pipeline.globalBindings.get(UBOGlobal.BLOCK.name);
 
         let passes = this.passes;
+        let commands = this._commands;
+        commands.length = 0;
         for (let i = 0; i < passes.length; i++) {
             let pass = passes[i];
 
-            const globalUBO = pipeline.globalBindings.get(UBOGlobal.BLOCK.name);
             pass.bindBuffer(UBOGlobal.BLOCK.binding, globalUBO!.buffer!);
 
             let originSampler = pass.getBinding('pe_origin_texture');
@@ -125,12 +157,27 @@ export class PostProcessStage extends RenderStage {
                 pass.bindTextureView(originSampler, originTexture);
             }
 
+            let input = flip || originFrameBuffer;
+
             let inputSampler = pass.getBinding('pe_input_texture');
             if (inputSampler) {
-                if (i === 0) {
-                    pass.bindTextureView(inputSampler, originTexture);
-                }
+                pass.bindTextureView(inputSampler, input.colorViews[0]);
             }
+
+            if (!flop) {
+                flop = this.createFrameBuffer();
+            }
+
+            let output = flop;
+            if (i === passes.length - 1) {
+                output = null;
+            }
+
+            commands.push(new PostEffectCommand(pass, input, output));
+
+            tmp = flip;
+            flip = flop;
+            flop = tmp;
 
             let pso = pass.createPipelineState();
             let bindingLayout = pso!.pipelineLayout.layouts[0];

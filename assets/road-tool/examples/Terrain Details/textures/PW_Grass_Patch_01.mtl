@@ -4,11 +4,14 @@
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
-    "__uuid__": "a7facdb2-d7a2-4f8f-8106-10586a2963b7"
+    "__uuid__": "a3cd009f-0ab0-420d-9278-b9fdab939bbc"
   },
   "_techIdx": 0,
   "_defines": [
-    {}
+    {
+      "USE_TEXTURE": true,
+      "USE_ALPHA_TEST": true
+    }
   ],
   "_states": [
     {
@@ -18,14 +21,17 @@
         ]
       },
       "depthStencilState": {},
-      "rasterizerState": {}
+      "rasterizerState": {
+        "cullMode": 0
+      }
     }
   ],
   "_props": [
     {
-      "radius": 0.8,
-      "smoothness": 0.4,
-      "intensity": 0.6
+      "mainTexture": {
+        "__uuid__": "f4706cb6-74cd-4b24-9789-fe2c8e2f72ba@6c48a"
+      },
+      "alphaThreshold": 0.9
     }
   ]
 }
