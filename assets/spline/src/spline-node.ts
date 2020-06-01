@@ -22,7 +22,7 @@ export default class SplineNode extends Component {
     public set position (v) {
         if (!CC_EDITOR && this._position.equals(v)) return;
         this._position.set(v);
-        this.node.position = v;
+        // this.node.position = v;
         this.changed.invoke(this);
     }
 

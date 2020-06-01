@@ -19,6 +19,9 @@ export default class SplineUtilRenderer extends SplineUtilBase {
     protected _generated: Node = null;
     protected get generated () {
         if (!this._generated || this._generated.parent !== this.node) {
+            if (this._generated) {
+                this._generated.parent = null;
+            }
             let generatedName = 'generated ' + cc.js.getClassName(this);
             this._generated = cc.find(generatedName, this.node);
             if (!this._generated) {

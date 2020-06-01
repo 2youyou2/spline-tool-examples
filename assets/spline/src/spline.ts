@@ -241,9 +241,9 @@ export default class Spline extends Component {
     /// Returns an interpolated sample of the spline, containing all curve data at this time.
     /// Time must be between 0 and the number of nodes.
     /// </summary>
-    public getSample (t: number): CurveSample {
+    public getSample (t: number, out?: CurveSample): CurveSample {
         let index = this.getNodeIndexForTime(t);
-        return this.curves[index].getSample(t - index);
+        return this.curves[index].getSample(t - index, out);
     }
 
     /// <summary>

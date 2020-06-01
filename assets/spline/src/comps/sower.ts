@@ -65,11 +65,11 @@ export default class NewClass extends SplineUtilRenderer {
             return;
 
         let distance = 0;
-        let spline = this.spline;
+        let splineCurve = this.splineCurve;
         let used = 0;
-        while (distance <= spline.length) {
+        while (distance <= splineCurve.length) {
 
-            let sample = spline.getSampleAtDistance(distance);
+            let sample = splineCurve.getSampleAtDistance(distance);
 
             let node = children[used];
             if (!node) {
