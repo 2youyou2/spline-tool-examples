@@ -5,8 +5,6 @@ import CubicBezierCurve from './cubic-bezier-curve';
 import CurveSample from './curve-sample';
 
 import Event from './utils/event';
-import pool from './utils/pool';
-import SplineNodeLegacy from './spline-node-legacy';
 
 const { ccclass, type, boolean, integer, float, executeInEditMode } = _decorator;
 
@@ -171,8 +169,6 @@ export default class Spline extends Component {
         return splineNode;
     }
 
-    @type(SplineNodeLegacy)
-    _legacyNodes: SplineNodeLegacy[] = [];
     _nodeRoot: Node;
     _updatingNodes = false;
     private _updateNodes () {
@@ -187,20 +183,6 @@ export default class Spline extends Component {
         }
         else {
             this._nodes = nodeRoot.getComponentsInChildren(SplineNode);
-        }
-
-        let legacyNodes = this._legacyNodes;
-        if (legacyNodes && legacyNodes.length) {
-            nodeRoot.removeAllChildren();
-            this._nodes.length = 0;
-            for (let i = 0; i < legacyNodes.length; i++) {
-                let legacyNode = legacyNodes[i];
-                let splineNode = this.addNode(legacyNode.position, legacyNode.direction);
-                splineNode.roll = legacyNode.roll;
-                splineNode.scale = legacyNode.scale;
-                splineNode.up = legacyNode.up;
-            }
-            this._legacyNodes = [];
         }
         
         this._createCurves();
