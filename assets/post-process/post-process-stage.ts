@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, RenderStage, RenderFlow, RenderView, renderer, GFXClearFlag, GFXPipelineState, GFXCommandBuffer, GFXTextureType, GFXTextureUsageBit, GFXTextureViewType, GFXFormat, Vec2, GFXFramebuffer, GFXTexture, GFXTextureView, pipeline } from "cc";
+import { _decorator, Component, Node, RenderStage, RenderFlow, RenderView, renderer, GFXClearFlag, GFXPipelineState, GFXCommandBuffer, GFXTextureType, GFXTextureUsageBit, GFXTextureViewType, GFXFormat, Vec2, GFXFramebuffer, GFXTexture, GFXTextureView, pipeline, game, director, Director } from "cc";
 
 const { UBOGlobal } = pipeline;
 const { ccclass, property } = _decorator;
@@ -192,3 +192,8 @@ export class PostProcessStage extends RenderStage {
         this._psos.length = passes.length;
     }
 }
+
+director.on(Director.EVENT_BEFORE_SCENE_LAUNCH, () => {
+    let stage = director.root.pipeline.getFlow('PostProcessFlow').stages[0] as PostProcessStage;
+    stage.passes = [];
+})
