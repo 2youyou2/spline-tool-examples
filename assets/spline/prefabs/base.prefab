@@ -61,7 +61,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_nodes": [
+    "_legacyNodes": [
       {
         "__id__": 3
       },
@@ -72,7 +72,7 @@
     "_id": ""
   },
   {
-    "__type__": "SplineNode",
+    "__type__": "SplineNodeLegacy",
     "_position": {
       "__type__": "cc.Vec3",
       "x": -5,
@@ -99,7 +99,7 @@
     "_roll": 0
   },
   {
-    "__type__": "SplineNode",
+    "__type__": "SplineNodeLegacy",
     "_position": {
       "__type__": "cc.Vec3",
       "x": 5,

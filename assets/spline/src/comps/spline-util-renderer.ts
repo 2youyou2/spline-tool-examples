@@ -1,17 +1,34 @@
 import SplineUtilBase from "./spline-util-base"
 import { Node, _decorator, PrivateNode } from "cc";
 
-const { ccclass } = _decorator;
+const { ccclass, property } = _decorator;
 
 @ccclass(SplineUtilRenderer)
 export default class SplineUtilRenderer extends SplineUtilBase {
+    @property
+    _showGenerated = false;
+    @property
+    get showGenerated () {
+        return this._showGenerated;
+    }
+    set showGenerated (value) {
+        this._showGenerated = value;
+        this.reset();
+    }
+
     protected _generated: Node = null;
     protected get generated () {
         if (!this._generated || this._generated.parent !== this.node) {
             let generatedName = 'generated ' + cc.js.getClassName(this);
             this._generated = cc.find(generatedName, this.node);
             if (!this._generated) {
-                this._generated = new PrivateNode(generatedName);
+                if (this._showGenerated) {
+                    this._generated = new Node(generatedName);
+
+                }
+                else {
+                    this._generated = new PrivateNode(generatedName);
+                }
                 this._generated.parent = this.node;
             }
         }

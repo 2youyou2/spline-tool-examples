@@ -1,10 +1,10 @@
-import { _decorator, Vec3, Vec2, Component } from 'cc';
+import { _decorator, Vec3, Vec2 } from 'cc';
 import Event from './utils/event';
 
 const { ccclass, property } = _decorator;
 
-@ccclass('SplineNode')
-export default class SplineNode extends Component {
+@ccclass('SplineNodeLegacy')
+export default class SplineNodeLegacy {
     /// <summary>
     /// Spline node storing a position and a direction (tangent).
     /// Note : you shouldn't modify position and direction manualy but use dedicated methods instead, to insure event raising.
@@ -22,7 +22,6 @@ export default class SplineNode extends Component {
     public set position (v) {
         if (!CC_EDITOR && this._position.equals(v)) return;
         this._position.set(v);
-        this.node.position = v;
         this.changed.invoke(this);
     }
 
@@ -91,5 +90,12 @@ export default class SplineNode extends Component {
         if (!CC_EDITOR && this._roll === v) return;
         this._roll = v;
         this.changed.invoke(this);
+    }
+
+    static create (position: Vec3, direction: Vec3) : SplineNode {
+        let node = new SplineNode();
+        node.position = position;
+        node.direction = direction;
+        return node;
     }
 };

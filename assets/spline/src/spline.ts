@@ -1,4 +1,4 @@
-import { Component, Node, _decorator, Vec3 } from 'cc';
+import { Component, Node, _decorator, Vec3, find } from 'cc';
 
 import SplineNode from './spline-node';
 import CubicBezierCurve from './cubic-bezier-curve';
@@ -6,6 +6,7 @@ import CurveSample from './curve-sample';
 
 import Event from './utils/event';
 import pool from './utils/pool';
+import SplineNodeLegacy from './spline-node-legacy';
 
 const { ccclass, type, boolean, integer, float, executeInEditMode } = _decorator;
 
@@ -22,6 +23,8 @@ interface ListChangedEventArgs {
     insertIndex?: Number;
     removeIndex?: Number;
 }
+
+const SplineRootNodeName = '__spline_node_root__';
 
 /// <summary>
 /// A curved line made of oriented nodes.
@@ -45,8 +48,7 @@ export default class Spline extends Component {
         let lastNode = this.nodes[index];
         let sample = this.getSample(index);
         let offset = sample.tangent.clone().multiplyScalar(this.length / this.nodes.length / 2);
-        let newNode = SplineNode.create(offset.add(lastNode.position), lastNode.direction);
-        this.addNode(newNode);
+        this.addNode(offset.add(lastNode.position), lastNode.direction);
     }
 
     @boolean
@@ -64,9 +66,7 @@ export default class Spline extends Component {
         if (index === -1) return;
         let sample = this.getSample(index);
         let offset = sample.tangent.clone().multiplyScalar(this.length / this.nodes.length / 2);
-        let newNode = SplineNode.create(offset.add(this.currentSelection.position), this.currentSelection.direction);
-        this.nodes.splice(index + 1, 0, newNode);
-        this.nodes = this.nodes;
+        this.insertNode(offset.add(this.currentSelection.position), this.currentSelection.direction, index + 1);
     }
 
     @boolean
@@ -81,8 +81,7 @@ export default class Spline extends Component {
 
         let index = this.nodes.indexOf(this.currentSelection);
         if (index === -1) return;
-        this.nodes.splice(index, 1);
-        this.nodes = this.nodes;
+        this.removeNode(index);
     }
 
     /// <summary>
@@ -96,11 +95,6 @@ export default class Spline extends Component {
     @type([SplineNode])
     public get nodes () {
         return this._nodes;
-    }
-    public set nodes (v) {
-        this._nodes = v;
-        this.createCurves();
-        this.nodeListChanged.invoke({});
     }
 
     /// <summary>
@@ -124,59 +118,113 @@ export default class Spline extends Component {
     public nodeListChanged: Event = new Event;
     public curveChanged: Event = new Event;
 
-    public resetInEditor () {
-        this.reset();
-    }
-
-    /// <summary>
-    /// Clear the nodes and curves, then add two default nodes for the reset spline to be visible in editor.
-    /// </summary>
-    private reset () {
-        this.nodes.length = 0;
-        this.curves.length = 0;
-        this.addNode(SplineNode.create(cc.v3(5, 0, 0), cc.v3(5, 0, -3)));
-        this.addNode(SplineNode.create(cc.v3(10, 0, 0), cc.v3(10, 0, 3)));
-        this.raiseNodeListChanged({
-            type: ListChangeType.clear
-        });
-        this.updateAfterCurveChanged();
-    }
-
     onLoad () {
-        this.updateAfterCurveChanged = this.updateAfterCurveChanged.bind(this);
-        this.createCurves();
+        this._updateNodes();
     }
 
-    onEnable () {
+    onEnable () {}
+    onDisable () {}
 
+    addNode (pos: Vec3, direction: Vec3) {
+        let node = new Node('SplineNode');
+        let splineNode = node.addComponent(SplineNode);
+        splineNode.position = pos;
+        splineNode.direction = direction;
+
+        node.parent = this._nodeRoot;
+        this._nodes.push(splineNode);
+
+        if (!this._updatingNodes) {
+            this.nodeListChanged.invoke();
+            this._createCurves();
+        }
+        return splineNode;
     }
 
-    onDisable () {
+    insertNode (pos: Vec3, direction: Vec3, index: number) {
+        let node = new Node('SplineNode');
+        let splineNode = node.addComponent(SplineNode);
+        splineNode.position = pos;
+        splineNode.direction = direction;
 
+        this._nodeRoot.insertChild(node, index);
+        this._nodes.splice(index, 0, splineNode);
+        
+        if (!this._updatingNodes) {
+            this.nodeListChanged.invoke();
+            this._createCurves();
+        }
+
+        return splineNode;
     }
 
-    createCurves () {
+    removeNode (index: number) {
+        let splineNode = this._nodes[index];
+        this._nodeRoot.removeChild(splineNode.node);
+        this._nodes.splice(index, 1);
+
+        if (!this._updatingNodes) {
+            this.nodeListChanged.invoke();
+            this._createCurves();
+        }
+
+        return splineNode;
+    }
+
+    @type(SplineNodeLegacy)
+    _legacyNodes: SplineNodeLegacy[] = [];
+    _nodeRoot: Node;
+    _updatingNodes = false;
+    private _updateNodes () {
+        this._updatingNodes = true;
+
+        let nodeRoot = this._nodeRoot = find(SplineRootNodeName, this.node);
+        if (!nodeRoot) {
+            nodeRoot = this._nodeRoot = new Node(SplineRootNodeName);
+            this.addNode(cc.v3(5, 0, 0), cc.v3(5, 0, -3));
+            this.addNode(cc.v3(10, 0, 0), cc.v3(10, 0, 3));
+            nodeRoot.parent = this.node;
+        }
+        else {
+            this._nodes = nodeRoot.getComponentsInChildren(SplineNode);
+        }
+
+        let legacyNodes = this._legacyNodes;
+        if (legacyNodes && legacyNodes.length) {
+            nodeRoot.removeAllChildren();
+            this._nodes.length = 0;
+            for (let i = 0; i < legacyNodes.length; i++) {
+                let legacyNode = legacyNodes[i];
+                let splineNode = this.addNode(legacyNode.position, legacyNode.direction);
+                splineNode.roll = legacyNode.roll;
+                splineNode.scale = legacyNode.scale;
+                splineNode.up = legacyNode.up;
+            }
+            this._legacyNodes = [];
+        }
+        
+        this._createCurves();
+        this.nodeListChanged.invoke();
+    
+        this._updatingNodes = false;
+    }
+
+    private _createCurves () {
         this.curves.length = 0;
         for (let i = 0; i < this.nodes.length - 1; i++) {
             let n: SplineNode = this.nodes[i];
             let next: SplineNode = this.nodes[i + 1];
 
             let curve: CubicBezierCurve = new CubicBezierCurve(n, next);
-            curve.changed.addListener(this.updateAfterCurveChanged);
+            curve.changed.addListener(this.updateAfterCurveChanged, this);
             this.curves.push(curve);
         }
-        this.raiseNodeListChanged({
-            type: ListChangeType.clear
-        });
+        this.nodeListChanged.invoke();
         this.updateAfterCurveChanged();
     }
 
     public getCurves (): CubicBezierCurve[] {
         return this.curves;
-    }
-
-    private raiseNodeListChanged (args: ListChangedEventArgs) {
-        this.nodeListChanged.invoke(args);
     }
 
     private updateAfterCurveChanged () {
@@ -241,90 +289,6 @@ export default class Spline extends Component {
             }
         }
         throw new Error("Something went wrong with GetSampleAtDistance.");
-    }
-
-    /// <summary>
-    /// Adds a node at the end of the spline.
-    /// </summary>
-    /// <param name="node"></param>
-    public addNode (node: SplineNode) {
-        this.nodes.push(node);
-        if (this.nodes.length != 1) {
-            let previousNode = this.nodes[this.nodes.indexOf(node) - 1];
-            let curve = new CubicBezierCurve(previousNode, node);
-            curve.changed.addListener(this.updateAfterCurveChanged);
-            this.curves.push(curve);
-        }
-        this.raiseNodeListChanged({
-            type: ListChangeType.Add,
-            newItems: [node]
-        });
-
-        this.updateAfterCurveChanged();
-        this.updateLoopBinding();
-    }
-
-    /// <summary>
-    /// Insert the given node in the spline at index. Index must be greater than 0 and less than node count.
-    /// </summary>
-    /// <param name="index"></param>
-    /// <param name="node"></param>
-    public insertNode (index: number, node: SplineNode) {
-        if (index == 0)
-            throw new Error("Can't insert a node at index 0");
-
-        let nodes = this.nodes;
-        let curves = this.curves;
-
-        let previousNode = nodes[index - 1];
-        let nextNode = nodes[index];
-
-        nodes.splice(index, 0, node);
-
-        curves[index - 1].connectEnd(node);
-
-        let curve = new CubicBezierCurve(node, nextNode);
-        curve.changed.addListener(this.updateAfterCurveChanged);
-        curves.splice(index, 0, curve);
-        this.raiseNodeListChanged({
-            type: ListChangeType.Insert,
-            newItems: [node],
-            insertIndex: index
-        });
-        this.updateAfterCurveChanged();
-        this.updateLoopBinding();
-    }
-
-    /// <summary>
-    /// Remove the given node from the spline. The given node must exist and the spline must have more than 2 nodes.
-    /// </summary>
-    /// <param name="node"></param>
-    public removeNode (node: SplineNode) {
-        let nodes = this.nodes;
-        let curves = this.curves;
-        let index = nodes.indexOf(node);
-
-        if (nodes.length <= 2) {
-            throw new Error("Can't remove the node because a spline needs at least 2 nodes.");
-        }
-
-        let toRemove = index == nodes.length - 1 ? curves[index - 1] : curves[index];
-        if (index != 0 && index != nodes.length - 1) {
-            let nextNode = nodes[index + 1];
-            curves[index - 1].connectEnd(nextNode);
-        }
-
-        nodes.splice(index, 1);
-        toRemove.changed.removeListener(this.updateAfterCurveChanged);
-        curves.splice(curves.indexOf(toRemove), 1);
-
-        this.raiseNodeListChanged({
-            type: ListChangeType.Remove,
-            removedItems: [node],
-            removeIndex: index
-        });
-        this.updateAfterCurveChanged();
-        this.updateLoopBinding();
     }
 
     private startNode: SplineNode;
