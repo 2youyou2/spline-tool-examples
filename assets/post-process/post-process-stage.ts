@@ -1,4 +1,6 @@
-import { _decorator, Component, Node, RenderStage, RenderFlow, RenderView, renderer, UBOGlobal, GFXClearFlag, GFXPipelineState, GFXCommandBuffer, GFXTextureType, GFXTextureUsageBit, GFXTextureViewType, GFXFormat, Vec2, GFXFramebuffer, GFXTexture, GFXTextureView } from "cc";
+import { _decorator, Component, Node, RenderStage, RenderFlow, RenderView, renderer, GFXClearFlag, GFXPipelineState, GFXCommandBuffer, GFXTextureType, GFXTextureUsageBit, GFXTextureViewType, GFXFormat, Vec2, GFXFramebuffer, GFXTexture, GFXTextureView, pipeline } from "cc";
+
+const { UBOGlobal } = pipeline;
 const { ccclass, property } = _decorator;
 
 const bufs: GFXCommandBuffer[] = [];
