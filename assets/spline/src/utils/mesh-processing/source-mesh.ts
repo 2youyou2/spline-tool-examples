@@ -81,7 +81,7 @@ export default class SourceMesh {
         }
     }
 
-    public translate (x: number | Vec3, y: number, z: number) {
+    public translate (x: number | Vec3, y?: number, z?: number) {
         this.reset();
         if (typeof x === 'number') {
             this.translation.set(x, y, z);
@@ -98,7 +98,7 @@ export default class SourceMesh {
         return this;
     }
 
-    public scaleRes (x: number | Vec3, y: number, z: number) {
+    public scaleRes (x: number | Vec3, y?: number, z?: number) {
         this.reset();
         if (typeof x === 'number') {
             this.scale.set(x, y, z);

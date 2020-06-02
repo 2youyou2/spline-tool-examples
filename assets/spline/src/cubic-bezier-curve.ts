@@ -132,7 +132,7 @@ export default class CubicBezierCurve {
 
     public computeSamples () {
         let samples = this.samples;
-        samples.length = STEP_COUNT;
+        samples.length = STEP_COUNT + 1;
         this.length = 0;
         let previousPosition = this.getLocation(0);
         for (let i = 0; i <= STEP_COUNT; i++) {

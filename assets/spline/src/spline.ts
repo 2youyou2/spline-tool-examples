@@ -216,7 +216,9 @@ export default class Spline extends Component {
             this.length += curve.length;
         }
         this.curveChanged.invoke();
+        
         this._points.length = 0;
+        this._samples.length = 0;
     }
 
     /// <summary>

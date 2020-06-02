@@ -106,6 +106,16 @@ export default class Scatter extends SplineUtilRenderer {
                     items[i].currentCount = 0;
                 }
             }
+
+            let volumeInfos = this._volumeInfos;
+            if (volumeInfos) {
+                for (let i = 0; i < volumeInfos.length; i++) {
+                    volumeInfos[i].count = 0;
+                }
+            }
+            if (this._selfVolumeInfo) {
+                this._selfVolumeInfo.count = 0;
+            }
         }
     }
 
@@ -405,18 +415,18 @@ export default class Scatter extends SplineUtilRenderer {
     protected get generated () {
         if (!this._generated || this._generated.parent !== this.node) {
             let generatedName = 'generated ' + cc.js.getClassName(this);
-            // this._generated = cc.find(generatedName, this.node);
-            // if (!this._generated) {
-            this._generated = new Node(generatedName);
-            this._generated.parent = this.node;
-            // }
+            this._generated = cc.find(generatedName, this.node);
+            if (!this._generated) {
+                this._generated = new Node(generatedName);
+                this._generated.parent = this.node;
+            }
         }
         return this._generated;
     }
 
     _hasValidItem = false;
     _updateItems () {
-        this.node.removeAllChildren();
+        this.generated.removeAllChildren();
 
         this._hasValidItem = false;
 
