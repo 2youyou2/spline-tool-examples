@@ -6,6 +6,7 @@ import Spline from '../spline';
 
 import { _decorator, Node, Vec3, Mesh, Quat, ModelComponent, Material } from 'cc';
 import CubicBezierCurve from '../cubic-bezier-curve';
+import ISplineCruve from '../spline-curve-interface';
 const { ccclass, executeInEditMode, float, type, boolean, property } = _decorator;
 
 @ccclass
@@ -123,16 +124,23 @@ export default class SplineMeshTiling extends SplineUtilRenderer {
         let children = this.generated.children;
         let used = 0;
 
-        if (this.curveSpace) {
-            let curves = this.spline.curves;
-            for (let i = 0; i < curves.length; i++) {
-                this._getOrcreate(i, curves[i]);
+        if (this.splineCurve instanceof Spline) {
+            if (this.curveSpace) {
+                let curves = this.spline.curves;
+                for (let i = 0; i < curves.length; i++) {
+                    this._getOrcreate(i, curves[i]);
+                    used++;
+                }
+            } else {
+                this._getOrcreate(0, this.spline);
                 used++;
             }
-        } else {
-            this._getOrcreate(0, this.spline);
+        }
+        else {
+            this._getOrcreate(0, this.splineCurve);
             used++;
         }
+        
 
         if (children.length > used) {
             for (let i = children.length - 1; i >= used; i--) {
@@ -157,7 +165,7 @@ export default class SplineMeshTiling extends SplineUtilRenderer {
         }
     }
 
-    private _getOrcreate (childIdx, target: Spline | CubicBezierCurve) {
+    private _getOrcreate (childIdx, target: ISplineCruve) {
         let node: Node = this.generated.children[childIdx];
         if (!node) {
             node = new Node();
@@ -171,7 +179,7 @@ export default class SplineMeshTiling extends SplineUtilRenderer {
             mb.setInterval1(target, 0);
         }
         else {
-            mb.setInterval(target);
+            mb.setInterval(target as CubicBezierCurve);
         }
 
         mb.source = SourceMesh.build(this.mesh)

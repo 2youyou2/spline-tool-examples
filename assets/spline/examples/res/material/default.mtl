@@ -18,7 +18,9 @@
         ]
       },
       "depthStencilState": {},
-      "rasterizerState": {}
+      "rasterizerState": {
+        "cullMode": 0
+      }
     }
   ],
   "_props": [

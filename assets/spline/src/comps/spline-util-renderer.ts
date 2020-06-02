@@ -56,11 +56,17 @@ export default class SplineUtilRenderer extends SplineUtilBase {
         if (this.spline) {
             this.spline[this.listenerEventName].addListener(this._onSplineChanged);
         }
+        if (this.generated) {
+            this.generated.active = true;
+        }
     }
 
     onDisable () {
         if (this.spline) {
             this.spline[this.listenerEventName].removeListener(this._onSplineChanged);
+        }
+        if (this.generated) {
+            this.generated.active = false;
         }
     }
 

@@ -97,6 +97,22 @@ export default class CurveSample {
         this.roll = roll;
         this.distanceInCurve = distanceInCurve;
         this.timeInCurve = timeInCurve;
+
+        if (this._transformedUp) {
+            pool.Vec3.put(this._transformedUp);
+            this._transformedUp = null;
+        }
+
+        if (this._rotation) {
+            pool.Quat.put(this._rotation);
+            this._rotation = null;
+        }
+
+        if (this._bentRotation) {
+            pool.Quat.put(this._bentRotation);
+            this._bentRotation = null;
+        }
+
         return this;
     }
 

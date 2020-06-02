@@ -190,7 +190,10 @@ export default class CubicBezierCurve {
             throw new Error("Distance must be positive and less than curve length. Length = " + this.length + ", given distance was " + d);
 
         if (d === 0) {
-            d = 0.01;
+            d = 0.001;
+        }
+        else if (d === this.length) {
+            d = this.length - 0.001;
         }
 
         let samples = this.samples;

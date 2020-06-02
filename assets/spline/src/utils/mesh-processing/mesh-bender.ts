@@ -283,7 +283,7 @@ export default class MeshBender extends Component {
         }
 
         // fill remaining length
-        let remainingLength = this.spline.length - offset;
+        let remainingLength = (this.useSpline ? this.spline.length : this.curve.length) - offset;
         for (let i = 0; i < sourceVertices.length; i++) {
             let vert = sourceVertices[i];
             let distanceRate = source.length == 0 ? 0 : Math.abs(vert.position.x - source.minX) / source.length;
