@@ -1,4 +1,4 @@
-import { Component, Node, _decorator, Vec3, find } from 'cc';
+import { Component, Node, _decorator, Vec3, find, Vec2 } from 'cc';
 
 import SplineNode from './spline-node';
 import CubicBezierCurve from './cubic-bezier-curve';
@@ -120,14 +120,24 @@ export default class Spline extends Component {
         this._updateNodes();
     }
 
-    onEnable () {}
-    onDisable () {}
+    onEnable () { }
+    onDisable () { }
 
-    addNode (pos: Vec3, direction: Vec3) {
+    addNode (pos: Vec3, direction: Vec3, up?: Vec3, scale?: Vec2, roll?: number) {
         let node = new Node('SplineNode');
         let splineNode = node.addComponent(SplineNode);
         splineNode.position = pos;
         splineNode.direction = direction;
+
+        if (up !== undefined) {
+            splineNode.up = up;
+        }
+        if (scale !== undefined) {
+            splineNode.scale = scale;
+        }
+        if (roll !== undefined) {
+            splineNode.roll = roll;
+        }
 
         node.parent = this._nodeRoot;
         this._nodes.push(splineNode);
@@ -147,7 +157,7 @@ export default class Spline extends Component {
 
         this._nodeRoot.insertChild(node, index);
         this._nodes.splice(index, 0, splineNode);
-        
+
         if (!this._updatingNodes) {
             this.nodeListChanged.invoke();
             this._createCurves();
@@ -177,17 +187,30 @@ export default class Spline extends Component {
         let nodeRoot = this._nodeRoot = find(SplineRootNodeName, this.node);
         if (!nodeRoot) {
             nodeRoot = this._nodeRoot = new Node(SplineRootNodeName);
-            this.addNode(cc.v3(5, 0, 0), cc.v3(5, 0, -3));
-            this.addNode(cc.v3(10, 0, 0), cc.v3(10, 0, 3));
+            // some thing is wrong
+            // spline node root is missing, try recover from this._nodes
+            if (this._nodes.length) {
+                let nodes = this._nodes.slice();
+                this._nodes.length = 0;
+                for (let i = 0; i < nodes.length; i++) {
+                    let node = nodes[i];
+                    this.addNode(node.position, node.direction, node.up, node.scale, node.roll);
+                }
+            }
+            else {
+                this.addNode(cc.v3(5, 0, 0), cc.v3(5, 0, -3));
+                this.addNode(cc.v3(10, 0, 0), cc.v3(10, 0, 3));
+            }
+
             nodeRoot.parent = this.node;
         }
         else {
             this._nodes = nodeRoot.getComponentsInChildren(SplineNode);
         }
-        
+
         this._createCurves();
         this.nodeListChanged.invoke();
-    
+
         this._updatingNodes = false;
     }
 
@@ -216,7 +239,7 @@ export default class Spline extends Component {
             this.length += curve.length;
         }
         this.curveChanged.invoke();
-        
+
         this._points.length = 0;
         this._samples.length = 0;
     }
