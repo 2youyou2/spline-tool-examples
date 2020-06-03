@@ -1,0 +1,14 @@
+precision highp float;
+#include <common>
+#include <cc-global>
+
+in vec2 a_position;
+in vec2 a_texCoord;
+out vec2 v_uv;
+
+vec4 vert () {
+  vec4 pos = vec4(a_position, 0, 1);
+  v_uv = a_texCoord * cc_screenScale.xy;
+
+  return pos;
+}

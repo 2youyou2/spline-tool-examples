@@ -1,11 +1,13 @@
 import { _decorator, Component, Node, RenderStage, RenderFlow, RenderView, renderer, GFXClearFlag, GFXPipelineState, GFXCommandBuffer, GFXTextureType, GFXTextureUsageBit, GFXTextureViewType, GFXFormat, Vec2, GFXFramebuffer, GFXTexture, GFXTextureView, pipeline, game, director, Director } from "cc";
+import PostProcessCommand from "./post-process-command";
+import PostProcessRenderer from "./post-process-renderer";
 
 const { UBOGlobal } = pipeline;
 const { ccclass, property } = _decorator;
 
 const bufs: GFXCommandBuffer[] = [];
 
-class PostEffectCommand {
+class PostEffectRenderCommand {
     pass: renderer.Pass = null;
     input: GFXFramebuffer = null;
     output: GFXFramebuffer = null;
@@ -45,7 +47,7 @@ export class PostProcessStage extends RenderStage {
     render (view: RenderView) {
         // Your update function goes here.
 
-        if (this.passes.length === 0) {
+        if (this._renderCommands.length === 0) {
             this._framebuffer = null;
         }
         else {
@@ -59,7 +61,7 @@ export class PostProcessStage extends RenderStage {
     }
 
     renderEffects (view: RenderView) {
-        let commands = this._commands;
+        let commands = this._renderCommands;
         if (commands.length === 0) return;
 
         const camera = view.camera!;
@@ -95,16 +97,16 @@ export class PostProcessStage extends RenderStage {
 
     resize (width: number, height: number) { }
 
-    _passes: renderer.Pass[] = [];
-    get passes () {
-        return this._passes;
+    _renderers: PostProcessRenderer[] = [];
+    get renderers () {
+        return this._renderers;
     }
-    set passes (value) {
-        this._passes = value;
+    set renderers (value) {
+        this._renderers = value;
         this.rebuild();
     }
 
-    _commands: PostEffectCommand[] = [];
+    _renderCommands: PostEffectRenderCommand[] = [];
 
     createFrameBuffer () {
         // @ts-ignore
@@ -143,57 +145,91 @@ export class PostProcessStage extends RenderStage {
 
         let originTexture = originFrameBuffer.colorViews[0];
 
-        let flip:GFXFramebuffer, flop:GFXFramebuffer, tmp:GFXFramebuffer;
+        let flip: GFXFramebuffer, flop: GFXFramebuffer, tmp: GFXFramebuffer;
         const globalUBO = pipeline.globalBindings.get(UBOGlobal.BLOCK.name);
 
-        let passes = this.passes;
-        let commands = this._commands;
-        commands.length = 0;
-        for (let i = 0; i < passes.length; i++) {
-            let pass = passes[i];
+        let renderCommands = this._renderCommands;
+        renderCommands.length = 0;
 
-            pass.bindBuffer(UBOGlobal.BLOCK.binding, globalUBO!.buffer!);
+        let framebufferMap: Map<string, GFXFramebuffer> = new Map();
 
-            let originSampler = pass.getBinding('pe_origin_texture');
-            if (originSampler) {
-                pass.bindTextureView(originSampler, originTexture);
+        let renderers = this._renderers;
+        this._psos.length = 0;
+        for (let ri = 0; ri < renderers.length; ri++) {
+            let renderer = this.renderers[ri];
+            if (!renderer || !renderer.enabled) {
+                continue;
             }
 
-            let input = flip || originFrameBuffer;
+            let commands = renderer.commands;
+            for (let ci = 0; ci < commands.length; ci++) {
+                let command = commands[ci];
+                let pass = command.pass;
 
-            let inputSampler = pass.getBinding('pe_input_texture');
-            if (inputSampler) {
-                pass.bindTextureView(inputSampler, input.colorViews[0]);
+                pass.bindBuffer(UBOGlobal.BLOCK.binding, globalUBO!.buffer!);
+
+                let originSampler = pass.getBinding('pe_origin_texture');
+                if (originSampler) {
+                    pass.bindTextureView(originSampler, originTexture);
+                }
+
+                if (command.inputCommands) {
+                    for (let ii = 0; ii < command.inputCommands.length; ii++) {
+                        let inputName = command.inputCommands[ii].outputName;
+                        let inputTexture = pass.getBinding(inputName);
+                        if (!inputTexture) {
+                            cc.warn(`Can not find input name [${inputName}] for post process renderer [${typeof renderer}]`);
+                            continue;
+                        }
+                        
+                        let framebuffer = framebufferMap.get(inputName);
+                        if (!framebuffer) {
+                            cc.warn(`Can not find input frame buffer for input name [${inputName}] in post process renderer [${typeof renderer}]`);
+                            continue;
+                        }
+                        pass.bindTextureView(inputTexture, framebuffer.colorViews[0]);
+                    }
+                }
+
+                let input = flip || originFrameBuffer;
+
+                let inputSampler = pass.getBinding('pe_input_texture');
+                if (inputSampler) {
+                    pass.bindTextureView(inputSampler, input.colorViews[0]);
+                }
+
+                if (!flop) {
+                    flop = this.createFrameBuffer();
+                }
+
+                renderCommands.push(new PostEffectRenderCommand(pass, input, flop));
+
+                if (command.outputName) {
+                    framebufferMap.set(command.outputName, flop);
+                    flop = null;
+                }
+
+                tmp = flip;
+                flip = flop;
+                flop = tmp;
+
+                let pso = pass.createPipelineState();
+                let bindingLayout = pso!.pipelineLayout.layouts[0];
+                bindingLayout.update();
+
+                pass.update();
+                this._psos.push(pso);
             }
-
-            if (!flop) {
-                flop = this.createFrameBuffer();
-            }
-
-            let output = flop;
-            if (i === passes.length - 1) {
-                output = null;
-            }
-
-            commands.push(new PostEffectCommand(pass, input, output));
-
-            tmp = flip;
-            flip = flop;
-            flop = tmp;
-
-            let pso = pass.createPipelineState();
-            let bindingLayout = pso!.pipelineLayout.layouts[0];
-            bindingLayout.update();
-
-            pass.update();
-
-            this._psos[i] = pso;
         }
-        this._psos.length = passes.length;
+
+        // last command should output to screen
+        if (renderCommands.length > 0) {
+            renderCommands[renderCommands.length - 1].output = null;
+        }
     }
 }
 
 director.on(Director.EVENT_BEFORE_SCENE_LAUNCH, () => {
     let stage = director.root.pipeline.getFlow('PostProcessFlow').stages[0] as PostProcessStage;
-    stage.passes = [];
+    stage.renderers = [];
 })

@@ -4,7 +4,7 @@
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
-    "__uuid__": "3aea9d5c-dd51-4ebc-9c5a-99b67bd74bd4"
+    "__uuid__": "bae430bf-87a2-4118-be48-d658287e8f75"
   },
   "_techIdx": 0,
   "_defines": [
@@ -23,8 +23,8 @@
   ],
   "_props": [
     {
-      "brightness": 1.25,
-      "saturation": 2
+      "brightness": 1.2,
+      "saturation": 3
     }
   ]
 }

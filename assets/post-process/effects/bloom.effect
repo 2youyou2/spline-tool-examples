@@ -1,0 +1,242 @@
+// Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.  
+
+CCEffect %{
+  techniques:
+  - name: normal
+    passes:
+    - name: prefilter 
+      vert: post-process-vs:vert
+      frag: prefilter4:frag
+      properties:
+        threshold: { value: 0.5 }
+        softKnee: { value: 0.5 }
+    - name: downsample
+      vert: post-process-vs:vert
+      frag: downsample4:frag
+      postEffect:
+        output: { size: [0.5, 0.5], name: bloom_texture }
+    - name: upsample
+      vert: post-process-vs:vert
+      frag: upsample:frag
+      properties:
+        sampleScale: { value: 1 }
+  - name: high
+    passes:
+    - name: prefilter 
+      vert: post-process-vs:vert
+      frag: prefilter13:frag
+      properties:
+        threshold: { value: 0.5 }
+        softKnee: { value: 0.5 }
+    - name: downsample
+      vert: post-process-vs:vert
+      frag: downsample13:frag
+      postEffect:
+        output: { size: [0.5, 0.5], name: bloom_texture }
+    - name: upsample
+      vert: post-process-vs:vert
+      frag: upsample:frag
+      properties:
+        sampleScale: { value: 1 }
+}%
+
+CCProgram post-process-vs %{
+precision highp float;
+#include <common>
+#include <cc-global>
+
+in vec2 a_position;
+in vec2 a_texCoord;
+out vec2 v_uv;
+
+vec4 vert () {
+  vec4 pos = vec4(a_position, 0, 1);
+  v_uv = a_texCoord * cc_screenScale.xy;
+
+  return pos;
+}
+}%
+
+CCProgram post-process %{
+// #pragma builtin(local)
+uniform sampler2D pe_origin_texture;
+// #pragma builtin(local)
+uniform sampler2D pe_input_texture;
+
+#include <cc-global>
+}%
+
+CCProgram bloom %{
+  #include <post-process>
+
+  #define EPSILON         1.0e-4
+
+  vec4 QuadraticThreshold(vec4 color, float threshold, float softKnee)
+  {
+    vec3 curve = vec3(threshold - softKnee, softKnee * 2.0, 0.25 / softKnee);
+
+    // Pixel brightness
+    float br = max(max(color.r, color.g), color.b);
+
+    // Under-threshold part: quadratic curve
+    float rq = clamp(br - curve.x, 0.0, curve.y);
+    rq = curve.z * rq * rq;
+
+    // Combine and apply the brightness response curve.
+    color *= max(rq, br - threshold) / max(br, EPSILON);
+
+    // color *= clamp(br - threshold, 0.0, 1.0);
+
+    return color;
+  }
+
+  // Better, temporally stable box filtering
+  // [Jimenez14] http://goo.gl/eomGso
+  // . . . . . . .
+  // . A . B . C .
+  // . . D . E . .
+  // . F . G . H .
+  // . . I . J . .
+  // . K . L . M .
+  // . . . . . . .
+  vec4 DownsampleBox13Tap(sampler2D tex, vec2 uv, vec2 texelSize)
+  {
+      vec4 A = texture(tex, uv + texelSize * vec2(-1.0, -1.0));
+      vec4 B = texture(tex, uv + texelSize * vec2( 0.0, -1.0));
+      vec4 C = texture(tex, uv + texelSize * vec2( 1.0, -1.0));
+      vec4 D = texture(tex, uv + texelSize * vec2(-0.5, -0.5));
+      vec4 E = texture(tex, uv + texelSize * vec2( 0.5, -0.5));
+      vec4 F = texture(tex, uv + texelSize * vec2(-1.0,  0.0));
+      vec4 G = texture(tex, uv                                 );
+      vec4 H = texture(tex, uv + texelSize * vec2( 1.0,  0.0));
+      vec4 I = texture(tex, uv + texelSize * vec2(-0.5,  0.5));
+      vec4 J = texture(tex, uv + texelSize * vec2( 0.5,  0.5));
+      vec4 K = texture(tex, uv + texelSize * vec2(-1.0,  1.0));
+      vec4 L = texture(tex, uv + texelSize * vec2( 0.0,  1.0));
+      vec4 M = texture(tex, uv + texelSize * vec2( 1.0,  1.0));
+
+      vec2 div = (1.0 / 4.0) * vec2(0.5, 0.125);
+
+      vec4 o = (D + E + I + J) * div.x;
+      o += (A + B + G + F) * div.y;
+      o += (B + C + H + G) * div.y;
+      o += (F + G + L + K) * div.y;
+      o += (G + H + M + L) * div.y;
+
+      return o;
+  }
+
+  // Standard box filtering
+  vec4 DownsampleBox4Tap(sampler2D tex, vec2 uv, vec2 texelSize)
+  {
+    vec4 d = texelSize.xyxy * vec4(-1.0, -1.0, 1.0, 1.0);
+
+    vec4 s;
+    s =  texture(tex, uv + d.xy);
+    s += texture(tex, uv + d.zy);
+    s += texture(tex, uv + d.xw);
+    s += texture(tex, uv + d.zw);
+
+    return s * (1.0 / 4.0);
+  }
+
+  vec4 Prefilter(vec4 color, vec2 uv, float threshold, float softKnee)
+  {
+      // color = min(65472.0, color); // clamp to max
+      color = QuadraticThreshold(color, threshold, softKnee);
+      return color;
+  }
+
+  // Standard box filtering
+  vec4 UpsampleBox(sampler2D tex, vec2 uv, vec2 texelSize, float sampleScale)
+  {
+      vec4 d = texelSize.xyxy * vec4(-1.0, -1.0, 1.0, 1.0) * sampleScale;
+
+      vec4 s;
+      s =  texture(tex, uv + d.xy);
+      s += texture(tex, uv + d.zy);
+      s += texture(tex, uv + d.xw);
+      s += texture(tex, uv + d.zw);
+
+      return s * (1.0 / 4.0);
+  }
+
+  vec4 Combine(vec4 color, sampler2D originTexture, vec2 uv)
+  {
+    return color + texture(originTexture, uv);
+  }
+}%
+
+CCProgram prefilter4 %{
+  precision highp float;
+  #include <bloom>
+  
+  in vec2 v_uv;
+
+  uniform Bloom {
+    float threshold;
+    float softKnee;
+  };
+
+  vec4 frag () {
+    vec4 color = DownsampleBox4Tap(pe_input_texture, v_uv, cc_screenSize.zw);
+    return Prefilter(color, v_uv, threshold, softKnee);
+  }
+}%
+
+CCProgram downsample4 %{
+  precision highp float;
+  #include <bloom>
+
+  in vec2 v_uv;
+
+  vec4 frag () {
+    return DownsampleBox4Tap(pe_input_texture, v_uv, cc_screenSize.zw);
+  }
+}%
+
+CCProgram prefilter13 %{
+  precision highp float;
+  #include <bloom>
+  
+  in vec2 v_uv;
+
+  uniform Bloom {
+    float threshold;
+    float softKnee;
+  };
+
+  vec4 frag () {
+    vec4 color = DownsampleBox13Tap(pe_input_texture, v_uv, cc_screenSize.zw);
+    return Prefilter(color, v_uv, threshold, softKnee);
+  }
+}%
+
+CCProgram downsample13 %{
+  precision highp float;
+  #include <bloom>
+
+  in vec2 v_uv;
+
+  vec4 frag () {
+    return DownsampleBox13Tap(pe_input_texture, v_uv, cc_screenSize.zw);
+  }
+}%
+
+CCProgram upsample %{
+  precision highp float;
+  #include <bloom>
+
+  in vec2 v_uv;
+
+  uniform Bloom {
+    float sampleScale;
+  };
+
+  uniform sampler2D bloom_texture;
+
+  vec4 frag () {
+    vec4 bloom = UpsampleBox(bloom_texture, v_uv, cc_screenSize.zw, sampleScale);
+    return Combine(bloom, pe_origin_texture, v_uv);
+  }
+}%
