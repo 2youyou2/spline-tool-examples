@@ -20,6 +20,19 @@ export class PostProcess extends Component {
         this._updateStage();
     }
 
+    // just for refresh material in editor
+    // do not modify manually
+    @type(Material)
+    get materials () {
+        return this._renderers.map(r => r.material);
+    }
+    set materials (value) {
+        this._renderers.forEach((r, index) => {
+            r._updateMaterial(value[index]);
+        })
+        this._updateStage();
+    }
+
     start () {
         this._stage = director.root.pipeline.getFlow('PostProcessFlow').stages[0] as PostProcessStage;
         this._updateStage();

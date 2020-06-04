@@ -96,6 +96,11 @@ export default class PostProcessRenderer {
         this._updateCommands();
     }
 
+    _updateMaterial (m) {
+        this._material = m;
+        this._updateCommands();
+    }
+
     _updateCommands () {
         let commandMap = this._commandMap;
         let commands = this._commands;
@@ -103,6 +108,7 @@ export default class PostProcessRenderer {
         commandMap.clear();
 
         let material = this._material;
+        if (!material) return;
         for (let i = 0; i < material.passes.length; i++) {
             let pass = material.passes[i];
             let cmd = new PostProcessCommand(pass);
