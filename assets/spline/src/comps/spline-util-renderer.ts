@@ -1,5 +1,6 @@
 import SplineUtilBase from "./spline-util-base"
 import { Node, _decorator, PrivateNode } from "cc";
+import Event from "../utils/event";
 
 const { ccclass, property } = _decorator;
 
@@ -40,21 +41,18 @@ export default class SplineUtilRenderer extends SplineUtilBase {
 
     protected dirty = true;
 
-    protected listenerEventName = 'curveChanged';
-
-    // LIFE-CYCLE CALLBACKS:
-    constructor () {
-        super();
-        this._onSplineChanged = this._onSplineChanged.bind(this);
-    }
-
     onLoad () {
-        this._onSplineChanged();
+        this.onCurveChanged();
     }
 
     onEnable () {
         if (this.spline) {
-            this.spline[this.listenerEventName].addListener(this._onSplineChanged);
+            if (this['onCurveChanged']) {
+                this.spline.curveChanged.addListener(this['onCurveChanged'], this);
+            }
+            if (this['onNodeListChanged']) {
+                this.spline.nodeListChanged.addListener(this['onNodeListChanged'], this);
+            }
         }
         if (this.generated) {
             this.generated.active = true;
@@ -63,14 +61,19 @@ export default class SplineUtilRenderer extends SplineUtilBase {
 
     onDisable () {
         if (this.spline) {
-            this.spline[this.listenerEventName].removeListener(this._onSplineChanged);
+            if (this['onCurveChanged']) {
+                this.spline.curveChanged.removeListener(this['onCurveChanged'], this);
+            }
+            if (this['onNodeListChanged']) {
+                this.spline.curveChanged.removeListener(this['onNodeListChanged'], this);
+            }
         }
         if (this.generated) {
             this.generated.active = false;
         }
     }
 
-    protected _onSplineChanged () {
+    protected onCurveChanged () {
         this.dirty = true;
     }
 
@@ -79,7 +82,7 @@ export default class SplineUtilRenderer extends SplineUtilBase {
             this._generated.parent = null;
             this._generated = null;
         }
-        this._onSplineChanged();
+        this.onCurveChanged();
     }
 
     update (dt) {

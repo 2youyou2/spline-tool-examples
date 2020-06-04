@@ -63,13 +63,13 @@ export class ScatterVolume extends SplineUtilBase {
     }
 
     onEnable () {
-        this.spline.curveChanged.addListener(this._onSplineChanged, this);
+        this.spline.curveChanged.addListener(this.onCurveChanged, this);
     }
     onDisable () {
-        this.spline.curveChanged.removeListener(this._onSplineChanged, this);
+        this.spline.curveChanged.removeListener(this.onCurveChanged, this);
     }
 
-    _onSplineChanged () {
+    onCurveChanged () {
         this.volumeChanged.invoke();
     }
 }

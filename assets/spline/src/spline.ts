@@ -5,6 +5,7 @@ import CubicBezierCurve from './cubic-bezier-curve';
 import CurveSample from './curve-sample';
 
 import Event from './utils/event';
+import SplineNodeWrapper from './spline-node-wrapper';
 
 const { ccclass, type, boolean, integer, float, executeInEditMode } = _decorator;
 
@@ -90,9 +91,17 @@ export default class Spline extends Component {
     @type([SplineNode])
     public _nodes: SplineNode[] = [];
 
-    @type([SplineNode])
+    // @type([SplineNode])
     public get nodes () {
         return this._nodes;
+    }
+
+    @type(SplineNodeWrapper)
+    public get splineNodes () : SplineNodeWrapper[] {
+        return this._nodes.map(node => new SplineNodeWrapper(node));
+    }
+    public set splineNodes (value: SplineNodeWrapper[]) {
+        
     }
 
     /// <summary>
