@@ -3,8 +3,8 @@ import SplineUtilRenderer from './spline-util-renderer';
 import MeshBender, { FillingMode } from '../utils/mesh-processing/mesh-bender';
 import SourceMesh from '../utils/mesh-processing/source-mesh';
 import Spline from '../spline';
-
-import { _decorator, Node, Vec3, Mesh, Quat, ModelComponent, Material } from 'cc';
+import UAnimationCurve from '../utils/animation-curve';
+import { _decorator, Node, Vec3, Mesh, Quat, ModelComponent, Material, geometry, CurveRange } from 'cc';
 import CubicBezierCurve from '../cubic-bezier-curve';
 import ISplineCruve from '../spline-curve-interface';
 const { ccclass, executeInEditMode, float, type, boolean, property } = _decorator;
@@ -116,6 +116,29 @@ export default class SplineMeshTiling extends SplineUtilRenderer {
         this.onCurveChanged();
     }
 
+    @type(CurveRange)
+    _heightCurve: CurveRange = UAnimationCurve.one();
+    @type(CurveRange)
+    get heightCurve () {
+        return this._heightCurve;
+    }
+    set heightCurve (value) {
+        this._heightCurve = value;
+        this.dirty = true;
+    }
+
+    @property
+    _alignTopToZero = false;
+    @property
+    get alignTopToZero () {
+        return this._alignTopToZero;
+    }
+    set alignTopToZero (value) {
+        this._alignTopToZero = value;
+        this.dirty = true;
+    }
+
+    
     public compute () {
         if (!this.mesh) {
             return;
@@ -188,6 +211,8 @@ export default class SplineMeshTiling extends SplineUtilRenderer {
             .scaleRes(this.scale);
         mb.mode = this.mode;
         mb.offset = this.offset;
+        mb.heightCurve = this.heightCurve;
+        mb.alignTopToZero = this.alignTopToZero;
 
         let mc = node.getComponent(ModelComponent);
         if (!mc) {

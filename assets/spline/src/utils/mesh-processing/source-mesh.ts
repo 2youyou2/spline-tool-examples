@@ -35,10 +35,22 @@ export default class SourceMesh {
         return this._minX[0];
     }
 
-    private _length: number[] = [0];
-    get length () {
+    private _lengthX: number[] = [0];
+    get lengthX () {
         if (!this._vertices[0]) this.buildData();
-        return this._length[0];
+        return this._lengthX[0];
+    }
+
+    private _minY: number[] = [0];
+    get minY () {
+        if (!this._vertices[0]) this.buildData();
+        return this._minY[0];
+    }
+
+    private _lengthY: number[] = [0];
+    get lengthY () {
+        if (!this._vertices[0]) this.buildData();
+        return this._lengthY[0];
     }
 
     getVertices (subMeshIndex = 0) {
@@ -53,9 +65,9 @@ export default class SourceMesh {
         if (!this._vertices[subMeshIndex]) this.buildData();
         return this._minX[subMeshIndex];
     }
-    getLength (subMeshIndex = 0) {
+    getLengthX (subMeshIndex = 0) {
         if (!this._vertices[subMeshIndex]) this.buildData();
-        return this._length[subMeshIndex];
+        return this._lengthX[subMeshIndex];
     }
     subCount () {
         return this.mesh ? this.mesh.subMeshCount : 0;
@@ -193,13 +205,18 @@ export default class SourceMesh {
             // find the bounds along x
             this._minX[si] = Number.MAX_SAFE_INTEGER;
             let maxX = -Number.MAX_SAFE_INTEGER;
+            this._minY[si] = Number.MAX_SAFE_INTEGER;
+            let maxY = -Number.MAX_SAFE_INTEGER;
             for (let i = 0; i < vertices.length; i++) {
                 let vert = vertices[i];
                 let p = vert.position;
                 maxX = Math.max(maxX, p.x);
                 this._minX[si] = Math.min(this._minX[si], p.x);
+                maxY = Math.max(maxY, p.y);
+                this._minY[si] = Math.min(this._minY[si], p.y);
             }
-            this._length[si] = Math.abs(maxX - this._minX[si]);
+            this._lengthX[si] = Math.abs(maxX - this._minX[si]);
+            this._lengthY[si] = Math.abs(maxY - this._minY[si]);
         }
     }
 

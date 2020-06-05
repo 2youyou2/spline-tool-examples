@@ -118,6 +118,8 @@
       "scenes": [
         "42351d26-281b-466f-aadd-f788e114af8a@92e4a"
       ]
-    }
+    },
+    "dumpMaterials": false,
+    "materialDumpDir": "db://assets/road-tool/res/mesh/RoadObj/Bridges/BridgeBase9-2L"
   }
 }

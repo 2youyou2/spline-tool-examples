@@ -9,6 +9,7 @@
   "_techIdx": 0,
   "_defines": [
     {
+      "USE_NORMAL_MAP": true,
       "USE_ALBEDO_MAP": true
     }
   ],
@@ -25,15 +26,11 @@
   ],
   "_props": [
     {
-      "tilingOffset": {
-        "__type__": "cc.Vec4",
-        "x": 10,
-        "y": 10,
-        "z": 0,
-        "w": 0
-      },
       "mainTexture": {
-        "__uuid__": "03dc0beb-de85-4b3f-8c2f-a2920cda3f8d@6c48a"
+        "__uuid__": "163ef61f-05bf-4a71-9964-e4bd215c7e78@6c48a"
+      },
+      "normalMap": {
+        "__uuid__": "9d8c7178-80e2-403e-b20f-32b0a1881d34@6c48a"
       }
     }
   ]
