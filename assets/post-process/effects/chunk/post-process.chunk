@@ -1,9 +1,0 @@
-// #pragma builtin(local)
-// uniform CCPostEffect {
-//   vec2 cc_pe_resolution;
-// };
-
-// #pragma builtin(local)
-uniform sampler2D pe_origin_texture;
-// #pragma builtin(local)
-uniform sampler2D pe_input_texture;
