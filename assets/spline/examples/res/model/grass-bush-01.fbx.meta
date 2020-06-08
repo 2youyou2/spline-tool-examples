@@ -11,7 +11,7 @@
       "displayName": "",
       "id": "6e283",
       "name": "SM_grass_bush_01_LOD0.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
@@ -28,7 +28,7 @@
       "displayName": "",
       "id": "f5781",
       "name": "SM_grass_bush_01_LOD1.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",

@@ -11,7 +11,7 @@
       "displayName": "",
       "id": "ecae8",
       "name": "Fir_01_plant_LOD1.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
@@ -28,7 +28,7 @@
       "displayName": "",
       "id": "a9f42",
       "name": "Fir_01_plant_LOD0.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",

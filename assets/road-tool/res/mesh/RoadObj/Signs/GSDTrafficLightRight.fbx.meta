@@ -11,7 +11,7 @@
       "displayName": "",
       "id": "e3ca9",
       "name": "LightBase.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
@@ -28,7 +28,7 @@
       "displayName": "",
       "id": "5a462",
       "name": "Lights.mesh",
-      "ver": "1.0.9",
+      "ver": "1.1.0",
       "imported": true,
       "files": [
         ".json",
