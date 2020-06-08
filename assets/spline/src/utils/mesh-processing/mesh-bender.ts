@@ -1,4 +1,4 @@
-import { Component, Mesh, GFXAttributeName, Vec2, ModelComponent, _decorator, Enum, Vec3, CurveRange, repeat } from 'cc';
+import { Component, Mesh, GFXAttributeName, Vec2, ModelComponent, _decorator, Enum, Vec3, CurveRange, repeat, clamp } from 'cc';
 import Spline from '../../spline';
 import CubicBezierCurve from '../../cubic-bezier-curve';
 import CurveSample from '../../curve-sample';
@@ -33,11 +33,74 @@ export enum FillingMode {
 
 Enum(FillingMode)
 
+export enum AlignType {
+    None,
+    Top,
+    bottom,
+    // Right,
+    // Left
+}
+Enum(AlignType)
+
+export enum ValueType {
+    Absolute,
+    Percent
+}
+Enum(ValueType)
+
+// fill helpfer
+let _tempHeightRange = new Vec2();
+let _tempYOffset = 0;
+function _beginFill (meshBender: MeshBender) {
+    let source = meshBender.source;
+    _tempYOffset = 0;
+    switch (meshBender.alignType) {
+        case AlignType.None:
+            break;
+        case AlignType.Top:
+            _tempYOffset = meshBender.alignOffset - (source.minY + source.lengthY);
+            break;
+        case AlignType.bottom:
+            _tempYOffset = meshBender.alignOffset - source.minY;
+            break;
+    }
+
+    _tempHeightRange.set(source.minY + meshBender.heightRange.x * source.lengthY, source.minY + meshBender.heightRange.y * source.lengthY);
+}
+
+function _applyVert (meshBender: MeshBender, vert: MeshVertex, sample: CurveSample, distanceRatio) {
+    vert = MeshVertex.pool.get().set(vert);
+    vert.position.y = clamp(vert.position.y, _tempHeightRange.x, _tempHeightRange.y);
+    vert.position.y += _tempYOffset;
+    vert = sample.getBent(vert, vert);
+    if (meshBender.heightCurve) {
+        vert.position.y *= meshBender.heightCurve.evaluate(distanceRatio, 0.5);
+    }
+    return vert;
+}
+
+function _endFill (meshBender: MeshBender, bentVertices: MeshVertex[], sampleCache: Map<string, CurveSample>, triangles?: number[]) {
+    MeshUtility.updateOrCreateModelMesh(meshBender.getComponent(ModelComponent), {
+        positions: bentVertices.map(b => b.position),
+        normals: bentVertices.map(b => b.normal),
+        tangents: bentVertices.map(b => b.tangent),
+        uvs: bentVertices.map(b => b.uv),
+        indices: triangles || meshBender.source.triangles
+    });
+
+    for (let i = 0; i < bentVertices.length; i++) {
+        MeshVertex.pool.put(bentVertices[i]);
+    }
+    for (const iter of sampleCache) {
+        CurveSample.pool.put(iter[1]);
+    }
+    sampleCache.clear();
+}
 
 @ccclass
 @executeInEditMode
 export default class MeshBender extends Component {
-    private isDirty = false;
+    private dirty = false;
     private result: Mesh;
     private useSpline: boolean;
     private spline: Spline;
@@ -50,10 +113,10 @@ export default class MeshBender extends Component {
     /// <summary>
     /// The source mesh to bend.
     /// </summary>
-    get source() { return this._source; }
-    set source(value) {
+    get source () { return this._source; }
+    set source (value) {
         if (value == this._source) return;
-        this.setDirty();
+        this.dirty = true;
         this._source = value;
     }
 
@@ -61,43 +124,83 @@ export default class MeshBender extends Component {
     /// <summary>
     /// The scaling mode along the spline
     /// </summary>
-    get mode() { return this._mode; }
-    set mode(value) {
+    get mode () { return this._mode; }
+    set mode (value) {
         if (value == this._mode) return;
-        this.setDirty();
+        this.dirty = true;
         this._mode = value;
     }
 
     _offset = 0;
-    get offset() {
+    get offset () {
         return this._offset;
     }
-    set offset(value) {
+    set offset (value) {
         this._offset = value;
-        this.setDirty();
+        this.dirty = true;
+    }
+    _offsetValueType = ValueType.Absolute;
+    get offsetValueType () {
+        return this._offsetValueType;
+    }
+    set offsetValueType (value) {
+        this._offsetValueType = value;
+        this.dirty = true;
+    }
+
+    get length () {
+        if (this.useSpline) {
+            return this.spline.length;
+        }
+        else {
+            return this.curve.length;
+        }
+    }
+
+    get calcOffset () {
+        if (this.offsetValueType === ValueType.Absolute) {
+            return this.offset;
+        }
+        else {
+            return this.offset * this.length;
+        }
+
     }
 
     _heightCurve: CurveRange = null;
-    get heightCurve() {
+    get heightCurve () {
         return this._heightCurve;
     }
-    set heightCurve(value) {
+    set heightCurve (value) {
         this._heightCurve = value;
-        this.setDirty();
+        this.dirty = true;
     }
 
-    _alignTopToZero = false;
-    get alignTopToZero() {
-        return this._alignTopToZero;
+    _heightRange = new Vec2(0, 1)
+    get heightRange () {
+        return this._heightRange;
     }
-    set alignTopToZero(value) {
-        this._alignTopToZero = value;
-        this.setDirty();
+    set heightRange (value) {
+        this._heightRange.set(value);
+        this.dirty = true;
     }
 
-    constructor() {
-        super();
-        this.setDirty = this.setDirty.bind(this);
+    _alignType = AlignType.None;
+    get alignType () {
+        return this._alignType;
+    }
+    set alignType (value) {
+        this._alignType = value;
+        this.dirty = true;
+    }
+
+    _alignOffset = 0;
+    get alignOffset () {
+        return this._alignOffset;
+    }
+    set alignOffset (value) {
+        this._alignOffset = value;
+        this.dirty = true;
     }
 
     /// <summary>
@@ -105,17 +208,17 @@ export default class MeshBender extends Component {
     /// The mesh will be updated if the curve changes.
     /// </summary>
     /// <param name="curve">The <see cref="CubicBezierCurve"/> to bend the source mesh along.</param>
-    public setInterval(curve: CubicBezierCurve) {
+    public setInterval (curve: CubicBezierCurve) {
         if (this.curve == curve) return;
         if (curve == null) throw new Error("curve");
         if (this.curve != null) {
-            this.curve.changed.removeListener(this.setDirty);
+            this.curve.changed.removeListener(this.setDirty, this);
         }
         this.curve = curve;
         this.spline = null;
-        curve.changed.addListener(this.setDirty);
+        curve.changed.addListener(this.setDirty, this);
         this.useSpline = false;
-        this.setDirty();
+        this.dirty = true;
     }
 
     /// <summary>
@@ -127,7 +230,7 @@ export default class MeshBender extends Component {
     /// <param name="spline">The <see cref="SplineMesh"/> to bend the source mesh along.</param>
     /// <param name="intervalStart">Distance from the spline start to place the mesh minimum X.<param>
     /// <param name="intervalEnd">Distance from the spline start to stop deforming the source mesh.</param>
-    public setInterval1(spline: Spline, intervalStart: number, intervalEnd = 0) {
+    public setInterval1 (spline: Spline, intervalStart: number, intervalEnd = 0) {
         if (this.spline == spline && this.intervalStart == intervalStart && this.intervalEnd == intervalEnd) return;
         if (spline == null) throw new Error("spline");
         if (intervalStart < 0 || intervalStart >= spline.length) {
@@ -138,20 +241,20 @@ export default class MeshBender extends Component {
         }
         if (this.spline != null) {
             // unlistening previous spline
-            this.spline.curveChanged.removeListener(this.setDirty);
+            this.spline.curveChanged.removeListener(this.setDirty, this);
         }
         this.spline = spline;
         // listening new spline
-        spline.curveChanged.addListener(this.setDirty);
+        spline.curveChanged.addListener(this.setDirty, this);
 
         this.curve = null;
         this.intervalStart = intervalStart;
         this.intervalEnd = intervalEnd;
         this.useSpline = true;
-        this.setDirty();
+        this.dirty = true;
     }
 
-    public onEnable() {
+    public onEnable () {
         // if (GetComponent<MeshFilter>().sharedMesh != null) {
         //     result = GetComponent<MeshFilter>().sharedMesh;
         // } else {
@@ -160,26 +263,26 @@ export default class MeshBender extends Component {
         // }
     }
 
-    public update() {
+    public update () {
         this.computeIfNeeded();
     }
 
-    public computeIfNeeded() {
-        if (this.isDirty) {
+    public computeIfNeeded () {
+        if (this.dirty) {
             this.compute();
         }
     }
 
-    private setDirty() {
-        this.isDirty = true;
+    private setDirty () {
+        this.dirty = true;
     }
 
     /// <summary>
     /// Bend the mesh. This method may take time and should not be called more than necessary.
     /// Consider using <see cref="ComputeIfNeeded"/> for faster result.
     /// </summary>
-    private compute() {
-        this.isDirty = false;
+    private compute () {
+        this.dirty = false;
         switch (this.mode) {
             case FillingMode.Once:
                 this.fillOnce();
@@ -193,18 +296,21 @@ export default class MeshBender extends Component {
         }
     }
 
-    public onDestroy() {
+    public onDestroy () {
         if (this.curve != null) {
             this.curve.changed.removeListener(this.compute);
         }
     }
 
-    private fillOnce() {
+    private fillOnce () {
         let sampleCache = this._sampleCache;
 
         let source = this.source;
         let bentVertices: MeshVertex[] = [];
-        let offset = this.offset;
+
+        _beginFill(this);
+
+        let offset = this.calcOffset;
         // for each mesh vertex, we found its projection on the curve
         for (let j = 0; j < source.vertices.length; j++) {
             let vert = source.vertices[j];
@@ -230,31 +336,14 @@ export default class MeshBender extends Component {
                 sampleCache.set(cacheKey, sample);
             }
 
-            vert = sample.getBent(vert, MeshVertex.pool.get());
-            if (this.heightCurve) {
-                vert.position.y *= this.heightCurve.evaluate(distanceRate, 0.5);
-            }
+            vert = _applyVert(this, vert, sample, distanceRate);
             bentVertices.push(vert);
         }
 
-        MeshUtility.updateOrCreateModelMesh(this.getComponent(ModelComponent), {
-            positions: bentVertices.map(b => b.position),
-            normals: bentVertices.map(b => b.normal),
-            tangents: bentVertices.map(b => b.tangent),
-            uvs: bentVertices.map(b => b.uv),
-            indices: source.triangles
-        });
-
-        for (let i = 0; i < bentVertices.length; i++) {
-            MeshVertex.pool.put(bentVertices[i]);
-        }
-        for (const iter of sampleCache) {
-            CurveSample.pool.put(iter[1]);
-        }
-        sampleCache.clear();
+        _endFill(this, bentVertices, sampleCache);
     }
 
-    private fillRepeat() {
+    private fillRepeat () {
         let source = this.source;
         let intervalLength = this.useSpline ?
             (this.intervalEnd == 0 ? this.spline.length : this.intervalEnd) - this.intervalStart :
@@ -272,15 +361,11 @@ export default class MeshBender extends Component {
             }
         }
 
-        let yOffset = 0;
-        if (this.alignTopToZero) {
-            let maxY = source.minY + source.lengthY;
-            yOffset = 0 - maxY;
-        }
+        _beginFill(this);
 
         // computing vertices and normals
         let bentVertices: MeshVertex[] = [];
-        let offset = this.offset;
+        let offset = this.calcOffset;
         for (let i = 0; i < repetitionCount; i++) {
             // for each mesh vertex, we found its projection on the curve
             for (let j = 0; j < sourceVertices.length; j++) {
@@ -306,13 +391,7 @@ export default class MeshBender extends Component {
                     sampleCache.set(cacheKey, sample);
                 }
 
-                vert = MeshVertex.pool.get().set(vert);
-                vert.position.y += yOffset;
-                vert = sample.getBent(vert, vert);
-                if (this.heightCurve) {
-                    vert.position.y *= this.heightCurve.evaluate(distance/intervalLength, 0.5);
-                    // vert.position.y *= this.heightCurve.evaluate(i/repetitionCount, 0.5);
-                }
+                vert = _applyVert(this, vert, sample, distance / intervalLength);
                 bentVertices.push(vert);
             }
             offset += source.lengthX;
@@ -344,35 +423,21 @@ export default class MeshBender extends Component {
                 sampleCache.set(cacheKey, sample);
             }
 
-            vert = sample.getBent(vert, MeshVertex.pool.get());
-            if (this.heightCurve) {
-                vert.position.y *= this.heightCurve.evaluate(distance/intervalLength, 0.5);
-                // vert.position.y *= this.heightCurve.evaluate(1, 0.5);
-            }
+            vert = _applyVert(this, vert, sample, distanceRate);
             bentVertices.push(vert);
         }
 
-        MeshUtility.updateOrCreateModelMesh(this.getComponent(ModelComponent), {
-            positions: bentVertices.map(b => b.position),
-            normals: bentVertices.map(b => b.normal),
-            tangents: bentVertices.map(b => b.tangent),
-            uvs: bentVertices.map(b => b.uv),
-            indices: triangles
-        });
-
-        for (let i = 0; i < bentVertices.length; i++) {
-            MeshVertex.pool.put(bentVertices[i]);
-        }
-        for (const iter of sampleCache) {
-            CurveSample.pool.put(iter[1]);
-        }
-        sampleCache.clear();
+        _endFill(this, bentVertices, sampleCache, triangles);
     }
 
-    private fillStretch() {
+    private fillStretch () {
+        
         let bentVertices: MeshVertex[] = [];
         let source = this.source;
         let sampleCache = this._sampleCache;
+
+        _beginFill(this);
+
         // for each mesh vertex, we found its projection on the curve
         for (let i = 0; i < source.vertices.length; i++) {
             let vert = source.vertices[i];
@@ -395,27 +460,10 @@ export default class MeshBender extends Component {
                 sampleCache.set(cacheKey, sample);
             }
 
-            vert = sample.getBent(vert, MeshVertex.pool.get());
-            if (this.heightCurve) {
-                vert.position.y *= this.heightCurve.evaluate(distanceRate, 0.5);
-            }
+            vert = _applyVert(this, vert, sample, distanceRate);
             bentVertices.push(vert);
         }
 
-        MeshUtility.updateOrCreateModelMesh(this.getComponent(ModelComponent), {
-            positions: bentVertices.map(b => b.position),
-            normals: bentVertices.map(b => b.normal),
-            tangents: bentVertices.map(b => b.tangent),
-            uvs: bentVertices.map(b => b.uv),
-            indices: source.triangles
-        });
-
-        for (let i = 0; i < bentVertices.length; i++) {
-            MeshVertex.pool.put(bentVertices[i]);
-        }
-        for (const iter of sampleCache) {
-            CurveSample.pool.put(iter[1]);
-        }
-        sampleCache.clear();
+        _endFill(this, bentVertices, sampleCache);
     }
 }

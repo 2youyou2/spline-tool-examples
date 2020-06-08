@@ -187,7 +187,7 @@ class SplineGizmo extends Gizmo {
         }
     }
 
-    selectIndex (index) {
+    selectIndex (index, moveType = 'position') {
         if (this.currentSplineNodeController) {
             this.currentSplineNodeController.hideDirection();
             this.currentSplineNodeController = null;
@@ -199,7 +199,7 @@ class SplineGizmo extends Gizmo {
             return;
         }
         this.spline.currentSelection = splineNode;
-        this.moveType = 'position';
+        this.moveType = moveType;
         this.moveTarget = splineNode;
         this.currentSplineNodeController = controller;
 
@@ -215,7 +215,7 @@ class SplineGizmo extends Gizmo {
         let controller = new SplineNodeController(this.getGizmoRoot());
 
         controller.onControllerMouseDown = (event) => {
-            this.selectIndex(index);
+            this.selectIndex(index, event.axisName);
         };
         controller.onControllerMouseMove = () => {
 
