@@ -3,7 +3,7 @@ import SplineUtilRenderer from './../spline-util-renderer';
 import raycast from '../../utils/raycast';
 import { ScatterVolume } from './scatter-volume';
 import { pointInPolygonAreaXZ, pointInPolygonLineXZ, pointPolygonMinDistXZ } from '../../utils/mathf';
-import { VolumeInfo, VolumeType } from './type';
+import { VolumeInfo, VolumeType } from '../type';
 import ScatterItem from './scatter-item';
 import CurveSample from '../../curve-sample';
 
@@ -90,15 +90,10 @@ export default class Scatter extends SplineUtilRenderer {
         return this._raycastLayer;
     }
 
-    // dirty
-    private _dirty = true;
-    get dirty () {
-        return this._dirty;
-    }
-    set dirty (value) {
+    protected _onDirtyChanged (value) {
         if (value) {
+            this._dirtyTime = 0;
             this._currentItemCount = 0;
-            this._dirty = value;
 
             let items = this._items;
             if (items) {
@@ -116,6 +111,11 @@ export default class Scatter extends SplineUtilRenderer {
             if (this._selfVolumeInfo) {
                 this._selfVolumeInfo.count = 0;
             }
+
+            this._dirty = true;
+        }
+        else if (this._currentItemCount >= this._itemCount) {
+            this._dirty = false;
         }
     }
 
@@ -160,11 +160,9 @@ export default class Scatter extends SplineUtilRenderer {
     }
 
     // scatter type
-    // @ts-ignore
-    @type(VolumeType)
+    @type(VolumeType as any)
     _type: VolumeType = VolumeType.Area;
-    // @ts-ignore
-    @type(VolumeType)
+    @type(VolumeType as any)
     get type () {
         return this._type;
     }
@@ -273,7 +271,7 @@ export default class Scatter extends SplineUtilRenderer {
         let sample = this.spline.getSampleAtDistance(randomRange(0, length), tempCurveSample);
 
         tempPos.set(sample.location);
-        
+
         let normal: Vec3 = tempVec3.set(-sample.tangent.z, 0, sample.tangent.x);
         let width = randomRange(-this._scatterLineWidth, this.scatterLineWidth);
         let dist = Math.sign(width) * this._scatterLineOffset + width;
@@ -361,12 +359,9 @@ export default class Scatter extends SplineUtilRenderer {
             for (let i = 0; i < items.length; i++) {
                 items[i].endFill();
             }
-
-            //@ts-ignore
-            if (CC_EDITOR) cce.Engine.repaintInEditMode();
         }
         else {
-            this._dirty = false;
+            this.dirty = false;
         }
     }
 

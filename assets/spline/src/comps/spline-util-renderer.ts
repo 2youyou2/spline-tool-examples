@@ -1,8 +1,10 @@
 import SplineUtilBase from "./spline-util-base"
-import { Node, _decorator, PrivateNode } from "cc";
+import { Node, _decorator, PrivateNode, Mat4 } from "cc";
 import Event from "../utils/event";
 
 const { ccclass, property } = _decorator;
+
+const RebuildAfterTime = 0.2;
 
 @ccclass(SplineUtilRenderer)
 export default class SplineUtilRenderer extends SplineUtilBase {
@@ -39,7 +41,20 @@ export default class SplineUtilRenderer extends SplineUtilBase {
         return this._generated;
     }
 
-    protected dirty = true;
+
+    protected _dirty = true;
+    get dirty () {
+        return this._dirty;
+    }
+    set dirty (value) {
+        this._onDirtyChanged(value);
+    }
+
+    _dirtyTime = 0;
+    protected _onDirtyChanged (value) {
+        this._dirty = value;
+        this._dirtyTime = 0;
+    }
 
     onLoad () {
         this.onCurveChanged();
@@ -77,6 +92,20 @@ export default class SplineUtilRenderer extends SplineUtilBase {
         this.dirty = true;
     }
 
+    protected dirtyWhenSplineMoved = false;
+    protected splineMatrix: Mat4 = null;
+    protected checkSplineMoved () {
+        if (!this.dirtyWhenSplineMoved) return;
+        let worldMatrix = this.spline.node.worldMatrix;
+        if (!this.splineMatrix) {
+            this.splineMatrix = new Mat4();
+        }
+        else if (!this.splineMatrix.equals(worldMatrix)) {
+            this.dirty = true;
+        }
+        this.splineMatrix.set(worldMatrix);
+    }
+
     reset () {
         if (this._generated) {
             this._generated.parent = null;
@@ -86,9 +115,18 @@ export default class SplineUtilRenderer extends SplineUtilBase {
     }
 
     update (dt) {
+        this.checkSplineMoved();
+        
         if (this.dirty && this.spline) {
-            this.compute();
-            this.dirty = false;
+            this._dirtyTime += dt;
+
+            if (this._dirtyTime >= RebuildAfterTime) {
+                this.compute();
+                this.dirty = false;
+            }
+
+            //@ts-ignore
+            if (CC_EDITOR) cce.Engine.repaintInEditMode();
         }
     }
 

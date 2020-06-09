@@ -207,8 +207,8 @@ export default class Spline extends Component {
                 }
             }
             else {
-                this.addNode(cc.v3(5, 0, 0), cc.v3(5, 0, -3));
-                this.addNode(cc.v3(10, 0, 0), cc.v3(10, 0, 3));
+                this.addNode(cc.v3(-5, 0, 0), cc.v3(-5, 0, -3));
+                this.addNode(cc.v3(5, 0, 0), cc.v3(5, 0, 3));
             }
 
             nodeRoot.parent = this.node;

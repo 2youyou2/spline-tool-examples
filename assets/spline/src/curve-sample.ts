@@ -153,7 +153,7 @@ export default class CurveSample {
         if (!out) {
             out = MeshVertex.create(vert.position, vert.normal, vert.uv, vert.tangent);
         }
-        else {
+        else if (out !== vert) {
             out.set(vert);
         }
 

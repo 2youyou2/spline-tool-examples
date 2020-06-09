@@ -1,7 +1,7 @@
 import { _decorator, Node, Prefab, Vec4, Quat, Vec3, Mat4, ModelComponent, Vec2 } from 'cc';
 import SourceMesh from '../../utils/mesh-processing/source-mesh';
 import FixedModelMesh from '../../utils/mesh-processing/fixed-model-mesh';
-import { ScatterType } from './type';
+import { ScatterType } from '../type';
 
 const { ccclass, type, property } = _decorator;
 
@@ -17,8 +17,7 @@ let tempArray4 = new Array(4).fill(0);
 export default class ScatterItem {
     @type(Prefab)
     _prefab: Prefab = null;
-    // @ts-ignore
-    @type(ScatterType)
+    @type(ScatterType as any)
     _type = ScatterType.Mesh;
     @property
     _volume = 1;
@@ -30,8 +29,7 @@ export default class ScatterItem {
     set prefab (value) {
         this._prefab = value;
     }
-    // @ts-ignore
-    @type(ScatterType)
+    @type(ScatterType as any)
     get type () {
         return this._type;
     }
