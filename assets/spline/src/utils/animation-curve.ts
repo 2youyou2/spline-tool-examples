@@ -16,16 +16,12 @@ export default class UAnimationCurve {
 
     // A straight Line starting at /timeStart/, /valueStart/ and ending at /timeEnd/, /valueEnd/
     public static linear (timeStart, valueStart, timeEnd, valueEnd) {
-        if (timeStart == timeEnd) {
-            let key = createKeyframe(timeStart, valueStart);
-            return new geometry.AnimationCurve([key]);
-        }
-
         let tangent = (valueEnd - valueStart) / (timeEnd - timeStart);
 
         let curve = new CurveRange();
         curve.mode = CurveRange.Mode.Curve;
 
+        curve.curve.keyFrames.length = 0;
         if (timeStart === timeEnd) {
             curve.curve.addKey(createKeyframe(timeStart, valueStart));
         }
@@ -39,14 +35,10 @@ export default class UAnimationCurve {
 
     // An ease-in and out curve starting at /timeStart/, /valueStart/ and ending at /timeEnd/, /valueEnd/.
     public static easeInOut (timeStart, valueStart, timeEnd, valueEnd) {
-        if (timeStart == timeEnd) {
-            let key = createKeyframe(timeStart, valueStart);
-            return new geometry.AnimationCurve([key]);
-        }
-
         let curve = new CurveRange();
         curve.mode = CurveRange.Mode.Curve;
 
+        curve.curve.keyFrames.length = 0;
         if (timeStart === timeEnd) {
             curve.curve.addKey(createKeyframe(timeStart, valueStart));
         }

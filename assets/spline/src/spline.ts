@@ -365,7 +365,7 @@ export default class Spline extends Component {
         return this._samples;
     }
 
-    _points = [];
+    _points: Vec3[] = [];
     getPoints () {
         if (this._points.length === 0) {
             this._caclBoundingBox();

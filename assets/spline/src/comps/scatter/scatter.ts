@@ -203,7 +203,7 @@ export default class Scatter extends SplineUtilRenderer {
     private _isPosValid (pos) {
         let pointIn = false;
         if (this._type === VolumeType.Line) {
-            let dist = pointPolygonMinDistXZ(pos, this.spline.getPoints());
+            let dist = pointPolygonMinDistXZ(pos, this.spline.getPoints()).dist;
             pointIn = dist > this._scatterLineOffset && dist < (this.scatterLineOffset + this.scatterLineWidth);
         }
         else if (this._type === VolumeType.Area) {

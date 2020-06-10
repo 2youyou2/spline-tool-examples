@@ -4,7 +4,7 @@ import Event from "../utils/event";
 
 const { ccclass, property } = _decorator;
 
-const RebuildAfterTime = 0.2;
+const RebuildAfterTime = 0;
 
 @ccclass(SplineUtilRenderer)
 export default class SplineUtilRenderer extends SplineUtilBase {
@@ -53,7 +53,9 @@ export default class SplineUtilRenderer extends SplineUtilBase {
     _dirtyTime = 0;
     protected _onDirtyChanged (value) {
         this._dirty = value;
-        this._dirtyTime = 0;
+        if (value) {
+            this._dirtyTime = 0;
+        } 
     }
 
     onLoad () {

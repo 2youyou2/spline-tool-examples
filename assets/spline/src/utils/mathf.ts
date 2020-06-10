@@ -26,8 +26,12 @@ export function pointInPolygonAreaXZ (point: Vec3, polygon: Vec3[]) {
     return inside;
 }
 
-let tempLinePos = new Vec2();
-export function pointLineDistanceXZ(point, start, end, isSegment) {
+let tempLinePos = new Vec3();
+let _pointLineDistanceXZRes = {
+    dist: 0,
+    t: 0,
+}
+export function pointLineDistanceXZ(point: Vec3, start: Vec3, end: Vec3, isSegment = false) {
     var dx = end.x - start.x;
     var dz = end.z - start.z;
     var d = dx*dx + dz*dz;
@@ -35,13 +39,13 @@ export function pointLineDistanceXZ(point, start, end, isSegment) {
     var p;
 
     if (!isSegment) {
-        p = tempLinePos.set(start.x + t * dx, start.z + t * dz);
+        p = tempLinePos.set(start.x + t * dx, 0, start.z + t * dz);
     }
     else {
         if (d) {
             if (t < 0) p = start;
             else if (t > 1) p = end;
-            else p = tempLinePos.set(start.x + t * dx, start.z + t * dz);
+            else p = tempLinePos.set(start.x + t * dx, 0, start.z + t * dz);
         }
         else {
             p = start;
@@ -50,22 +54,35 @@ export function pointLineDistanceXZ(point, start, end, isSegment) {
         
     dx = point.x - p.x;
     dz = point.z - p.z;
-    return Math.sqrt(dx*dx + dz*dz);
+
+    _pointLineDistanceXZRes.dist = Math.sqrt(dx*dx + dz*dz);
+    _pointLineDistanceXZRes.t = t;
+    return _pointLineDistanceXZRes;
 }
 
 export function pointInPolygonLineXZ (point: Vec3, polygon: Vec3[], width) {
     for (let i = 1; i < polygon.length; i++) {
-        if (pointLineDistanceXZ(point, polygon[i], polygon[i-1], true) < width) {
+        if (pointLineDistanceXZ(point, polygon[i], polygon[i-1], true).dist < width) {
             return true;
         }
     }
     return false;
 }
 
+let _pointPolygonMinDistXZRes = {
+    dist: 0,
+    index: 0,
+    t: 0,
+}
 export function pointPolygonMinDistXZ (point: Vec3, polygon: Vec3[]) {
-    let dist = Number.MAX_SAFE_INTEGER;
+    _pointPolygonMinDistXZRes.dist = Number.MAX_SAFE_INTEGER;
     for (let i = 1; i < polygon.length; i++) {
-        dist = Math.min(pointLineDistanceXZ(point, polygon[i], polygon[i-1], true), dist);
+        let res = pointLineDistanceXZ(point, polygon[i-1], polygon[i], true);
+        if (res.dist < _pointPolygonMinDistXZRes.dist) {
+            _pointPolygonMinDistXZRes.dist = res.dist;
+            _pointPolygonMinDistXZRes.index = i;
+            _pointPolygonMinDistXZRes.t = res.t;
+        }
     }
-    return dist;
+    return _pointPolygonMinDistXZRes;
 }
