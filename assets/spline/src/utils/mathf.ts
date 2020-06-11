@@ -60,10 +60,18 @@ export function pointLineDistanceXZ(point: Vec3, start: Vec3, end: Vec3, isSegme
     return _pointLineDistanceXZRes;
 }
 
-export function pointInPolygonLineXZ (point: Vec3, polygon: Vec3[], width) {
+export function pointInPolygonLineXZ (point: Vec3, polygon: Vec3[], width, includeCap = true) {
     for (let i = 1; i < polygon.length; i++) {
-        if (pointLineDistanceXZ(point, polygon[i], polygon[i-1], true).dist < width) {
-            return true;
+        let res = pointLineDistanceXZ(point, polygon[i], polygon[i-1], true);
+        if (res.dist < width) {
+            if (!includeCap) {
+                if (res.t >= 0 && res.t <= 1) {
+                    return true;
+                }
+            }
+            else {
+                return true;
+            }
         }
     }
     return false;

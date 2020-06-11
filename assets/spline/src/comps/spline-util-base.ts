@@ -25,10 +25,24 @@ export default class SplineUtilBase extends Component {
         return this._spline;
     };
 
+    protected _splineNode: SplineNode = null;
+    get splineNode () {
+        if (!this._splineNode) {
+            let parent = this.node;
+            while (parent) {
+                this._splineNode = parent.getComponent(SplineNode);
+                if (this._splineNode) break;
+    
+                parent = parent.parent;
+            }
+        }
+        return this._splineNode;
+    };
+
     protected _splineCurve: ISplineCruve = null;
     get splineCurve () {
         if (!this._splineCurve) {
-            let splineNode = this.node.getComponent(SplineNode);
+            let splineNode = this.splineNode;
             if (splineNode) {
                 let index = splineNode.node.getSiblingIndex();
                 this._splineCurve = this.spline.getCurve(index);

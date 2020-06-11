@@ -72,10 +72,10 @@ function _applyVert (meshBender: MeshBender, vert: MeshVertex, sample: CurveSamp
     vert = MeshVertex.pool.get().set(vert);
     vert.position.y = clamp(vert.position.y, _tempHeightRange.x, _tempHeightRange.y);
     vert.position.y += _tempYOffset;
-    vert = sample.getBent(vert, vert);
     if (meshBender.heightCurve) {
         vert.position.y *= meshBender.heightCurve.evaluate(distanceRatio, 0.5);
     }
+    vert = sample.getBent(vert, vert);
     return vert;
 }
 

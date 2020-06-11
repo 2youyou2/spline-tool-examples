@@ -47,16 +47,27 @@ export class ScatterVolume extends SplineUtilBase {
         this._lineWidth = value;
         this.volumeChanged.invoke();
     }
+
+    @property
+    _includeCap = true;
+    @property
+    get includeCap () {
+        return this._includeCap;
+    }
+    set includeCap (value) {
+        this._includeCap = value;
+        this.volumeChanged.invoke();
+    }
     
     volumeChanged: Event = new Event;
 
     includePos (pos: Vec3) {
         Vec3.subtract(tempPos, pos, this.spline.node.getWorldPosition(tempPos));
         if (this._type === VolumeType.Area) {
-            return pointInPolygonAreaXZ(tempPos, this.spline.getPoints());
+            return pointInPolygonAreaXZ(tempPos, this.splineCurve.getPoints());
         }
         else if (this._type === VolumeType.Line) {
-            return pointInPolygonLineXZ(tempPos, this.spline.getPoints(), this._lineWidth);
+            return pointInPolygonLineXZ(tempPos, this.splineCurve.getPoints(), this._lineWidth, this._includeCap);
         }
         return false;
     }

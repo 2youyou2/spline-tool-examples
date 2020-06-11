@@ -7,6 +7,8 @@ import UAnimationCurve from '../../utils/animation-curve';
 import { getNodeWorldPostion, getNodeLocalPostion, node2nodePos, node2nodeLength } from "../../editor/utils";
 import pool from "../../utils/pool";
 import { pointPolygonMinDistXZ } from "../../utils/mathf";
+import Spline from "../../spline";
+import { ScatterVolume } from "../scatter/scatter-volume";
 
 const { ccclass, property, type } = _decorator;
 
@@ -67,6 +69,27 @@ export class TerrainSculpt extends SplineUtilRenderer {
 
         this.dirty = true;
     }
+    @property
+    _heightOffset = 0;
+    @property
+    get heightOffset () {
+        return this._heightOffset;
+    }
+    set heightOffset (value) {
+        this._heightOffset = value;
+        this.dirty = true;
+    }
+
+    @type(ScatterVolume)
+    _volumes: ScatterVolume[] = [];
+    @type(ScatterVolume)
+    get volumes () {
+        return this._volumes;
+    }
+    set volumes (value) {
+        this._volumes = value;
+        this.dirty = true;
+    }
 
 
     @type(Terrain)
@@ -103,6 +126,31 @@ export class TerrainSculpt extends SplineUtilRenderer {
         editorOnly: true
     })
     _originTerrainData: Record<string, [number, Vec3]> = {};
+    
+    // TODO: Should add a button
+    _clearCacheOldTerrainData = false;
+    @property
+    get clearCacheOldTerrainData () {
+        return this._clearCacheOldTerrainData;
+    }
+    set clearCacheOldTerrainData (value) {
+        this._originTerrainData = {};
+        this.terrain._asset = this.terrain._asset;
+        this._clearCacheOldTerrainData = value;
+        this.dirty = true;
+    }
+
+
+    calcVolumeHeight (pos, h) {
+        let volumes = this.volumes;
+        for (let i = 0; i < volumes.length; i++) {
+            if (!volumes[i]) continue;
+            if (volumes[i].includePos(pos)) {
+                h *= volumes[i].volume;
+            }
+        }
+        return h;
+    }
 
     compute () {
         let splineCurve = this.splineCurve;
@@ -114,60 +162,6 @@ export class TerrainSculpt extends SplineUtilRenderer {
         let sculptPositionMap = {};
 
         if (this._volumeType === VolumeType.Line) {
-            // let end = splineCurve.length;
-            // let start = 0;
-            // let tileSize = terrain.tileSize;
-            // let halfTileSize = tileSize / 2;
-            // let vertexCount = terrain.vertexCount;
-            // let lineSmoothWidth = this.lineSmoothWidth;
-            // let lineWidth = this.lineWidth;
-            // let width = lineWidth + lineSmoothWidth;
-            // let smoothCurve = this.lineSmootCurve;
-
-            // for (let d = start; d < end; d += halfTileSize) {
-            //     splineCurve.getSampleAtDistance(d, tempSample);
-
-            //     for (let z = -width; z <= width; z += halfTileSize) {
-            //         tempVert.position.set(d, 0, z);
-            //         tempSample.getBent(tempVert, tempVert);
-
-            //         getNodeWorldPostion(this.spline.node, tempVert.position, tempVert.position);
-            //         getNodeLocalPostion(this.terrain.node, tempVert.position, tempVert.position);
-
-            //         let h = tempVert.position.y;
-            //         if (Math.abs(z) > lineWidth) {
-            //             let t = (Math.abs(z) - lineWidth) / lineSmoothWidth;
-            //             h *= smoothCurve.evaluate(t, 0.5);
-            //         }
-
-            //         let i = Math.floor(tempVert.position.x / tileSize);
-            //         let j = Math.floor(tempVert.position.z / tileSize);
-
-            //         if (i > vertexCount[0] - 1 || i < 0) {
-            //             continue;
-            //         }
-            //         if (j > vertexCount[1] - 1 || j < 0) {
-            //             continue;
-            //         }
-
-            //         i = clamp(i, 0, vertexCount[0] - 1);
-            //         j = clamp(j, 0, vertexCount[1] - 1);
-
-            //         let key = `${i}_${j}`;
-            //         if (sculptPositionMap[key]) continue;
-
-            //         if (!originTerrainData[key]) {
-            //             let normal = terrain.getNormal(i, j);
-            //             originTerrainData[key] = [terrain.getHeight(i, j), normal];
-            //         }
-
-            //         sculptPositionMap[key] = true;
-            //         terrain.setHeight(i, j, h);
-
-            //         this.testBlocks(i, j, changelist);
-            //     }
-            // }
-
             let lineSmoothWidth = this.lineSmoothWidth;
             let lineWidth = this.lineWidth;
             let maxDist = lineWidth + lineSmoothWidth;
@@ -208,8 +202,8 @@ export class TerrainSculpt extends SplineUtilRenderer {
             x2 = clamp(x2, 0, vertexCount[0] - 1);
             y2 = clamp(y2, 0, vertexCount[1] - 1);
 
-
             let linePoints = splineCurve.getPoints();
+            let heightOffset = this.heightOffset;
 
             for (let j = y1; j <= y2; j++) {
                 for (let i = x1; i <= x2; i++) {
@@ -219,17 +213,20 @@ export class TerrainSculpt extends SplineUtilRenderer {
                     let dist = res.dist;
                     if (dist > maxDist) continue;
 
-                    let lineDist = clamp((res.index - 1 + res.t) / linePoints.length, 0, 1) * splineCurve.length;
-                    splineCurve.getSampleAtDistance(lineDist, tempSample);
+                    let t = clamp((res.index - 1 + res.t) / linePoints.length, 0, 1) * (this.splineCurve instanceof Spline ? this.spline.curves.length : 1);
+                    splineCurve.getSample(t, tempSample);
                     tempVert.position.set(0, 0, dist);
                     tempSample.getBent(tempVert, tempVert);
                     node2nodePos(this.spline.node, this.terrain.node, tempVert.position, tempVert.position);
+
 
                     let h = tempVert.position.y;
                     if (dist > lineWidth) {
                         let t = (dist - lineWidth) / lineSmoothWidth;
                         h *= smoothCurve.evaluate(t, 0.5);
                     }
+                    h = this.calcVolumeHeight(tempVert.position, h);
+                    h += heightOffset;
 
                     let key = `${i}_${j}`;
                     if (sculptPositionMap[key]) continue;
