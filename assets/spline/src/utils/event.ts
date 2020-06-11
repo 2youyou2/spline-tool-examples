@@ -5,7 +5,7 @@ export default class Event {
     public addListener(cb: Function, target?: Object) {
         let listeners = this._listeners;
         for (let i = 0; i < listeners.length; i++) {
-            if (listeners[i][0] === cb) {
+            if (listeners[i][0] === cb && listeners[i][1] === target) {
                 return;
             }
         }
