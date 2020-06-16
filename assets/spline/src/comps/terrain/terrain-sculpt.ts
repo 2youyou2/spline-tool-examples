@@ -213,7 +213,7 @@ export class TerrainSculpt extends SplineUtilRenderer {
                     let dist = res.dist;
                     if (dist > maxDist) continue;
 
-                    let t = clamp((res.index - 1 + res.t) / linePoints.length, 0, 1) * (this.splineCurve instanceof Spline ? this.spline.curves.length : 1);
+                    let t = clamp((res.index - 1 + res.t) / (linePoints.length - 1), 0, 1) * (this.splineCurve instanceof Spline ? this.spline.curves.length : 1);
                     splineCurve.getSample(t, tempSample);
                     tempVert.position.set(0, 0, dist);
                     tempSample.getBent(tempVert, tempVert);
@@ -225,6 +225,7 @@ export class TerrainSculpt extends SplineUtilRenderer {
                         let t = (dist - lineWidth) / lineSmoothWidth;
                         h *= smoothCurve.evaluate(t, 0.5);
                     }
+                    getNodeWorldPostion(this.terrain.node, tempVert.position, tempVert.position)
                     h = this.calcVolumeHeight(tempVert.position, h);
                     h += heightOffset;
 

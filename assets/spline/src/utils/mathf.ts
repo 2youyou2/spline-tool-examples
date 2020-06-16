@@ -1,7 +1,7 @@
-import { Vec3, Vec2 } from "cc";
+import { Vec3, Vec2, equals } from "cc";
 
 export default class mathf {
-    static lerp (a: number, b: number, t: number) : number {
+    static lerp (a: number, b: number, t: number): number {
         return a + (b - a) * t;
     }
 }
@@ -31,10 +31,10 @@ let _pointLineDistanceXZRes = {
     dist: 0,
     t: 0,
 }
-export function pointLineDistanceXZ(point: Vec3, start: Vec3, end: Vec3, isSegment = false) {
+export function pointLineDistanceXZ (point: Vec3, start: Vec3, end: Vec3, isSegment = false) {
     var dx = end.x - start.x;
     var dz = end.z - start.z;
-    var d = dx*dx + dz*dz;
+    var d = dx * dx + dz * dz;
     var t = ((point.x - start.x) * dx + (point.z - start.z) * dz) / d;
     var p;
 
@@ -51,18 +51,18 @@ export function pointLineDistanceXZ(point: Vec3, start: Vec3, end: Vec3, isSegme
             p = start;
         }
     }
-        
+
     dx = point.x - p.x;
     dz = point.z - p.z;
 
-    _pointLineDistanceXZRes.dist = Math.sqrt(dx*dx + dz*dz);
+    _pointLineDistanceXZRes.dist = Math.sqrt(dx * dx + dz * dz);
     _pointLineDistanceXZRes.t = t;
     return _pointLineDistanceXZRes;
 }
 
 export function pointInPolygonLineXZ (point: Vec3, polygon: Vec3[], width, includeCap = true) {
-    for (let i = 1; i < polygon.length; i++) {
-        let res = pointLineDistanceXZ(point, polygon[i], polygon[i-1], true);
+    for (let i = 1, l = polygon.length; i < l; i++) {
+        let res = pointLineDistanceXZ(point, polygon[i - 1], polygon[i], true);
         if (res.dist < width) {
             if (!includeCap) {
                 if (res.t >= 0 && res.t <= 1) {
@@ -85,7 +85,7 @@ let _pointPolygonMinDistXZRes = {
 export function pointPolygonMinDistXZ (point: Vec3, polygon: Vec3[]) {
     _pointPolygonMinDistXZRes.dist = Number.MAX_SAFE_INTEGER;
     for (let i = 1; i < polygon.length; i++) {
-        let res = pointLineDistanceXZ(point, polygon[i-1], polygon[i], true);
+        let res = pointLineDistanceXZ(point, polygon[i - 1], polygon[i], true);
         if (res.dist < _pointPolygonMinDistXZRes.dist) {
             _pointPolygonMinDistXZRes.dist = res.dist;
             _pointPolygonMinDistXZRes.index = i;

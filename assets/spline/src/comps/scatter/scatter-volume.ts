@@ -1,7 +1,7 @@
 
 import { _decorator, Vec3, } from 'cc';
 import SplineUtilBase from '../spline-util-base';
-import { pointInPolygonAreaXZ, pointInPolygonLineXZ } from '../../utils/mathf';
+import { pointInPolygonAreaXZ, pointInPolygonLineXZ, pointPolygonMinDistXZ } from '../../utils/mathf';
 import Event from '../../utils/event';
 import { VolumeType } from '../type';
 const { ccclass, property, type, executeInEditMode } = _decorator;
@@ -58,7 +58,7 @@ export class ScatterVolume extends SplineUtilBase {
         this._includeCap = value;
         this.volumeChanged.invoke();
     }
-    
+
     volumeChanged: Event = new Event;
 
     includePos (pos: Vec3) {
@@ -67,7 +67,16 @@ export class ScatterVolume extends SplineUtilBase {
             return pointInPolygonAreaXZ(tempPos, this.splineCurve.getPoints());
         }
         else if (this._type === VolumeType.Line) {
-            return pointInPolygonLineXZ(tempPos, this.splineCurve.getPoints(), this._lineWidth, this._includeCap);
+            let points = this.splineCurve.getPoints();
+            let res = pointPolygonMinDistXZ(tempPos, points);
+            if (res.dist > this._lineWidth) {
+                return false;
+            }
+            if (res.index === 1 || res.index === points.length - 1) {
+                const EPSILON = 0.5;
+                return res.t >= -EPSILON && res.t <= 1 + EPSILON;
+            }
+            return true;
         }
         return false;
     }
