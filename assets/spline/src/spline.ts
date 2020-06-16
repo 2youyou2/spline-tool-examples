@@ -36,12 +36,15 @@ const SplineRootNodeName = '__spline_node_root__';
 export default class Spline extends Component {
     currentSelection: SplineNode = null;
 
+
+    private _addSplineNodeAtLast = false;
     @boolean
     public get addSplineNodeAtLast () {
-        return false;
+        return this._addSplineNodeAtLast;
     }
     public set addSplineNodeAtLast (v) {
-        if (!v) return;
+        if (this._addSplineNodeAtLast === v) return;
+        this._addSplineNodeAtLast = v;
 
         let index = this.nodes.length - 1;
         let lastNode = this.nodes[index];
@@ -50,12 +53,15 @@ export default class Spline extends Component {
         this.addNode(offset.add(lastNode.position), lastNode.direction);
     }
 
+    private _addSplineNodeAfterSelection = false;
     @boolean
     get addSplineNodeAfterSelection () {
-        return false;
+        return this._addSplineNodeAfterSelection;
     }
     set addSplineNodeAfterSelection (v) {
-        if (!v) return;
+        if (this._addSplineNodeAfterSelection === v) return;
+        this._addSplineNodeAfterSelection = v;
+
         if (!this.currentSelection) {
             cc.warn('No SpineNode selected.');
             return;
@@ -68,11 +74,15 @@ export default class Spline extends Component {
         this.insertNode(offset.add(this.currentSelection.position), this.currentSelection.direction, index + 1);
     }
 
+    private _deleteSelectSplineNode = false;
     @boolean
     get deleteSelectSplineNode () {
-        return false;
+        return this._deleteSelectSplineNode;
     }
     set deleteSelectSplineNode (v) {
+        if (this._deleteSelectSplineNode === v) return;
+        this._deleteSelectSplineNode = v;
+
         if (!this.currentSelection) {
             cc.warn('No SpineNode selected.');
             return;
