@@ -132,6 +132,27 @@ export default class Spline extends Component {
         this.updateLoopBinding();
     }
 
+
+    private _gizmoEditing = false;
+    get gizmoEditing () {
+        return this._gizmoEditing;
+    }
+    set gizmoEditing (value) {
+        this._gizmoEditing = value;
+        for (let i = 0; i < this.curves.length; i++) {
+            this.curves[i].gizmoEditing = value;
+        }
+    }
+
+    invokeNodeListChanged () {
+        if (CC_EDITOR && this._gizmoEditing) return;
+        this.nodeListChanged.invoke();
+    }
+    invokeCurveChanged () {
+        if (CC_EDITOR && this._gizmoEditing) return;
+        this.curveChanged.invoke();
+    }
+
     public nodeListChanged: Event = new Event;
     public curveChanged: Event = new Event;
 
@@ -162,7 +183,7 @@ export default class Spline extends Component {
         this._nodes.push(splineNode);
 
         if (!this._updatingNodes) {
-            this.nodeListChanged.invoke();
+            this.invokeNodeListChanged();
             this._createCurves();
         }
         return splineNode;
@@ -178,7 +199,7 @@ export default class Spline extends Component {
         this._nodes.splice(index, 0, splineNode);
 
         if (!this._updatingNodes) {
-            this.nodeListChanged.invoke();
+            this.invokeNodeListChanged();
             this._createCurves();
         }
 
@@ -191,7 +212,7 @@ export default class Spline extends Component {
         this._nodes.splice(index, 1);
 
         if (!this._updatingNodes) {
-            this.nodeListChanged.invoke();
+            this.invokeNodeListChanged();
             this._createCurves();
         }
 
@@ -228,7 +249,7 @@ export default class Spline extends Component {
         }
 
         this._createCurves();
-        this.nodeListChanged.invoke();
+        this.invokeNodeListChanged();
 
         this._updatingNodes = false;
     }
@@ -243,7 +264,7 @@ export default class Spline extends Component {
             curve.changed.addListener(this.updateAfterCurveChanged, this);
             this.curves.push(curve);
         }
-        this.nodeListChanged.invoke();
+        this.invokeNodeListChanged();
         this.updateAfterCurveChanged();
     }
 
@@ -257,7 +278,7 @@ export default class Spline extends Component {
             let curve = this.curves[i];
             this.length += curve.length;
         }
-        this.curveChanged.invoke();
+        this.invokeCurveChanged();
 
         this._points.length = 0;
         this._samples.length = 0;

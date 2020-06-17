@@ -2,7 +2,7 @@ import { Node } from 'cc';
 import { callGizmoFunction } from '../utils';
 
 export default class Gizmo {
-    static register(componentName, componentGizmo) {
+    static register (componentName, componentGizmo) {
         callGizmoFunction(() => {
             window.cce.gizmos.GizmoDefines.components[componentName] = componentGizmo;
         })
@@ -21,11 +21,11 @@ export default class Gizmo {
     declare unregisterCameraMoveEvent: () => void;
     //#endregion
 
-    get target() {
+    get target () {
         return this._target;
     }
     // component 的 gizmo 是1对1关系，transform gizmo 可以同时操作多个对像
-    set target(value) {
+    set target (value) {
         let nodes = this.nodes;
         if (nodes && nodes.length > 0) {
             // this.unRegisterTransformEvent(this.nodes);
@@ -47,51 +47,67 @@ export default class Gizmo {
         }
     }
 
-    constructor(target) {
+    constructor (target) {
         cc.js.addon(this, new window.cce.gizmos.Gizmo(target));
     }
 
-    layer() {
+    layer () {
         return 'foreground';
     }
 
-    updateController() {
+    updateController () {
         this.updateControllerData();
         this.updateControllerTransform();
     }
 
-    updateControllerData() {
+    updateControllerData () {
 
     }
 
-    updateControllerTransform() {
+    updateControllerTransform () {
 
     }
 
-    onTargetUpdate() {
+    onTargetUpdate () {
         this.updateController();
     }
 
-    onNodeChanged() {
+    onNodeChanged () {
         this.updateController();
     }
 
-    showTransformGizmo(show) {
-        if (show) {
+    _showTransformGizmo = true;
+    showTransformGizmo (show) {
+        // if (!window.cce.gizmos.transformTool) return;
+
+        // // TODO: remove hack
+        // if (show) {
+        //     window.cce.gizmos.transformTool.show();
+        // }
+        // else {
+        //     window.cce.gizmos.transformTool.hide();
+        // }
+
+        this._showTransformGizmo = show;
+    }
+
+    getTransformGizmoNode (): Node {
+        let transformTool = window.cce.gizmos.transformTool;
+        return transformTool && transformTool.node;
+    }
+
+    show () {
+        window.cce.gizmos.Gizmo.prototype.show.call(this);
+    }
+
+    onUpdate () {
+        // TODO: show/hide transformTool in showTransformGizmo has no effect, should remove hack
+        if (this._showTransformGizmo) {
             window.cce.gizmos.transformTool.show();
         }
         else {
             window.cce.gizmos.transformTool.hide();
         }
-    }
-
-    getTransformGizmoNode(): Node {
-        let transformTool = window.cce.gizmos.transformTool;
-        return transformTool && transformTool.node;
-    }
-
-    show() {
-        window.cce.gizmos.Gizmo.prototype.show.call(this);
     }
 }
 

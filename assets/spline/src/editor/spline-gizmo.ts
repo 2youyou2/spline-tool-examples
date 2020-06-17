@@ -6,9 +6,10 @@ import ContinuousLineController from './continuous-line-controller';
 import pool from '../utils/pool';
 import SplineNode from '../spline-node';
 import Spline from '../spline';
-import { Component, AnimationComponent, Node } from 'cc';
+import { Component, AnimationComponent, Node, Vec3 } from 'cc';
+import { SplineMoveType } from './types';
 
-function findComponentInParent<T extends Component>(node: Node, ctor: typeof T) {
+function findComponentInParent<T extends Component> (node: Node, ctor: typeof T) {
     let parent: Node = node;
     while (parent) {
         let comp = parent.getComponent(ctor);
@@ -19,9 +20,11 @@ function findComponentInParent<T extends Component>(node: Node, ctor: typeof T) 
 }
 
 
+let tempVec3 = new Vec3
+
 class SplineGizmo extends Gizmo {
     moveTarget = null;
-    moveType = '';
+    moveType: SplineMoveType = SplineMoveType.None;
 
     splineNodeControllers: SplineNodeController[] = [];
     moveController = null;
@@ -29,7 +32,7 @@ class SplineGizmo extends Gizmo {
 
     currentSplineNodeController = null;
 
-    init() {
+    init () {
         this.moveController = this.createMoveController();
         this.splineLineController = this.createSplineLineController();
 
@@ -39,7 +42,7 @@ class SplineGizmo extends Gizmo {
 
     // 由于inspect之类的地方也会修改位置旋转等，所以暂时在update里调用可以确保位置一直是正确的，更好的
     // 作法应该是在各种引起Node的Transform的变化的地方发送一个消息来通知Gizmo的Trasform更新。
-    updateControllerTransform() {
+    updateControllerTransform () {
         let node = this.spline.node;
 
         let splineNodes = this.splineNodes;
@@ -64,7 +67,7 @@ class SplineGizmo extends Gizmo {
     //     this.onSplineCurvesUpdate();
     // }
 
-    onSplineNodesUpdate() {
+    onSplineNodesUpdate () {
         let splineNodes = this.splineNodes;
         let splineNodeControllers = this.splineNodeControllers;
         for (let i = 0; i < splineNodes.length; i++) {
@@ -78,17 +81,17 @@ class SplineGizmo extends Gizmo {
         }
     }
 
-    get spline(): Spline {
+    get spline (): Spline {
         return this.target instanceof SplineNode ? findComponentInParent(this.target.node, Spline) : this.target;
     }
-    get splineNodes() {
+    get splineNodes () {
         return this.spline.nodes;
     }
-    get splineCurves() {
+    get splineCurves () {
         return this.spline.curves;
     }
 
-    onSplineCurvesUpdate() {
+    onSplineCurvesUpdate () {
         let curves = this.splineCurves;
         let positions = [];
         let node = this.spline.node;
@@ -108,7 +111,7 @@ class SplineGizmo extends Gizmo {
         }
     }
 
-    onShow() {
+    onShow () {
         let node = this.spline.node;
         let splineNodes = this.splineNodes;
         let splineNodeControllers = this.splineNodeControllers;
@@ -134,12 +137,12 @@ class SplineGizmo extends Gizmo {
         this.onSplineCurvesUpdate();
 
         this.registerCameraMovedEvent();
-              
+
         if (this.target instanceof SplineNode) {
-            this.selectIndex(this.splineNodes.indexOf(this.target));
+            this.selectIndex(this.splineNodes.indexOf(this.target), SplineMoveType.Position);
         }
         else {
-            this.spline.currentSelection = null;
+            this.selectIndex(-1, SplineMoveType.Node);
         }
     }
 
@@ -148,7 +151,7 @@ class SplineGizmo extends Gizmo {
         return node && (node.getComponent(Spline) || node.getComponent(SplineNode));
     }
 
-    onHide() {
+    onHide () {
         let splineNodeControllers = this.splineNodeControllers;
         for (let i = 0; i < splineNodeControllers.length; i++) {
             splineNodeControllers[i].hide();
@@ -169,41 +172,58 @@ class SplineGizmo extends Gizmo {
         this.unregisterCameraMoveEvent();
     }
 
-    onEditorCameraMoved() {
+    onEditorCameraMoved () {
         this.updateMoveControllderPos();
     }
 
-    updateMoveControllderPos() {
-        if (!this.currentSplineNodeController) return;
+    updateMoveControllderPos () {
 
-        if (this.moveType === 'position') {
-            this.moveController.setPosition(this.currentSplineNodeController.getSplineNodeWorldPosition());
+        if (this.moveType === SplineMoveType.Node) {
+            this.moveController.setPosition(this.spline.node.getWorldPosition(tempVec3));
         }
-        else if (this.moveType === 'direction') {
-            this.moveController.setPosition(this.currentSplineNodeController.getSplineNodeWorldDirection());
-        }
-        else if (this.moveType === 'invDirection') {
-            this.moveController.setPosition(this.currentSplineNodeController.getSplineNodeWorldInvDirection());
+        else {
+            if (!this.currentSplineNodeController) return;
+            if (this.moveType === SplineMoveType.Position) {
+                this.moveController.setPosition(this.currentSplineNodeController.getSplineNodeWorldPosition());
+            }
+            else if (this.moveType === SplineMoveType.Direction) {
+                this.moveController.setPosition(this.currentSplineNodeController.getSplineNodeWorldDirection());
+            }
+            else if (this.moveType === SplineMoveType.InvDirection) {
+                this.moveController.setPosition(this.currentSplineNodeController.getSplineNodeWorldInvDirection());
+            }
         }
     }
 
-    selectIndex (index, moveType = 'position') {
+    selectIndex (index, moveType: SplineMoveType) {
         if (this.currentSplineNodeController) {
             this.currentSplineNodeController.hideDirection();
             this.currentSplineNodeController = null;
         }
+
         let splineNode = this.splineNodes[index];
         let controller = this.splineNodeControllers[index];
-        if (!splineNode || !controller) {
-            cc.warn(`Can not select spline index ${index}`);
-            return;
+        if (moveType !== SplineMoveType.Node) {
+            if (!splineNode || !controller) {
+                cc.warn(`Can not select spline index ${index}`);
+                moveType = SplineMoveType.Node;
+            }
         }
-        this.spline.currentSelection = splineNode;
-        this.moveType = moveType;
-        this.moveTarget = splineNode;
-        this.currentSplineNodeController = controller;
 
-        controller.showDirection();
+        this.moveType = moveType;
+
+        if (moveType === SplineMoveType.Node) {
+            this.spline.currentSelection = null;
+            this.moveTarget = this.spline.node;
+        }
+        else {
+            this.spline.currentSelection = splineNode;
+            this.moveTarget = splineNode;
+            this.currentSplineNodeController = controller;
+
+            controller.showDirection();
+        }
+
 
         this.showTransformGizmo(false);
         this.moveController.show();
@@ -211,7 +231,7 @@ class SplineGizmo extends Gizmo {
         this.updateMoveControllderPos();
     }
 
-    createSplineNodeController(index) {
+    createSplineNodeController (index) {
         let controller = new SplineNodeController(this.getGizmoRoot());
 
         controller.onControllerMouseDown = (event) => {
@@ -227,11 +247,10 @@ class SplineGizmo extends Gizmo {
         return controller;
     }
 
-    createMoveController() {
+    createMoveController () {
         let controller = new window.cce.gizmos.PositionController(this.getGizmoRoot());
-        let startPos = cc.v3();
         controller.onControllerMouseDown = () => {
-            startPos.set(controller.getPosition());
+            this.spline.gizmoEditing = true;
         };
         controller.onControllerMouseMove = () => {
             if (controller.updated) {
@@ -241,18 +260,25 @@ class SplineGizmo extends Gizmo {
 
                 let node = this.spline.node;
                 let splineNode = this.moveTarget;
-                let newPos = getNodeLocalPostion(node, curNodePos);
 
-                if (this.moveType === 'position') {
-                    splineNode.direction = splineNode.direction.clone().add(newPos).subtract(splineNode.position);
-                    splineNode.position = newPos;
+                if (this.moveType === SplineMoveType.Node) {
+                    node.setWorldPosition(curNodePos);
                 }
-                else if (this.moveType === 'direction') {
-                    splineNode.direction = newPos;
+                else {
+                    let newPos = getNodeLocalPostion(node, curNodePos);
+
+                    if (this.moveType === SplineMoveType.Position) {
+                        splineNode.direction = splineNode.direction.clone().add(newPos).subtract(splineNode.position);
+                        splineNode.position = newPos;
+                    }
+                    else if (this.moveType === SplineMoveType.Direction) {
+                        splineNode.direction = newPos;
+                    }
+                    else if (this.moveType === SplineMoveType.InvDirection) {
+                        splineNode.invDirection = newPos;
+                    }
                 }
-                else if (this.moveType === 'invDirection') {
-                    splineNode.invDirection = newPos;
-                }
+
 
                 this.updateControllerTransform();
 
@@ -261,14 +287,17 @@ class SplineGizmo extends Gizmo {
             }
         };
         controller.onControllerMouseUp = () => {
+            this.spline.gizmoEditing = false;
+
             if (controller.updated) {
+                this.spline.invokeCurveChanged();
                 this.commitChanges();
             }
         };
         return controller;
     }
 
-    createSplineLineController() {
+    createSplineLineController () {
         return new ContinuousLineController(this.getGizmoRoot());
     }
 }

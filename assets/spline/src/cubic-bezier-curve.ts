@@ -25,6 +25,14 @@ export default class CubicBezierCurve {
 
     public length: number = 0;
 
+    private _gizmoEditing = false;
+    get gizmoEditing () {
+        return this._gizmoEditing;
+    }
+    set gizmoEditing (value) {
+        this._gizmoEditing = value;
+    }
+
     constructor (n1: SplineNode, n2: SplineNode) {
         this.n1 = n1;
         this.n2 = n2;
@@ -151,7 +159,9 @@ export default class CubicBezierCurve {
 
         this._points.length = 0;
 
-        this.changed.invoke();
+        if (!CC_EDITOR || !this._gizmoEditing) {
+            this.changed.invoke();
+        }
     }
 
     private updateSample (sample: CurveSample, distance: number, time: number): CurveSample {

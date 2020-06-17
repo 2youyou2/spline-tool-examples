@@ -1,6 +1,7 @@
 import { Node, Color } from 'cc'
 import Controller from './base/controller';
 import { createLineShape, getNodeWorldPostion } from './utils';
+import { SplineMoveType } from './types';
 
 const SPLINE_NODE_SIZE = 10;
 export default class SplineNodeController extends Controller {
@@ -25,17 +26,17 @@ export default class SplineNodeController extends Controller {
         let cube = window.cce.gizmos.ControllerUtils.cube(SPLINE_NODE_SIZE, SPLINE_NODE_SIZE, SPLINE_NODE_SIZE, Color.YELLOW);
         cube.parent = this.shape;
         this.positionNode = cube;
-        this.initAxis(cube, 'position');
+        this.initAxis(cube, SplineMoveType.Position);
 
         cube = window.cce.gizmos.ControllerUtils.cube(SPLINE_NODE_SIZE, SPLINE_NODE_SIZE, SPLINE_NODE_SIZE, Color.YELLOW);
         cube.parent = this.shape;
         this.directionNode = cube;
-        this.initAxis(cube, 'direction');
+        this.initAxis(cube, SplineMoveType.Direction);
 
         cube = window.cce.gizmos.ControllerUtils.cube(SPLINE_NODE_SIZE, SPLINE_NODE_SIZE, SPLINE_NODE_SIZE, Color.YELLOW);
         cube.parent = this.shape;
         this.invDirectionNode = cube;
-        this.initAxis(cube, 'invDirection');
+        this.initAxis(cube, SplineMoveType.InvDirection);
 
         this._directionLineShape = createLineShape('Direction Line', Color.RED);
         this._directionLineShape.parent = this.shape;

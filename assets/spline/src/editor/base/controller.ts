@@ -4,7 +4,7 @@ import { callGizmoFunction } from '../utils';
 export default class Controller {
     //#region extends from GizmoBase
     declare createShapeNode: (name: String) => void;
-    declare initAxis: (node: Node, axisName: String) => void;
+    declare initAxis: (node: Node, axisName: String | Number) => void;
     declare updateController: () => void;
     declare show: () => void;
     declare hide: () => void;
