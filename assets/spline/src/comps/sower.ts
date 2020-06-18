@@ -53,7 +53,7 @@ export default class NewClass extends SplineUtilRenderer {
     get prefab () { return this._prefab; };
     set prefab (v) { 
         this._prefab = v; 
-        this.node.removeAllChildren();
+        this.generated.removeAllChildren();
         this.dirty = true;
     };
 

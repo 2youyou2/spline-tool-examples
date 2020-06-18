@@ -109,6 +109,11 @@ export default class Gizmo {
             window.cce.gizmos.transformTool.hide();
         }
     }
+
+    commitNodeChanged (node: any, ...param: any[]) {
+        // @ts-ignore
+        cce.gizmos.Utils.onNodeChanged(node, ...param);
+    }
 }
 
 callGizmoFunction(() => {

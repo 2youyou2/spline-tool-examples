@@ -277,6 +277,8 @@ class SplineGizmo extends Gizmo {
                     else if (this.moveType === SplineMoveType.InvDirection) {
                         splineNode.invDirection = newPos;
                     }
+
+                    this.commitNodeChanged(splineNode.node);
                 }
 
 
