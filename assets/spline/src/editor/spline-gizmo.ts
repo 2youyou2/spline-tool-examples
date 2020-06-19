@@ -292,7 +292,7 @@ class SplineGizmo extends Gizmo {
             this.spline.gizmoEditing = false;
 
             if (controller.updated) {
-                this.spline.invokeCurveChanged();
+                this.spline.updateAfterCurveChanged();
                 this.commitChanges();
             }
         };

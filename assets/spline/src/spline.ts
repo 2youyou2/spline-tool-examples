@@ -272,7 +272,7 @@ export default class Spline extends Component {
         return this.curves;
     }
 
-    private updateAfterCurveChanged () {
+    updateAfterCurveChanged () {
         this.length = 0;
         for (let i = 0; i < this.curves.length; i++) {
             let curve = this.curves[i];
