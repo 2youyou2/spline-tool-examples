@@ -51,7 +51,10 @@ export default class ScatterItem {
     }
 
     protected _fixedMeshes: FixedModelMesh[] = [];
-    protected _models: ModelComponent[] = [];
+    get fixedMeshes () {
+        return this._fixedMeshes;
+    }
+    
     protected _sourceMesh: SourceMesh = null;
 
     init (node, maxCount) {
@@ -79,11 +82,10 @@ export default class ScatterItem {
             let subMeshCount = this._sourceMesh.subCount();
 
             this._fixedMeshes.length = 0;
-            this._models.length = 0;
             for (let i = 0; i < subMeshCount; i++) {
-                this._fixedMeshes[i] = FixedModelMesh.create(this._sourceMesh.getVertices(i).length, this._sourceMesh.getTriangles(i).length, this.maxCount);
                 let node = new Node('ScatterItemModel');
                 let model = node.addComponent(ModelComponent);
+                this._fixedMeshes[i] = FixedModelMesh.create(this._sourceMesh.getVertices(i).length, this._sourceMesh.getTriangles(i).length, model, this.maxCount);
                 model.mesh = this._fixedMeshes[i].mesh;
                 model.shadowCastingMode = tempModel.shadowCastingMode;
 
@@ -93,15 +95,12 @@ export default class ScatterItem {
                     model.setMaterial(material, j);
                 }
 
-                this._models[i] = model;
-
                 node.parent = this.node;
             }
         }
         else {
             this.node.removeComponent(ModelComponent);
 
-            this._models.length = 0;
             this._sourceMesh = null;
             this._fixedMeshes.length = 0;
         }
@@ -128,9 +127,8 @@ export default class ScatterItem {
 
         if (this._type === ScatterType.Mesh) {
             let fixedMeshes = this._fixedMeshes;
-            let models = this._models;
             for (let i = 0; i < fixedMeshes.length; i++) {
-                fixedMeshes[i].update(models[i]);
+                fixedMeshes[i].update();
             }
         }
         else if (this._type === ScatterType.Instance) {

@@ -1,10 +1,10 @@
 import FixedBuffer, { AttributesKey, builtinAttributes } from "./fixed-buffer";
-import { Mesh, GFXFormatInfos, GFXPrimitiveMode, IGFXAttribute, utils, ModelComponent } from "cc";
+import { Mesh, GFXFormatInfos, GFXPrimitiveMode, IGFXAttribute, utils, ModelComponent, Vec3 } from "cc";
 
 const MAX_VERTICES_COUNT = 65535;
 
 export default class FixedModelMesh {
-    static create (verticesCount, indicesCount, modelCount, attributes: AttributesKey[] = ['position', 'normal', 'tangent', 'uv']) {
+    static create (verticesCount: number, indicesCount: number, modelComp: ModelComponent, modelCount: number, attributes: AttributesKey[] = ['position', 'normal', 'tangent', 'uv']) {
         let fixedModelMesh = new FixedModelMesh();
         
         let gfxAttrs: IGFXAttribute[] = [];
@@ -67,6 +67,8 @@ export default class FixedModelMesh {
         let meshStruct: Mesh.IStruct = {
             vertexBundles: [],
             primitives: [],
+            // minPosition: new Vec3,
+            // maxPosition: new Vec3
         };
         for (let i = 0; i < buffers.length; i++) {
             const vertexBundle: Mesh.IVertexBundle = {
@@ -100,11 +102,13 @@ export default class FixedModelMesh {
         });
 
         fixedModelMesh.mesh = mesh;
+        fixedModelMesh.modelComp = modelComp;
 
         return fixedModelMesh;
     }
 
     mesh: Mesh = null;
+    modelComp: ModelComponent = null;
 
     maxBatchVerticesCount = 0;
 
@@ -125,7 +129,8 @@ export default class FixedModelMesh {
         value = value % this.maxBatchVerticesCount;
         this._iView[indexOffset] = value;
     }
-    update (modelComp: ModelComponent) {
+    update () {
+        let modelComp = this.modelComp;
         let subMeshes = this.mesh.renderingSubMeshes;
         for (let i = 0; i < subMeshes.length; i++) {
             let subMesh = subMeshes[i];

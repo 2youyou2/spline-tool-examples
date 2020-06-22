@@ -4,12 +4,13 @@ import SplineNode from "./spline-node";
 const { ccclass, property, type } = _decorator;
 @ccclass('SplineNodeWrapper')
 export default class SplineNodeWrapper {
-    node: SplineNode = null;
-
-    constructor (node: SplineNode) {
-        this.node = node;
+    static create (node) {
+        let wrapper = new SplineNodeWrapper();
+        wrapper.node = node;
+        return wrapper;
     }
 
+    node: SplineNode = null;
 
     @type(SplineNode)
     get splineNode () {

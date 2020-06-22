@@ -108,7 +108,7 @@ export default class Spline extends Component {
 
     @type(SplineNodeWrapper)
     public get splineNodes () : SplineNodeWrapper[] {
-        return this._nodes.map(node => new SplineNodeWrapper(node));
+        return this._nodes.map(node => SplineNodeWrapper.create(node));
     }
     public set splineNodes (value: SplineNodeWrapper[]) {
         

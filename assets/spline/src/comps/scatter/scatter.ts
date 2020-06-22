@@ -1,4 +1,4 @@
-import { _decorator, Node, Prefab, isPropertyModifier, Vec4, Quat, Vec3, geometry, randomRange, Mat4, Layers, Terrain } from 'cc';
+import { _decorator, Node, Prefab, isPropertyModifier, Vec4, Quat, Vec3, geometry, randomRange, Mat4, Layers, Terrain, Mesh } from 'cc';
 import SplineUtilRenderer from './../spline-util-renderer';
 import raycast from '../../utils/raycast';
 import { ScatterVolume } from './scatter-volume';
@@ -6,6 +6,8 @@ import { pointInPolygonAreaXZ, pointInPolygonLineXZ, pointPolygonMinDistXZ } fro
 import { VolumeInfo, VolumeType } from '../type';
 import ScatterItem from './scatter-item';
 import CurveSample from '../../curve-sample';
+import { createMesh, saveMesh } from '../../editor/asset-operation';
+import meshTesselate from '../../utils/mesh-processing/mesh-tesselate';
 
 const { ccclass, executeInEditMode, float, type, boolean, property } = _decorator;
 
@@ -116,6 +118,7 @@ export default class Scatter extends SplineUtilRenderer {
         }
         else if (this._currentItemCount >= this._itemCount) {
             this._dirty = false;
+            this._saveToCache();
         }
     }
 
@@ -193,6 +196,22 @@ export default class Scatter extends SplineUtilRenderer {
         this.dirty = true;
     }
 
+    @property
+    _cacheToMesh = true;
+    @property
+    get cacheToMesh () {
+        return this._cacheToMesh;
+    }
+    set cacheToMesh (value) {
+        this._cacheToMesh = value;
+        this.dirty = true;
+    }
+
+    _virtualMesh: Mesh = null;
+    @type(Mesh)
+    get virtualMesh () {
+        return this._virtualMesh;
+    }
 
 
     public onLoad () {
@@ -363,6 +382,42 @@ export default class Scatter extends SplineUtilRenderer {
         else {
             this.dirty = false;
         }
+    }
+
+    protected _saveToCache () {
+        if (!this.cacheToMesh) return;
+        let totalBytes = 0;
+        for (let i = 0; i < this.items.length; i++) {
+            let item = this.items[i];
+            for (let j = 0; j < item.fixedMeshes.length; j++) {
+                let mesh = item.fixedMeshes[j].mesh;
+                totalBytes += mesh.data.byteLength;
+            }
+        }
+
+        let data = new Uint8Array(totalBytes);
+        let offset = 0;
+        for (let i = 0; i < this.items.length; i++) {
+            let item = this.items[i];
+            for (let j = 0; j < item.fixedMeshes.length; j++) {
+                let mesh = item.fixedMeshes[j].mesh;
+                data.set(mesh.data, offset);
+                offset += mesh.data.byteLength;
+            }
+        }
+
+        let mesh = new Mesh;
+        mesh.reset({
+            struct: {
+                vertexBundles: [],
+                primitives: [],
+            },
+            data: data
+        })
+
+        saveMesh('scatter-cache-data/' + this.uuid + '.mesh', mesh).then(mesh => {
+            this._virtualMesh = mesh
+        });
     }
 
     protected _updateVolume () {
