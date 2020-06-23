@@ -3,7 +3,7 @@ import SplineUtilRenderer from './../spline-util-renderer';
 import raycast from '../../utils/raycast';
 import { ScatterVolume } from './scatter-volume';
 import { pointInPolygonAreaXZ, pointInPolygonLineXZ, pointPolygonMinDistXZ } from '../../utils/mathf';
-import { VolumeInfo, VolumeType } from '../type';
+import { VolumeInfo, VolumeType, ScatterType } from '../type';
 import ScatterItem from './scatter-item';
 import CurveSample from '../../curve-sample';
 import { createMesh, saveMesh } from '../../editor/asset-operation';
@@ -67,7 +67,6 @@ export default class Scatter extends SplineUtilRenderer {
         if (this._itemCount === value) return;
         this._itemCount = value;
         this.dirty = true;
-        this._updateVolume();
     }
     @property
     get generateCountPerFrame () { return this._generateCountPerFrame; }
@@ -114,11 +113,12 @@ export default class Scatter extends SplineUtilRenderer {
                 this._selfVolumeInfo.count = 0;
             }
 
+            this._updateVolume();
+
             this._dirty = true;
         }
         else if (this._currentItemCount >= this._itemCount) {
             this._dirty = false;
-            this._saveToCache();
         }
     }
 
@@ -207,16 +207,42 @@ export default class Scatter extends SplineUtilRenderer {
         this.dirty = true;
     }
 
+    @type(Mesh)
     _virtualMesh: Mesh = null;
     @type(Mesh)
     get virtualMesh () {
         return this._virtualMesh;
     }
 
+    @type(ScatterType as any)
+    _dataType = ScatterType.Mesh;
+    @type(ScatterType as any)
+    get dataType () {
+        return this._dataType;
+    }
+    set dataType (value) {
+        this._dataType = value;
+        this.dirty = true;
+    }
+
 
     public onLoad () {
-        super.onLoad();
-        this._updateVolume();
+        if (!this._cacheToMesh || !this._virtualMesh) {
+            this._updateVolume();
+        }
+        else {
+            this._initWidthVirtualMesh();    
+        }
+    }
+
+    private _initWidthVirtualMesh () {
+        let children = this.generated.children;
+        let items = this._items;
+        for (let i = 0; i < items.length; i++) {
+            items[i].initWithVirtualMesh(children[i], this.virtualMesh);
+        }
+
+        this.dirty = false;
     }
 
     private _isPosValid (pos) {
@@ -378,6 +404,10 @@ export default class Scatter extends SplineUtilRenderer {
             for (let i = 0; i < items.length; i++) {
                 items[i].endFill();
             }
+
+            if (this._currentItemCount >= this._itemCount) {
+                this._saveToCache();
+            }
         }
         else {
             this.dirty = false;
@@ -385,7 +415,7 @@ export default class Scatter extends SplineUtilRenderer {
     }
 
     protected _saveToCache () {
-        if (!this.cacheToMesh) return;
+        if (!this.cacheToMesh || !CC_EDITOR) return;
         let totalBytes = 0;
         for (let i = 0; i < this.items.length; i++) {
             let item = this.items[i];
@@ -400,6 +430,8 @@ export default class Scatter extends SplineUtilRenderer {
         for (let i = 0; i < this.items.length; i++) {
             let item = this.items[i];
             for (let j = 0; j < item.fixedMeshes.length; j++) {
+                item.shiftStructOffset(offset);
+
                 let mesh = item.fixedMeshes[j].mesh;
                 data.set(mesh.data, offset);
                 offset += mesh.data.byteLength;
@@ -457,7 +489,7 @@ export default class Scatter extends SplineUtilRenderer {
         this._selfVolumeInfo.volume = Math.max(0, 1 - totalVolume);
         this._selfVolumeInfo.maxCount = this._selfVolumeInfo.volume * this.itemCount;
 
-        this.dirty = true;
+        this._dirty = true;
 
         this._updateItems();
     }
@@ -522,10 +554,10 @@ export default class Scatter extends SplineUtilRenderer {
                 maxCount = this.itemCount - used;
             }
 
-            item.init(node, maxCount);
+            item.init(node, maxCount, this._dataType);
             used += maxCount;
         }
 
-        this.dirty = true;
+        this._dirty = true;
     }
 }

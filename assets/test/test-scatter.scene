@@ -124,15 +124,15 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
-      "z": 0
+      "y": 9.287,
+      "z": 14.119
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": 0,
+      "x": -0.3228273914359073,
       "y": 0,
       "z": 0,
-      "w": 1
+      "w": 0.9464578571382286
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -143,7 +143,7 @@
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": -37.668,
       "y": 0,
       "z": 0
     },
@@ -464,7 +464,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "b4y8O8IjRCLKdhQcApHgpa"
+    "_id": "53TuaICvFJdIDQo0oLFaYP"
   },
   {
     "__type__": "cc.Node",
@@ -507,7 +507,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "c4JsgiLoNFHbnjiAZmvIh4"
+    "_id": "1eoq7JFZ5AurfK2zecIhTy"
   },
   {
     "__type__": "cc.ModelComponent",
@@ -529,7 +529,7 @@
     "_mesh": null,
     "_shadowCastingMode": 1,
     "_enableMorph": true,
-    "_id": "06gSswovlB5bZiVWdTtDpu"
+    "_id": "572uASlGhHyINgEVjftsbU"
   },
   {
     "__type__": "cc.ModelLightmapSettings",
@@ -953,6 +953,10 @@
     "_scatterLineWidth": 1,
     "_scatterLineOffset": 0,
     "_cacheToMesh": true,
+    "_virtualMesh": {
+      "__uuid__": "57a68450-804d-4936-9955-620db8914ecd"
+    },
+    "_dataType": 0,
     "_id": "c0typf72hA/6qi+7CeH30Y"
   },
   {
@@ -1691,7 +1695,53 @@
       "__uuid__": "0ebb9aed-5bdd-49d2-8d18-01dcfa34607c"
     },
     "_type": 0,
-    "_volume": 1
+    "_volume": 1,
+    "_meshStructs": [
+      {
+        "vertexBundles": [
+          {
+            "attributes": [
+              {
+                "name": "a_position",
+                "format": 32
+              },
+              {
+                "name": "a_normal",
+                "format": 32
+              },
+              {
+                "name": "a_tangent",
+                "format": 43
+              },
+              {
+                "name": "a_texCoord",
+                "format": 21
+              }
+            ],
+            "view": {
+              "offset": 0,
+              "length": 1824000,
+              "count": 38000,
+              "stride": 48
+            }
+          }
+        ],
+        "primitives": [
+          {
+            "primitiveMode": 7,
+            "vertexBundelIndices": [
+              0
+            ],
+            "indexView": {
+              "offset": 1824000,
+              "length": 174000,
+              "count": 87000,
+              "stride": 2
+            }
+          }
+        ]
+      }
+    ]
   },
   {
     "__type__": "4f3betNZrFAk5ghozl0TFWc",

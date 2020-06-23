@@ -1,7 +1,8 @@
-import { _decorator, Node, Prefab, Vec4, Quat, Vec3, Mat4, ModelComponent, Vec2 } from 'cc';
+import { _decorator, Node, Prefab, Vec4, Quat, Vec3, Mat4, ModelComponent, Vec2, Mesh } from 'cc';
 import SourceMesh from '../../utils/mesh-processing/source-mesh';
 import FixedModelMesh from '../../utils/mesh-processing/fixed-model-mesh';
 import { ScatterType } from '../type';
+import { node2nodeLength } from '../../editor/utils';
 
 const { ccclass, type, property } = _decorator;
 
@@ -17,7 +18,7 @@ let tempArray4 = new Array(4).fill(0);
 export default class ScatterItem {
     @type(Prefab)
     _prefab: Prefab = null;
-    @type(ScatterType as any)
+    @property
     _type = ScatterType.Mesh;
     @property
     _volume = 1;
@@ -29,13 +30,7 @@ export default class ScatterItem {
     set prefab (value) {
         this._prefab = value;
     }
-    @type(ScatterType as any)
-    get type () {
-        return this._type;
-    }
-    set type (value) {
-        this._type = value;
-    }
+
     @property
     get volume () {
         return this._volume;
@@ -54,12 +49,16 @@ export default class ScatterItem {
     get fixedMeshes () {
         return this._fixedMeshes;
     }
+
+    @property
+    protected _meshStructs: Mesh.IStruct[] = [];
     
     protected _sourceMesh: SourceMesh = null;
 
-    init (node, maxCount) {
+    init (node, maxCount, dataType: ScatterType) {
         this.node = node;
         this._maxCount = maxCount;
+        this._type = dataType;
         this.currentCount = 0;
 
         if (!this.prefab) return;
@@ -82,10 +81,12 @@ export default class ScatterItem {
             let subMeshCount = this._sourceMesh.subCount();
 
             this._fixedMeshes.length = 0;
+            this._meshStructs.length = 0;
             for (let i = 0; i < subMeshCount; i++) {
                 let node = new Node('ScatterItemModel');
                 let model = node.addComponent(ModelComponent);
                 this._fixedMeshes[i] = FixedModelMesh.create(this._sourceMesh.getVertices(i).length, this._sourceMesh.getTriangles(i).length, model, this.maxCount);
+                this._meshStructs[i] = this._fixedMeshes[i].mesh.struct;
                 model.mesh = this._fixedMeshes[i].mesh;
                 model.shadowCastingMode = tempModel.shadowCastingMode;
 
@@ -103,6 +104,36 @@ export default class ScatterItem {
 
             this._sourceMesh = null;
             this._fixedMeshes.length = 0;
+        }
+    }
+
+    initWithVirtualMesh (node: Node, virtualMesh: Mesh) {
+        this.node = node;
+        let children = node.children;
+
+        let structs = this._meshStructs;
+        for (let i = 0; i < structs.length; i++) {
+            let child = children[i];
+            if (!child) {
+                cc.warn('Can not find scatter item children ' + i);
+                continue;
+            }
+
+            let model = child.getComponent(ModelComponent);
+            let mesh = new Mesh();
+            mesh.reset({
+                struct: structs[i],
+                data: virtualMesh.data
+            })
+            model.mesh = mesh;
+        }
+    }
+
+    shiftStructOffset (offset: number) {
+        let structs = this._meshStructs;
+        for (let i = 0; i < structs.length; i++) {
+            structs[i].primitives.forEach(primitive => primitive.indexView.offset += offset);
+            structs[i].vertexBundles.forEach(vertex => vertex.view.offset += offset);
         }
     }
 

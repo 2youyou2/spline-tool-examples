@@ -16,17 +16,25 @@ if (CC_EDITOR) {
 
     const tmpdir = os.tmpdir();
 
-    function zip (target: string, files: string[]) {
+    async function zip (target: string, files: string[]) {
         return new Promise((resolve, reject) => {
             const output = createWriteStream(target);
             const archive = archiver('zip');
 
-            archive.on('error', (error: Error) => {
+            let data = [];
+            output.on('error', (error: Error) => {
                 reject(error);
             });
 
-            archive.on('close', () => {
-                resolve()
+            output.on('close', () => {
+                console.log('zip close');
+                resolve(new Uint8Array(data))
+            });
+
+            archive.on('data', function (subdata) {
+                for (let i = 0; i < subdata.length; i++) {
+                    data.push(subdata[i]);
+                }
             });
 
             archive.pipe(output);
@@ -48,16 +56,14 @@ if (CC_EDITOR) {
     }
 
     _saveMesh = async function saveMesh (filePath: string, mesh: Mesh) {
-        filePath = join(projectPath, filePath);
+        filePath = join(projectPath, 'assets', filePath);
 
         mesh._setRawAsset('.bin');
         // @ts-ignore
         mesh._dataLength = mesh.data.byteLength;
         // @ts-ignore
-        let meshJson = EditorExtends.serialize();
+        let meshJson = EditorExtends.serialize(mesh);
         let meshBin = mesh.data;
-
-
 
         let meshJsonPath = join(tmpdir, 'creator/SaveMesh/__meshJson__.json');
         let meshBinPath = join(tmpdir, 'creator/SaveMesh/__meshBin__.bin');
@@ -68,10 +74,17 @@ if (CC_EDITOR) {
         writeFileSync(meshBinPath, meshBin);
 
         ensureDirSync(dirname(filePath));
-        await zip(filePath, [meshJsonPath, meshBinPath]);
+        let data = await zip(meshZipPath, [meshJsonPath, meshBinPath]);
 
         const url = await Editor.Ipc.requestToPackage('asset-db', 'query-url-by-path', filePath);
-        let assetUid = await Editor.Ipc.requestToPackage('asset-db', 'query-asset-uuid', url);
+
+        let assetUid;
+        if (existsSync(filePath)) {
+            assetUid = await Editor.Ipc.requestToPackage('asset-db', 'query-asset-uuid', url);
+            await Editor.Ipc.requestToPackage('asset-db', 'save-asset', assetUid, data);
+        } else {
+            assetUid = await Editor.Ipc.requestToPackage('asset-db', 'create-asset', url, data);
+        }
 
         return new Promise((resolve, reject) => {
             setTimeout(() => {
