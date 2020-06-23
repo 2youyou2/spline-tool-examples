@@ -8,7 +8,7 @@ const SPLINE_NODE_SIZE = 10;
 let _SplineNodeController
 if (CC_EDITOR) {
 
-    let _SplineNodeController = class SplineNodeController extends Controller {
+    _SplineNodeController = class SplineNodeController extends Controller {
         _node = null;
         _splineNode = null;
 
