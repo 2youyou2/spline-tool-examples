@@ -19,10 +19,10 @@
         "__id__": 2
       },
       {
-        "__id__": 4
+        "__id__": 5
       },
       {
-        "__id__": 6
+        "__id__": 7
       }
     ],
     "_active": true,
@@ -30,7 +30,7 @@
     "_prefab": null,
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 9
+      "__id__": 10
     },
     "_id": "7f227bed-5e86-4682-b961-56456ce09ca3"
   },
@@ -94,9 +94,17 @@
     },
     "_useColorTemperature": false,
     "_colorTemperature": 6550,
-    "_bakeType": 0,
+    "_staticSettings": {
+      "__id__": 4
+    },
     "_illuminance": 65000,
     "_id": "597uMYCbhEtJQc0ffJlcgA"
+  },
+  {
+    "__type__": "cc.StaticLightSettings",
+    "_editorOnly": false,
+    "_bakeable": false,
+    "_castShadow": false
   },
   {
     "__type__": "cc.Node",
@@ -109,7 +117,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 5
+        "__id__": 6
       }
     ],
     "_prefab": null,
@@ -117,7 +125,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0
+      "z": 2.282
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -146,7 +154,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 4
+      "__id__": 5
     },
     "_enabled": true,
     "_projection": 1,
@@ -192,9 +200,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 7
+        "__id__": 8
       }
     ],
+    "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -228,7 +237,7 @@
     "_name": "Sphere<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 7
     },
     "_enabled": true,
     "_materials": [
@@ -238,7 +247,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 8
+      "__id__": 9
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@17020"
@@ -266,13 +275,13 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 10
-    },
-    "planarShadows": {
       "__id__": 11
     },
-    "_skybox": {
+    "planarShadows": {
       "__id__": 12
+    },
+    "_skybox": {
+      "__id__": 13
     }
   },
   {
