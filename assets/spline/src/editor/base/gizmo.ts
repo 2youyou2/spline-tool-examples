@@ -17,7 +17,7 @@ export default class Gizmo {
     getGizmoRoot () { return window.cce.gizmos.Gizmo.prototype.getGizmoRoot.call(this) };
     recordChanges () { return window.cce.gizmos.Gizmo.prototype.recordChanges.call(this) };
     commitChanges () { return window.cce.gizmos.Gizmo.prototype.commitChanges.call(this) };
-    onComponentChanged (node: Node) { return window.cce.gizmos.Gizmo.prototype.onComponentChanged.call(this) };
+    onComponentChanged (node: Node) { return window.cce.gizmos.Gizmo.prototype.onComponentChanged.call(this, node) };
     registerCameraMovedEvent () { return window.cce.gizmos.Gizmo.prototype.registerCameraMovedEvent.call(this) };
     unregisterCameraMoveEvent () { return window.cce.gizmos.Gizmo.prototype.unregisterCameraMoveEvent.call(this) };
     //#endregion
