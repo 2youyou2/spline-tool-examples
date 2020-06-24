@@ -22,5 +22,4 @@ node_modules/
 #//////////////////////////
 .idea/
 
-
-assets/post-process/
+.deploy_git/
