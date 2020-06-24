@@ -1,0 +1,1 @@
+{"__type__":"cc.Material","_effectAsset":{"__uuid__":"1brw/JvvpFnIvdrxpFCgMZ"},"_defines":[{"USE_ALBEDO_MAP":true}],"_states":[{"blendState":{"targets":[{}]},"depthStencilState":{},"rasterizerState":{}}],"_props":[{"tilingOffset":{"__type__":"cc.Vec4","x":10,"y":10},"mainTexture":{"__uuid__":"033Avr3oVLP4wvopIM2j+N@6c48a"}}]}
