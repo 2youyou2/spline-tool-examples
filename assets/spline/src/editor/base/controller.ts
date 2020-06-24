@@ -1,49 +1,45 @@
-// @ts-nocheck
-
 import { Node } from 'cc'
 import { callGizmoFunction } from '../utils';
 import _Gizmo from './gizmo';
 
-let _Controller
-if (CC_EDITOR) {
-    _Controller = class Controller {
-        //#region extends from GizmoBase
-        declare createShapeNode: (name: String) => void;
-        declare initAxis: (node: Node, axisName: String | Number) => void;
-        declare updateController: () => void;
-        declare show: () => void;
-        declare hide: () => void;
-        declare registerCameraMovedEvent: () => void;
-        declare unregisterCameraMoveEvent: () => void;
-        declare adjustControllerSize: () => void;
-        declare shape;
-        //#endregion
-    
-        constructor (rootNode) {
-            cc.js.addon(this, new window.cce.gizmos.ControllerBase(rootNode));
-        }
-    
-        onControllerMouseDown (event) { }
-        onControllerMouseMove (event) { }
-        onControllerMouseUp (event) { }
-    
-        onMouseDown (event) {
-            this.onControllerMouseDown(event);
-        }
-        onMouseMove (event) {
-            this.onControllerMouseMove(event);
-        }
-        onMouseUp (event) {
-            this.onControllerMouseUp(event);
-        }
-        onMouseLeave (event) {
-            this.onMouseUp(event);
-        }
+
+export default class Controller {
+    //#region  TODO: change to declare 
+    public shape: Node|null = null;
+    createShapeNode (name: String) { return window.cce.gizmos.ControllerBase.prototype.createShapeNode.call(this, name); }
+    initAxis (node: Node, axisName: String | Number) { return window.cce.gizmos.ControllerBase.prototype.initAxis.call(this, node, axisName); }
+    updateController () { return window.cce.gizmos.ControllerBase.prototype.updateController.call(this); }
+    show () { return window.cce.gizmos.ControllerBase.prototype.show.call(this); }
+    hide () { return window.cce.gizmos.ControllerBase.prototype.hide.call(this); }
+    registerCameraMovedEvent () { return window.cce.gizmos.ControllerBase.prototype.registerCameraMovedEvent.call(this); }
+    unregisterCameraMoveEvent () { return window.cce.gizmos.ControllerBase.prototype.unregisterCameraMoveEvent.call(this); }
+    adjustControllerSize () { return window.cce.gizmos.ControllerBase.prototype.adjustControllerSize.call(this); }
+    //#endregion
+
+    constructor (rootNode) {
+        cc.js.addon(this, new window.cce.gizmos.ControllerBase(rootNode));
     }
-    
-    callGizmoFunction(() => {
-        Object.setPrototypeOf(_Controller.prototype, window.cce.gizmos.ControllerBase.prototype);
-    })
+
+    onControllerMouseDown (event) { }
+    onControllerMouseMove (event) { }
+    onControllerMouseUp (event) { }
+
+    onMouseDown (event) {
+        this.onControllerMouseDown(event);
+    }
+    onMouseMove (event) {
+        this.onControllerMouseMove(event);
+    }
+    onMouseUp (event) {
+        this.onControllerMouseUp(event);
+    }
+    onMouseLeave (event) {
+        this.onMouseUp(event);
+    }
 }
 
-export default _Controller
+if (CC_EDITOR) {
+    callGizmoFunction(() => {
+        Object.setPrototypeOf(Controller.prototype, window.cce.gizmos.ControllerBase.prototype);
+    })
+}
