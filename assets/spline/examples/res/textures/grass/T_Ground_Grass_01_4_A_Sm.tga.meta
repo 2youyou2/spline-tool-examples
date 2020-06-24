@@ -35,6 +35,11 @@
   },
   "userData": {
     "type": "texture",
-    "redirect": "bf224397-c699-4ac8-b8f0-9f176aecb63c@6c48a"
+    "redirect": "bf224397-c699-4ac8-b8f0-9f176aecb63c@6c48a",
+    "platformSettings": {
+      "default": {
+        "png": 25
+      }
+    }
   }
 }

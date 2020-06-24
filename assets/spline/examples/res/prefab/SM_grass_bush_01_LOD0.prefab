@@ -63,7 +63,7 @@
     "_enabled": true,
     "_materials": [
       {
-        "__uuid__": "19a24321-21bc-4694-ab3a-59cd09b0f6ea"
+        "__uuid__": "7cfe3fbd-7125-477d-92ca-e51327bcb481"
       }
     ],
     "_visFlags": 0,
@@ -89,6 +89,7 @@
     },
     "_bakeable": false,
     "_castShadow": false,
+    "_receiveShadow": false,
     "_recieveShadow": false,
     "_lightmapSize": 64
   },

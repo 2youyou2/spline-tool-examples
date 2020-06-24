@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.18",
+  "importer": "image",
+  "imported": true,
+  "uuid": "b46a865d-349d-432a-8492-b0bc4798cbab",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "b46a865d-349d-432a-8492-b0bc4798cbab@6c48a",
+      "displayName": "T_atlas_grass_01_N_512",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "b46a865d-349d-432a-8492-b0bc4798cbab"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "b46a865d-349d-432a-8492-b0bc4798cbab@6c48a"
+  }
+}
