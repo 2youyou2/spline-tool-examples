@@ -9,20 +9,6 @@ import SplineNodeWrapper from './spline-node-wrapper';
 
 const { ccclass, type, boolean, integer, float, executeInEditMode } = _decorator;
 
-enum ListChangeType {
-    Add,
-    Insert,
-    Remove,
-    clear,
-}
-interface ListChangedEventArgs {
-    type: ListChangeType;
-    newItems?: SplineNode[];
-    removedItems?: SplineNode[];
-    insertIndex?: Number;
-    removeIndex?: Number;
-}
-
 const SplineRootNodeName = '__spline_node_root__';
 
 /// <summary>
