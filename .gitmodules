@@ -1,3 +1,6 @@
 [submodule "assets/shader-lib"]
 	path = assets/shader-lib
 	url = git@github.com:2youyou2/shader-lib.git
+[submodule "assets/spline/src"]
+	path = assets/spline/src
+	url = git@github.com:2youyou2/spline-tool.git
