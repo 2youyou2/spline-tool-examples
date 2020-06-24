@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.18",
+  "importer": "image",
+  "imported": true,
+  "uuid": "14aedb4a-1331-4c7b-8e70-51792aac16d7",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "14aedb4a-1331-4c7b-8e70-51792aac16d7@6c48a",
+      "displayName": "T_Ground_Grass_01_N_512",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "14aedb4a-1331-4c7b-8e70-51792aac16d7"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "14aedb4a-1331-4c7b-8e70-51792aac16d7@6c48a"
+  }
+}
