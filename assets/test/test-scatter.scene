@@ -464,7 +464,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "53TuaICvFJdIDQo0oLFaYP"
+    "_id": "4bJUov6NhDXZCxv1+ILm2L"
   },
   {
     "__type__": "cc.Node",
@@ -507,7 +507,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "1eoq7JFZ5AurfK2zecIhTy"
+    "_id": "e8B2VzQ59OGbGKfuVIE6hx"
   },
   {
     "__type__": "cc.ModelComponent",
@@ -529,7 +529,7 @@
     "_mesh": null,
     "_shadowCastingMode": 1,
     "_enableMorph": true,
-    "_id": "572uASlGhHyINgEVjftsbU"
+    "_id": "00VybzQa9DrZyR84qpRABI"
   },
   {
     "__type__": "cc.ModelLightmapSettings",
@@ -954,7 +954,7 @@
     "_scatterLineOffset": 0,
     "_cacheToMesh": true,
     "_virtualMesh": {
-      "__uuid__": "57a68450-804d-4936-9955-620db8914ecd"
+      "__uuid__": "0ea937cf-5a3b-47ac-a670-477f7bd72a76"
     },
     "_dataType": 0,
     "_id": "c0typf72hA/6qi+7CeH30Y"

@@ -210,7 +210,7 @@ export default class Scatter extends SplineUtilRenderer {
     @type(Mesh)
     _virtualMesh: Mesh = null;
     @type(Mesh)
-    get virtualMesh () {
+    get cacheVirtualMesh () {
         return this._virtualMesh;
     }
 
@@ -239,7 +239,7 @@ export default class Scatter extends SplineUtilRenderer {
         let children = this.generated.children;
         let items = this._items;
         for (let i = 0; i < items.length; i++) {
-            items[i].initWithVirtualMesh(children[i], this.virtualMesh);
+            items[i].initWithVirtualMesh(children[i], this.cacheVirtualMesh);
         }
 
         this.dirty = false;
@@ -447,7 +447,7 @@ export default class Scatter extends SplineUtilRenderer {
             data: data
         })
 
-        saveMesh('scatter-cache-data/' + this.uuid + '.mesh', mesh).then(mesh => {
+        saveMesh('_scatter-cache-data_/' + this.uuid + '.mesh', mesh).then(mesh => {
             this._virtualMesh = mesh
         });
     }
