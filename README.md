@@ -1,6 +1,6 @@
 
 
-Examples for [Spline Tool](https://github.com/2youyou2/spline-tool).
+Examples for [Spline Tool](https://github.com/2youyou2/spline-tool) based on Cocos Creator 3D v1.1.1.
 
 Online demo : http://2youyou2.com/spline-tool-examples/
 
