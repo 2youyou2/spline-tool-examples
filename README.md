@@ -12,6 +12,11 @@ Example Video :
 
 1. git clone git@github.com:2youyou2/spline-tool-examples.git
 2. git submodule update --init
+3. To enable post process, please change pipeline in project setting
+
+![image](https://user-images.githubusercontent.com/1862402/86127168-0c656b00-bb12-11ea-8de7-8a155fee1a1a.png)
+
+# Screenshots
 
 ![image](https://user-images.githubusercontent.com/1862402/85509193-1d9d0c00-b628-11ea-8f1b-c87344456a89.png)
 
