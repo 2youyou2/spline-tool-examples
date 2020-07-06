@@ -55,7 +55,7 @@
   },
   {
     "__type__": "cc.ModelComponent",
-    "_name": "",
+    "_name": "PW_Grass_Blue_Flower_02<ModelComponent>",
     "_objFlags": 0,
     "node": {
       "__id__": 1
@@ -71,7 +71,7 @@
       "__id__": 3
     },
     "_mesh": {
-      "__uuid__": "2b31c015-6662-403f-9e8f-2b30ce129876@08c68"
+      "__uuid__": "36d21d5c-0c1a-4be9-b6b8-1a82871727c4@08c68"
     },
     "_shadowCastingMode": 0,
     "_enableMorph": true,
@@ -87,10 +87,11 @@
       "z": 0,
       "w": 0
     },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
+    "_bakeable": true,
+    "_castShadow": true,
+    "_receiveShadow": true,
+    "_recieveShadow": true,
+    "_lightmapSize": 128
   },
   {
     "__type__": "cc.PrefabInfo",

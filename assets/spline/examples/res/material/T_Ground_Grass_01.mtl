@@ -10,6 +10,8 @@
   "_defines": [
     {
       "USE_NORMAL_MAP": true,
+      "USE_LIGHTMAP": true,
+      "HAS_SECOND_UV": true,
       "USE_ALBEDO_MAP": true
     }
   ],
@@ -40,13 +42,20 @@
         "b": 114,
         "a": 255
       },
+      "albedoScale": {
+        "__type__": "cc.Vec3",
+        "x": 1.3,
+        "y": 1.3,
+        "z": 1.3
+      },
       "metallic": 0,
       "mainTexture": {
         "__uuid__": "3d64e366-ca1a-4543-841c-1fc925d7533e@6c48a"
       },
       "normalMap": {
         "__uuid__": "14aedb4a-1331-4c7b-8e70-51792aac16d7@6c48a"
-      }
+      },
+      "alphaThreshold": 0
     }
   ]
 }

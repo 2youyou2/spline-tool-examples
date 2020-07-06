@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.18",
+  "importer": "image",
+  "imported": true,
+  "uuid": "f7785295-76a0-4b40-969e-6d8a99fc55c1",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "f7785295-76a0-4b40-969e-6d8a99fc55c1@6c48a",
+      "displayName": "LFX_Terrain_0004",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f7785295-76a0-4b40-969e-6d8a99fc55c1"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "f7785295-76a0-4b40-969e-6d8a99fc55c1@6c48a"
+  }
+}

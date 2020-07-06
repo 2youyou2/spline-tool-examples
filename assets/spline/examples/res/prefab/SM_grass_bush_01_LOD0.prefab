@@ -71,7 +71,7 @@
       "__id__": 3
     },
     "_mesh": {
-      "__uuid__": "a863b302-ef21-4336-a9be-c3c445b00f0c@6e283"
+      "__uuid__": "b97bbb9f-ce2f-468b-9b26-0855370d998a@32aeb"
     },
     "_shadowCastingMode": 1,
     "_enableMorph": true,
@@ -87,11 +87,11 @@
       "z": 0,
       "w": 0
     },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
+    "_bakeable": true,
+    "_castShadow": true,
+    "_receiveShadow": true,
+    "_recieveShadow": true,
+    "_lightmapSize": 128
   },
   {
     "__type__": "cc.PrefabInfo",

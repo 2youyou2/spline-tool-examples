@@ -1,0 +1,137 @@
+2020-07-06 16:23:52 D:\workspace\fireball\editor-3d\tools\lightmap-tools/LightFX http://127.0.0.1:8000 
+2020-07-06 16:23:52 -:Building meshes
+2020-07-06 16:23:52 -:Building terrain
+2020-07-06 16:23:52 -:Building bv scene
+2020-07-06 16:23:53 Start 0
+
+2020-07-06 16:23:53 DirectLighting 6
+
+2020-07-06 16:24:00 DirectLighting 12
+
+2020-07-06 16:24:08 DirectLighting 18
+
+2020-07-06 16:24:15 DirectLighting 25
+
+2020-07-06 16:24:22 DirectLighting 31
+
+2020-07-06 16:24:22 DirectLighting 37
+
+2020-07-06 16:24:22 DirectLighting 43
+
+2020-07-06 16:24:26 DirectLighting 50
+
+2020-07-06 16:24:31 DirectLighting 56
+
+2020-07-06 16:24:34 DirectLighting 62
+
+2020-07-06 16:24:38 DirectLighting 68
+
+2020-07-06 16:24:45 DirectLighting 75
+
+2020-07-06 16:24:48 DirectLighting 81
+
+2020-07-06 16:24:51 DirectLighting 87
+
+2020-07-06 16:24:55 DirectLighting 93
+
+2020-07-06 16:24:57 IndirectLighting 6
+
+2020-07-06 16:24:57 IndirectLighting 12
+
+2020-07-06 16:24:57 IndirectLighting 18
+
+2020-07-06 16:24:57 IndirectLighting 25
+
+2020-07-06 16:24:57 IndirectLighting 31
+
+2020-07-06 16:24:57 IndirectLighting 37
+
+2020-07-06 16:24:57 IndirectLighting 43
+
+2020-07-06 16:24:57 IndirectLighting 50
+
+2020-07-06 16:24:57 IndirectLighting 56
+
+2020-07-06 16:24:57 IndirectLighting 62
+
+2020-07-06 16:24:57 IndirectLighting 68
+
+2020-07-06 16:24:57 IndirectLighting 75
+
+2020-07-06 16:24:57 IndirectLighting 81
+
+2020-07-06 16:24:57 IndirectLighting 87
+
+2020-07-06 16:24:57 IndirectLighting 93
+
+2020-07-06 16:24:57  6
+
+2020-07-06 16:24:57  12
+
+2020-07-06 16:24:57  18
+
+2020-07-06 16:24:57  25
+
+2020-07-06 16:24:57  31
+
+2020-07-06 16:24:57  37
+
+2020-07-06 16:24:57  43
+
+2020-07-06 16:24:57  50
+
+2020-07-06 16:24:57  56
+
+2020-07-06 16:24:57  62
+
+2020-07-06 16:24:57  68
+
+2020-07-06 16:24:57  75
+
+2020-07-06 16:24:57  81
+
+2020-07-06 16:24:57  87
+
+2020-07-06 16:24:57  93
+
+2020-07-06 16:24:57 Post Process 6
+
+2020-07-06 16:24:57 Post Process 12
+
+2020-07-06 16:24:57 Post Process 18
+
+2020-07-06 16:24:57 Post Process 25
+
+2020-07-06 16:24:57 Post Process 31
+
+2020-07-06 16:24:57 Post Process 37
+
+2020-07-06 16:24:57 Post Process 43
+
+2020-07-06 16:24:58 Post Process 50
+
+2020-07-06 16:24:58 Post Process 56
+
+2020-07-06 16:24:58 Post Process 62
+
+2020-07-06 16:24:58 Post Process 68
+
+2020-07-06 16:24:58 Post Process 75
+
+2020-07-06 16:24:58 Post Process 81
+
+2020-07-06 16:24:58 Post Process 87
+
+2020-07-06 16:24:58 Post Process 93
+
+2020-07-06 16:24:58 Post Process 100
+
+2020-07-06 16:24:58 Pack terrain 0 blocks 0 0 1 1
+2020-07-06 16:24:58 Pack terrain 0 blocks 1 0 1 1
+2020-07-06 16:24:58 Pack terrain 0 blocks 2 0 1 1
+2020-07-06 16:24:59 Pack terrain 0 blocks 0 1 1 1
+2020-07-06 16:24:59 Pack terrain 0 blocks 1 1 1 1
+2020-07-06 16:24:59 Pack terrain 0 blocks 2 1 1 1
+2020-07-06 16:25:00 Pack terrain 0 blocks 0 2 1 1
+2020-07-06 16:25:00 Pack terrain 0 blocks 1 2 1 1
+2020-07-06 16:25:00 Pack terrain 0 blocks 2 2 1 1

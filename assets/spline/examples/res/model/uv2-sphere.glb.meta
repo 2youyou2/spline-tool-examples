@@ -1,0 +1,57 @@
+{
+  "ver": "1.3.21",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "c9be04ed-17ef-4b18-af2f-ce6440ae29bd",
+  "files": [],
+  "subMetas": {
+    "ed341": {
+      "importer": "gltf-mesh",
+      "uuid": "c9be04ed-17ef-4b18-af2f-ce6440ae29bd@ed341",
+      "displayName": "",
+      "id": "ed341",
+      "name": "Sphere.001.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "a3e47": {
+      "importer": "gltf-scene",
+      "uuid": "c9be04ed-17ef-4b18-af2f-ce6440ae29bd@a3e47",
+      "displayName": "",
+      "id": "a3e47",
+      "name": "uv2-sphere.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "c9be04ed-17ef-4b18-af2f-ce6440ae29bd@a3e47",
+    "assetFinder": {
+      "meshes": [
+        "c9be04ed-17ef-4b18-af2f-ce6440ae29bd@ed341"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "c9be04ed-17ef-4b18-af2f-ce6440ae29bd@a3e47"
+      ]
+    }
+  }
+}

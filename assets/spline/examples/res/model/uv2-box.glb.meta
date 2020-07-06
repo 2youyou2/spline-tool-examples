@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.21",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "dce2c679-d0de-46c2-98b4-843c598c92cc",
+  "files": [],
+  "subMetas": {
+    "2f6d1": {
+      "importer": "gltf-mesh",
+      "uuid": "dce2c679-d0de-46c2-98b4-843c598c92cc@2f6d1",
+      "displayName": "",
+      "id": "2f6d1",
+      "name": "Cube.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".json",
+        ".bin"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "b4e6b": {
+      "importer": "gltf-material",
+      "uuid": "dce2c679-d0de-46c2-98b4-843c598c92cc@b4e6b",
+      "displayName": "",
+      "id": "b4e6b",
+      "name": "Material.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "da1f6": {
+      "importer": "gltf-scene",
+      "uuid": "dce2c679-d0de-46c2-98b4-843c598c92cc@da1f6",
+      "displayName": "",
+      "id": "da1f6",
+      "name": "uv2-box.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "dce2c679-d0de-46c2-98b4-843c598c92cc@da1f6",
+    "assetFinder": {
+      "meshes": [
+        "dce2c679-d0de-46c2-98b4-843c598c92cc@2f6d1"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "dce2c679-d0de-46c2-98b4-843c598c92cc@b4e6b"
+      ],
+      "scenes": [
+        "dce2c679-d0de-46c2-98b4-843c598c92cc@da1f6"
+      ]
+    }
+  }
+}

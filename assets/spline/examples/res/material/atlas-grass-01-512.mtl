@@ -10,6 +10,8 @@
   "_defines": [
     {
       "USE_NORMAL_MAP": true,
+      "USE_LIGHTMAP": true,
+      "HAS_SECOND_UV": true,
       "USE_ALBEDO_MAP": true,
       "USE_ALPHA_TEST": true
     }
