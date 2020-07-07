@@ -48924,7 +48924,7 @@
       "b": 223,
       "a": 1
     },
-    "_skyIllum": 30000,
+    "_skyIllum": 35000,
     "_groundAlbedo": {
       "__type__": "cc.Color",
       "r": 51,
