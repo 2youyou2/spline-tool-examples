@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.18",
+  "importer": "image",
+  "imported": true,
+  "uuid": "574a9325-a28e-4e46-9db5-8b0c4ee3f18f",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "574a9325-a28e-4e46-9db5-8b0c4ee3f18f@6c48a",
+      "displayName": "PW_Grass_Dandelion",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "574a9325-a28e-4e46-9db5-8b0c4ee3f18f"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "574a9325-a28e-4e46-9db5-8b0c4ee3f18f@6c48a"
+  }
+}

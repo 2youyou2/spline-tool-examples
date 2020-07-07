@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.18",
+  "importer": "image",
+  "imported": true,
+  "uuid": "c9a9b493-8a05-4d4b-ae3e-5dd4b020fa50",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "c9a9b493-8a05-4d4b-ae3e-5dd4b020fa50@6c48a",
+      "displayName": "T_Fir_bark_01_MT_AO_G",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "c9a9b493-8a05-4d4b-ae3e-5dd4b020fa50"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "c9a9b493-8a05-4d4b-ae3e-5dd4b020fa50@6c48a"
+  }
+}

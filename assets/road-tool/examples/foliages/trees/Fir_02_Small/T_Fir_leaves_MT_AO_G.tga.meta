@@ -1,0 +1,40 @@
+{
+  "ver": "1.0.18",
+  "importer": "image",
+  "imported": true,
+  "uuid": "cd2516d9-1798-4316-9ef7-f2838847aef9",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "cd2516d9-1798-4316-9ef7-f2838847aef9@6c48a",
+      "displayName": "T_Fir_leaves_MT_AO_G",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.19",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "cd2516d9-1798-4316-9ef7-f2838847aef9"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "cd2516d9-1798-4316-9ef7-f2838847aef9@6c48a"
+  }
+}

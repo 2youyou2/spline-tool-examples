@@ -1,48 +1,56 @@
-2020-07-06 16:11:40 D:\workspace\fireball\editor-3d\tools\lightmap-tools/LightFX http://127.0.0.1:8000 
-2020-07-06 16:11:40 -:Building meshes
-2020-07-06 16:11:40 -:Building terrain
-2020-07-06 16:11:40 -:Building bv scene
-2020-07-06 16:11:41 Start 0
+2020-07-07 10:47:11 D:\workspace\fireball\editor-3d\tools\lightmap-tools/LightFX http://127.0.0.1:8000 
+2020-07-07 10:47:11 -:Building meshes
+2020-07-07 10:47:11 -:Building terrain
+2020-07-07 10:47:11 -:Building bv scene
+2020-07-07 10:47:12 Start 0
 
-2020-07-06 16:11:41 DirectLighting 16
+2020-07-07 10:47:12 DirectLighting 14
 
-2020-07-06 16:11:41 DirectLighting 33
+2020-07-07 10:47:13 DirectLighting 28
 
-2020-07-06 16:11:41 DirectLighting 50
+2020-07-07 10:47:13 DirectLighting 42
 
-2020-07-06 16:11:41 DirectLighting 66
+2020-07-07 10:47:13 DirectLighting 57
 
-2020-07-06 16:11:41 DirectLighting 83
+2020-07-07 10:47:13 DirectLighting 71
 
-2020-07-06 16:11:41 IndirectLighting 16
+2020-07-07 10:47:13 DirectLighting 85
 
-2020-07-06 16:11:41 IndirectLighting 33
+2020-07-07 10:47:13 IndirectLighting 14
 
-2020-07-06 16:11:41 IndirectLighting 50
+2020-07-07 10:47:13 IndirectLighting 28
 
-2020-07-06 16:11:41 IndirectLighting 66
+2020-07-07 10:47:13 IndirectLighting 42
 
-2020-07-06 16:11:41 IndirectLighting 83
+2020-07-07 10:47:13 IndirectLighting 57
 
-2020-07-06 16:11:41  16
+2020-07-07 10:47:13 IndirectLighting 71
 
-2020-07-06 16:11:41  33
+2020-07-07 10:47:13 IndirectLighting 85
 
-2020-07-06 16:11:41  50
+2020-07-07 10:47:13  14
 
-2020-07-06 16:11:41  66
+2020-07-07 10:47:13  28
 
-2020-07-06 16:11:41  83
+2020-07-07 10:47:13  42
 
-2020-07-06 16:11:41 Post Process 16
+2020-07-07 10:47:13  57
 
-2020-07-06 16:11:41 Post Process 33
+2020-07-07 10:47:13  71
 
-2020-07-06 16:11:41 Post Process 50
+2020-07-07 10:47:13  85
 
-2020-07-06 16:11:41 Post Process 66
+2020-07-07 10:47:13 Post Process 14
 
-2020-07-06 16:11:41 Post Process 83
+2020-07-07 10:47:13 Post Process 28
 
-2020-07-06 16:11:41 Post Process 100
+2020-07-07 10:47:13 Post Process 42
+
+2020-07-07 10:47:13 Post Process 57
+
+2020-07-07 10:47:13 Post Process 71
+
+2020-07-07 10:47:13 Post Process 85
+
+2020-07-07 10:47:13 Post Process 100
 

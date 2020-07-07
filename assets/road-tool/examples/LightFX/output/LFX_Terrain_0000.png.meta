@@ -2,7 +2,7 @@
   "ver": "1.0.18",
   "importer": "image",
   "imported": true,
-  "uuid": "b605f5af-e887-4d03-a6c4-76da7b0790a4",
+  "uuid": "e50b8974-e287-49be-bb48-a8d7fc68e4d8",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "b605f5af-e887-4d03-a6c4-76da7b0790a4@6c48a",
+      "uuid": "e50b8974-e287-49be-bb48-a8d7fc68e4d8@6c48a",
       "displayName": "LFX_Terrain_0000",
       "id": "6c48a",
       "name": "texture",
@@ -29,12 +29,12 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "b605f5af-e887-4d03-a6c4-76da7b0790a4"
+        "imageUuidOrDatabaseUri": "e50b8974-e287-49be-bb48-a8d7fc68e4d8"
       }
     }
   },
   "userData": {
     "type": "texture",
-    "redirect": "b605f5af-e887-4d03-a6c4-76da7b0790a4@6c48a"
+    "redirect": "e50b8974-e287-49be-bb48-a8d7fc68e4d8@6c48a"
   }
 }
