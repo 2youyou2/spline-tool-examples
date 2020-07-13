@@ -29,9 +29,6 @@
       },
       {
         "__id__": 49
-      },
-      {
-        "__id__": 150
       }
     ],
     "_active": true,
@@ -39,7 +36,7 @@
     "_prefab": null,
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 153
+      "__id__": 150
     },
     "_id": "17071f16-7fc7-48c7-8fa8-2ef5f9f2a4c0"
   },
@@ -4263,98 +4260,15 @@
     "_id": "3dPj3sTddEyqgiQMm12JBn"
   },
   {
-    "__type__": "cc.Node",
-    "_name": "sea",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 151
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 46.889,
-      "y": 23.704,
-      "z": 92.52
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 50,
-      "y": 1,
-      "z": 50
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "08s1aSNodIw6Rm7Vcg7QvK"
-  },
-  {
-    "__type__": "cc.ModelComponent",
-    "_name": "Plane<ModelComponent>",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 150
-    },
-    "_enabled": true,
-    "_materials": [
-      {
-        "__uuid__": "0b0dd01a-ed07-4e2c-b190-3dc3f826a53e"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 152
-    },
-    "_mesh": {
-      "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@2e76e"
-    },
-    "_shadowCastingMode": 0,
-    "_enableMorph": true,
-    "_id": "90dG2Qt9xAXLXtnvfumlk0"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 154
+      "__id__": 151
     },
     "planarShadows": {
-      "__id__": 155
+      "__id__": 152
     },
     "_skybox": {
-      "__id__": 156
+      "__id__": 153
     }
   },
   {
