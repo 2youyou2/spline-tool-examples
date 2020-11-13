@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "195def10-fb99-49e5-b302-f9fba7c54753",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "195def10-fb99-49e5-b302-f9fba7c54753@6c48a",
+      "displayName": "GSDFedSign-Yel-FallingRock_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "195def10-fb99-49e5-b302-f9fba7c54753"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "195def10-fb99-49e5-b302-f9fba7c54753@6c48a",
+    "hasAlpha": true
+  }
+}

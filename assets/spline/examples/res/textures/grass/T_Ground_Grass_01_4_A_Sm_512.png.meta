@@ -1,5 +1,5 @@
 {
-  "ver": "1.0.18",
+  "ver": "1.0.21",
   "importer": "image",
   "imported": true,
   "uuid": "3d64e366-ca1a-4543-841c-1fc925d7533e",
@@ -14,7 +14,7 @@
       "displayName": "T_Ground_Grass_01_4_A_Sm_512",
       "id": "6c48a",
       "name": "texture",
-      "ver": "1.0.19",
+      "ver": "1.0.20",
       "imported": true,
       "files": [
         ".json"
@@ -35,6 +35,7 @@
   },
   "userData": {
     "type": "texture",
-    "redirect": "3d64e366-ca1a-4543-841c-1fc925d7533e@6c48a"
+    "redirect": "3d64e366-ca1a-4543-841c-1fc925d7533e@6c48a",
+    "hasAlpha": false
   }
 }

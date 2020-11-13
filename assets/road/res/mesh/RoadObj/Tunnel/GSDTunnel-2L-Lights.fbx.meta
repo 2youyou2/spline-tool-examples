@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "7af56277-cb6a-4e0b-90fb-96a0951f2661",
+  "files": [],
+  "subMetas": {
+    "075b6": {
+      "importer": "gltf-mesh",
+      "uuid": "7af56277-cb6a-4e0b-90fb-96a0951f2661@075b6",
+      "displayName": "",
+      "id": "075b6",
+      "name": "GSDTunnel-2L-Lights.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ace8f": {
+      "importer": "gltf-embeded-image",
+      "uuid": "7af56277-cb6a-4e0b-90fb-96a0951f2661@ace8f",
+      "displayName": "",
+      "id": "ace8f",
+      "name": "Map #4.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "f8008": {
+      "importer": "texture",
+      "uuid": "7af56277-cb6a-4e0b-90fb-96a0951f2661@f8008",
+      "displayName": "",
+      "id": "f8008",
+      "name": "Map #4.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "7af56277-cb6a-4e0b-90fb-96a0951f2661@ace8f"
+      }
+    },
+    "6363a": {
+      "importer": "gltf-material",
+      "uuid": "7af56277-cb6a-4e0b-90fb-96a0951f2661@6363a",
+      "displayName": "",
+      "id": "6363a",
+      "name": "03 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "173d2": {
+      "importer": "gltf-scene",
+      "uuid": "7af56277-cb6a-4e0b-90fb-96a0951f2661@173d2",
+      "displayName": "",
+      "id": "173d2",
+      "name": "GSDTunnel-2L-Lights.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #4",
+        "uri": "7af56277-cb6a-4e0b-90fb-96a0951f2661@ace8f"
+      }
+    ],
+    "redirect": "7af56277-cb6a-4e0b-90fb-96a0951f2661@173d2",
+    "assetFinder": {
+      "meshes": [
+        "7af56277-cb6a-4e0b-90fb-96a0951f2661@075b6"
+      ],
+      "skeletons": [],
+      "textures": [
+        "7af56277-cb6a-4e0b-90fb-96a0951f2661@f8008"
+      ],
+      "materials": [
+        "7af56277-cb6a-4e0b-90fb-96a0951f2661@6363a"
+      ],
+      "scenes": [
+        "7af56277-cb6a-4e0b-90fb-96a0951f2661@173d2"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "861413c0-1fae-47cd-8c2f-46a3e5f35903",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "861413c0-1fae-47cd-8c2f-46a3e5f35903@6c48a",
+      "displayName": "GSDSign-861-TollSign_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "861413c0-1fae-47cd-8c2f-46a3e5f35903"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "861413c0-1fae-47cd-8c2f-46a3e5f35903@6c48a",
+    "hasAlpha": true
+  }
+}

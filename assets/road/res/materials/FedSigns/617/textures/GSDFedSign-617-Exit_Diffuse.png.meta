@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "62bff3be-78b3-48b3-a0d9-4bef95cf6456",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "62bff3be-78b3-48b3-a0d9-4bef95cf6456@6c48a",
+      "displayName": "GSDFedSign-617-Exit_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "62bff3be-78b3-48b3-a0d9-4bef95cf6456"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "62bff3be-78b3-48b3-a0d9-4bef95cf6456@6c48a",
+    "hasAlpha": true
+  }
+}

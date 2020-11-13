@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "ba9dc9e0-c015-44fe-8274-7a027bfe4269",
+  "files": [],
+  "subMetas": {
+    "b6d71": {
+      "importer": "gltf-mesh",
+      "uuid": "ba9dc9e0-c015-44fe-8274-7a027bfe4269@b6d71",
+      "displayName": "",
+      "id": "b6d71",
+      "name": "GSDRailing7-10m-Pole.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "d4f45": {
+      "importer": "gltf-embeded-image",
+      "uuid": "ba9dc9e0-c015-44fe-8274-7a027bfe4269@d4f45",
+      "displayName": "",
+      "id": "d4f45",
+      "name": "Map #2.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "1da29": {
+      "importer": "texture",
+      "uuid": "ba9dc9e0-c015-44fe-8274-7a027bfe4269@1da29",
+      "displayName": "",
+      "id": "1da29",
+      "name": "Map #2.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ba9dc9e0-c015-44fe-8274-7a027bfe4269@d4f45"
+      }
+    },
+    "db4d2": {
+      "importer": "gltf-material",
+      "uuid": "ba9dc9e0-c015-44fe-8274-7a027bfe4269@db4d2",
+      "displayName": "",
+      "id": "db4d2",
+      "name": "02 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "912f4": {
+      "importer": "gltf-scene",
+      "uuid": "ba9dc9e0-c015-44fe-8274-7a027bfe4269@912f4",
+      "displayName": "",
+      "id": "912f4",
+      "name": "GSDRailing7-10m-Pole.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #2",
+        "uri": "ba9dc9e0-c015-44fe-8274-7a027bfe4269@d4f45"
+      }
+    ],
+    "redirect": "ba9dc9e0-c015-44fe-8274-7a027bfe4269@912f4",
+    "assetFinder": {
+      "meshes": [
+        "ba9dc9e0-c015-44fe-8274-7a027bfe4269@b6d71"
+      ],
+      "skeletons": [],
+      "textures": [
+        "ba9dc9e0-c015-44fe-8274-7a027bfe4269@1da29"
+      ],
+      "materials": [
+        "ba9dc9e0-c015-44fe-8274-7a027bfe4269@db4d2"
+      ],
+      "scenes": [
+        "ba9dc9e0-c015-44fe-8274-7a027bfe4269@912f4"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

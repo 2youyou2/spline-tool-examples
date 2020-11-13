@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "1abdc8e7-1904-474e-88d5-8d253de9660b",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "1abdc8e7-1904-474e-88d5-8d253de9660b@6c48a",
+      "displayName": "GSDInterCenter-None-2L-3",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "1abdc8e7-1904-474e-88d5-8d253de9660b"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "1abdc8e7-1904-474e-88d5-8d253de9660b@6c48a",
+    "hasAlpha": true
+  }
+}

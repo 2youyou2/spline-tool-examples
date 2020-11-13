@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "758fe8f9-cd76-433f-878b-7a23bfa006c9",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "758fe8f9-cd76-433f-878b-7a23bfa006c9@6c48a",
+      "displayName": "GSDFedSign-Yel-ChildrenPlay1_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "758fe8f9-cd76-433f-878b-7a23bfa006c9"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "758fe8f9-cd76-433f-878b-7a23bfa006c9@6c48a",
+    "hasAlpha": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "72bd7140-df31-43fc-80c3-2d625e2a40fb",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "72bd7140-df31-43fc-80c3-2d625e2a40fb@6c48a",
+      "displayName": "GSDFedSign-G-Ark8_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "72bd7140-df31-43fc-80c3-2d625e2a40fb"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "72bd7140-df31-43fc-80c3-2d625e2a40fb@6c48a",
+    "hasAlpha": true
+  }
+}

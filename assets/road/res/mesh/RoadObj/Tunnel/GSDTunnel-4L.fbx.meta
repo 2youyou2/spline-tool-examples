@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "ff192e4b-40cc-4b78-9aa3-06cab26eabb7",
+  "files": [],
+  "subMetas": {
+    "b8367": {
+      "importer": "gltf-mesh",
+      "uuid": "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@b8367",
+      "displayName": "",
+      "id": "b8367",
+      "name": "GSDTunnel-4L.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "873ed": {
+      "importer": "gltf-embeded-image",
+      "uuid": "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@873ed",
+      "displayName": "",
+      "id": "873ed",
+      "name": "Map #6.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "53e01": {
+      "importer": "texture",
+      "uuid": "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@53e01",
+      "displayName": "",
+      "id": "53e01",
+      "name": "Map #6.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@873ed"
+      }
+    },
+    "c4114": {
+      "importer": "gltf-material",
+      "uuid": "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@c4114",
+      "displayName": "",
+      "id": "c4114",
+      "name": "07 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "9edd6": {
+      "importer": "gltf-scene",
+      "uuid": "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@9edd6",
+      "displayName": "",
+      "id": "9edd6",
+      "name": "GSDTunnel-4L.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #6",
+        "uri": "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@873ed"
+      }
+    ],
+    "redirect": "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@9edd6",
+    "assetFinder": {
+      "meshes": [
+        "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@b8367"
+      ],
+      "skeletons": [],
+      "textures": [
+        "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@53e01"
+      ],
+      "materials": [
+        "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@c4114"
+      ],
+      "scenes": [
+        "ff192e4b-40cc-4b78-9aa3-06cab26eabb7@9edd6"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

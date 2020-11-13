@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "95482a0d-958d-4f73-b565-d6a8cdac654d",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "95482a0d-958d-4f73-b565-d6a8cdac654d@6c48a",
+      "displayName": "GSDFedSign-Yel-SchoolBusStop3_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "95482a0d-958d-4f73-b565-d6a8cdac654d"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "95482a0d-958d-4f73-b565-d6a8cdac654d@6c48a",
+    "hasAlpha": true
+  }
+}

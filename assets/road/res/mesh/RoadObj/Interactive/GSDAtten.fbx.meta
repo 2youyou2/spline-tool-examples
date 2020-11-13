@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "0c725294-e253-43bd-b8a3-e4fcd310a34d",
+  "files": [],
+  "subMetas": {
+    "59253": {
+      "importer": "gltf-material",
+      "uuid": "0c725294-e253-43bd-b8a3-e4fcd310a34d@59253",
+      "displayName": "",
+      "id": "59253",
+      "name": "08 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "d3d66": {
+      "importer": "gltf-mesh",
+      "uuid": "0c725294-e253-43bd-b8a3-e4fcd310a34d@d3d66",
+      "displayName": "",
+      "id": "d3d66",
+      "name": "GSDAtten.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "876a7": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0c725294-e253-43bd-b8a3-e4fcd310a34d@876a7",
+      "displayName": "",
+      "id": "876a7",
+      "name": "Map #7.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "8b7bb": {
+      "importer": "texture",
+      "uuid": "0c725294-e253-43bd-b8a3-e4fcd310a34d@8b7bb",
+      "displayName": "",
+      "id": "8b7bb",
+      "name": "Map #7.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0c725294-e253-43bd-b8a3-e4fcd310a34d@876a7"
+      }
+    },
+    "eb2f1": {
+      "importer": "gltf-scene",
+      "uuid": "0c725294-e253-43bd-b8a3-e4fcd310a34d@eb2f1",
+      "displayName": "",
+      "id": "eb2f1",
+      "name": "GSDAtten.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #7",
+        "uri": "0c725294-e253-43bd-b8a3-e4fcd310a34d@876a7"
+      }
+    ],
+    "redirect": "0c725294-e253-43bd-b8a3-e4fcd310a34d@eb2f1",
+    "assetFinder": {
+      "meshes": [
+        "0c725294-e253-43bd-b8a3-e4fcd310a34d@d3d66"
+      ],
+      "skeletons": [],
+      "textures": [
+        "0c725294-e253-43bd-b8a3-e4fcd310a34d@8b7bb"
+      ],
+      "materials": [
+        "0c725294-e253-43bd-b8a3-e4fcd310a34d@59253"
+      ],
+      "scenes": [
+        "0c725294-e253-43bd-b8a3-e4fcd310a34d@eb2f1"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

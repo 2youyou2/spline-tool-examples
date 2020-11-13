@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f",
+  "files": [],
+  "subMetas": {
+    "bc669": {
+      "importer": "gltf-mesh",
+      "uuid": "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@bc669",
+      "displayName": "",
+      "id": "bc669",
+      "name": "SteelBeam.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "915b2": {
+      "importer": "gltf-embeded-image",
+      "uuid": "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@915b2",
+      "displayName": "",
+      "id": "915b2",
+      "name": "Map #5.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "f3416": {
+      "importer": "texture",
+      "uuid": "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@f3416",
+      "displayName": "",
+      "id": "f3416",
+      "name": "Map #5.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@915b2"
+      }
+    },
+    "6363a": {
+      "importer": "gltf-material",
+      "uuid": "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@6363a",
+      "displayName": "",
+      "id": "6363a",
+      "name": "03 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "fdfdc": {
+      "importer": "gltf-scene",
+      "uuid": "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@fdfdc",
+      "displayName": "",
+      "id": "fdfdc",
+      "name": "SteelBeamBase.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #5",
+        "uri": "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@915b2"
+      }
+    ],
+    "redirect": "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@fdfdc",
+    "assetFinder": {
+      "meshes": [
+        "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@bc669"
+      ],
+      "skeletons": [],
+      "textures": [
+        "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@f3416"
+      ],
+      "materials": [
+        "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@6363a"
+      ],
+      "scenes": [
+        "85b0a3e4-5d3b-448c-8d15-93f8f22aa59f@fdfdc"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

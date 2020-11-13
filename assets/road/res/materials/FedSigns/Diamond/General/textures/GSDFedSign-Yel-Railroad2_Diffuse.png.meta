@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "deb6154f-8217-4b16-b771-a61c2dd56a2d",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "deb6154f-8217-4b16-b771-a61c2dd56a2d@6c48a",
+      "displayName": "GSDFedSign-Yel-Railroad2_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "deb6154f-8217-4b16-b771-a61c2dd56a2d"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "deb6154f-8217-4b16-b771-a61c2dd56a2d@6c48a",
+    "hasAlpha": true
+  }
+}

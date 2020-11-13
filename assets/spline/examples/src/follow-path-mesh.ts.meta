@@ -1,5 +1,5 @@
 {
-  "ver": "2.0.14",
+  "ver": "4.0.3",
   "importer": "typescript",
   "imported": true,
   "uuid": "f58d1645-cf2c-4296-8a18-6dc74dcfa3b5",
@@ -10,6 +10,7 @@
   "subMetas": {},
   "userData": {
     "importAsPlugin": false,
-    "moduleId": "project:///assets/spline/examples/src/follow-path-mesh.js"
+    "moduleId": "project:///assets/spline/examples/src/follow-path-mesh.js",
+    "importerSettings": 7
   }
 }

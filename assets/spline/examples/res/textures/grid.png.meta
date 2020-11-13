@@ -1,5 +1,5 @@
 {
-  "ver": "1.0.18",
+  "ver": "1.0.21",
   "importer": "image",
   "imported": true,
   "uuid": "03dc0beb-de85-4b3f-8c2f-a2920cda3f8d",
@@ -14,7 +14,7 @@
       "displayName": "grid",
       "id": "6c48a",
       "name": "texture",
-      "ver": "1.0.19",
+      "ver": "1.0.20",
       "imported": true,
       "files": [
         ".json"
@@ -35,6 +35,7 @@
   },
   "userData": {
     "type": "texture",
-    "redirect": "03dc0beb-de85-4b3f-8c2f-a2920cda3f8d@6c48a"
+    "redirect": "03dc0beb-de85-4b3f-8c2f-a2920cda3f8d@6c48a",
+    "hasAlpha": true
   }
 }

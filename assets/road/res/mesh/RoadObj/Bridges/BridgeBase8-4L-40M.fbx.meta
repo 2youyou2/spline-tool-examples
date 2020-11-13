@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "10455681-f43b-48ad-981e-e28346a9be8e",
+  "files": [],
+  "subMetas": {
+    "33dd2": {
+      "importer": "gltf-mesh",
+      "uuid": "10455681-f43b-48ad-981e-e28346a9be8e@33dd2",
+      "displayName": "",
+      "id": "33dd2",
+      "name": "BridgeBase8-4L-40M.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "10455681-f43b-48ad-981e-e28346a9be8e@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "10455681-f43b-48ad-981e-e28346a9be8e@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "10455681-f43b-48ad-981e-e28346a9be8e@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "10455681-f43b-48ad-981e-e28346a9be8e@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "c9c3a": {
+      "importer": "gltf-scene",
+      "uuid": "10455681-f43b-48ad-981e-e28346a9be8e@c9c3a",
+      "displayName": "",
+      "id": "c9c3a",
+      "name": "BridgeBase8-4L-40M.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "10455681-f43b-48ad-981e-e28346a9be8e@32d96"
+      }
+    ],
+    "redirect": "10455681-f43b-48ad-981e-e28346a9be8e@c9c3a",
+    "assetFinder": {
+      "meshes": [
+        "10455681-f43b-48ad-981e-e28346a9be8e@33dd2"
+      ],
+      "skeletons": [],
+      "textures": [
+        "10455681-f43b-48ad-981e-e28346a9be8e@ab932"
+      ],
+      "materials": [
+        "10455681-f43b-48ad-981e-e28346a9be8e@d90a4"
+      ],
+      "scenes": [
+        "10455681-f43b-48ad-981e-e28346a9be8e@c9c3a"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

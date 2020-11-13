@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac",
+  "files": [],
+  "subMetas": {
+    "83a33": {
+      "importer": "gltf-mesh",
+      "uuid": "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@83a33",
+      "displayName": "",
+      "id": "83a33",
+      "name": "SuspCableHolder.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "efc5f": {
+      "importer": "gltf-scene",
+      "uuid": "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@efc5f",
+      "displayName": "",
+      "id": "efc5f",
+      "name": "SuspCableHolder.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@32d96"
+      }
+    ],
+    "redirect": "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@efc5f",
+    "assetFinder": {
+      "meshes": [
+        "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@83a33"
+      ],
+      "skeletons": [],
+      "textures": [
+        "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@ab932"
+      ],
+      "materials": [
+        "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@d90a4"
+      ],
+      "scenes": [
+        "c3a6f0a3-dc2e-4d6f-89a2-4cb0a4cbc4ac@efc5f"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

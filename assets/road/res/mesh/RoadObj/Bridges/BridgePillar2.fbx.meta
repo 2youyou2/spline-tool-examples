@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1d22008b-b8a0-4090-a753-ae956d4abf72",
+  "files": [],
+  "subMetas": {
+    "fd316": {
+      "importer": "gltf-mesh",
+      "uuid": "1d22008b-b8a0-4090-a753-ae956d4abf72@fd316",
+      "displayName": "",
+      "id": "fd316",
+      "name": "BridgePillar2-2L.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "1d22008b-b8a0-4090-a753-ae956d4abf72@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "1d22008b-b8a0-4090-a753-ae956d4abf72@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "1d22008b-b8a0-4090-a753-ae956d4abf72@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "1d22008b-b8a0-4090-a753-ae956d4abf72@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "abcad": {
+      "importer": "gltf-scene",
+      "uuid": "1d22008b-b8a0-4090-a753-ae956d4abf72@abcad",
+      "displayName": "",
+      "id": "abcad",
+      "name": "BridgePillar2.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "1d22008b-b8a0-4090-a753-ae956d4abf72@32d96"
+      }
+    ],
+    "redirect": "1d22008b-b8a0-4090-a753-ae956d4abf72@abcad",
+    "assetFinder": {
+      "meshes": [
+        "1d22008b-b8a0-4090-a753-ae956d4abf72@fd316"
+      ],
+      "skeletons": [],
+      "textures": [
+        "1d22008b-b8a0-4090-a753-ae956d4abf72@ab932"
+      ],
+      "materials": [
+        "1d22008b-b8a0-4090-a753-ae956d4abf72@d90a4"
+      ],
+      "scenes": [
+        "1d22008b-b8a0-4090-a753-ae956d4abf72@abcad"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

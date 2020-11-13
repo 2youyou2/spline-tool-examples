@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "a0cdaf76-2628-4e88-8043-dc1f7e8126b7",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "a0cdaf76-2628-4e88-8043-dc1f7e8126b7@6c48a",
+      "displayName": "GSDFedSign-Yel-TankCrossing_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "a0cdaf76-2628-4e88-8043-dc1f7e8126b7"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "a0cdaf76-2628-4e88-8043-dc1f7e8126b7@6c48a",
+    "hasAlpha": true
+  }
+}

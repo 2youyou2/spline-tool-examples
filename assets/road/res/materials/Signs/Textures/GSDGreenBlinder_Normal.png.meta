@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "abbdab24-ba20-46c2-9e4f-02b049296040",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "abbdab24-ba20-46c2-9e4f-02b049296040@6c48a",
+      "displayName": "GSDGreenBlinder_Normal",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "abbdab24-ba20-46c2-9e4f-02b049296040"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "abbdab24-ba20-46c2-9e4f-02b049296040@6c48a",
+    "hasAlpha": true
+  }
+}

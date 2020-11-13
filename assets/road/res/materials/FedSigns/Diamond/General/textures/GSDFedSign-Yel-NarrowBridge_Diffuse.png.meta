@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "1cc02ba8-d546-49c4-824f-8a5b589d6271",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "1cc02ba8-d546-49c4-824f-8a5b589d6271@6c48a",
+      "displayName": "GSDFedSign-Yel-NarrowBridge_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "1cc02ba8-d546-49c4-824f-8a5b589d6271"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "1cc02ba8-d546-49c4-824f-8a5b589d6271@6c48a",
+    "hasAlpha": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "1d4a5615-7239-4ebb-b3cf-f4b151668bb4",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "1d4a5615-7239-4ebb-b3cf-f4b151668bb4@6c48a",
+      "displayName": "GSDFedSign-Yel-Turn270_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "1d4a5615-7239-4ebb-b3cf-f4b151668bb4"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "1d4a5615-7239-4ebb-b3cf-f4b151668bb4@6c48a",
+    "hasAlpha": true
+  }
+}

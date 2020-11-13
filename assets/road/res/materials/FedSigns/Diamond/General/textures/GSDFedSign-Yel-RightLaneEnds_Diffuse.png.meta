@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d88a009e-ad17-434a-9b9e-157dd64c61fe",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d88a009e-ad17-434a-9b9e-157dd64c61fe@6c48a",
+      "displayName": "GSDFedSign-Yel-RightLaneEnds_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "d88a009e-ad17-434a-9b9e-157dd64c61fe"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "d88a009e-ad17-434a-9b9e-157dd64c61fe@6c48a",
+    "hasAlpha": true
+  }
+}

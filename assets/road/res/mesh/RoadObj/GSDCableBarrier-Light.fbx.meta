@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "ca7f3a37-d73e-4d2e-9373-74fdab114ae0",
+  "files": [],
+  "subMetas": {
+    "5324e": {
+      "importer": "gltf-mesh",
+      "uuid": "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@5324e",
+      "displayName": "",
+      "id": "5324e",
+      "name": "GSDCableBarrier-Light.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "a2364": {
+      "importer": "gltf-embeded-image",
+      "uuid": "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@a2364",
+      "displayName": "",
+      "id": "a2364",
+      "name": "Map #1.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "6e70c": {
+      "importer": "texture",
+      "uuid": "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@6e70c",
+      "displayName": "",
+      "id": "6e70c",
+      "name": "Map #1.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@a2364"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "7fa52": {
+      "importer": "gltf-scene",
+      "uuid": "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@7fa52",
+      "displayName": "",
+      "id": "7fa52",
+      "name": "GSDCableBarrier-Light.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #1",
+        "uri": "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@a2364"
+      }
+    ],
+    "redirect": "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@7fa52",
+    "assetFinder": {
+      "meshes": [
+        "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@5324e"
+      ],
+      "skeletons": [],
+      "textures": [
+        "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@6e70c"
+      ],
+      "materials": [
+        "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@d90a4"
+      ],
+      "scenes": [
+        "ca7f3a37-d73e-4d2e-9373-74fdab114ae0@7fa52"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

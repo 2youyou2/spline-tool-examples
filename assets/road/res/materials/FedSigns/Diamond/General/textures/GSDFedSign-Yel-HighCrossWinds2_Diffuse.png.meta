@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "106b08fd-d52e-4bd4-9ba7-d645097bec4e",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "106b08fd-d52e-4bd4-9ba7-d645097bec4e@6c48a",
+      "displayName": "GSDFedSign-Yel-HighCrossWinds2_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "106b08fd-d52e-4bd4-9ba7-d645097bec4e"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "106b08fd-d52e-4bd4-9ba7-d645097bec4e@6c48a",
+    "hasAlpha": true
+  }
+}

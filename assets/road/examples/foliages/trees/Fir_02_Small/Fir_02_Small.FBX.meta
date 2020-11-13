@@ -1,0 +1,181 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "d0164205-e8da-49fb-b7d5-7519955e8b0f",
+  "files": [],
+  "subMetas": {
+    "77111": {
+      "importer": "gltf-mesh",
+      "uuid": "d0164205-e8da-49fb-b7d5-7519955e8b0f@77111",
+      "displayName": "",
+      "id": "77111",
+      "name": "Fir_02_small_LOD3.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 2
+      }
+    },
+    "53b48": {
+      "importer": "gltf-mesh",
+      "uuid": "d0164205-e8da-49fb-b7d5-7519955e8b0f@53b48",
+      "displayName": "",
+      "id": "53b48",
+      "name": "Fir_02_small_LOD1.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "6e27c": {
+      "importer": "gltf-mesh",
+      "uuid": "d0164205-e8da-49fb-b7d5-7519955e8b0f@6e27c",
+      "displayName": "",
+      "id": "6e27c",
+      "name": "Fir_02_small_LOD2.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 1
+      }
+    },
+    "3fa46": {
+      "importer": "gltf-mesh",
+      "uuid": "d0164205-e8da-49fb-b7d5-7519955e8b0f@3fa46",
+      "displayName": "",
+      "id": "3fa46",
+      "name": "Fir_02_small_LOD0.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 3
+      }
+    },
+    "92e79": {
+      "importer": "gltf-material",
+      "uuid": "d0164205-e8da-49fb-b7d5-7519955e8b0f@92e79",
+      "displayName": "",
+      "id": "92e79",
+      "name": "M_Bark_Fir_01-0.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "a7f3b": {
+      "importer": "gltf-material",
+      "uuid": "d0164205-e8da-49fb-b7d5-7519955e8b0f@a7f3b",
+      "displayName": "",
+      "id": "a7f3b",
+      "name": "M_leaves_Fir-1.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 1
+      }
+    },
+    "8273a": {
+      "importer": "gltf-material",
+      "uuid": "d0164205-e8da-49fb-b7d5-7519955e8b0f@8273a",
+      "displayName": "",
+      "id": "8273a",
+      "name": "M_leaves_Fir-2.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 2
+      }
+    },
+    "07225": {
+      "importer": "gltf-material",
+      "uuid": "d0164205-e8da-49fb-b7d5-7519955e8b0f@07225",
+      "displayName": "",
+      "id": "07225",
+      "name": "M_Bark_Fir_01-3.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 3
+      }
+    },
+    "bf17e": {
+      "importer": "gltf-scene",
+      "uuid": "d0164205-e8da-49fb-b7d5-7519955e8b0f@bf17e",
+      "displayName": "",
+      "id": "bf17e",
+      "name": "Fir_02_Small.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "d0164205-e8da-49fb-b7d5-7519955e8b0f@bf17e",
+    "assetFinder": {
+      "meshes": [
+        "d0164205-e8da-49fb-b7d5-7519955e8b0f@53b48",
+        "d0164205-e8da-49fb-b7d5-7519955e8b0f@6e27c",
+        "d0164205-e8da-49fb-b7d5-7519955e8b0f@77111",
+        "d0164205-e8da-49fb-b7d5-7519955e8b0f@3fa46"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "d0164205-e8da-49fb-b7d5-7519955e8b0f@92e79",
+        "d0164205-e8da-49fb-b7d5-7519955e8b0f@a7f3b",
+        "d0164205-e8da-49fb-b7d5-7519955e8b0f@8273a",
+        "d0164205-e8da-49fb-b7d5-7519955e8b0f@07225"
+      ],
+      "scenes": [
+        "d0164205-e8da-49fb-b7d5-7519955e8b0f@bf17e"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

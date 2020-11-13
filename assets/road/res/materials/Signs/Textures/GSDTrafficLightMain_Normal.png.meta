@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "6c0c378d-8058-456e-a859-a271e7387457",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "6c0c378d-8058-456e-a859-a271e7387457@6c48a",
+      "displayName": "GSDTrafficLightMain_Normal",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "6c0c378d-8058-456e-a859-a271e7387457"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "6c0c378d-8058-456e-a859-a271e7387457@6c48a",
+    "hasAlpha": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "b044f413-69df-4835-8d54-ed70900b4730",
+  "files": [],
+  "subMetas": {
+    "94293": {
+      "importer": "gltf-scene",
+      "uuid": "b044f413-69df-4835-8d54-ed70900b4730@94293",
+      "displayName": "",
+      "id": "94293",
+      "name": "GSDSignYieldOnGreen.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "d8009": {
+      "importer": "gltf-mesh",
+      "uuid": "b044f413-69df-4835-8d54-ed70900b4730@d8009",
+      "displayName": "",
+      "id": "d8009",
+      "name": "GSDSignYieldOnGreen.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ea6e2": {
+      "importer": "gltf-material",
+      "uuid": "b044f413-69df-4835-8d54-ed70900b4730@ea6e2",
+      "displayName": "",
+      "id": "ea6e2",
+      "name": "DefaultMaterial.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "b044f413-69df-4835-8d54-ed70900b4730@94293",
+    "assetFinder": {
+      "meshes": [
+        "b044f413-69df-4835-8d54-ed70900b4730@d8009"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "b044f413-69df-4835-8d54-ed70900b4730@ea6e2"
+      ],
+      "scenes": [
+        "b044f413-69df-4835-8d54-ed70900b4730@94293"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

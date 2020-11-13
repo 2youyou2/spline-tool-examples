@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "187b4841-aa90-4c89-a27d-02e46491f618",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "187b4841-aa90-4c89-a27d-02e46491f618@6c48a",
+      "displayName": "GSDTunnelLights_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "187b4841-aa90-4c89-a27d-02e46491f618"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "187b4841-aa90-4c89-a27d-02e46491f618@6c48a",
+    "hasAlpha": true
+  }
+}

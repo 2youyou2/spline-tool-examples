@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "795d7105-dc6d-437d-a367-ceb162e4eb3a",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "795d7105-dc6d-437d-a367-ceb162e4eb3a@6c48a",
+      "displayName": "GSDFedSign-OraConstruction-NewTrafficPatternAhead_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "795d7105-dc6d-437d-a367-ceb162e4eb3a"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "795d7105-dc6d-437d-a367-ceb162e4eb3a@6c48a",
+    "hasAlpha": true
+  }
+}

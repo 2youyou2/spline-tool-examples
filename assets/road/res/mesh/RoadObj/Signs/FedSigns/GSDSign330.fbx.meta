@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "75f6e526-61e4-4280-8532-7b70534c15de",
+  "files": [],
+  "subMetas": {
+    "a9197": {
+      "importer": "gltf-mesh",
+      "uuid": "75f6e526-61e4-4280-8532-7b70534c15de@a9197",
+      "displayName": "",
+      "id": "a9197",
+      "name": "GSDSign330.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "5b823": {
+      "importer": "gltf-embeded-image",
+      "uuid": "75f6e526-61e4-4280-8532-7b70534c15de@5b823",
+      "displayName": "",
+      "id": "5b823",
+      "name": "GSDFedSign-330-Exit25mph_Diffuse.png.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "090c6": {
+      "importer": "texture",
+      "uuid": "75f6e526-61e4-4280-8532-7b70534c15de@090c6",
+      "displayName": "",
+      "id": "090c6",
+      "name": "Map #7655.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "75f6e526-61e4-4280-8532-7b70534c15de@5b823"
+      }
+    },
+    "cd5dd": {
+      "importer": "gltf-material",
+      "uuid": "75f6e526-61e4-4280-8532-7b70534c15de@cd5dd",
+      "displayName": "",
+      "id": "cd5dd",
+      "name": "20 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "b3bf9": {
+      "importer": "gltf-scene",
+      "uuid": "75f6e526-61e4-4280-8532-7b70534c15de@b3bf9",
+      "displayName": "",
+      "id": "b3bf9",
+      "name": "GSDSign330.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "GSDFedSign-330-Exit25mph_Diffuse.png",
+        "uri": "75f6e526-61e4-4280-8532-7b70534c15de@5b823"
+      }
+    ],
+    "redirect": "75f6e526-61e4-4280-8532-7b70534c15de@b3bf9",
+    "assetFinder": {
+      "meshes": [
+        "75f6e526-61e4-4280-8532-7b70534c15de@a9197"
+      ],
+      "skeletons": [],
+      "textures": [
+        "75f6e526-61e4-4280-8532-7b70534c15de@090c6"
+      ],
+      "materials": [
+        "75f6e526-61e4-4280-8532-7b70534c15de@cd5dd"
+      ],
+      "scenes": [
+        "75f6e526-61e4-4280-8532-7b70534c15de@b3bf9"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

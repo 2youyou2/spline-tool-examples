@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "e54751ae-afbc-4e93-a0ab-11e50a5b31be",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "e54751ae-afbc-4e93-a0ab-11e50a5b31be@6c48a",
+      "displayName": "PW_Grass_Pink_Flower_01",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e54751ae-afbc-4e93-a0ab-11e50a5b31be"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "e54751ae-afbc-4e93-a0ab-11e50a5b31be@6c48a",
+    "hasAlpha": true
+  }
+}

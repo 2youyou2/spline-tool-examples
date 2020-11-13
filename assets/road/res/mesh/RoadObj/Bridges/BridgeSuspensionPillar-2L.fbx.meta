@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "4064e857-7513-4714-9828-131b84d47faa",
+  "files": [],
+  "subMetas": {
+    "93538": {
+      "importer": "gltf-scene",
+      "uuid": "4064e857-7513-4714-9828-131b84d47faa@93538",
+      "displayName": "",
+      "id": "93538",
+      "name": "BridgeSuspensionPillar-2L.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "b45fb": {
+      "importer": "gltf-mesh",
+      "uuid": "4064e857-7513-4714-9828-131b84d47faa@b45fb",
+      "displayName": "",
+      "id": "b45fb",
+      "name": "SuspLPillar-2L.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "4064e857-7513-4714-9828-131b84d47faa@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "4064e857-7513-4714-9828-131b84d47faa@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "4064e857-7513-4714-9828-131b84d47faa@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "4064e857-7513-4714-9828-131b84d47faa@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "4064e857-7513-4714-9828-131b84d47faa@32d96"
+      }
+    ],
+    "redirect": "4064e857-7513-4714-9828-131b84d47faa@93538",
+    "assetFinder": {
+      "meshes": [
+        "4064e857-7513-4714-9828-131b84d47faa@b45fb"
+      ],
+      "skeletons": [],
+      "textures": [
+        "4064e857-7513-4714-9828-131b84d47faa@ab932"
+      ],
+      "materials": [
+        "4064e857-7513-4714-9828-131b84d47faa@d90a4"
+      ],
+      "scenes": [
+        "4064e857-7513-4714-9828-131b84d47faa@93538"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

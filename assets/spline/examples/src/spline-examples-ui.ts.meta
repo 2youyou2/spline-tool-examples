@@ -1,5 +1,5 @@
 {
-  "ver": "2.0.14",
+  "ver": "4.0.3",
   "importer": "typescript",
   "imported": true,
   "uuid": "7a185f62-92e9-413f-b17b-bb2dae421773",
@@ -10,6 +10,7 @@
   "subMetas": {},
   "userData": {
     "importAsPlugin": false,
-    "moduleId": "project:///assets/spline/examples/src/spline-examples-ui.js"
+    "moduleId": "project:///assets/spline/examples/src/spline-examples-ui.js",
+    "importerSettings": 7
   }
 }

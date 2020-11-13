@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "e669b7c4-678c-4736-9311-649f3fd569f7",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "e669b7c4-678c-4736-9311-649f3fd569f7@6c48a",
+      "displayName": "GSDFedSign-330-MedianAlertRight_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e669b7c4-678c-4736-9311-649f3fd569f7"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "e669b7c4-678c-4736-9311-649f3fd569f7@6c48a",
+    "hasAlpha": true
+  }
+}

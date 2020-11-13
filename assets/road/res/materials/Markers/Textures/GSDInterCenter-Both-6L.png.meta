@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "36d1317f-797a-484e-81c9-799b9a44399b",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "36d1317f-797a-484e-81c9-799b9a44399b@6c48a",
+      "displayName": "GSDInterCenter-Both-6L",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "36d1317f-797a-484e-81c9-799b9a44399b"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "36d1317f-797a-484e-81c9-799b9a44399b@6c48a",
+    "hasAlpha": true
+  }
+}

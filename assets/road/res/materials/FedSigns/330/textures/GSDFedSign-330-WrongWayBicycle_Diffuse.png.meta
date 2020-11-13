@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "3f6a7e1c-7540-4327-9ad6-8b36e9885be2",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "3f6a7e1c-7540-4327-9ad6-8b36e9885be2@6c48a",
+      "displayName": "GSDFedSign-330-WrongWayBicycle_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "3f6a7e1c-7540-4327-9ad6-8b36e9885be2"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "3f6a7e1c-7540-4327-9ad6-8b36e9885be2@6c48a",
+    "hasAlpha": true
+  }
+}

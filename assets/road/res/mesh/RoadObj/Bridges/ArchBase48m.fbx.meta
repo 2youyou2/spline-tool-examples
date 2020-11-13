@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e",
+  "files": [],
+  "subMetas": {
+    "c4558": {
+      "importer": "gltf-mesh",
+      "uuid": "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@c4558",
+      "displayName": "",
+      "id": "c4558",
+      "name": "ArchBase48m.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "9622e": {
+      "importer": "gltf-scene",
+      "uuid": "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@9622e",
+      "displayName": "",
+      "id": "9622e",
+      "name": "ArchBase48m.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@32d96"
+      }
+    ],
+    "redirect": "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@9622e",
+    "assetFinder": {
+      "meshes": [
+        "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@c4558"
+      ],
+      "skeletons": [],
+      "textures": [
+        "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@ab932"
+      ],
+      "materials": [
+        "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@d90a4"
+      ],
+      "scenes": [
+        "3ca126ce-2bf8-4efe-bdb2-ada915e4a42e@9622e"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

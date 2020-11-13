@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d610ff0e-32c7-4a8c-bfed-f4f1e7c08958",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d610ff0e-32c7-4a8c-bfed-f4f1e7c08958@6c48a",
+      "displayName": "GSDFedSign-Com-BikeMayUseFullLane_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "d610ff0e-32c7-4a8c-bfed-f4f1e7c08958"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "d610ff0e-32c7-4a8c-bfed-f4f1e7c08958@6c48a",
+    "hasAlpha": true
+  }
+}

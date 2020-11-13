@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "4f0f506c-5e02-4b3b-9008-69e82251804b",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "4f0f506c-5e02-4b3b-9008-69e82251804b@6c48a",
+      "displayName": "GSDFedSign-Yel-Bump_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "4f0f506c-5e02-4b3b-9008-69e82251804b"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "4f0f506c-5e02-4b3b-9008-69e82251804b@6c48a",
+    "hasAlpha": true
+  }
+}

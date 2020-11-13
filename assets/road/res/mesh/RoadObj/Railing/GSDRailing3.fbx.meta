@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "5858affb-47b8-43f4-adb0-b45aff4c1bd8",
+  "files": [],
+  "subMetas": {
+    "59253": {
+      "importer": "gltf-material",
+      "uuid": "5858affb-47b8-43f4-adb0-b45aff4c1bd8@59253",
+      "displayName": "",
+      "id": "59253",
+      "name": "08 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "f8ccc": {
+      "importer": "gltf-mesh",
+      "uuid": "5858affb-47b8-43f4-adb0-b45aff4c1bd8@f8ccc",
+      "displayName": "",
+      "id": "f8ccc",
+      "name": "GSDRailing3.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "876a7": {
+      "importer": "gltf-embeded-image",
+      "uuid": "5858affb-47b8-43f4-adb0-b45aff4c1bd8@876a7",
+      "displayName": "",
+      "id": "876a7",
+      "name": "Map #7.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "8b7bb": {
+      "importer": "texture",
+      "uuid": "5858affb-47b8-43f4-adb0-b45aff4c1bd8@8b7bb",
+      "displayName": "",
+      "id": "8b7bb",
+      "name": "Map #7.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5858affb-47b8-43f4-adb0-b45aff4c1bd8@876a7"
+      }
+    },
+    "6c9bb": {
+      "importer": "gltf-scene",
+      "uuid": "5858affb-47b8-43f4-adb0-b45aff4c1bd8@6c9bb",
+      "displayName": "",
+      "id": "6c9bb",
+      "name": "GSDRailing3.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #7",
+        "uri": "5858affb-47b8-43f4-adb0-b45aff4c1bd8@876a7"
+      }
+    ],
+    "redirect": "5858affb-47b8-43f4-adb0-b45aff4c1bd8@6c9bb",
+    "assetFinder": {
+      "meshes": [
+        "5858affb-47b8-43f4-adb0-b45aff4c1bd8@f8ccc"
+      ],
+      "skeletons": [],
+      "textures": [
+        "5858affb-47b8-43f4-adb0-b45aff4c1bd8@8b7bb"
+      ],
+      "materials": [
+        "5858affb-47b8-43f4-adb0-b45aff4c1bd8@59253"
+      ],
+      "scenes": [
+        "5858affb-47b8-43f4-adb0-b45aff4c1bd8@6c9bb"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

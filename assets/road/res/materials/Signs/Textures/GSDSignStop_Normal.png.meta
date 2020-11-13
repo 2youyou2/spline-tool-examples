@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "823270d1-1fb5-49c5-8605-973f0fcb6af3",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "823270d1-1fb5-49c5-8605-973f0fcb6af3@6c48a",
+      "displayName": "GSDSignStop_Normal",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "823270d1-1fb5-49c5-8605-973f0fcb6af3"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "823270d1-1fb5-49c5-8605-973f0fcb6af3@6c48a",
+    "hasAlpha": true
+  }
+}

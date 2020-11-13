@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "fc59ce8b-3dbb-472f-a68a-0f7fff4db8c5",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "fc59ce8b-3dbb-472f-a68a-0f7fff4db8c5@6c48a",
+      "displayName": "GSDFedSign-OraConstruction-RoadMovement1_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "fc59ce8b-3dbb-472f-a68a-0f7fff4db8c5"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "fc59ce8b-3dbb-472f-a68a-0f7fff4db8c5@6c48a",
+    "hasAlpha": true
+  }
+}

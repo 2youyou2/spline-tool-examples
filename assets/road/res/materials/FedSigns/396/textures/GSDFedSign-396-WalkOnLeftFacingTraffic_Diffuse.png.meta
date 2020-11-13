@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "cee65807-6435-4cbf-b4f1-54f2e7d8607e",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "cee65807-6435-4cbf-b4f1-54f2e7d8607e@6c48a",
+      "displayName": "GSDFedSign-396-WalkOnLeftFacingTraffic_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "cee65807-6435-4cbf-b4f1-54f2e7d8607e"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "cee65807-6435-4cbf-b4f1-54f2e7d8607e@6c48a",
+    "hasAlpha": true
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "ver": "1.0.18",
+  "ver": "1.0.21",
   "importer": "image",
   "imported": true,
   "uuid": "bf224397-c699-4ac8-b8f0-9f176aecb63c",
@@ -14,7 +14,7 @@
       "displayName": "T_Ground_Grass_01_4_A_Sm",
       "id": "6c48a",
       "name": "texture",
-      "ver": "1.0.19",
+      "ver": "1.0.20",
       "imported": true,
       "files": [
         ".json"
@@ -36,10 +36,10 @@
   "userData": {
     "type": "texture",
     "redirect": "bf224397-c699-4ac8-b8f0-9f176aecb63c@6c48a",
-    "platformSettings": {
-      "default": {
-        "png": 25
-      }
-    }
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "presetId1605247614058"
+    },
+    "hasAlpha": true
   }
 }

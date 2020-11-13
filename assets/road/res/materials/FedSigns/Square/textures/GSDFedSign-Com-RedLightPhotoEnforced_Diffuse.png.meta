@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "bed413bc-8201-4023-8218-e61ff96f2457",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "bed413bc-8201-4023-8218-e61ff96f2457@6c48a",
+      "displayName": "GSDFedSign-Com-RedLightPhotoEnforced_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bed413bc-8201-4023-8218-e61ff96f2457"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "bed413bc-8201-4023-8218-e61ff96f2457@6c48a",
+    "hasAlpha": true
+  }
+}

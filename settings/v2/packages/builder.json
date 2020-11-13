@@ -1,0 +1,26 @@
+{
+  "textureCompressConfig": {
+    "userPreset": {
+      "presetId1605247614058": {
+        "name": "presetId1605247614058",
+        "options": {
+          "android": {
+            "png": 25
+          },
+          "ios": {
+            "png": 25
+          },
+          "miniGame": {
+            "png": 25
+          },
+          "pc": {
+            "png": 25
+          },
+          "web": {
+            "png": 25
+          }
+        }
+      }
+    }
+  }
+}

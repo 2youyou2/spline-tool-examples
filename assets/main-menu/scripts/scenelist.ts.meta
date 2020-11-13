@@ -1,5 +1,5 @@
 {
-  "ver": "2.0.14",
+  "ver": "4.0.3",
   "importer": "typescript",
   "imported": true,
   "uuid": "56ce0300-7432-47da-a05e-c3232e4d09d6",
@@ -10,6 +10,7 @@
   "subMetas": {},
   "userData": {
     "importAsPlugin": false,
-    "moduleId": "project:///assets/main-menu/scripts/scenelist.js"
+    "moduleId": "project:///assets/main-menu/scripts/scenelist.js",
+    "importerSettings": 7
   }
 }

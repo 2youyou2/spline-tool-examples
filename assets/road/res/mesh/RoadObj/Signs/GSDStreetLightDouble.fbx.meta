@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915",
+  "files": [],
+  "subMetas": {
+    "770e4": {
+      "importer": "gltf-mesh",
+      "uuid": "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@770e4",
+      "displayName": "",
+      "id": "770e4",
+      "name": "GSDStreetLightDouble.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "a2364": {
+      "importer": "gltf-embeded-image",
+      "uuid": "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@a2364",
+      "displayName": "",
+      "id": "a2364",
+      "name": "Map #1.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "6e70c": {
+      "importer": "texture",
+      "uuid": "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@6e70c",
+      "displayName": "",
+      "id": "6e70c",
+      "name": "Map #1.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@a2364"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ccb39": {
+      "importer": "gltf-scene",
+      "uuid": "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@ccb39",
+      "displayName": "",
+      "id": "ccb39",
+      "name": "GSDStreetLightDouble.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #1",
+        "uri": "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@a2364"
+      }
+    ],
+    "redirect": "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@ccb39",
+    "assetFinder": {
+      "meshes": [
+        "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@770e4"
+      ],
+      "skeletons": [],
+      "textures": [
+        "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@6e70c"
+      ],
+      "materials": [
+        "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@d90a4"
+      ],
+      "scenes": [
+        "4d2befdf-87a9-4e91-b4c1-1e58fbb9c915@ccb39"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

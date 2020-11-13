@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "f8402539-f457-4aaf-88c9-a553225f1a69",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "f8402539-f457-4aaf-88c9-a553225f1a69@6c48a",
+      "displayName": "GSDUtilityPole_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f8402539-f457-4aaf-88c9-a553225f1a69"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "f8402539-f457-4aaf-88c9-a553225f1a69@6c48a",
+    "hasAlpha": true
+  }
+}

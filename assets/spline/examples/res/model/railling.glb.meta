@@ -1,5 +1,5 @@
 {
-  "ver": "1.3.21",
+  "ver": "2.0.2",
   "importer": "gltf",
   "imported": true,
   "uuid": "f17391b7-b143-4f38-8bb3-f24e21641205",
@@ -14,8 +14,8 @@
       "ver": "1.1.0",
       "imported": true,
       "files": [
-        ".json",
-        ".bin"
+        ".bin",
+        ".json"
       ],
       "subMetas": {},
       "userData": {

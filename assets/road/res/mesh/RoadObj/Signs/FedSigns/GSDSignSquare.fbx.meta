@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc",
+  "files": [],
+  "subMetas": {
+    "44315": {
+      "importer": "gltf-scene",
+      "uuid": "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@44315",
+      "displayName": "",
+      "id": "44315",
+      "name": "GSDSignSquare.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "45414": {
+      "importer": "gltf-embeded-image",
+      "uuid": "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@45414",
+      "displayName": "",
+      "id": "45414",
+      "name": "GSDFedSign-G-Advise35_Diffuse.png.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "8c596": {
+      "importer": "gltf-mesh",
+      "uuid": "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@8c596",
+      "displayName": "",
+      "id": "8c596",
+      "name": "GSDSignSquare.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "67b79": {
+      "importer": "texture",
+      "uuid": "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@67b79",
+      "displayName": "",
+      "id": "67b79",
+      "name": "Map #7656.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@45414"
+      }
+    },
+    "6230f": {
+      "importer": "gltf-material",
+      "uuid": "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@6230f",
+      "displayName": "",
+      "id": "6230f",
+      "name": "21 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "GSDFedSign-G-Advise35_Diffuse.png",
+        "uri": "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@45414"
+      }
+    ],
+    "redirect": "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@44315",
+    "assetFinder": {
+      "meshes": [
+        "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@8c596"
+      ],
+      "skeletons": [],
+      "textures": [
+        "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@67b79"
+      ],
+      "materials": [
+        "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@6230f"
+      ],
+      "scenes": [
+        "20be6433-b1ce-4499-a7a9-a7ffefbdf9bc@44315"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

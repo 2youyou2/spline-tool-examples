@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "422e8538-3e5b-4906-a384-ef0ea072b578",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "422e8538-3e5b-4906-a384-ef0ea072b578@6c48a",
+      "displayName": "GSDRoad1_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "422e8538-3e5b-4906-a384-ef0ea072b578"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "422e8538-3e5b-4906-a384-ef0ea072b578@6c48a",
+    "hasAlpha": true
+  }
+}

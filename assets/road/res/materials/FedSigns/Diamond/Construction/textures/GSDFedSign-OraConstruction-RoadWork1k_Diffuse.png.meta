@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "455e68c8-7389-48a9-964f-2a27ed8eae26",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "455e68c8-7389-48a9-964f-2a27ed8eae26@6c48a",
+      "displayName": "GSDFedSign-OraConstruction-RoadWork1k_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "455e68c8-7389-48a9-964f-2a27ed8eae26"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "455e68c8-7389-48a9-964f-2a27ed8eae26@6c48a",
+    "hasAlpha": true
+  }
+}

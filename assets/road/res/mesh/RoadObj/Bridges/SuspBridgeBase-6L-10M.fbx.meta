@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "269ef8ff-4673-4d7c-9694-4f30a173f949",
+  "files": [],
+  "subMetas": {
+    "becf4": {
+      "importer": "gltf-mesh",
+      "uuid": "269ef8ff-4673-4d7c-9694-4f30a173f949@becf4",
+      "displayName": "",
+      "id": "becf4",
+      "name": "SuspBridgeBase-6L-10M.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "269ef8ff-4673-4d7c-9694-4f30a173f949@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "269ef8ff-4673-4d7c-9694-4f30a173f949@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "269ef8ff-4673-4d7c-9694-4f30a173f949@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "269ef8ff-4673-4d7c-9694-4f30a173f949@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "3b849": {
+      "importer": "gltf-scene",
+      "uuid": "269ef8ff-4673-4d7c-9694-4f30a173f949@3b849",
+      "displayName": "",
+      "id": "3b849",
+      "name": "SuspBridgeBase-6L-10M.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "269ef8ff-4673-4d7c-9694-4f30a173f949@32d96"
+      }
+    ],
+    "redirect": "269ef8ff-4673-4d7c-9694-4f30a173f949@3b849",
+    "assetFinder": {
+      "meshes": [
+        "269ef8ff-4673-4d7c-9694-4f30a173f949@becf4"
+      ],
+      "skeletons": [],
+      "textures": [
+        "269ef8ff-4673-4d7c-9694-4f30a173f949@ab932"
+      ],
+      "materials": [
+        "269ef8ff-4673-4d7c-9694-4f30a173f949@d90a4"
+      ],
+      "scenes": [
+        "269ef8ff-4673-4d7c-9694-4f30a173f949@3b849"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

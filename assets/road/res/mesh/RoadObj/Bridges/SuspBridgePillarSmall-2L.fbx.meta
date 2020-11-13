@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "f617cfb8-cf55-438f-b3cb-12fdd8548394",
+  "files": [],
+  "subMetas": {
+    "2f9c3": {
+      "importer": "gltf-mesh",
+      "uuid": "f617cfb8-cf55-438f-b3cb-12fdd8548394@2f9c3",
+      "displayName": "",
+      "id": "2f9c3",
+      "name": "SuspSmallPillar-2L.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "f617cfb8-cf55-438f-b3cb-12fdd8548394@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "f617cfb8-cf55-438f-b3cb-12fdd8548394@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f617cfb8-cf55-438f-b3cb-12fdd8548394@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "f617cfb8-cf55-438f-b3cb-12fdd8548394@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "f5e9a": {
+      "importer": "gltf-scene",
+      "uuid": "f617cfb8-cf55-438f-b3cb-12fdd8548394@f5e9a",
+      "displayName": "",
+      "id": "f5e9a",
+      "name": "SuspBridgePillarSmall-2L.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "f617cfb8-cf55-438f-b3cb-12fdd8548394@32d96"
+      }
+    ],
+    "redirect": "f617cfb8-cf55-438f-b3cb-12fdd8548394@f5e9a",
+    "assetFinder": {
+      "meshes": [
+        "f617cfb8-cf55-438f-b3cb-12fdd8548394@2f9c3"
+      ],
+      "skeletons": [],
+      "textures": [
+        "f617cfb8-cf55-438f-b3cb-12fdd8548394@ab932"
+      ],
+      "materials": [
+        "f617cfb8-cf55-438f-b3cb-12fdd8548394@d90a4"
+      ],
+      "scenes": [
+        "f617cfb8-cf55-438f-b3cb-12fdd8548394@f5e9a"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

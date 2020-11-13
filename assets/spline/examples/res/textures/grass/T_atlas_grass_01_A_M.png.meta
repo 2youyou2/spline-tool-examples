@@ -1,5 +1,5 @@
 {
-  "ver": "1.0.18",
+  "ver": "1.0.21",
   "importer": "image",
   "imported": true,
   "uuid": "0dba6fe1-605e-4279-9685-d506912849da",
@@ -14,7 +14,7 @@
       "displayName": "T_atlas_grass_01_A_M",
       "id": "6c48a",
       "name": "texture",
-      "ver": "1.0.19",
+      "ver": "1.0.20",
       "imported": true,
       "files": [
         ".json"
@@ -36,10 +36,10 @@
   "userData": {
     "type": "texture",
     "redirect": "0dba6fe1-605e-4279-9685-d506912849da@6c48a",
-    "platformSettings": {
-      "default": {
-        "png": 25
-      }
-    }
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "presetId1605247614058"
+    },
+    "hasAlpha": true
   }
 }

@@ -1,0 +1,16 @@
+{
+  "ver": "4.0.3",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "8109be70-d35c-46b6-90b6-f962e43b847a",
+  "files": [
+    ".js",
+    ".trans"
+  ],
+  "subMetas": {},
+  "userData": {
+    "importAsPlugin": false,
+    "moduleId": "project:///assets/road/src/road-tool.js",
+    "importerSettings": 7
+  }
+}

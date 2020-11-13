@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6",
+  "files": [],
+  "subMetas": {
+    "59972": {
+      "importer": "texture",
+      "uuid": "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@59972",
+      "displayName": "",
+      "id": "59972",
+      "name": "Map #7647.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@d4eae"
+      }
+    },
+    "2a2b7": {
+      "importer": "gltf-mesh",
+      "uuid": "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@2a2b7",
+      "displayName": "",
+      "id": "2a2b7",
+      "name": "GSDRoadBarrel3.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "d4eae": {
+      "importer": "gltf-embeded-image",
+      "uuid": "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@d4eae",
+      "displayName": "",
+      "id": "d4eae",
+      "name": "Map #7647.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "566ed": {
+      "importer": "gltf-material",
+      "uuid": "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@566ed",
+      "displayName": "",
+      "id": "566ed",
+      "name": "09 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "10b9d": {
+      "importer": "gltf-scene",
+      "uuid": "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@10b9d",
+      "displayName": "",
+      "id": "10b9d",
+      "name": "GSDRoadBarrel3.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #7647",
+        "uri": "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@d4eae"
+      }
+    ],
+    "redirect": "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@10b9d",
+    "assetFinder": {
+      "meshes": [
+        "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@2a2b7"
+      ],
+      "skeletons": [],
+      "textures": [
+        "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@59972"
+      ],
+      "materials": [
+        "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@566ed"
+      ],
+      "scenes": [
+        "7fe52d1d-c803-48f1-a398-d82cb6a3ecf6@10b9d"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

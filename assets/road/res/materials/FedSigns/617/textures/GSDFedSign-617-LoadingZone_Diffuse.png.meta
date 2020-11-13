@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "46324a76-146e-411b-969e-e2e14583b9b0",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "46324a76-146e-411b-969e-e2e14583b9b0@6c48a",
+      "displayName": "GSDFedSign-617-LoadingZone_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "46324a76-146e-411b-969e-e2e14583b9b0"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "46324a76-146e-411b-969e-e2e14583b9b0@6c48a",
+    "hasAlpha": true
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "ver": "1.0.18",
+  "ver": "1.0.21",
   "importer": "image",
   "imported": true,
   "uuid": "f6173c8b-8be2-4d99-98c3-7be2d15bf802",
@@ -14,7 +14,7 @@
       "displayName": "LFX_Mesh_0001",
       "id": "6c48a",
       "name": "texture",
-      "ver": "1.0.19",
+      "ver": "1.0.20",
       "imported": true,
       "files": [
         ".json"
@@ -35,6 +35,7 @@
   },
   "userData": {
     "type": "texture",
-    "redirect": "f6173c8b-8be2-4d99-98c3-7be2d15bf802@6c48a"
+    "redirect": "f6173c8b-8be2-4d99-98c3-7be2d15bf802@6c48a",
+    "hasAlpha": false
   }
 }

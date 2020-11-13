@@ -1,0 +1,75 @@
+{
+  "ver": "2.0.2",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "b21ca570-1b3c-4cf8-8d7a-2f3dcc8cea37",
+  "files": [],
+  "subMetas": {
+    "80c75": {
+      "importer": "gltf-mesh",
+      "uuid": "b21ca570-1b3c-4cf8-8d7a-2f3dcc8cea37@80c75",
+      "displayName": "",
+      "id": "80c75",
+      "name": "Mesh.001.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ac35e": {
+      "importer": "gltf-material",
+      "uuid": "b21ca570-1b3c-4cf8-8d7a-2f3dcc8cea37@ac35e",
+      "displayName": "",
+      "id": "ac35e",
+      "name": "02 - Default.001.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "bb1f9": {
+      "importer": "gltf-scene",
+      "uuid": "b21ca570-1b3c-4cf8-8d7a-2f3dcc8cea37@bb1f9",
+      "displayName": "",
+      "id": "bb1f9",
+      "name": "GSDRailing7-10m.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "b21ca570-1b3c-4cf8-8d7a-2f3dcc8cea37@bb1f9",
+    "assetFinder": {
+      "meshes": [
+        "b21ca570-1b3c-4cf8-8d7a-2f3dcc8cea37@80c75"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "b21ca570-1b3c-4cf8-8d7a-2f3dcc8cea37@ac35e"
+      ],
+      "scenes": [
+        "b21ca570-1b3c-4cf8-8d7a-2f3dcc8cea37@bb1f9"
+      ]
+    }
+  }
+}

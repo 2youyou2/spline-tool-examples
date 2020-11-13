@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "e361fa8a-7fb3-45ef-9081-4ce4a07eb564",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "e361fa8a-7fb3-45ef-9081-4ce4a07eb564@6c48a",
+      "displayName": "GSDConcrete3_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e361fa8a-7fb3-45ef-9081-4ce4a07eb564"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "e361fa8a-7fb3-45ef-9081-4ce4a07eb564@6c48a",
+    "hasAlpha": true
+  }
+}

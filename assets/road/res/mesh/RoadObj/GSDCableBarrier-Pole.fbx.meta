@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "c9497c42-8550-472e-a88e-6ab8525abc78",
+  "files": [],
+  "subMetas": {
+    "96f03": {
+      "importer": "gltf-mesh",
+      "uuid": "c9497c42-8550-472e-a88e-6ab8525abc78@96f03",
+      "displayName": "",
+      "id": "96f03",
+      "name": "GSDCableBarrier-Pole.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "a2364": {
+      "importer": "gltf-embeded-image",
+      "uuid": "c9497c42-8550-472e-a88e-6ab8525abc78@a2364",
+      "displayName": "",
+      "id": "a2364",
+      "name": "Map #1.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "6e70c": {
+      "importer": "texture",
+      "uuid": "c9497c42-8550-472e-a88e-6ab8525abc78@6e70c",
+      "displayName": "",
+      "id": "6e70c",
+      "name": "Map #1.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "c9497c42-8550-472e-a88e-6ab8525abc78@a2364"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "c9497c42-8550-472e-a88e-6ab8525abc78@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "e174b": {
+      "importer": "gltf-scene",
+      "uuid": "c9497c42-8550-472e-a88e-6ab8525abc78@e174b",
+      "displayName": "",
+      "id": "e174b",
+      "name": "GSDCableBarrier-Pole.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #1",
+        "uri": "c9497c42-8550-472e-a88e-6ab8525abc78@a2364"
+      }
+    ],
+    "redirect": "c9497c42-8550-472e-a88e-6ab8525abc78@e174b",
+    "assetFinder": {
+      "meshes": [
+        "c9497c42-8550-472e-a88e-6ab8525abc78@96f03"
+      ],
+      "skeletons": [],
+      "textures": [
+        "c9497c42-8550-472e-a88e-6ab8525abc78@6e70c"
+      ],
+      "materials": [
+        "c9497c42-8550-472e-a88e-6ab8525abc78@d90a4"
+      ],
+      "scenes": [
+        "c9497c42-8550-472e-a88e-6ab8525abc78@e174b"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

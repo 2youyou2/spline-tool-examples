@@ -78,8 +78,8 @@
     "_id": "70KY90/XlL8aJgGFQLiR6S"
   },
   {
-    "__type__": "cc.CameraComponent",
-    "_name": "Camera<CameraComponent>",
+    "__type__": "cc.Camera",
+    "_name": "Camera<Camera>",
     "_objFlags": 0,
     "node": {
       "__id__": 2
@@ -136,6 +136,9 @@
       },
       {
         "__id__": 18
+      },
+      {
+        "__id__": 49
       }
     ],
     "_prefab": null,
@@ -323,7 +326,7 @@
     "_id": "48DfIvOk5DzKdrc8+hIxDA"
   },
   {
-    "__type__": "cc.UITransformComponent",
+    "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -357,7 +360,7 @@
     "_id": "02uJG4b+5JRqw0t9cejfce"
   },
   {
-    "__type__": "cc.LayoutComponent",
+    "__type__": "cc.Layout",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -385,8 +388,8 @@
     "_id": "2cH7XBm3JHhas8nYpkP/wQ"
   },
   {
-    "__type__": "cc.UITransformComponent",
-    "_name": "view<UITransformComponent>",
+    "__type__": "cc.UITransform",
+    "_name": "view<UITransform>",
     "_objFlags": 0,
     "node": {
       "__id__": 6
@@ -406,8 +409,8 @@
     "_id": "1frCdS+ydHBK2rNdyE+9Lk"
   },
   {
-    "__type__": "cc.MaskComponent",
-    "_name": "view<MaskComponent>",
+    "__type__": "cc.Mask",
+    "_name": "view<Mask>",
     "_objFlags": 0,
     "node": {
       "__id__": 6
@@ -429,8 +432,8 @@
     "_id": "88m91EcLVPvIwBWbOKx307"
   },
   {
-    "__type__": "cc.WidgetComponent",
-    "_name": "view<WidgetComponent>",
+    "__type__": "cc.Widget",
+    "_name": "view<Widget>",
     "_objFlags": 0,
     "node": {
       "__id__": 6
@@ -457,8 +460,8 @@
     "_id": "9cXTTA6Z1H56iXCbrCFk1d"
   },
   {
-    "__type__": "cc.UITransformComponent",
-    "_name": "ScrollView<UITransformComponent>",
+    "__type__": "cc.UITransform",
+    "_name": "ScrollView<UITransform>",
     "_objFlags": 0,
     "node": {
       "__id__": 5
@@ -478,8 +481,8 @@
     "_id": "baEMt0e9NIsYN7Pi5vtr1S"
   },
   {
-    "__type__": "cc.ScrollViewComponent",
-    "_name": "ScrollView<ScrollViewComponent>",
+    "__type__": "cc.ScrollView",
+    "_name": "ScrollView<ScrollView>",
     "_objFlags": 0,
     "node": {
       "__id__": 5
@@ -501,8 +504,8 @@
     "_id": "33LUgKkGtLOavbd4g+rKUs"
   },
   {
-    "__type__": "cc.WidgetComponent",
-    "_name": "ScrollView<WidgetComponent>",
+    "__type__": "cc.Widget",
+    "_name": "ScrollView<Widget>",
     "_objFlags": 0,
     "node": {
       "__id__": 5
@@ -529,7 +532,7 @@
     "_id": "829Nxz6CJBi6td+16e2Vzx"
   },
   {
-    "__type__": "cc.UITransformComponent",
+    "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -550,7 +553,7 @@
     "_id": "e0HDOu9gRF4pYjmrK/cdLX"
   },
   {
-    "__type__": "cc.CanvasComponent",
+    "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -601,6 +604,9 @@
       },
       {
         "__id__": 44
+      },
+      {
+        "__id__": 50
       }
     ],
     "_prefab": null,
@@ -685,8 +691,8 @@
     "_id": "f0PrGmydtOfKRv2gxYAU/z"
   },
   {
-    "__type__": "cc.UITransformComponent",
-    "_name": "back<UITransformComponent>",
+    "__type__": "cc.UITransform",
+    "_name": "back<UITransform>",
     "_objFlags": 0,
     "node": {
       "__id__": 20
@@ -706,8 +712,8 @@
     "_id": "aa0Hd9QctPy4gzA9W9aHjh"
   },
   {
-    "__type__": "cc.SpriteComponent",
-    "_name": "back<SpriteComponent>",
+    "__type__": "cc.Sprite",
+    "_name": "back<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 20
@@ -742,8 +748,8 @@
     "_id": "5as5kcyO5Ml77G6UkPr0Ik"
   },
   {
-    "__type__": "cc.ButtonComponent",
-    "_name": "back<ButtonComponent>",
+    "__type__": "cc.Button",
+    "_name": "back<Button>",
     "_objFlags": 0,
     "node": {
       "__id__": 20
@@ -814,8 +820,8 @@
     "customEventData": ""
   },
   {
-    "__type__": "cc.WidgetComponent",
-    "_name": "back<WidgetComponent>",
+    "__type__": "cc.Widget",
+    "_name": "back<Widget>",
     "_objFlags": 0,
     "node": {
       "__id__": 20
@@ -894,8 +900,8 @@
     "_id": "e0OPpKS/ROg41aZV3bYlJk"
   },
   {
-    "__type__": "cc.UITransformComponent",
-    "_name": "back<UITransformComponent>",
+    "__type__": "cc.UITransform",
+    "_name": "back<UITransform>",
     "_objFlags": 0,
     "node": {
       "__id__": 26
@@ -915,8 +921,8 @@
     "_id": "56nCFodDxKtbb3pHstqsh6"
   },
   {
-    "__type__": "cc.SpriteComponent",
-    "_name": "back<SpriteComponent>",
+    "__type__": "cc.Sprite",
+    "_name": "back<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 26
@@ -951,8 +957,8 @@
     "_id": "55JjDMx3ZBkqZb2T4LAc1H"
   },
   {
-    "__type__": "cc.ButtonComponent",
-    "_name": "back<ButtonComponent>",
+    "__type__": "cc.Button",
+    "_name": "back<Button>",
     "_objFlags": 0,
     "node": {
       "__id__": 26
@@ -1023,8 +1029,8 @@
     "customEventData": ""
   },
   {
-    "__type__": "cc.WidgetComponent",
-    "_name": "back<WidgetComponent>",
+    "__type__": "cc.Widget",
+    "_name": "back<Widget>",
     "_objFlags": 0,
     "node": {
       "__id__": 26
@@ -1103,8 +1109,8 @@
     "_id": "2e0BKM72tIYqBGi1cUN9I6"
   },
   {
-    "__type__": "cc.UITransformComponent",
-    "_name": "back<UITransformComponent>",
+    "__type__": "cc.UITransform",
+    "_name": "back<UITransform>",
     "_objFlags": 0,
     "node": {
       "__id__": 32
@@ -1124,8 +1130,8 @@
     "_id": "c8AqcSVRFHHZzfpcWa8K/E"
   },
   {
-    "__type__": "cc.SpriteComponent",
-    "_name": "back<SpriteComponent>",
+    "__type__": "cc.Sprite",
+    "_name": "back<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 32
@@ -1160,8 +1166,8 @@
     "_id": "21fEJKfzdNK5J23wGcZZ0I"
   },
   {
-    "__type__": "cc.ButtonComponent",
-    "_name": "back<ButtonComponent>",
+    "__type__": "cc.Button",
+    "_name": "back<Button>",
     "_objFlags": 0,
     "node": {
       "__id__": 32
@@ -1232,8 +1238,8 @@
     "customEventData": ""
   },
   {
-    "__type__": "cc.WidgetComponent",
-    "_name": "back<WidgetComponent>",
+    "__type__": "cc.Widget",
+    "_name": "back<Widget>",
     "_objFlags": 0,
     "node": {
       "__id__": 32
@@ -1309,7 +1315,7 @@
     "_id": "00BaM1St1BLKs4+/1jbg/e"
   },
   {
-    "__type__": "cc.UITransformComponent",
+    "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1330,7 +1336,7 @@
     "_id": "c5UEhPAu1Ep6WpWbYEXNnF"
   },
   {
-    "__type__": "cc.BlockInputEventsComponent",
+    "__type__": "cc.BlockInputEvents",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1340,8 +1346,8 @@
     "_id": "0dDugl+Q9GGIUCft9MeU01"
   },
   {
-    "__type__": "cc.WidgetComponent",
-    "_name": "BlockInput<WidgetComponent>",
+    "__type__": "cc.Widget",
+    "_name": "BlockInput<Widget>",
     "_objFlags": 0,
     "node": {
       "__id__": 38
@@ -1368,7 +1374,7 @@
     "_id": "0cVlUbcvJI5IhEP8lhzVef"
   },
   {
-    "__type__": "cc.UITransformComponent",
+    "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1389,7 +1395,7 @@
     "_id": "84R2cC7rFN+YC7S750QxOT"
   },
   {
-    "__type__": "cc.CanvasComponent",
+    "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1424,11 +1430,11 @@
     "ambient": {
       "__id__": 46
     },
-    "planarShadows": {
-      "__id__": 47
-    },
     "_skybox": {
       "__id__": 48
+    },
+    "shadows": {
+      "__id__": 47
     }
   },
   {
@@ -1450,7 +1456,7 @@
     }
   },
   {
-    "__type__": "cc.PlanarShadowInfo",
+    "__type__": "cc.ShadowsInfo",
     "_enabled": false,
     "_normal": {
       "__type__": "cc.Vec3",
@@ -1473,5 +1479,59 @@
     "_isRGBE": false,
     "_enabled": false,
     "_useIBL": false
+  },
+  {
+    "__type__": "cc.Widget",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 4
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_alignFlags": 45,
+    "_target": null,
+    "_left": 0,
+    "_right": 0,
+    "_top": 0,
+    "_bottom": 0,
+    "_horizontalCenter": 0,
+    "_verticalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 0,
+    "_originalHeight": 0,
+    "_alignMode": 2,
+    "_lockFlags": 0
+  },
+  {
+    "__type__": "cc.Widget",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 19
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_alignFlags": 45,
+    "_target": null,
+    "_left": 0,
+    "_right": 0,
+    "_top": 0,
+    "_bottom": 0,
+    "_horizontalCenter": 0,
+    "_verticalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 0,
+    "_originalHeight": 0,
+    "_alignMode": 2,
+    "_lockFlags": 0
   }
 ]

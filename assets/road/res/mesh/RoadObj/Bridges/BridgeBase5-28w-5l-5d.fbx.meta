@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "90174f4c-1eed-4ed5-87b5-4dab4944171d",
+  "files": [],
+  "subMetas": {
+    "27724": {
+      "importer": "gltf-mesh",
+      "uuid": "90174f4c-1eed-4ed5-87b5-4dab4944171d@27724",
+      "displayName": "",
+      "id": "27724",
+      "name": "BridgeBase5-28w-5l-5d.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "90174f4c-1eed-4ed5-87b5-4dab4944171d@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "90174f4c-1eed-4ed5-87b5-4dab4944171d@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "90174f4c-1eed-4ed5-87b5-4dab4944171d@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "90174f4c-1eed-4ed5-87b5-4dab4944171d@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "7cba2": {
+      "importer": "gltf-scene",
+      "uuid": "90174f4c-1eed-4ed5-87b5-4dab4944171d@7cba2",
+      "displayName": "",
+      "id": "7cba2",
+      "name": "BridgeBase5-28w-5l-5d.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "90174f4c-1eed-4ed5-87b5-4dab4944171d@32d96"
+      }
+    ],
+    "redirect": "90174f4c-1eed-4ed5-87b5-4dab4944171d@7cba2",
+    "assetFinder": {
+      "meshes": [
+        "90174f4c-1eed-4ed5-87b5-4dab4944171d@27724"
+      ],
+      "skeletons": [],
+      "textures": [
+        "90174f4c-1eed-4ed5-87b5-4dab4944171d@ab932"
+      ],
+      "materials": [
+        "90174f4c-1eed-4ed5-87b5-4dab4944171d@d90a4"
+      ],
+      "scenes": [
+        "90174f4c-1eed-4ed5-87b5-4dab4944171d@7cba2"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

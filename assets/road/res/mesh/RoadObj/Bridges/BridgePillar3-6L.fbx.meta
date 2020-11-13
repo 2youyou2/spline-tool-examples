@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "da866336-9ec2-44f2-abee-9fd786d00ed1",
+  "files": [],
+  "subMetas": {
+    "8fe80": {
+      "importer": "gltf-mesh",
+      "uuid": "da866336-9ec2-44f2-abee-9fd786d00ed1@8fe80",
+      "displayName": "",
+      "id": "8fe80",
+      "name": "BridgePillar3-6L.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "da866336-9ec2-44f2-abee-9fd786d00ed1@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "da866336-9ec2-44f2-abee-9fd786d00ed1@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "da866336-9ec2-44f2-abee-9fd786d00ed1@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "da866336-9ec2-44f2-abee-9fd786d00ed1@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "fda1f": {
+      "importer": "gltf-scene",
+      "uuid": "da866336-9ec2-44f2-abee-9fd786d00ed1@fda1f",
+      "displayName": "",
+      "id": "fda1f",
+      "name": "BridgePillar3-6L.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "da866336-9ec2-44f2-abee-9fd786d00ed1@32d96"
+      }
+    ],
+    "redirect": "da866336-9ec2-44f2-abee-9fd786d00ed1@fda1f",
+    "assetFinder": {
+      "meshes": [
+        "da866336-9ec2-44f2-abee-9fd786d00ed1@8fe80"
+      ],
+      "skeletons": [],
+      "textures": [
+        "da866336-9ec2-44f2-abee-9fd786d00ed1@ab932"
+      ],
+      "materials": [
+        "da866336-9ec2-44f2-abee-9fd786d00ed1@d90a4"
+      ],
+      "scenes": [
+        "da866336-9ec2-44f2-abee-9fd786d00ed1@fda1f"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

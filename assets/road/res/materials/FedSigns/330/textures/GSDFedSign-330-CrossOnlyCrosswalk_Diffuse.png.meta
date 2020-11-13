@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "fc660d37-7550-4fd2-a114-29fed4b30b28",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "fc660d37-7550-4fd2-a114-29fed4b30b28@6c48a",
+      "displayName": "GSDFedSign-330-CrossOnlyCrosswalk_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "fc660d37-7550-4fd2-a114-29fed4b30b28"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "fc660d37-7550-4fd2-a114-29fed4b30b28@6c48a",
+    "hasAlpha": true
+  }
+}

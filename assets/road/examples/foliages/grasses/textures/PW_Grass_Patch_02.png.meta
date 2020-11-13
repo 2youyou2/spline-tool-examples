@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "f2990b7b-8504-4ec7-ab6e-67797a4bd940",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "f2990b7b-8504-4ec7-ab6e-67797a4bd940@6c48a",
+      "displayName": "PW_Grass_Patch_02",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f2990b7b-8504-4ec7-ab6e-67797a4bd940"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "f2990b7b-8504-4ec7-ab6e-67797a4bd940@6c48a",
+    "hasAlpha": true
+  }
+}

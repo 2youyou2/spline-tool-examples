@@ -54,13 +54,14 @@
     "_id": ""
   },
   {
-    "__type__": "cc.ModelComponent",
+    "__type__": "cc.MeshRenderer",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
     "_enabled": true,
+    "__prefab": null,
     "_materials": [
       {
         "__uuid__": "7cfe3fbd-7125-477d-92ca-e51327bcb481"
@@ -74,6 +75,7 @@
       "__uuid__": "b97bbb9f-ce2f-468b-9b26-0855370d998a@32aeb"
     },
     "_shadowCastingMode": 1,
+    "_shadowReceivingMode": 1,
     "_enableMorph": true,
     "_id": ""
   },
@@ -87,10 +89,10 @@
       "z": 0,
       "w": 0
     },
-    "_bakeable": true,
-    "_castShadow": true,
-    "_receiveShadow": true,
-    "_recieveShadow": true,
+    "_bakeable": false,
+    "_castShadow": false,
+    "_receiveShadow": false,
+    "_recieveShadow": false,
     "_lightmapSize": 128
   },
   {

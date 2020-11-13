@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d2f46ec4-6d2e-4c74-b3b1-03428142f67f",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d2f46ec4-6d2e-4c74-b3b1-03428142f67f@6c48a",
+      "displayName": "GSDWhiteYellowPassLeft_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "d2f46ec4-6d2e-4c74-b3b1-03428142f67f"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "d2f46ec4-6d2e-4c74-b3b1-03428142f67f@6c48a",
+    "hasAlpha": true
+  }
+}

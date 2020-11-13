@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d1c2c11e-8442-4884-ad3d-26cd201baf3d",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d1c2c11e-8442-4884-ad3d-26cd201baf3d@6c48a",
+      "displayName": "PW_Grass_White_Flower_04",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "d1c2c11e-8442-4884-ad3d-26cd201baf3d"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "d1c2c11e-8442-4884-ad3d-26cd201baf3d@6c48a",
+    "hasAlpha": true
+  }
+}

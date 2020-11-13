@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "fae3ccea-2a2f-427c-ba39-731ea88e5d39",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "fae3ccea-2a2f-427c-ba39-731ea88e5d39@6c48a",
+      "displayName": "GSDRumble_Normal",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "fae3ccea-2a2f-427c-ba39-731ea88e5d39"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "fae3ccea-2a2f-427c-ba39-731ea88e5d39@6c48a",
+    "hasAlpha": false
+  }
+}

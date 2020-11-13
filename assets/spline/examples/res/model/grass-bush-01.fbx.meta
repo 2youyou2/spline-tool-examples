@@ -1,5 +1,5 @@
 {
-  "ver": "1.3.21",
+  "ver": "2.0.2",
   "importer": "fbx",
   "imported": true,
   "uuid": "a863b302-ef21-4336-a9be-c3c445b00f0c",
@@ -14,8 +14,8 @@
       "ver": "1.1.0",
       "imported": true,
       "files": [
-        ".json",
-        ".bin"
+        ".bin",
+        ".json"
       ],
       "subMetas": {},
       "userData": {
@@ -31,8 +31,8 @@
       "ver": "1.1.0",
       "imported": true,
       "files": [
-        ".json",
-        ".bin"
+        ".bin",
+        ".json"
       ],
       "subMetas": {},
       "userData": {
@@ -88,6 +88,7 @@
       "scenes": [
         "a863b302-ef21-4336-a9be-c3c445b00f0c@312ae"
       ]
-    }
+    },
+    "legacyFbxImporter": true
   }
 }

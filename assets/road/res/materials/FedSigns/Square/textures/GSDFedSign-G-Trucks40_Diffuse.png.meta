@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "98f16a3f-4394-4576-8068-30b5057f329a",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "98f16a3f-4394-4576-8068-30b5057f329a@6c48a",
+      "displayName": "GSDFedSign-G-Trucks40_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "98f16a3f-4394-4576-8068-30b5057f329a"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "98f16a3f-4394-4576-8068-30b5057f329a@6c48a",
+    "hasAlpha": true
+  }
+}

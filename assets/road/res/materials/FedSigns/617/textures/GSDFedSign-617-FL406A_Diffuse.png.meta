@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "5f44869b-dc39-4676-92f6-53bf43ef1c40",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "5f44869b-dc39-4676-92f6-53bf43ef1c40@6c48a",
+      "displayName": "GSDFedSign-617-FL406A_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5f44869b-dc39-4676-92f6-53bf43ef1c40"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "5f44869b-dc39-4676-92f6-53bf43ef1c40@6c48a",
+    "hasAlpha": true
+  }
+}

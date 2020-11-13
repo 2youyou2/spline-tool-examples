@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "7ca2be98-a130-4855-99ca-3fa8ae7030ca",
+  "files": [],
+  "subMetas": {
+    "97aa2": {
+      "importer": "gltf-mesh",
+      "uuid": "7ca2be98-a130-4855-99ca-3fa8ae7030ca@97aa2",
+      "displayName": "",
+      "id": "97aa2",
+      "name": "GSDRailing7-10m-Cap.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "d4f45": {
+      "importer": "gltf-embeded-image",
+      "uuid": "7ca2be98-a130-4855-99ca-3fa8ae7030ca@d4f45",
+      "displayName": "",
+      "id": "d4f45",
+      "name": "Map #2.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "1da29": {
+      "importer": "texture",
+      "uuid": "7ca2be98-a130-4855-99ca-3fa8ae7030ca@1da29",
+      "displayName": "",
+      "id": "1da29",
+      "name": "Map #2.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "7ca2be98-a130-4855-99ca-3fa8ae7030ca@d4f45"
+      }
+    },
+    "db4d2": {
+      "importer": "gltf-material",
+      "uuid": "7ca2be98-a130-4855-99ca-3fa8ae7030ca@db4d2",
+      "displayName": "",
+      "id": "db4d2",
+      "name": "02 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "a8839": {
+      "importer": "gltf-scene",
+      "uuid": "7ca2be98-a130-4855-99ca-3fa8ae7030ca@a8839",
+      "displayName": "",
+      "id": "a8839",
+      "name": "GSDRailing7-10m-Cap.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #2",
+        "uri": "7ca2be98-a130-4855-99ca-3fa8ae7030ca@d4f45"
+      }
+    ],
+    "redirect": "7ca2be98-a130-4855-99ca-3fa8ae7030ca@a8839",
+    "assetFinder": {
+      "meshes": [
+        "7ca2be98-a130-4855-99ca-3fa8ae7030ca@97aa2"
+      ],
+      "skeletons": [],
+      "textures": [
+        "7ca2be98-a130-4855-99ca-3fa8ae7030ca@1da29"
+      ],
+      "materials": [
+        "7ca2be98-a130-4855-99ca-3fa8ae7030ca@db4d2"
+      ],
+      "scenes": [
+        "7ca2be98-a130-4855-99ca-3fa8ae7030ca@a8839"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

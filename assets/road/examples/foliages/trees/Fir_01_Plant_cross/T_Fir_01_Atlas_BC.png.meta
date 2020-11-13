@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "591354ee-ba6e-4f2a-a26d-4ecca0a09306",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "591354ee-ba6e-4f2a-a26d-4ecca0a09306@6c48a",
+      "displayName": "T_Fir_01_Atlas_BC",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "591354ee-ba6e-4f2a-a26d-4ecca0a09306"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "591354ee-ba6e-4f2a-a26d-4ecca0a09306@6c48a",
+    "hasAlpha": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "b04f71ff-dfcb-4dd8-854b-3d96b600a317",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "b04f71ff-dfcb-4dd8-854b-3d96b600a317@6c48a",
+      "displayName": "GSDFedSign-330-Speed80kmh_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "b04f71ff-dfcb-4dd8-854b-3d96b600a317"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "b04f71ff-dfcb-4dd8-854b-3d96b600a317@6c48a",
+    "hasAlpha": true
+  }
+}

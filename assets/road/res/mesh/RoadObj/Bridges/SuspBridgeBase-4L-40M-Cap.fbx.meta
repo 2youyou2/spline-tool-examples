@@ -1,0 +1,124 @@
+{
+  "ver": "2.0.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1cc24a9a-40c6-4577-94ac-66cb54c64b42",
+  "files": [],
+  "subMetas": {
+    "c3efc": {
+      "importer": "gltf-mesh",
+      "uuid": "1cc24a9a-40c6-4577-94ac-66cb54c64b42@c3efc",
+      "displayName": "",
+      "id": "c3efc",
+      "name": "SuspBridgeBase-4L-40M-Cap.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "32d96": {
+      "importer": "gltf-embeded-image",
+      "uuid": "1cc24a9a-40c6-4577-94ac-66cb54c64b42@32d96",
+      "displayName": "",
+      "id": "32d96",
+      "name": "Map #0.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "ab932": {
+      "importer": "texture",
+      "uuid": "1cc24a9a-40c6-4577-94ac-66cb54c64b42@ab932",
+      "displayName": "",
+      "id": "ab932",
+      "name": "Map #0.texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "1cc24a9a-40c6-4577-94ac-66cb54c64b42@32d96"
+      }
+    },
+    "d90a4": {
+      "importer": "gltf-material",
+      "uuid": "1cc24a9a-40c6-4577-94ac-66cb54c64b42@d90a4",
+      "displayName": "",
+      "id": "d90a4",
+      "name": "01 - Default.material",
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "f4375": {
+      "importer": "gltf-scene",
+      "uuid": "1cc24a9a-40c6-4577-94ac-66cb54c64b42@f4375",
+      "displayName": "",
+      "id": "f4375",
+      "name": "SuspBridgeBase-4L-40M-Cap.prefab",
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #0",
+        "uri": "1cc24a9a-40c6-4577-94ac-66cb54c64b42@32d96"
+      }
+    ],
+    "redirect": "1cc24a9a-40c6-4577-94ac-66cb54c64b42@f4375",
+    "assetFinder": {
+      "meshes": [
+        "1cc24a9a-40c6-4577-94ac-66cb54c64b42@c3efc"
+      ],
+      "skeletons": [],
+      "textures": [
+        "1cc24a9a-40c6-4577-94ac-66cb54c64b42@ab932"
+      ],
+      "materials": [
+        "1cc24a9a-40c6-4577-94ac-66cb54c64b42@d90a4"
+      ],
+      "scenes": [
+        "1cc24a9a-40c6-4577-94ac-66cb54c64b42@f4375"
+      ]
+    },
+    "legacyFbxImporter": true
+  }
+}

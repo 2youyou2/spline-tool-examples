@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "043fb7a8-7fbc-4e01-b077-a76b5dc07374",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "043fb7a8-7fbc-4e01-b077-a76b5dc07374@6c48a",
+      "displayName": "GSDSteel5_Diffuse",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "043fb7a8-7fbc-4e01-b077-a76b5dc07374"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "043fb7a8-7fbc-4e01-b077-a76b5dc07374@6c48a",
+    "hasAlpha": true
+  }
+}

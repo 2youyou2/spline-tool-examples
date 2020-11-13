@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "baa7c41d-8743-42ee-883c-e91765ca87bf",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "baa7c41d-8743-42ee-883c-e91765ca87bf@6c48a",
+      "displayName": "PW_Grass_Terrain_01_D",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "baa7c41d-8743-42ee-883c-e91765ca87bf"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "baa7c41d-8743-42ee-883c-e91765ca87bf@6c48a",
+    "hasAlpha": true
+  }
+}

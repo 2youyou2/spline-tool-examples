@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "ca4ab5b3-9331-42e2-8b83-0775d9ab199f",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "ca4ab5b3-9331-42e2-8b83-0775d9ab199f@6c48a",
+      "displayName": "GSDWarningSign_Normal",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.20",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ca4ab5b3-9331-42e2-8b83-0775d9ab199f"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "ca4ab5b3-9331-42e2-8b83-0775d9ab199f@6c48a",
+    "hasAlpha": true
+  }
+}
