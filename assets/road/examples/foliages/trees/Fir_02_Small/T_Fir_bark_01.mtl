@@ -12,9 +12,36 @@
       "USE_INSTANCING": true,
       "USE_NORMAL_MAP": true,
       "USE_ALBEDO_MAP": true
+    },
+    {
+      "USE_INSTANCING": true,
+      "USE_NORMAL_MAP": true,
+      "USE_ALBEDO_MAP": true
+    },
+    {
+      "USE_INSTANCING": true,
+      "USE_ALBEDO_MAP": true
     }
   ],
   "_states": [
+    {
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      },
+      "depthStencilState": {},
+      "rasterizerState": {}
+    },
+    {
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      },
+      "depthStencilState": {},
+      "rasterizerState": {}
+    },
     {
       "blendState": {
         "targets": [
@@ -29,11 +56,13 @@
     {
       "alphaThreshold": 0.4,
       "mainTexture": {
-        "__uuid__": "1f6e9268-493c-40a9-94b9-8171a71db3fc@6c48a"
+        "__uuid__": "3d5ae789-01b3-4987-ac1b-32adae6a5b91@6c48a"
       },
       "normalMap": {
-        "__uuid__": "16acc24f-bb27-4b1c-9c23-8166e311fed4@6c48a"
+        "__uuid__": "834af128-bd35-4f01-953f-dbbe75eb5d00@6c48a"
       }
-    }
+    },
+    {},
+    {}
   ]
 }
