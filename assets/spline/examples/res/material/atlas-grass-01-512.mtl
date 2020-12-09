@@ -9,12 +9,13 @@
   "_techIdx": 0,
   "_defines": [
     {
+      "USE_INSTANCING": true,
       "USE_NORMAL_MAP": true,
-      "USE_LIGHTMAP": true,
-      "HAS_SECOND_UV": true,
       "USE_ALBEDO_MAP": true,
       "USE_ALPHA_TEST": true
-    }
+    },
+    {},
+    {}
   ],
   "_states": [
     {
@@ -27,7 +28,9 @@
       "rasterizerState": {
         "cullMode": 0
       }
-    }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
@@ -39,6 +42,8 @@
       "normalMap": {
         "__uuid__": "b46a865d-349d-432a-8492-b0bc4798cbab@6c48a"
       }
-    }
+    },
+    {},
+    {}
   ]
 }

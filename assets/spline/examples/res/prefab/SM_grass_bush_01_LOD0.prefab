@@ -27,7 +27,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0.678,
+      "x": 0,
       "y": 0,
       "z": 0
     },
@@ -103,11 +103,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "a7UCIUm7pFGKiK4ISviGFm",
-    "sync": false,
-    "_synced": {
-      "default": false,
-      "serializable": false
-    }
+    "fileId": "",
+    "sync": false
   }
 ]
