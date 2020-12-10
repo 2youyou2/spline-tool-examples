@@ -27,16 +27,16 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 5.472,
+      "x": 0,
       "y": 0,
       "z": 0
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": 2.1855694143368998e-8,
+      "x": 0,
       "y": 0,
       "z": 0,
-      "w": 0.9999999999999998
+      "w": 1
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -47,7 +47,7 @@
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
-      "x": 0.00000250447806548767,
+      "x": 0,
       "y": 0,
       "z": 0
     },
@@ -61,6 +61,7 @@
       "__id__": 1
     },
     "_enabled": true,
+    "__prefab": null,
     "_materials": [
       {
         "__uuid__": "bead4d19-2cb1-46b1-9c60-927cb627fb14"
@@ -77,6 +78,7 @@
       "__uuid__": "d0164205-e8da-49fb-b7d5-7519955e8b0f@77111"
     },
     "_shadowCastingMode": 0,
+    "_shadowReceivingMode": 1,
     "_enableMorph": true,
     "_id": ""
   },
@@ -104,11 +106,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "8dsKetsLRL54Ngkox9iniR",
-    "sync": false,
-    "_synced": {
-      "default": false,
-      "serializable": false
-    }
+    "fileId": "",
+    "sync": false
   }
 ]
